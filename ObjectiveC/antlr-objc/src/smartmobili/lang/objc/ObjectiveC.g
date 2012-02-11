@@ -23,7 +23,7 @@ options {
 }
 
 
-translation_unit: external_declaration+;
+translation_unit: external_declaration+ EOF;
 
 external_declaration:
 COMMENT | LINE_COMMENT | preprocessor_declaration

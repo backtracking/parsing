@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g 2012-02-11 10:35:16
+// $ANTLR 3.4 /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g 2012-02-11 17:14:22
 
   package smartmobili.lang.objc;
 
@@ -195,7 +195,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "translation_unit"
-    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:26:1: translation_unit : ( external_declaration )+ ;
+    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:26:1: translation_unit : ( external_declaration )+ EOF ;
     public final ObjectiveCParser.translation_unit_return translation_unit() throws RecognitionException {
         ObjectiveCParser.translation_unit_return retval = new ObjectiveCParser.translation_unit_return();
         retval.start = input.LT(1);
@@ -203,13 +203,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
+        Token EOF2=null;
         ObjectiveCParser.external_declaration_return external_declaration1 =null;
 
 
+        Object EOF2_tree=null;
 
         try {
-            // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:26:17: ( ( external_declaration )+ )
-            // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:26:19: ( external_declaration )+
+            // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:26:17: ( ( external_declaration )+ EOF )
+            // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:26:19: ( external_declaration )+ EOF
             {
             root_0 = (Object)adaptor.nil();
 
@@ -250,6 +252,14 @@ public TreeAdaptor getTreeAdaptor() {
                 cnt1++;
             } while (true);
 
+
+            EOF2=(Token)match(input,EOF,FOLLOW_EOF_in_translation_unit50); if (state.failed) return retval;
+            if ( state.backtracking==0 ) {
+            EOF2_tree = 
+            (Object)adaptor.create(EOF2)
+            ;
+            adaptor.addChild(root_0, EOF2_tree);
+            }
 
             }
 
@@ -292,31 +302,31 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token COMMENT2=null;
-        Token LINE_COMMENT3=null;
-        ObjectiveCParser.preprocessor_declaration_return preprocessor_declaration4 =null;
+        Token COMMENT3=null;
+        Token LINE_COMMENT4=null;
+        ObjectiveCParser.preprocessor_declaration_return preprocessor_declaration5 =null;
 
-        ObjectiveCParser.function_definition_return function_definition5 =null;
+        ObjectiveCParser.function_definition_return function_definition6 =null;
 
-        ObjectiveCParser.declaration_return declaration6 =null;
+        ObjectiveCParser.declaration_return declaration7 =null;
 
-        ObjectiveCParser.class_interface_return class_interface7 =null;
+        ObjectiveCParser.class_interface_return class_interface8 =null;
 
-        ObjectiveCParser.class_implementation_return class_implementation8 =null;
+        ObjectiveCParser.class_implementation_return class_implementation9 =null;
 
-        ObjectiveCParser.category_interface_return category_interface9 =null;
+        ObjectiveCParser.category_interface_return category_interface10 =null;
 
-        ObjectiveCParser.category_implementation_return category_implementation10 =null;
+        ObjectiveCParser.category_implementation_return category_implementation11 =null;
 
-        ObjectiveCParser.protocol_declaration_return protocol_declaration11 =null;
+        ObjectiveCParser.protocol_declaration_return protocol_declaration12 =null;
 
-        ObjectiveCParser.protocol_declaration_list_return protocol_declaration_list12 =null;
+        ObjectiveCParser.protocol_declaration_list_return protocol_declaration_list13 =null;
 
-        ObjectiveCParser.class_declaration_list_return class_declaration_list13 =null;
+        ObjectiveCParser.class_declaration_list_return class_declaration_list14 =null;
 
 
-        Object COMMENT2_tree=null;
-        Object LINE_COMMENT3_tree=null;
+        Object COMMENT3_tree=null;
+        Object LINE_COMMENT4_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:28:21: ( COMMENT | LINE_COMMENT | preprocessor_declaration | function_definition | declaration | class_interface | class_implementation | category_interface | category_implementation | protocol_declaration | protocol_declaration_list | class_declaration_list )
@@ -775,12 +785,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    COMMENT2=(Token)match(input,COMMENT,FOLLOW_COMMENT_in_external_declaration55); if (state.failed) return retval;
+                    COMMENT3=(Token)match(input,COMMENT,FOLLOW_COMMENT_in_external_declaration57); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    COMMENT2_tree = 
-                    (Object)adaptor.create(COMMENT2)
+                    COMMENT3_tree = 
+                    (Object)adaptor.create(COMMENT3)
                     ;
-                    adaptor.addChild(root_0, COMMENT2_tree);
+                    adaptor.addChild(root_0, COMMENT3_tree);
                     }
 
                     }
@@ -791,12 +801,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    LINE_COMMENT3=(Token)match(input,LINE_COMMENT,FOLLOW_LINE_COMMENT_in_external_declaration59); if (state.failed) return retval;
+                    LINE_COMMENT4=(Token)match(input,LINE_COMMENT,FOLLOW_LINE_COMMENT_in_external_declaration61); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    LINE_COMMENT3_tree = 
-                    (Object)adaptor.create(LINE_COMMENT3)
+                    LINE_COMMENT4_tree = 
+                    (Object)adaptor.create(LINE_COMMENT4)
                     ;
-                    adaptor.addChild(root_0, LINE_COMMENT3_tree);
+                    adaptor.addChild(root_0, LINE_COMMENT4_tree);
                     }
 
                     }
@@ -807,12 +817,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_preprocessor_declaration_in_external_declaration63);
-                    preprocessor_declaration4=preprocessor_declaration();
+                    pushFollow(FOLLOW_preprocessor_declaration_in_external_declaration65);
+                    preprocessor_declaration5=preprocessor_declaration();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, preprocessor_declaration4.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, preprocessor_declaration5.getTree());
 
                     }
                     break;
@@ -822,12 +832,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_function_definition_in_external_declaration66);
-                    function_definition5=function_definition();
+                    pushFollow(FOLLOW_function_definition_in_external_declaration68);
+                    function_definition6=function_definition();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, function_definition5.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, function_definition6.getTree());
 
                     }
                     break;
@@ -837,12 +847,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_declaration_in_external_declaration70);
-                    declaration6=declaration();
+                    pushFollow(FOLLOW_declaration_in_external_declaration72);
+                    declaration7=declaration();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration6.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration7.getTree());
 
                     }
                     break;
@@ -852,12 +862,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_class_interface_in_external_declaration75);
-                    class_interface7=class_interface();
+                    pushFollow(FOLLOW_class_interface_in_external_declaration77);
+                    class_interface8=class_interface();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_interface7.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_interface8.getTree());
 
                     }
                     break;
@@ -867,12 +877,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_class_implementation_in_external_declaration79);
-                    class_implementation8=class_implementation();
+                    pushFollow(FOLLOW_class_implementation_in_external_declaration81);
+                    class_implementation9=class_implementation();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_implementation8.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_implementation9.getTree());
 
                     }
                     break;
@@ -882,12 +892,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_category_interface_in_external_declaration83);
-                    category_interface9=category_interface();
+                    pushFollow(FOLLOW_category_interface_in_external_declaration85);
+                    category_interface10=category_interface();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, category_interface9.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, category_interface10.getTree());
 
                     }
                     break;
@@ -897,12 +907,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_category_implementation_in_external_declaration87);
-                    category_implementation10=category_implementation();
+                    pushFollow(FOLLOW_category_implementation_in_external_declaration89);
+                    category_implementation11=category_implementation();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, category_implementation10.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, category_implementation11.getTree());
 
                     }
                     break;
@@ -912,12 +922,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_protocol_declaration_in_external_declaration91);
-                    protocol_declaration11=protocol_declaration();
+                    pushFollow(FOLLOW_protocol_declaration_in_external_declaration93);
+                    protocol_declaration12=protocol_declaration();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_declaration11.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_declaration12.getTree());
 
                     }
                     break;
@@ -927,12 +937,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_protocol_declaration_list_in_external_declaration95);
-                    protocol_declaration_list12=protocol_declaration_list();
+                    pushFollow(FOLLOW_protocol_declaration_list_in_external_declaration97);
+                    protocol_declaration_list13=protocol_declaration_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_declaration_list12.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_declaration_list13.getTree());
 
                     }
                     break;
@@ -942,12 +952,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_class_declaration_list_in_external_declaration99);
-                    class_declaration_list13=class_declaration_list();
+                    pushFollow(FOLLOW_class_declaration_list_in_external_declaration101);
+                    class_declaration_list14=class_declaration_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_declaration_list13.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_declaration_list14.getTree());
 
                     }
                     break;
@@ -992,37 +1002,37 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal14=null;
-        Token string_literal16=null;
-        Token string_literal18=null;
-        Token string_literal20=null;
-        Token string_literal22=null;
-        Token string_literal24=null;
-        Token string_literal26=null;
-        Token string_literal28=null;
-        ObjectiveCParser.file_specification_return file_specification15 =null;
+        Token string_literal15=null;
+        Token string_literal17=null;
+        Token string_literal19=null;
+        Token string_literal21=null;
+        Token string_literal23=null;
+        Token string_literal25=null;
+        Token string_literal27=null;
+        Token string_literal29=null;
+        ObjectiveCParser.file_specification_return file_specification16 =null;
 
-        ObjectiveCParser.file_specification_return file_specification17 =null;
+        ObjectiveCParser.file_specification_return file_specification18 =null;
 
-        ObjectiveCParser.macro_specification_return macro_specification19 =null;
+        ObjectiveCParser.macro_specification_return macro_specification20 =null;
 
-        ObjectiveCParser.expression_return expression21 =null;
+        ObjectiveCParser.expression_return expression22 =null;
 
-        ObjectiveCParser.expression_return expression23 =null;
+        ObjectiveCParser.expression_return expression24 =null;
 
-        ObjectiveCParser.expression_return expression25 =null;
+        ObjectiveCParser.expression_return expression26 =null;
 
-        ObjectiveCParser.expression_return expression27 =null;
+        ObjectiveCParser.expression_return expression28 =null;
 
 
-        Object string_literal14_tree=null;
-        Object string_literal16_tree=null;
-        Object string_literal18_tree=null;
-        Object string_literal20_tree=null;
-        Object string_literal22_tree=null;
-        Object string_literal24_tree=null;
-        Object string_literal26_tree=null;
-        Object string_literal28_tree=null;
+        Object string_literal15_tree=null;
+        Object string_literal17_tree=null;
+        Object string_literal19_tree=null;
+        Object string_literal21_tree=null;
+        Object string_literal23_tree=null;
+        Object string_literal25_tree=null;
+        Object string_literal27_tree=null;
+        Object string_literal29_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:40:25: ( '#import' file_specification | '#include' file_specification | '#define' macro_specification | '#ifdef' expression | '#if' expression | '#undef' expression | '#ifndef' expression | '#endif' )
@@ -1084,20 +1094,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal14=(Token)match(input,30,FOLLOW_30_in_preprocessor_declaration106); if (state.failed) return retval;
+                    string_literal15=(Token)match(input,30,FOLLOW_30_in_preprocessor_declaration108); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal14_tree = 
-                    (Object)adaptor.create(string_literal14)
+                    string_literal15_tree = 
+                    (Object)adaptor.create(string_literal15)
                     ;
-                    adaptor.addChild(root_0, string_literal14_tree);
+                    adaptor.addChild(root_0, string_literal15_tree);
                     }
 
-                    pushFollow(FOLLOW_file_specification_in_preprocessor_declaration108);
-                    file_specification15=file_specification();
+                    pushFollow(FOLLOW_file_specification_in_preprocessor_declaration110);
+                    file_specification16=file_specification();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, file_specification15.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, file_specification16.getTree());
 
                     }
                     break;
@@ -1107,20 +1117,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal16=(Token)match(input,31,FOLLOW_31_in_preprocessor_declaration112); if (state.failed) return retval;
+                    string_literal17=(Token)match(input,31,FOLLOW_31_in_preprocessor_declaration114); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal16_tree = 
-                    (Object)adaptor.create(string_literal16)
+                    string_literal17_tree = 
+                    (Object)adaptor.create(string_literal17)
                     ;
-                    adaptor.addChild(root_0, string_literal16_tree);
+                    adaptor.addChild(root_0, string_literal17_tree);
                     }
 
-                    pushFollow(FOLLOW_file_specification_in_preprocessor_declaration114);
-                    file_specification17=file_specification();
+                    pushFollow(FOLLOW_file_specification_in_preprocessor_declaration116);
+                    file_specification18=file_specification();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, file_specification17.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, file_specification18.getTree());
 
                     }
                     break;
@@ -1130,20 +1140,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal18=(Token)match(input,25,FOLLOW_25_in_preprocessor_declaration118); if (state.failed) return retval;
+                    string_literal19=(Token)match(input,25,FOLLOW_25_in_preprocessor_declaration120); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal18_tree = 
-                    (Object)adaptor.create(string_literal18)
+                    string_literal19_tree = 
+                    (Object)adaptor.create(string_literal19)
                     ;
-                    adaptor.addChild(root_0, string_literal18_tree);
+                    adaptor.addChild(root_0, string_literal19_tree);
                     }
 
-                    pushFollow(FOLLOW_macro_specification_in_preprocessor_declaration120);
-                    macro_specification19=macro_specification();
+                    pushFollow(FOLLOW_macro_specification_in_preprocessor_declaration122);
+                    macro_specification20=macro_specification();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, macro_specification19.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, macro_specification20.getTree());
 
                     }
                     break;
@@ -1153,20 +1163,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal20=(Token)match(input,28,FOLLOW_28_in_preprocessor_declaration124); if (state.failed) return retval;
+                    string_literal21=(Token)match(input,28,FOLLOW_28_in_preprocessor_declaration126); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal20_tree = 
-                    (Object)adaptor.create(string_literal20)
+                    string_literal21_tree = 
+                    (Object)adaptor.create(string_literal21)
                     ;
-                    adaptor.addChild(root_0, string_literal20_tree);
+                    adaptor.addChild(root_0, string_literal21_tree);
                     }
 
-                    pushFollow(FOLLOW_expression_in_preprocessor_declaration126);
-                    expression21=expression();
+                    pushFollow(FOLLOW_expression_in_preprocessor_declaration128);
+                    expression22=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression21.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression22.getTree());
 
                     }
                     break;
@@ -1176,20 +1186,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal22=(Token)match(input,27,FOLLOW_27_in_preprocessor_declaration130); if (state.failed) return retval;
+                    string_literal23=(Token)match(input,27,FOLLOW_27_in_preprocessor_declaration132); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal22_tree = 
-                    (Object)adaptor.create(string_literal22)
+                    string_literal23_tree = 
+                    (Object)adaptor.create(string_literal23)
                     ;
-                    adaptor.addChild(root_0, string_literal22_tree);
+                    adaptor.addChild(root_0, string_literal23_tree);
                     }
 
-                    pushFollow(FOLLOW_expression_in_preprocessor_declaration132);
-                    expression23=expression();
+                    pushFollow(FOLLOW_expression_in_preprocessor_declaration134);
+                    expression24=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression23.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression24.getTree());
 
                     }
                     break;
@@ -1199,20 +1209,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal24=(Token)match(input,32,FOLLOW_32_in_preprocessor_declaration136); if (state.failed) return retval;
+                    string_literal25=(Token)match(input,32,FOLLOW_32_in_preprocessor_declaration138); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal24_tree = 
-                    (Object)adaptor.create(string_literal24)
+                    string_literal25_tree = 
+                    (Object)adaptor.create(string_literal25)
                     ;
-                    adaptor.addChild(root_0, string_literal24_tree);
+                    adaptor.addChild(root_0, string_literal25_tree);
                     }
 
-                    pushFollow(FOLLOW_expression_in_preprocessor_declaration138);
-                    expression25=expression();
+                    pushFollow(FOLLOW_expression_in_preprocessor_declaration140);
+                    expression26=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression25.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression26.getTree());
 
                     }
                     break;
@@ -1222,20 +1232,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal26=(Token)match(input,29,FOLLOW_29_in_preprocessor_declaration142); if (state.failed) return retval;
+                    string_literal27=(Token)match(input,29,FOLLOW_29_in_preprocessor_declaration144); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal26_tree = 
-                    (Object)adaptor.create(string_literal26)
+                    string_literal27_tree = 
+                    (Object)adaptor.create(string_literal27)
                     ;
-                    adaptor.addChild(root_0, string_literal26_tree);
+                    adaptor.addChild(root_0, string_literal27_tree);
                     }
 
-                    pushFollow(FOLLOW_expression_in_preprocessor_declaration144);
-                    expression27=expression();
+                    pushFollow(FOLLOW_expression_in_preprocessor_declaration146);
+                    expression28=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression27.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression28.getTree());
 
                     }
                     break;
@@ -1245,12 +1255,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal28=(Token)match(input,26,FOLLOW_26_in_preprocessor_declaration148); if (state.failed) return retval;
+                    string_literal29=(Token)match(input,26,FOLLOW_26_in_preprocessor_declaration150); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal28_tree = 
-                    (Object)adaptor.create(string_literal28)
+                    string_literal29_tree = 
+                    (Object)adaptor.create(string_literal29)
                     ;
-                    adaptor.addChild(root_0, string_literal28_tree);
+                    adaptor.addChild(root_0, string_literal29_tree);
                     }
 
                     }
@@ -1296,15 +1306,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set29=null;
-        Token IDENTIFIER30=null;
-        Token set31=null;
+        Token set30=null;
+        Token IDENTIFIER31=null;
         Token set32=null;
+        Token set33=null;
 
-        Object set29_tree=null;
-        Object IDENTIFIER30_tree=null;
-        Object set31_tree=null;
+        Object set30_tree=null;
+        Object IDENTIFIER31_tree=null;
         Object set32_tree=null;
+        Object set33_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:50:19: ( ( '<' | '\"' ) ( IDENTIFIER ( '/' | '\\\\' | '.' )? )+ ( '>' | '\"' ) )
@@ -1313,12 +1323,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            set29=(Token)input.LT(1);
+            set30=(Token)input.LT(1);
 
             if ( input.LA(1)==24||input.LA(1)==57 ) {
                 input.consume();
                 if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-                (Object)adaptor.create(set29)
+                (Object)adaptor.create(set30)
                 );
                 state.errorRecovery=false;
                 state.failed=false;
@@ -1346,12 +1356,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:50:31: IDENTIFIER ( '/' | '\\\\' | '.' )?
             	    {
-            	    IDENTIFIER30=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_file_specification161); if (state.failed) return retval;
+            	    IDENTIFIER31=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_file_specification163); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    IDENTIFIER30_tree = 
-            	    (Object)adaptor.create(IDENTIFIER30)
+            	    IDENTIFIER31_tree = 
+            	    (Object)adaptor.create(IDENTIFIER31)
             	    ;
-            	    adaptor.addChild(root_0, IDENTIFIER30_tree);
+            	    adaptor.addChild(root_0, IDENTIFIER31_tree);
             	    }
 
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:50:42: ( '/' | '\\\\' | '.' )?
@@ -1365,12 +1375,12 @@ public TreeAdaptor getTreeAdaptor() {
             	        case 1 :
             	            // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:
             	            {
-            	            set31=(Token)input.LT(1);
+            	            set32=(Token)input.LT(1);
 
             	            if ( input.LA(1)==50||input.LA(1)==53||input.LA(1)==85 ) {
             	                input.consume();
             	                if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-            	                (Object)adaptor.create(set31)
+            	                (Object)adaptor.create(set32)
             	                );
             	                state.errorRecovery=false;
             	                state.failed=false;
@@ -1402,12 +1412,12 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
-            set32=(Token)input.LT(1);
+            set33=(Token)input.LT(1);
 
             if ( input.LA(1)==24||input.LA(1)==63 ) {
                 input.consume();
                 if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-                (Object)adaptor.create(set32)
+                (Object)adaptor.create(set33)
                 );
                 state.errorRecovery=false;
                 state.failed=false;
@@ -1460,9 +1470,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal33=null;
+        Token string_literal34=null;
 
-        Object string_literal33_tree=null;
+        Object string_literal34_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:52:20: ( '.+' )
@@ -1471,12 +1481,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal33=(Token)match(input,51,FOLLOW_51_in_macro_specification191); if (state.failed) return retval;
+            string_literal34=(Token)match(input,51,FOLLOW_51_in_macro_specification193); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal33_tree = 
-            (Object)adaptor.create(string_literal33)
+            string_literal34_tree = 
+            (Object)adaptor.create(string_literal34)
             ;
-            adaptor.addChild(root_0, string_literal33_tree);
+            adaptor.addChild(root_0, string_literal34_tree);
             }
 
             }
@@ -1520,23 +1530,23 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal34=null;
-        Token char_literal36=null;
-        Token string_literal41=null;
-        ObjectiveCParser.class_name_return class_name35 =null;
+        Token string_literal35=null;
+        Token char_literal37=null;
+        Token string_literal42=null;
+        ObjectiveCParser.class_name_return class_name36 =null;
 
-        ObjectiveCParser.superclass_name_return superclass_name37 =null;
+        ObjectiveCParser.superclass_name_return superclass_name38 =null;
 
-        ObjectiveCParser.protocol_reference_list_return protocol_reference_list38 =null;
+        ObjectiveCParser.protocol_reference_list_return protocol_reference_list39 =null;
 
-        ObjectiveCParser.instance_variables_return instance_variables39 =null;
+        ObjectiveCParser.instance_variables_return instance_variables40 =null;
 
-        ObjectiveCParser.interface_declaration_list_return interface_declaration_list40 =null;
+        ObjectiveCParser.interface_declaration_list_return interface_declaration_list41 =null;
 
 
-        Object string_literal34_tree=null;
-        Object char_literal36_tree=null;
-        Object string_literal41_tree=null;
+        Object string_literal35_tree=null;
+        Object char_literal37_tree=null;
+        Object string_literal42_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:54:16: ( '@interface' ( class_name ( ':' superclass_name )? ( protocol_reference_list )? ( instance_variables )? ( interface_declaration_list )? ) '@end' )
@@ -1545,23 +1555,23 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal34=(Token)match(input,74,FOLLOW_74_in_class_interface199); if (state.failed) return retval;
+            string_literal35=(Token)match(input,74,FOLLOW_74_in_class_interface201); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal34_tree = 
-            (Object)adaptor.create(string_literal34)
+            string_literal35_tree = 
+            (Object)adaptor.create(string_literal35)
             ;
-            adaptor.addChild(root_0, string_literal34_tree);
+            adaptor.addChild(root_0, string_literal35_tree);
             }
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:56:2: ( class_name ( ':' superclass_name )? ( protocol_reference_list )? ( instance_variables )? ( interface_declaration_list )? )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:57:2: class_name ( ':' superclass_name )? ( protocol_reference_list )? ( instance_variables )? ( interface_declaration_list )?
             {
-            pushFollow(FOLLOW_class_name_in_class_interface205);
-            class_name35=class_name();
+            pushFollow(FOLLOW_class_name_in_class_interface207);
+            class_name36=class_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name35.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name36.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:57:13: ( ':' superclass_name )?
             int alt6=2;
@@ -1574,20 +1584,20 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:57:14: ':' superclass_name
                     {
-                    char_literal36=(Token)match(input,55,FOLLOW_55_in_class_interface208); if (state.failed) return retval;
+                    char_literal37=(Token)match(input,55,FOLLOW_55_in_class_interface210); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal36_tree = 
-                    (Object)adaptor.create(char_literal36)
+                    char_literal37_tree = 
+                    (Object)adaptor.create(char_literal37)
                     ;
-                    adaptor.addChild(root_0, char_literal36_tree);
+                    adaptor.addChild(root_0, char_literal37_tree);
                     }
 
-                    pushFollow(FOLLOW_superclass_name_in_class_interface210);
-                    superclass_name37=superclass_name();
+                    pushFollow(FOLLOW_superclass_name_in_class_interface212);
+                    superclass_name38=superclass_name();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, superclass_name37.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, superclass_name38.getTree());
 
                     }
                     break;
@@ -1606,12 +1616,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:58:4: protocol_reference_list
                     {
-                    pushFollow(FOLLOW_protocol_reference_list_in_class_interface217);
-                    protocol_reference_list38=protocol_reference_list();
+                    pushFollow(FOLLOW_protocol_reference_list_in_class_interface219);
+                    protocol_reference_list39=protocol_reference_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_reference_list38.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_reference_list39.getTree());
 
                     }
                     break;
@@ -1630,12 +1640,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:59:4: instance_variables
                     {
-                    pushFollow(FOLLOW_instance_variables_in_class_interface225);
-                    instance_variables39=instance_variables();
+                    pushFollow(FOLLOW_instance_variables_in_class_interface227);
+                    instance_variables40=instance_variables();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, instance_variables39.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, instance_variables40.getTree());
 
                     }
                     break;
@@ -1654,12 +1664,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:60:4: interface_declaration_list
                     {
-                    pushFollow(FOLLOW_interface_declaration_list_in_class_interface233);
-                    interface_declaration_list40=interface_declaration_list();
+                    pushFollow(FOLLOW_interface_declaration_list_in_class_interface235);
+                    interface_declaration_list41=interface_declaration_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, interface_declaration_list40.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, interface_declaration_list41.getTree());
 
                     }
                     break;
@@ -1670,12 +1680,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            string_literal41=(Token)match(input,71,FOLLOW_71_in_class_interface242); if (state.failed) return retval;
+            string_literal42=(Token)match(input,71,FOLLOW_71_in_class_interface244); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal41_tree = 
-            (Object)adaptor.create(string_literal41)
+            string_literal42_tree = 
+            (Object)adaptor.create(string_literal42)
             ;
-            adaptor.addChild(root_0, string_literal41_tree);
+            adaptor.addChild(root_0, string_literal42_tree);
             }
 
             }
@@ -1719,23 +1729,23 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal42=null;
-        Token char_literal44=null;
-        Token char_literal46=null;
-        Token string_literal49=null;
-        ObjectiveCParser.class_name_return class_name43 =null;
+        Token string_literal43=null;
+        Token char_literal45=null;
+        Token char_literal47=null;
+        Token string_literal50=null;
+        ObjectiveCParser.class_name_return class_name44 =null;
 
-        ObjectiveCParser.category_name_return category_name45 =null;
+        ObjectiveCParser.category_name_return category_name46 =null;
 
-        ObjectiveCParser.protocol_reference_list_return protocol_reference_list47 =null;
+        ObjectiveCParser.protocol_reference_list_return protocol_reference_list48 =null;
 
-        ObjectiveCParser.interface_declaration_list_return interface_declaration_list48 =null;
+        ObjectiveCParser.interface_declaration_list_return interface_declaration_list49 =null;
 
 
-        Object string_literal42_tree=null;
-        Object char_literal44_tree=null;
-        Object char_literal46_tree=null;
-        Object string_literal49_tree=null;
+        Object string_literal43_tree=null;
+        Object char_literal45_tree=null;
+        Object char_literal47_tree=null;
+        Object string_literal50_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:64:19: ( '@interface' ( class_name '(' category_name ')' ( protocol_reference_list )? ( interface_declaration_list )? ) '@end' )
@@ -1744,45 +1754,45 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal42=(Token)match(input,74,FOLLOW_74_in_category_interface250); if (state.failed) return retval;
+            string_literal43=(Token)match(input,74,FOLLOW_74_in_category_interface252); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal42_tree = 
-            (Object)adaptor.create(string_literal42)
+            string_literal43_tree = 
+            (Object)adaptor.create(string_literal43)
             ;
-            adaptor.addChild(root_0, string_literal42_tree);
+            adaptor.addChild(root_0, string_literal43_tree);
             }
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:66:2: ( class_name '(' category_name ')' ( protocol_reference_list )? ( interface_declaration_list )? )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:67:2: class_name '(' category_name ')' ( protocol_reference_list )? ( interface_declaration_list )?
             {
-            pushFollow(FOLLOW_class_name_in_category_interface256);
-            class_name43=class_name();
+            pushFollow(FOLLOW_class_name_in_category_interface258);
+            class_name44=class_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name43.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name44.getTree());
 
-            char_literal44=(Token)match(input,38,FOLLOW_38_in_category_interface258); if (state.failed) return retval;
+            char_literal45=(Token)match(input,38,FOLLOW_38_in_category_interface260); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal44_tree = 
-            (Object)adaptor.create(char_literal44)
+            char_literal45_tree = 
+            (Object)adaptor.create(char_literal45)
             ;
-            adaptor.addChild(root_0, char_literal44_tree);
+            adaptor.addChild(root_0, char_literal45_tree);
             }
 
-            pushFollow(FOLLOW_category_name_in_category_interface260);
-            category_name45=category_name();
+            pushFollow(FOLLOW_category_name_in_category_interface262);
+            category_name46=category_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, category_name45.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, category_name46.getTree());
 
-            char_literal46=(Token)match(input,39,FOLLOW_39_in_category_interface262); if (state.failed) return retval;
+            char_literal47=(Token)match(input,39,FOLLOW_39_in_category_interface264); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal46_tree = 
-            (Object)adaptor.create(char_literal46)
+            char_literal47_tree = 
+            (Object)adaptor.create(char_literal47)
             ;
-            adaptor.addChild(root_0, char_literal46_tree);
+            adaptor.addChild(root_0, char_literal47_tree);
             }
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:68:2: ( protocol_reference_list )?
@@ -1796,12 +1806,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:68:4: protocol_reference_list
                     {
-                    pushFollow(FOLLOW_protocol_reference_list_in_category_interface267);
-                    protocol_reference_list47=protocol_reference_list();
+                    pushFollow(FOLLOW_protocol_reference_list_in_category_interface269);
+                    protocol_reference_list48=protocol_reference_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_reference_list47.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_reference_list48.getTree());
 
                     }
                     break;
@@ -1820,12 +1830,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:69:4: interface_declaration_list
                     {
-                    pushFollow(FOLLOW_interface_declaration_list_in_category_interface275);
-                    interface_declaration_list48=interface_declaration_list();
+                    pushFollow(FOLLOW_interface_declaration_list_in_category_interface277);
+                    interface_declaration_list49=interface_declaration_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, interface_declaration_list48.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, interface_declaration_list49.getTree());
 
                     }
                     break;
@@ -1836,12 +1846,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            string_literal49=(Token)match(input,71,FOLLOW_71_in_category_interface284); if (state.failed) return retval;
+            string_literal50=(Token)match(input,71,FOLLOW_71_in_category_interface286); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal49_tree = 
-            (Object)adaptor.create(string_literal49)
+            string_literal50_tree = 
+            (Object)adaptor.create(string_literal50)
             ;
-            adaptor.addChild(root_0, string_literal49_tree);
+            adaptor.addChild(root_0, string_literal50_tree);
             }
 
             }
@@ -1885,19 +1895,19 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal50=null;
-        Token char_literal52=null;
-        Token string_literal55=null;
-        ObjectiveCParser.class_name_return class_name51 =null;
+        Token string_literal51=null;
+        Token char_literal53=null;
+        Token string_literal56=null;
+        ObjectiveCParser.class_name_return class_name52 =null;
 
-        ObjectiveCParser.superclass_name_return superclass_name53 =null;
+        ObjectiveCParser.superclass_name_return superclass_name54 =null;
 
-        ObjectiveCParser.implementation_definition_list_return implementation_definition_list54 =null;
+        ObjectiveCParser.implementation_definition_list_return implementation_definition_list55 =null;
 
 
-        Object string_literal50_tree=null;
-        Object char_literal52_tree=null;
-        Object string_literal55_tree=null;
+        Object string_literal51_tree=null;
+        Object char_literal53_tree=null;
+        Object string_literal56_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:73:21: ( '@implementation' ( class_name ( ':' superclass_name )? ( implementation_definition_list )? ) '@end' )
@@ -1906,23 +1916,23 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal50=(Token)match(input,73,FOLLOW_73_in_class_implementation292); if (state.failed) return retval;
+            string_literal51=(Token)match(input,73,FOLLOW_73_in_class_implementation294); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal50_tree = 
-            (Object)adaptor.create(string_literal50)
+            string_literal51_tree = 
+            (Object)adaptor.create(string_literal51)
             ;
-            adaptor.addChild(root_0, string_literal50_tree);
+            adaptor.addChild(root_0, string_literal51_tree);
             }
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:75:2: ( class_name ( ':' superclass_name )? ( implementation_definition_list )? )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:76:2: class_name ( ':' superclass_name )? ( implementation_definition_list )?
             {
-            pushFollow(FOLLOW_class_name_in_class_implementation298);
-            class_name51=class_name();
+            pushFollow(FOLLOW_class_name_in_class_implementation300);
+            class_name52=class_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name51.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name52.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:76:13: ( ':' superclass_name )?
             int alt12=2;
@@ -1935,20 +1945,20 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:76:15: ':' superclass_name
                     {
-                    char_literal52=(Token)match(input,55,FOLLOW_55_in_class_implementation302); if (state.failed) return retval;
+                    char_literal53=(Token)match(input,55,FOLLOW_55_in_class_implementation304); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal52_tree = 
-                    (Object)adaptor.create(char_literal52)
+                    char_literal53_tree = 
+                    (Object)adaptor.create(char_literal53)
                     ;
-                    adaptor.addChild(root_0, char_literal52_tree);
+                    adaptor.addChild(root_0, char_literal53_tree);
                     }
 
-                    pushFollow(FOLLOW_superclass_name_in_class_implementation304);
-                    superclass_name53=superclass_name();
+                    pushFollow(FOLLOW_superclass_name_in_class_implementation306);
+                    superclass_name54=superclass_name();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, superclass_name53.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, superclass_name54.getTree());
 
                     }
                     break;
@@ -1967,12 +1977,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:77:4: implementation_definition_list
                     {
-                    pushFollow(FOLLOW_implementation_definition_list_in_class_implementation312);
-                    implementation_definition_list54=implementation_definition_list();
+                    pushFollow(FOLLOW_implementation_definition_list_in_class_implementation314);
+                    implementation_definition_list55=implementation_definition_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, implementation_definition_list54.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, implementation_definition_list55.getTree());
 
                     }
                     break;
@@ -1983,12 +1993,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            string_literal55=(Token)match(input,71,FOLLOW_71_in_class_implementation321); if (state.failed) return retval;
+            string_literal56=(Token)match(input,71,FOLLOW_71_in_class_implementation323); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal55_tree = 
-            (Object)adaptor.create(string_literal55)
+            string_literal56_tree = 
+            (Object)adaptor.create(string_literal56)
             ;
-            adaptor.addChild(root_0, string_literal55_tree);
+            adaptor.addChild(root_0, string_literal56_tree);
             }
 
             }
@@ -2032,21 +2042,21 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal56=null;
-        Token char_literal58=null;
-        Token char_literal60=null;
-        Token string_literal62=null;
-        ObjectiveCParser.class_name_return class_name57 =null;
+        Token string_literal57=null;
+        Token char_literal59=null;
+        Token char_literal61=null;
+        Token string_literal63=null;
+        ObjectiveCParser.class_name_return class_name58 =null;
 
-        ObjectiveCParser.category_name_return category_name59 =null;
+        ObjectiveCParser.category_name_return category_name60 =null;
 
-        ObjectiveCParser.implementation_definition_list_return implementation_definition_list61 =null;
+        ObjectiveCParser.implementation_definition_list_return implementation_definition_list62 =null;
 
 
-        Object string_literal56_tree=null;
-        Object char_literal58_tree=null;
-        Object char_literal60_tree=null;
-        Object string_literal62_tree=null;
+        Object string_literal57_tree=null;
+        Object char_literal59_tree=null;
+        Object char_literal61_tree=null;
+        Object string_literal63_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:81:24: ( '@implementation' ( class_name '(' category_name ')' ( implementation_definition_list )? ) '@end' )
@@ -2055,45 +2065,45 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal56=(Token)match(input,73,FOLLOW_73_in_category_implementation329); if (state.failed) return retval;
+            string_literal57=(Token)match(input,73,FOLLOW_73_in_category_implementation331); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal56_tree = 
-            (Object)adaptor.create(string_literal56)
+            string_literal57_tree = 
+            (Object)adaptor.create(string_literal57)
             ;
-            adaptor.addChild(root_0, string_literal56_tree);
+            adaptor.addChild(root_0, string_literal57_tree);
             }
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:82:19: ( class_name '(' category_name ')' ( implementation_definition_list )? )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:83:2: class_name '(' category_name ')' ( implementation_definition_list )?
             {
-            pushFollow(FOLLOW_class_name_in_category_implementation333);
-            class_name57=class_name();
+            pushFollow(FOLLOW_class_name_in_category_implementation335);
+            class_name58=class_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name57.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name58.getTree());
 
-            char_literal58=(Token)match(input,38,FOLLOW_38_in_category_implementation335); if (state.failed) return retval;
+            char_literal59=(Token)match(input,38,FOLLOW_38_in_category_implementation337); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal58_tree = 
-            (Object)adaptor.create(char_literal58)
+            char_literal59_tree = 
+            (Object)adaptor.create(char_literal59)
             ;
-            adaptor.addChild(root_0, char_literal58_tree);
+            adaptor.addChild(root_0, char_literal59_tree);
             }
 
-            pushFollow(FOLLOW_category_name_in_category_implementation337);
-            category_name59=category_name();
+            pushFollow(FOLLOW_category_name_in_category_implementation339);
+            category_name60=category_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, category_name59.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, category_name60.getTree());
 
-            char_literal60=(Token)match(input,39,FOLLOW_39_in_category_implementation339); if (state.failed) return retval;
+            char_literal61=(Token)match(input,39,FOLLOW_39_in_category_implementation341); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal60_tree = 
-            (Object)adaptor.create(char_literal60)
+            char_literal61_tree = 
+            (Object)adaptor.create(char_literal61)
             ;
-            adaptor.addChild(root_0, char_literal60_tree);
+            adaptor.addChild(root_0, char_literal61_tree);
             }
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:84:2: ( implementation_definition_list )?
@@ -2107,12 +2117,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:84:4: implementation_definition_list
                     {
-                    pushFollow(FOLLOW_implementation_definition_list_in_category_implementation344);
-                    implementation_definition_list61=implementation_definition_list();
+                    pushFollow(FOLLOW_implementation_definition_list_in_category_implementation346);
+                    implementation_definition_list62=implementation_definition_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, implementation_definition_list61.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, implementation_definition_list62.getTree());
 
                     }
                     break;
@@ -2123,12 +2133,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            string_literal62=(Token)match(input,71,FOLLOW_71_in_category_implementation351); if (state.failed) return retval;
+            string_literal63=(Token)match(input,71,FOLLOW_71_in_category_implementation353); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal62_tree = 
-            (Object)adaptor.create(string_literal62)
+            string_literal63_tree = 
+            (Object)adaptor.create(string_literal63)
             ;
-            adaptor.addChild(root_0, string_literal62_tree);
+            adaptor.addChild(root_0, string_literal63_tree);
             }
 
             }
@@ -2172,17 +2182,17 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal63=null;
-        Token string_literal67=null;
-        ObjectiveCParser.protocol_name_return protocol_name64 =null;
+        Token string_literal64=null;
+        Token string_literal68=null;
+        ObjectiveCParser.protocol_name_return protocol_name65 =null;
 
-        ObjectiveCParser.protocol_reference_list_return protocol_reference_list65 =null;
+        ObjectiveCParser.protocol_reference_list_return protocol_reference_list66 =null;
 
-        ObjectiveCParser.interface_declaration_list_return interface_declaration_list66 =null;
+        ObjectiveCParser.interface_declaration_list_return interface_declaration_list67 =null;
 
 
-        Object string_literal63_tree=null;
-        Object string_literal67_tree=null;
+        Object string_literal64_tree=null;
+        Object string_literal68_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:87:21: ( '@protocol' ( protocol_name ( protocol_reference_list )? ( interface_declaration_list )? ) '@end' )
@@ -2191,23 +2201,23 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal63=(Token)match(input,78,FOLLOW_78_in_protocol_declaration359); if (state.failed) return retval;
+            string_literal64=(Token)match(input,78,FOLLOW_78_in_protocol_declaration361); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal63_tree = 
-            (Object)adaptor.create(string_literal63)
+            string_literal64_tree = 
+            (Object)adaptor.create(string_literal64)
             ;
-            adaptor.addChild(root_0, string_literal63_tree);
+            adaptor.addChild(root_0, string_literal64_tree);
             }
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:88:13: ( protocol_name ( protocol_reference_list )? ( interface_declaration_list )? )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:89:2: protocol_name ( protocol_reference_list )? ( interface_declaration_list )?
             {
-            pushFollow(FOLLOW_protocol_name_in_protocol_declaration363);
-            protocol_name64=protocol_name();
+            pushFollow(FOLLOW_protocol_name_in_protocol_declaration365);
+            protocol_name65=protocol_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_name64.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_name65.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:89:16: ( protocol_reference_list )?
             int alt15=2;
@@ -2220,12 +2230,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:89:18: protocol_reference_list
                     {
-                    pushFollow(FOLLOW_protocol_reference_list_in_protocol_declaration367);
-                    protocol_reference_list65=protocol_reference_list();
+                    pushFollow(FOLLOW_protocol_reference_list_in_protocol_declaration369);
+                    protocol_reference_list66=protocol_reference_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_reference_list65.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_reference_list66.getTree());
 
                     }
                     break;
@@ -2244,12 +2254,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:90:4: interface_declaration_list
                     {
-                    pushFollow(FOLLOW_interface_declaration_list_in_protocol_declaration375);
-                    interface_declaration_list66=interface_declaration_list();
+                    pushFollow(FOLLOW_interface_declaration_list_in_protocol_declaration377);
+                    interface_declaration_list67=interface_declaration_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, interface_declaration_list66.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, interface_declaration_list67.getTree());
 
                     }
                     break;
@@ -2260,12 +2270,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            string_literal67=(Token)match(input,71,FOLLOW_71_in_protocol_declaration382); if (state.failed) return retval;
+            string_literal68=(Token)match(input,71,FOLLOW_71_in_protocol_declaration384); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal67_tree = 
-            (Object)adaptor.create(string_literal67)
+            string_literal68_tree = 
+            (Object)adaptor.create(string_literal68)
             ;
-            adaptor.addChild(root_0, string_literal67_tree);
+            adaptor.addChild(root_0, string_literal68_tree);
             }
 
             }
@@ -2309,13 +2319,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal68=null;
-        Token char_literal70=null;
-        ObjectiveCParser.protocol_list_return protocol_list69 =null;
+        Token string_literal69=null;
+        Token char_literal71=null;
+        ObjectiveCParser.protocol_list_return protocol_list70 =null;
 
 
-        Object string_literal68_tree=null;
-        Object char_literal70_tree=null;
+        Object string_literal69_tree=null;
+        Object char_literal71_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:93:26: ( ( '@protocol' protocol_list ';' ) )
@@ -2327,27 +2337,27 @@ public TreeAdaptor getTreeAdaptor() {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:94:2: ( '@protocol' protocol_list ';' )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:94:3: '@protocol' protocol_list ';'
             {
-            string_literal68=(Token)match(input,78,FOLLOW_78_in_protocol_declaration_list391); if (state.failed) return retval;
+            string_literal69=(Token)match(input,78,FOLLOW_78_in_protocol_declaration_list393); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal68_tree = 
-            (Object)adaptor.create(string_literal68)
+            string_literal69_tree = 
+            (Object)adaptor.create(string_literal69)
             ;
-            adaptor.addChild(root_0, string_literal68_tree);
+            adaptor.addChild(root_0, string_literal69_tree);
             }
 
-            pushFollow(FOLLOW_protocol_list_in_protocol_declaration_list393);
-            protocol_list69=protocol_list();
+            pushFollow(FOLLOW_protocol_list_in_protocol_declaration_list395);
+            protocol_list70=protocol_list();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_list69.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_list70.getTree());
 
-            char_literal70=(Token)match(input,56,FOLLOW_56_in_protocol_declaration_list394); if (state.failed) return retval;
+            char_literal71=(Token)match(input,56,FOLLOW_56_in_protocol_declaration_list396); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal70_tree = 
-            (Object)adaptor.create(char_literal70)
+            char_literal71_tree = 
+            (Object)adaptor.create(char_literal71)
             ;
-            adaptor.addChild(root_0, char_literal70_tree);
+            adaptor.addChild(root_0, char_literal71_tree);
             }
 
             }
@@ -2394,13 +2404,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal71=null;
-        Token char_literal73=null;
-        ObjectiveCParser.class_list_return class_list72 =null;
+        Token string_literal72=null;
+        Token char_literal74=null;
+        ObjectiveCParser.class_list_return class_list73 =null;
 
 
-        Object string_literal71_tree=null;
-        Object char_literal73_tree=null;
+        Object string_literal72_tree=null;
+        Object char_literal74_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:97:23: ( ( '@class' class_list ';' ) )
@@ -2412,27 +2422,27 @@ public TreeAdaptor getTreeAdaptor() {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:98:2: ( '@class' class_list ';' )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:98:3: '@class' class_list ';'
             {
-            string_literal71=(Token)match(input,69,FOLLOW_69_in_class_declaration_list406); if (state.failed) return retval;
+            string_literal72=(Token)match(input,69,FOLLOW_69_in_class_declaration_list408); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal71_tree = 
-            (Object)adaptor.create(string_literal71)
+            string_literal72_tree = 
+            (Object)adaptor.create(string_literal72)
             ;
-            adaptor.addChild(root_0, string_literal71_tree);
+            adaptor.addChild(root_0, string_literal72_tree);
             }
 
-            pushFollow(FOLLOW_class_list_in_class_declaration_list408);
-            class_list72=class_list();
+            pushFollow(FOLLOW_class_list_in_class_declaration_list410);
+            class_list73=class_list();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_list72.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_list73.getTree());
 
-            char_literal73=(Token)match(input,56,FOLLOW_56_in_class_declaration_list409); if (state.failed) return retval;
+            char_literal74=(Token)match(input,56,FOLLOW_56_in_class_declaration_list411); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal73_tree = 
-            (Object)adaptor.create(char_literal73)
+            char_literal74_tree = 
+            (Object)adaptor.create(char_literal74)
             ;
-            adaptor.addChild(root_0, char_literal73_tree);
+            adaptor.addChild(root_0, char_literal74_tree);
             }
 
             }
@@ -2479,13 +2489,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal75=null;
-        ObjectiveCParser.class_name_return class_name74 =null;
+        Token char_literal76=null;
+        ObjectiveCParser.class_name_return class_name75 =null;
 
-        ObjectiveCParser.class_name_return class_name76 =null;
+        ObjectiveCParser.class_name_return class_name77 =null;
 
 
-        Object char_literal75_tree=null;
+        Object char_literal76_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:101:11: ( class_name ( ',' class_name )* )
@@ -2494,12 +2504,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_class_name_in_class_list420);
-            class_name74=class_name();
+            pushFollow(FOLLOW_class_name_in_class_list422);
+            class_name75=class_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name74.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name75.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:102:13: ( ',' class_name )*
             loop17:
@@ -2516,20 +2526,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:102:14: ',' class_name
             	    {
-            	    char_literal75=(Token)match(input,45,FOLLOW_45_in_class_list423); if (state.failed) return retval;
+            	    char_literal76=(Token)match(input,45,FOLLOW_45_in_class_list425); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal75_tree = 
-            	    (Object)adaptor.create(char_literal75)
+            	    char_literal76_tree = 
+            	    (Object)adaptor.create(char_literal76)
             	    ;
-            	    adaptor.addChild(root_0, char_literal75_tree);
+            	    adaptor.addChild(root_0, char_literal76_tree);
             	    }
 
-            	    pushFollow(FOLLOW_class_name_in_class_list425);
-            	    class_name76=class_name();
+            	    pushFollow(FOLLOW_class_name_in_class_list427);
+            	    class_name77=class_name();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name76.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name77.getTree());
 
             	    }
             	    break;
@@ -2581,13 +2591,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal77=null;
-        Token char_literal79=null;
-        ObjectiveCParser.protocol_list_return protocol_list78 =null;
+        Token char_literal78=null;
+        Token char_literal80=null;
+        ObjectiveCParser.protocol_list_return protocol_list79 =null;
 
 
-        Object char_literal77_tree=null;
-        Object char_literal79_tree=null;
+        Object char_literal78_tree=null;
+        Object char_literal80_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:104:24: ( ( '<' protocol_list '>' ) )
@@ -2599,27 +2609,27 @@ public TreeAdaptor getTreeAdaptor() {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:105:2: ( '<' protocol_list '>' )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:105:3: '<' protocol_list '>'
             {
-            char_literal77=(Token)match(input,57,FOLLOW_57_in_protocol_reference_list436); if (state.failed) return retval;
+            char_literal78=(Token)match(input,57,FOLLOW_57_in_protocol_reference_list438); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal77_tree = 
-            (Object)adaptor.create(char_literal77)
+            char_literal78_tree = 
+            (Object)adaptor.create(char_literal78)
             ;
-            adaptor.addChild(root_0, char_literal77_tree);
+            adaptor.addChild(root_0, char_literal78_tree);
             }
 
-            pushFollow(FOLLOW_protocol_list_in_protocol_reference_list438);
-            protocol_list78=protocol_list();
+            pushFollow(FOLLOW_protocol_list_in_protocol_reference_list440);
+            protocol_list79=protocol_list();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_list78.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_list79.getTree());
 
-            char_literal79=(Token)match(input,63,FOLLOW_63_in_protocol_reference_list440); if (state.failed) return retval;
+            char_literal80=(Token)match(input,63,FOLLOW_63_in_protocol_reference_list442); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal79_tree = 
-            (Object)adaptor.create(char_literal79)
+            char_literal80_tree = 
+            (Object)adaptor.create(char_literal80)
             ;
-            adaptor.addChild(root_0, char_literal79_tree);
+            adaptor.addChild(root_0, char_literal80_tree);
             }
 
             }
@@ -2666,13 +2676,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal81=null;
-        ObjectiveCParser.protocol_name_return protocol_name80 =null;
+        Token char_literal82=null;
+        ObjectiveCParser.protocol_name_return protocol_name81 =null;
 
-        ObjectiveCParser.protocol_name_return protocol_name82 =null;
+        ObjectiveCParser.protocol_name_return protocol_name83 =null;
 
 
-        Object char_literal81_tree=null;
+        Object char_literal82_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:107:14: ( protocol_name ( ',' protocol_name )* )
@@ -2681,12 +2691,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_protocol_name_in_protocol_list449);
-            protocol_name80=protocol_name();
+            pushFollow(FOLLOW_protocol_name_in_protocol_list451);
+            protocol_name81=protocol_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_name80.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_name81.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:108:16: ( ',' protocol_name )*
             loop18:
@@ -2703,20 +2713,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:108:17: ',' protocol_name
             	    {
-            	    char_literal81=(Token)match(input,45,FOLLOW_45_in_protocol_list452); if (state.failed) return retval;
+            	    char_literal82=(Token)match(input,45,FOLLOW_45_in_protocol_list454); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal81_tree = 
-            	    (Object)adaptor.create(char_literal81)
+            	    char_literal82_tree = 
+            	    (Object)adaptor.create(char_literal82)
             	    ;
-            	    adaptor.addChild(root_0, char_literal81_tree);
+            	    adaptor.addChild(root_0, char_literal82_tree);
             	    }
 
-            	    pushFollow(FOLLOW_protocol_name_in_protocol_list454);
-            	    protocol_name82=protocol_name();
+            	    pushFollow(FOLLOW_protocol_name_in_protocol_list456);
+            	    protocol_name83=protocol_name();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_name82.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_name83.getTree());
 
             	    }
             	    break;
@@ -2768,9 +2778,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token IDENTIFIER83=null;
+        Token IDENTIFIER84=null;
 
-        Object IDENTIFIER83_tree=null;
+        Object IDENTIFIER84_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:110:11: ( IDENTIFIER )
@@ -2779,12 +2789,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            IDENTIFIER83=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_class_name464); if (state.failed) return retval;
+            IDENTIFIER84=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_class_name466); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            IDENTIFIER83_tree = 
-            (Object)adaptor.create(IDENTIFIER83)
+            IDENTIFIER84_tree = 
+            (Object)adaptor.create(IDENTIFIER84)
             ;
-            adaptor.addChild(root_0, IDENTIFIER83_tree);
+            adaptor.addChild(root_0, IDENTIFIER84_tree);
             }
 
             }
@@ -2828,9 +2838,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token IDENTIFIER84=null;
+        Token IDENTIFIER85=null;
 
-        Object IDENTIFIER84_tree=null;
+        Object IDENTIFIER85_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:113:16: ( IDENTIFIER )
@@ -2839,12 +2849,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            IDENTIFIER84=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_superclass_name472); if (state.failed) return retval;
+            IDENTIFIER85=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_superclass_name474); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            IDENTIFIER84_tree = 
-            (Object)adaptor.create(IDENTIFIER84)
+            IDENTIFIER85_tree = 
+            (Object)adaptor.create(IDENTIFIER85)
             ;
-            adaptor.addChild(root_0, IDENTIFIER84_tree);
+            adaptor.addChild(root_0, IDENTIFIER85_tree);
             }
 
             }
@@ -2888,9 +2898,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token IDENTIFIER85=null;
+        Token IDENTIFIER86=null;
 
-        Object IDENTIFIER85_tree=null;
+        Object IDENTIFIER86_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:116:14: ( IDENTIFIER )
@@ -2899,12 +2909,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            IDENTIFIER85=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_category_name480); if (state.failed) return retval;
+            IDENTIFIER86=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_category_name482); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            IDENTIFIER85_tree = 
-            (Object)adaptor.create(IDENTIFIER85)
+            IDENTIFIER86_tree = 
+            (Object)adaptor.create(IDENTIFIER86)
             ;
-            adaptor.addChild(root_0, IDENTIFIER85_tree);
+            adaptor.addChild(root_0, IDENTIFIER86_tree);
             }
 
             }
@@ -2948,9 +2958,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token IDENTIFIER86=null;
+        Token IDENTIFIER87=null;
 
-        Object IDENTIFIER86_tree=null;
+        Object IDENTIFIER87_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:119:14: ( IDENTIFIER )
@@ -2959,12 +2969,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            IDENTIFIER86=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_protocol_name488); if (state.failed) return retval;
+            IDENTIFIER87=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_protocol_name490); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            IDENTIFIER86_tree = 
-            (Object)adaptor.create(IDENTIFIER86)
+            IDENTIFIER87_tree = 
+            (Object)adaptor.create(IDENTIFIER87)
             ;
-            adaptor.addChild(root_0, IDENTIFIER86_tree);
+            adaptor.addChild(root_0, IDENTIFIER87_tree);
             }
 
             }
@@ -3008,13 +3018,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal87=null;
-        Token char_literal89=null;
-        ObjectiveCParser.instance_variable_declaration_return instance_variable_declaration88 =null;
+        Token char_literal88=null;
+        Token char_literal90=null;
+        ObjectiveCParser.instance_variable_declaration_return instance_variable_declaration89 =null;
 
 
-        Object char_literal87_tree=null;
-        Object char_literal89_tree=null;
+        Object char_literal88_tree=null;
+        Object char_literal90_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:122:19: ( '{' instance_variable_declaration '}' )
@@ -3023,27 +3033,27 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            char_literal87=(Token)match(input,130,FOLLOW_130_in_instance_variables496); if (state.failed) return retval;
+            char_literal88=(Token)match(input,130,FOLLOW_130_in_instance_variables498); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal87_tree = 
-            (Object)adaptor.create(char_literal87)
+            char_literal88_tree = 
+            (Object)adaptor.create(char_literal88)
             ;
-            adaptor.addChild(root_0, char_literal87_tree);
+            adaptor.addChild(root_0, char_literal88_tree);
             }
 
-            pushFollow(FOLLOW_instance_variable_declaration_in_instance_variables498);
-            instance_variable_declaration88=instance_variable_declaration();
+            pushFollow(FOLLOW_instance_variable_declaration_in_instance_variables500);
+            instance_variable_declaration89=instance_variable_declaration();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, instance_variable_declaration88.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, instance_variable_declaration89.getTree());
 
-            char_literal89=(Token)match(input,134,FOLLOW_134_in_instance_variables500); if (state.failed) return retval;
+            char_literal90=(Token)match(input,134,FOLLOW_134_in_instance_variables502); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal89_tree = 
-            (Object)adaptor.create(char_literal89)
+            char_literal90_tree = 
+            (Object)adaptor.create(char_literal90)
             ;
-            adaptor.addChild(root_0, char_literal89_tree);
+            adaptor.addChild(root_0, char_literal90_tree);
             }
 
             }
@@ -3087,11 +3097,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.visibility_specification_return visibility_specification90 =null;
+        ObjectiveCParser.visibility_specification_return visibility_specification91 =null;
 
-        ObjectiveCParser.struct_declarator_list_return struct_declarator_list91 =null;
+        ObjectiveCParser.struct_declarator_list_return struct_declarator_list92 =null;
 
-        ObjectiveCParser.instance_variables_return instance_variables92 =null;
+        ObjectiveCParser.instance_variables_return instance_variables93 =null;
 
 
 
@@ -3121,31 +3131,31 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:126:3: visibility_specification
             	    {
-            	    pushFollow(FOLLOW_visibility_specification_in_instance_variable_declaration510);
-            	    visibility_specification90=visibility_specification();
+            	    pushFollow(FOLLOW_visibility_specification_in_instance_variable_declaration512);
+            	    visibility_specification91=visibility_specification();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, visibility_specification90.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, visibility_specification91.getTree());
 
             	    }
             	    break;
             	case 2 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:126:30: struct_declarator_list instance_variables
             	    {
-            	    pushFollow(FOLLOW_struct_declarator_list_in_instance_variable_declaration514);
-            	    struct_declarator_list91=struct_declarator_list();
+            	    pushFollow(FOLLOW_struct_declarator_list_in_instance_variable_declaration516);
+            	    struct_declarator_list92=struct_declarator_list();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_declarator_list91.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_declarator_list92.getTree());
 
-            	    pushFollow(FOLLOW_instance_variables_in_instance_variable_declaration516);
-            	    instance_variables92=instance_variables();
+            	    pushFollow(FOLLOW_instance_variables_in_instance_variable_declaration518);
+            	    instance_variables93=instance_variables();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, instance_variables92.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, instance_variables93.getTree());
 
             	    }
             	    break;
@@ -3202,9 +3212,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set93=null;
+        Token set94=null;
 
-        Object set93_tree=null;
+        Object set94_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:129:25: ( '@private' | '@protected' | '@package' | '@public' )
@@ -3213,12 +3223,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            set93=(Token)input.LT(1);
+            set94=(Token)input.LT(1);
 
             if ( (input.LA(1) >= 75 && input.LA(1) <= 77)||input.LA(1)==79 ) {
                 input.consume();
                 if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-                (Object)adaptor.create(set93)
+                (Object)adaptor.create(set94)
                 );
                 state.errorRecovery=false;
                 state.failed=false;
@@ -3271,11 +3281,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.declaration_return declaration94 =null;
+        ObjectiveCParser.declaration_return declaration95 =null;
 
-        ObjectiveCParser.class_method_declaration_return class_method_declaration95 =null;
+        ObjectiveCParser.class_method_declaration_return class_method_declaration96 =null;
 
-        ObjectiveCParser.instance_method_declaration_return instance_method_declaration96 =null;
+        ObjectiveCParser.instance_method_declaration_return instance_method_declaration97 =null;
 
 
 
@@ -3340,36 +3350,36 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:136:3: declaration
             	    {
-            	    pushFollow(FOLLOW_declaration_in_interface_declaration_list553);
-            	    declaration94=declaration();
+            	    pushFollow(FOLLOW_declaration_in_interface_declaration_list555);
+            	    declaration95=declaration();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration94.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration95.getTree());
 
             	    }
             	    break;
             	case 2 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:136:17: class_method_declaration
             	    {
-            	    pushFollow(FOLLOW_class_method_declaration_in_interface_declaration_list557);
-            	    class_method_declaration95=class_method_declaration();
+            	    pushFollow(FOLLOW_class_method_declaration_in_interface_declaration_list559);
+            	    class_method_declaration96=class_method_declaration();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_method_declaration95.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_method_declaration96.getTree());
 
             	    }
             	    break;
             	case 3 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:136:44: instance_method_declaration
             	    {
-            	    pushFollow(FOLLOW_instance_method_declaration_in_interface_declaration_list561);
-            	    instance_method_declaration96=instance_method_declaration();
+            	    pushFollow(FOLLOW_instance_method_declaration_in_interface_declaration_list563);
+            	    instance_method_declaration97=instance_method_declaration();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, instance_method_declaration96.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, instance_method_declaration97.getTree());
 
             	    }
             	    break;
@@ -3426,11 +3436,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal97=null;
-        ObjectiveCParser.method_declaration_return method_declaration98 =null;
+        Token char_literal98=null;
+        ObjectiveCParser.method_declaration_return method_declaration99 =null;
 
 
-        Object char_literal97_tree=null;
+        Object char_literal98_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:139:25: ( ( '+' method_declaration ) )
@@ -3442,20 +3452,20 @@ public TreeAdaptor getTreeAdaptor() {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:140:2: ( '+' method_declaration )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:140:3: '+' method_declaration
             {
-            char_literal97=(Token)match(input,42,FOLLOW_42_in_class_method_declaration574); if (state.failed) return retval;
+            char_literal98=(Token)match(input,42,FOLLOW_42_in_class_method_declaration576); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal97_tree = 
-            (Object)adaptor.create(char_literal97)
+            char_literal98_tree = 
+            (Object)adaptor.create(char_literal98)
             ;
-            adaptor.addChild(root_0, char_literal97_tree);
+            adaptor.addChild(root_0, char_literal98_tree);
             }
 
-            pushFollow(FOLLOW_method_declaration_in_class_method_declaration576);
-            method_declaration98=method_declaration();
+            pushFollow(FOLLOW_method_declaration_in_class_method_declaration578);
+            method_declaration99=method_declaration();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_declaration98.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_declaration99.getTree());
 
             }
 
@@ -3501,11 +3511,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal99=null;
-        ObjectiveCParser.method_declaration_return method_declaration100 =null;
+        Token char_literal100=null;
+        ObjectiveCParser.method_declaration_return method_declaration101 =null;
 
 
-        Object char_literal99_tree=null;
+        Object char_literal100_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:143:28: ( ( '-' method_declaration ) )
@@ -3517,20 +3527,20 @@ public TreeAdaptor getTreeAdaptor() {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:144:2: ( '-' method_declaration )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:144:3: '-' method_declaration
             {
-            char_literal99=(Token)match(input,46,FOLLOW_46_in_instance_method_declaration588); if (state.failed) return retval;
+            char_literal100=(Token)match(input,46,FOLLOW_46_in_instance_method_declaration590); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal99_tree = 
-            (Object)adaptor.create(char_literal99)
+            char_literal100_tree = 
+            (Object)adaptor.create(char_literal100)
             ;
-            adaptor.addChild(root_0, char_literal99_tree);
+            adaptor.addChild(root_0, char_literal100_tree);
             }
 
-            pushFollow(FOLLOW_method_declaration_in_instance_method_declaration590);
-            method_declaration100=method_declaration();
+            pushFollow(FOLLOW_method_declaration_in_instance_method_declaration592);
+            method_declaration101=method_declaration();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_declaration100.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_declaration101.getTree());
 
             }
 
@@ -3576,13 +3586,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal103=null;
-        ObjectiveCParser.method_type_return method_type101 =null;
+        Token char_literal104=null;
+        ObjectiveCParser.method_type_return method_type102 =null;
 
-        ObjectiveCParser.method_selector_return method_selector102 =null;
+        ObjectiveCParser.method_selector_return method_selector103 =null;
 
 
-        Object char_literal103_tree=null;
+        Object char_literal104_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:147:19: ( ( method_type )? method_selector ';' )
@@ -3602,12 +3612,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:148:4: method_type
                     {
-                    pushFollow(FOLLOW_method_type_in_method_declaration603);
-                    method_type101=method_type();
+                    pushFollow(FOLLOW_method_type_in_method_declaration605);
+                    method_type102=method_type();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, method_type101.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, method_type102.getTree());
 
                     }
                     break;
@@ -3615,19 +3625,19 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            pushFollow(FOLLOW_method_selector_in_method_declaration608);
-            method_selector102=method_selector();
+            pushFollow(FOLLOW_method_selector_in_method_declaration610);
+            method_selector103=method_selector();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_selector102.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_selector103.getTree());
 
-            char_literal103=(Token)match(input,56,FOLLOW_56_in_method_declaration610); if (state.failed) return retval;
+            char_literal104=(Token)match(input,56,FOLLOW_56_in_method_declaration612); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal103_tree = 
-            (Object)adaptor.create(char_literal103)
+            char_literal104_tree = 
+            (Object)adaptor.create(char_literal104)
             ;
-            adaptor.addChild(root_0, char_literal103_tree);
+            adaptor.addChild(root_0, char_literal104_tree);
             }
 
             }
@@ -3671,13 +3681,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.function_definition_return function_definition104 =null;
+        ObjectiveCParser.function_definition_return function_definition105 =null;
 
-        ObjectiveCParser.declaration_return declaration105 =null;
+        ObjectiveCParser.declaration_return declaration106 =null;
 
-        ObjectiveCParser.class_method_definition_return class_method_definition106 =null;
+        ObjectiveCParser.class_method_definition_return class_method_definition107 =null;
 
-        ObjectiveCParser.instance_method_definition_return instance_method_definition107 =null;
+        ObjectiveCParser.instance_method_definition_return instance_method_definition108 =null;
 
 
 
@@ -3959,48 +3969,48 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:151:3: function_definition
             	    {
-            	    pushFollow(FOLLOW_function_definition_in_implementation_definition_list619);
-            	    function_definition104=function_definition();
+            	    pushFollow(FOLLOW_function_definition_in_implementation_definition_list621);
+            	    function_definition105=function_definition();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, function_definition104.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, function_definition105.getTree());
 
             	    }
             	    break;
             	case 2 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:151:25: declaration
             	    {
-            	    pushFollow(FOLLOW_declaration_in_implementation_definition_list623);
-            	    declaration105=declaration();
+            	    pushFollow(FOLLOW_declaration_in_implementation_definition_list625);
+            	    declaration106=declaration();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration105.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration106.getTree());
 
             	    }
             	    break;
             	case 3 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:151:39: class_method_definition
             	    {
-            	    pushFollow(FOLLOW_class_method_definition_in_implementation_definition_list627);
-            	    class_method_definition106=class_method_definition();
+            	    pushFollow(FOLLOW_class_method_definition_in_implementation_definition_list629);
+            	    class_method_definition107=class_method_definition();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_method_definition106.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_method_definition107.getTree());
 
             	    }
             	    break;
             	case 4 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:151:65: instance_method_definition
             	    {
-            	    pushFollow(FOLLOW_instance_method_definition_in_implementation_definition_list631);
-            	    instance_method_definition107=instance_method_definition();
+            	    pushFollow(FOLLOW_instance_method_definition_in_implementation_definition_list633);
+            	    instance_method_definition108=instance_method_definition();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, instance_method_definition107.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, instance_method_definition108.getTree());
 
             	    }
             	    break;
@@ -4057,11 +4067,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal108=null;
-        ObjectiveCParser.method_definition_return method_definition109 =null;
+        Token char_literal109=null;
+        ObjectiveCParser.method_definition_return method_definition110 =null;
 
 
-        Object char_literal108_tree=null;
+        Object char_literal109_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:153:24: ( ( '+' method_definition ) )
@@ -4073,20 +4083,20 @@ public TreeAdaptor getTreeAdaptor() {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:154:2: ( '+' method_definition )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:154:3: '+' method_definition
             {
-            char_literal108=(Token)match(input,42,FOLLOW_42_in_class_method_definition642); if (state.failed) return retval;
+            char_literal109=(Token)match(input,42,FOLLOW_42_in_class_method_definition644); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal108_tree = 
-            (Object)adaptor.create(char_literal108)
+            char_literal109_tree = 
+            (Object)adaptor.create(char_literal109)
             ;
-            adaptor.addChild(root_0, char_literal108_tree);
+            adaptor.addChild(root_0, char_literal109_tree);
             }
 
-            pushFollow(FOLLOW_method_definition_in_class_method_definition644);
-            method_definition109=method_definition();
+            pushFollow(FOLLOW_method_definition_in_class_method_definition646);
+            method_definition110=method_definition();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_definition109.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_definition110.getTree());
 
             }
 
@@ -4132,11 +4142,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal110=null;
-        ObjectiveCParser.method_definition_return method_definition111 =null;
+        Token char_literal111=null;
+        ObjectiveCParser.method_definition_return method_definition112 =null;
 
 
-        Object char_literal110_tree=null;
+        Object char_literal111_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:157:27: ( ( '-' method_definition ) )
@@ -4148,20 +4158,20 @@ public TreeAdaptor getTreeAdaptor() {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:158:2: ( '-' method_definition )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:158:3: '-' method_definition
             {
-            char_literal110=(Token)match(input,46,FOLLOW_46_in_instance_method_definition656); if (state.failed) return retval;
+            char_literal111=(Token)match(input,46,FOLLOW_46_in_instance_method_definition658); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal110_tree = 
-            (Object)adaptor.create(char_literal110)
+            char_literal111_tree = 
+            (Object)adaptor.create(char_literal111)
             ;
-            adaptor.addChild(root_0, char_literal110_tree);
+            adaptor.addChild(root_0, char_literal111_tree);
             }
 
-            pushFollow(FOLLOW_method_definition_in_instance_method_definition658);
-            method_definition111=method_definition();
+            pushFollow(FOLLOW_method_definition_in_instance_method_definition660);
+            method_definition112=method_definition();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_definition111.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_definition112.getTree());
 
             }
 
@@ -4207,13 +4217,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.method_type_return method_type112 =null;
+        ObjectiveCParser.method_type_return method_type113 =null;
 
-        ObjectiveCParser.method_selector_return method_selector113 =null;
+        ObjectiveCParser.method_selector_return method_selector114 =null;
 
-        ObjectiveCParser.init_declarator_list_return init_declarator_list114 =null;
+        ObjectiveCParser.init_declarator_list_return init_declarator_list115 =null;
 
-        ObjectiveCParser.compound_statement_return compound_statement115 =null;
+        ObjectiveCParser.compound_statement_return compound_statement116 =null;
 
 
 
@@ -4235,12 +4245,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:162:3: method_type
                     {
-                    pushFollow(FOLLOW_method_type_in_method_definition671);
-                    method_type112=method_type();
+                    pushFollow(FOLLOW_method_type_in_method_definition673);
+                    method_type113=method_type();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, method_type112.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, method_type113.getTree());
 
                     }
                     break;
@@ -4248,12 +4258,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            pushFollow(FOLLOW_method_selector_in_method_definition675);
-            method_selector113=method_selector();
+            pushFollow(FOLLOW_method_selector_in_method_definition677);
+            method_selector114=method_selector();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_selector113.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, method_selector114.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:162:33: ( init_declarator_list )?
             int alt24=2;
@@ -4266,12 +4276,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:162:34: init_declarator_list
                     {
-                    pushFollow(FOLLOW_init_declarator_list_in_method_definition678);
-                    init_declarator_list114=init_declarator_list();
+                    pushFollow(FOLLOW_init_declarator_list_in_method_definition680);
+                    init_declarator_list115=init_declarator_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, init_declarator_list114.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, init_declarator_list115.getTree());
 
                     }
                     break;
@@ -4279,12 +4289,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            pushFollow(FOLLOW_compound_statement_in_method_definition682);
-            compound_statement115=compound_statement();
+            pushFollow(FOLLOW_compound_statement_in_method_definition684);
+            compound_statement116=compound_statement();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, compound_statement115.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, compound_statement116.getTree());
 
             }
 
@@ -4327,11 +4337,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.selector_return selector116 =null;
+        ObjectiveCParser.selector_return selector117 =null;
 
-        ObjectiveCParser.keyword_declarator_return keyword_declarator117 =null;
+        ObjectiveCParser.keyword_declarator_return keyword_declarator118 =null;
 
-        ObjectiveCParser.parameter_list_return parameter_list118 =null;
+        ObjectiveCParser.parameter_list_return parameter_list119 =null;
 
 
 
@@ -4376,12 +4386,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_selector_in_method_selector690);
-                    selector116=selector();
+                    pushFollow(FOLLOW_selector_in_method_selector692);
+                    selector117=selector();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector116.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector117.getTree());
 
                     }
                     break;
@@ -4419,12 +4429,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:165:13: keyword_declarator
                     	    {
-                    	    pushFollow(FOLLOW_keyword_declarator_in_method_selector694);
-                    	    keyword_declarator117=keyword_declarator();
+                    	    pushFollow(FOLLOW_keyword_declarator_in_method_selector696);
+                    	    keyword_declarator118=keyword_declarator();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, keyword_declarator117.getTree());
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, keyword_declarator118.getTree());
 
                     	    }
                     	    break;
@@ -4458,12 +4468,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:165:34: parameter_list
                             {
-                            pushFollow(FOLLOW_parameter_list_in_method_selector698);
-                            parameter_list118=parameter_list();
+                            pushFollow(FOLLOW_parameter_list_in_method_selector700);
+                            parameter_list119=parameter_list();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_list118.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_list119.getTree());
 
                             }
                             break;
@@ -4517,15 +4527,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal120=null;
-        Token IDENTIFIER122=null;
-        ObjectiveCParser.selector_return selector119 =null;
+        Token char_literal121=null;
+        Token IDENTIFIER123=null;
+        ObjectiveCParser.selector_return selector120 =null;
 
-        ObjectiveCParser.method_type_return method_type121 =null;
+        ObjectiveCParser.method_type_return method_type122 =null;
 
 
-        Object char_literal120_tree=null;
-        Object IDENTIFIER122_tree=null;
+        Object char_literal121_tree=null;
+        Object IDENTIFIER123_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:168:19: ( ( selector )? ':' ( method_type )* IDENTIFIER )
@@ -4545,12 +4555,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:169:2: selector
                     {
-                    pushFollow(FOLLOW_selector_in_keyword_declarator712);
-                    selector119=selector();
+                    pushFollow(FOLLOW_selector_in_keyword_declarator714);
+                    selector120=selector();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector119.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector120.getTree());
 
                     }
                     break;
@@ -4558,12 +4568,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            char_literal120=(Token)match(input,55,FOLLOW_55_in_keyword_declarator715); if (state.failed) return retval;
+            char_literal121=(Token)match(input,55,FOLLOW_55_in_keyword_declarator717); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal120_tree = 
-            (Object)adaptor.create(char_literal120)
+            char_literal121_tree = 
+            (Object)adaptor.create(char_literal121)
             ;
-            adaptor.addChild(root_0, char_literal120_tree);
+            adaptor.addChild(root_0, char_literal121_tree);
             }
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:169:16: ( method_type )*
@@ -4581,12 +4591,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:169:16: method_type
             	    {
-            	    pushFollow(FOLLOW_method_type_in_keyword_declarator717);
-            	    method_type121=method_type();
+            	    pushFollow(FOLLOW_method_type_in_keyword_declarator719);
+            	    method_type122=method_type();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, method_type121.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, method_type122.getTree());
 
             	    }
             	    break;
@@ -4597,12 +4607,12 @@ public TreeAdaptor getTreeAdaptor() {
             } while (true);
 
 
-            IDENTIFIER122=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_keyword_declarator720); if (state.failed) return retval;
+            IDENTIFIER123=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_keyword_declarator722); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            IDENTIFIER122_tree = 
-            (Object)adaptor.create(IDENTIFIER122)
+            IDENTIFIER123_tree = 
+            (Object)adaptor.create(IDENTIFIER123)
             ;
-            adaptor.addChild(root_0, IDENTIFIER122_tree);
+            adaptor.addChild(root_0, IDENTIFIER123_tree);
             }
 
             }
@@ -4646,9 +4656,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token IDENTIFIER123=null;
+        Token IDENTIFIER124=null;
 
-        Object IDENTIFIER123_tree=null;
+        Object IDENTIFIER124_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:171:9: ( IDENTIFIER )
@@ -4657,12 +4667,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            IDENTIFIER123=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_selector727); if (state.failed) return retval;
+            IDENTIFIER124=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_selector729); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            IDENTIFIER123_tree = 
-            (Object)adaptor.create(IDENTIFIER123)
+            IDENTIFIER124_tree = 
+            (Object)adaptor.create(IDENTIFIER124)
             ;
-            adaptor.addChild(root_0, IDENTIFIER123_tree);
+            adaptor.addChild(root_0, IDENTIFIER124_tree);
             }
 
             }
@@ -4706,13 +4716,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal124=null;
-        Token char_literal126=null;
-        ObjectiveCParser.type_name_return type_name125 =null;
+        Token char_literal125=null;
+        Token char_literal127=null;
+        ObjectiveCParser.type_name_return type_name126 =null;
 
 
-        Object char_literal124_tree=null;
-        Object char_literal126_tree=null;
+        Object char_literal125_tree=null;
+        Object char_literal127_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:174:12: ( '(' type_name ')' )
@@ -4721,27 +4731,27 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            char_literal124=(Token)match(input,38,FOLLOW_38_in_method_type734); if (state.failed) return retval;
+            char_literal125=(Token)match(input,38,FOLLOW_38_in_method_type736); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal124_tree = 
-            (Object)adaptor.create(char_literal124)
+            char_literal125_tree = 
+            (Object)adaptor.create(char_literal125)
             ;
-            adaptor.addChild(root_0, char_literal124_tree);
+            adaptor.addChild(root_0, char_literal125_tree);
             }
 
-            pushFollow(FOLLOW_type_name_in_method_type736);
-            type_name125=type_name();
+            pushFollow(FOLLOW_type_name_in_method_type738);
+            type_name126=type_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, type_name125.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, type_name126.getTree());
 
-            char_literal126=(Token)match(input,39,FOLLOW_39_in_method_type738); if (state.failed) return retval;
+            char_literal127=(Token)match(input,39,FOLLOW_39_in_method_type740); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal126_tree = 
-            (Object)adaptor.create(char_literal126)
+            char_literal127_tree = 
+            (Object)adaptor.create(char_literal127)
             ;
-            adaptor.addChild(root_0, char_literal126_tree);
+            adaptor.addChild(root_0, char_literal127_tree);
             }
 
             }
@@ -4785,7 +4795,6 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal127=null;
         Token string_literal128=null;
         Token string_literal129=null;
         Token string_literal130=null;
@@ -4795,19 +4804,19 @@ public TreeAdaptor getTreeAdaptor() {
         Token string_literal134=null;
         Token string_literal135=null;
         Token string_literal136=null;
-        Token IDENTIFIER142=null;
-        ObjectiveCParser.protocol_reference_list_return protocol_reference_list137 =null;
+        Token string_literal137=null;
+        Token IDENTIFIER143=null;
+        ObjectiveCParser.protocol_reference_list_return protocol_reference_list138 =null;
 
-        ObjectiveCParser.class_name_return class_name138 =null;
+        ObjectiveCParser.class_name_return class_name139 =null;
 
-        ObjectiveCParser.protocol_reference_list_return protocol_reference_list139 =null;
+        ObjectiveCParser.protocol_reference_list_return protocol_reference_list140 =null;
 
-        ObjectiveCParser.struct_or_union_specifier_return struct_or_union_specifier140 =null;
+        ObjectiveCParser.struct_or_union_specifier_return struct_or_union_specifier141 =null;
 
-        ObjectiveCParser.enum_specifier_return enum_specifier141 =null;
+        ObjectiveCParser.enum_specifier_return enum_specifier142 =null;
 
 
-        Object string_literal127_tree=null;
         Object string_literal128_tree=null;
         Object string_literal129_tree=null;
         Object string_literal130_tree=null;
@@ -4817,7 +4826,8 @@ public TreeAdaptor getTreeAdaptor() {
         Object string_literal134_tree=null;
         Object string_literal135_tree=null;
         Object string_literal136_tree=null;
-        Object IDENTIFIER142_tree=null;
+        Object string_literal137_tree=null;
+        Object IDENTIFIER143_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:177:15: ( 'void' | 'char' | 'short' | 'int' | 'long' | 'float' | 'double' | 'signed' | 'unsigned' | ( 'id' ( protocol_reference_list )? ) | ( class_name ( protocol_reference_list )? ) | struct_or_union_specifier | enum_specifier | IDENTIFIER )
@@ -4920,12 +4930,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal127=(Token)match(input,127,FOLLOW_127_in_type_specifier745); if (state.failed) return retval;
+                    string_literal128=(Token)match(input,127,FOLLOW_127_in_type_specifier747); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal127_tree = 
-                    (Object)adaptor.create(string_literal127)
+                    string_literal128_tree = 
+                    (Object)adaptor.create(string_literal128)
                     ;
-                    adaptor.addChild(root_0, string_literal127_tree);
+                    adaptor.addChild(root_0, string_literal128_tree);
                     }
 
                     }
@@ -4936,12 +4946,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal128=(Token)match(input,94,FOLLOW_94_in_type_specifier749); if (state.failed) return retval;
+                    string_literal129=(Token)match(input,94,FOLLOW_94_in_type_specifier751); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal128_tree = 
-                    (Object)adaptor.create(string_literal128)
+                    string_literal129_tree = 
+                    (Object)adaptor.create(string_literal129)
                     ;
-                    adaptor.addChild(root_0, string_literal128_tree);
+                    adaptor.addChild(root_0, string_literal129_tree);
                     }
 
                     }
@@ -4952,12 +4962,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal129=(Token)match(input,117,FOLLOW_117_in_type_specifier753); if (state.failed) return retval;
+                    string_literal130=(Token)match(input,117,FOLLOW_117_in_type_specifier755); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal129_tree = 
-                    (Object)adaptor.create(string_literal129)
+                    string_literal130_tree = 
+                    (Object)adaptor.create(string_literal130)
                     ;
-                    adaptor.addChild(root_0, string_literal129_tree);
+                    adaptor.addChild(root_0, string_literal130_tree);
                     }
 
                     }
@@ -4968,12 +4978,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal130=(Token)match(input,110,FOLLOW_110_in_type_specifier757); if (state.failed) return retval;
+                    string_literal131=(Token)match(input,110,FOLLOW_110_in_type_specifier759); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal130_tree = 
-                    (Object)adaptor.create(string_literal130)
+                    string_literal131_tree = 
+                    (Object)adaptor.create(string_literal131)
                     ;
-                    adaptor.addChild(root_0, string_literal130_tree);
+                    adaptor.addChild(root_0, string_literal131_tree);
                     }
 
                     }
@@ -4984,12 +4994,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal131=(Token)match(input,111,FOLLOW_111_in_type_specifier761); if (state.failed) return retval;
+                    string_literal132=(Token)match(input,111,FOLLOW_111_in_type_specifier763); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal131_tree = 
-                    (Object)adaptor.create(string_literal131)
+                    string_literal132_tree = 
+                    (Object)adaptor.create(string_literal132)
                     ;
-                    adaptor.addChild(root_0, string_literal131_tree);
+                    adaptor.addChild(root_0, string_literal132_tree);
                     }
 
                     }
@@ -5000,12 +5010,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal132=(Token)match(input,103,FOLLOW_103_in_type_specifier765); if (state.failed) return retval;
+                    string_literal133=(Token)match(input,103,FOLLOW_103_in_type_specifier767); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal132_tree = 
-                    (Object)adaptor.create(string_literal132)
+                    string_literal133_tree = 
+                    (Object)adaptor.create(string_literal133)
                     ;
-                    adaptor.addChild(root_0, string_literal132_tree);
+                    adaptor.addChild(root_0, string_literal133_tree);
                     }
 
                     }
@@ -5016,12 +5026,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal133=(Token)match(input,99,FOLLOW_99_in_type_specifier769); if (state.failed) return retval;
+                    string_literal134=(Token)match(input,99,FOLLOW_99_in_type_specifier771); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal133_tree = 
-                    (Object)adaptor.create(string_literal133)
+                    string_literal134_tree = 
+                    (Object)adaptor.create(string_literal134)
                     ;
-                    adaptor.addChild(root_0, string_literal133_tree);
+                    adaptor.addChild(root_0, string_literal134_tree);
                     }
 
                     }
@@ -5032,12 +5042,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal134=(Token)match(input,118,FOLLOW_118_in_type_specifier773); if (state.failed) return retval;
+                    string_literal135=(Token)match(input,118,FOLLOW_118_in_type_specifier775); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal134_tree = 
-                    (Object)adaptor.create(string_literal134)
+                    string_literal135_tree = 
+                    (Object)adaptor.create(string_literal135)
                     ;
-                    adaptor.addChild(root_0, string_literal134_tree);
+                    adaptor.addChild(root_0, string_literal135_tree);
                     }
 
                     }
@@ -5048,12 +5058,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal135=(Token)match(input,126,FOLLOW_126_in_type_specifier777); if (state.failed) return retval;
+                    string_literal136=(Token)match(input,126,FOLLOW_126_in_type_specifier779); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal135_tree = 
-                    (Object)adaptor.create(string_literal135)
+                    string_literal136_tree = 
+                    (Object)adaptor.create(string_literal136)
                     ;
-                    adaptor.addChild(root_0, string_literal135_tree);
+                    adaptor.addChild(root_0, string_literal136_tree);
                     }
 
                     }
@@ -5067,12 +5077,12 @@ public TreeAdaptor getTreeAdaptor() {
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:179:4: ( 'id' ( protocol_reference_list )? )
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:179:5: 'id' ( protocol_reference_list )?
                     {
-                    string_literal136=(Token)match(input,106,FOLLOW_106_in_type_specifier784); if (state.failed) return retval;
+                    string_literal137=(Token)match(input,106,FOLLOW_106_in_type_specifier786); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal136_tree = 
-                    (Object)adaptor.create(string_literal136)
+                    string_literal137_tree = 
+                    (Object)adaptor.create(string_literal137)
                     ;
-                    adaptor.addChild(root_0, string_literal136_tree);
+                    adaptor.addChild(root_0, string_literal137_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:179:10: ( protocol_reference_list )?
@@ -5086,12 +5096,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:179:12: protocol_reference_list
                             {
-                            pushFollow(FOLLOW_protocol_reference_list_in_type_specifier788);
-                            protocol_reference_list137=protocol_reference_list();
+                            pushFollow(FOLLOW_protocol_reference_list_in_type_specifier790);
+                            protocol_reference_list138=protocol_reference_list();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_reference_list137.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_reference_list138.getTree());
 
                             }
                             break;
@@ -5113,12 +5123,12 @@ public TreeAdaptor getTreeAdaptor() {
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:180:4: ( class_name ( protocol_reference_list )? )
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:180:5: class_name ( protocol_reference_list )?
                     {
-                    pushFollow(FOLLOW_class_name_in_type_specifier799);
-                    class_name138=class_name();
+                    pushFollow(FOLLOW_class_name_in_type_specifier801);
+                    class_name139=class_name();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name138.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name139.getTree());
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:180:16: ( protocol_reference_list )?
                     int alt31=2;
@@ -5131,12 +5141,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:180:18: protocol_reference_list
                             {
-                            pushFollow(FOLLOW_protocol_reference_list_in_type_specifier803);
-                            protocol_reference_list139=protocol_reference_list();
+                            pushFollow(FOLLOW_protocol_reference_list_in_type_specifier805);
+                            protocol_reference_list140=protocol_reference_list();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_reference_list139.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_reference_list140.getTree());
 
                             }
                             break;
@@ -5155,12 +5165,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_struct_or_union_specifier_in_type_specifier812);
-                    struct_or_union_specifier140=struct_or_union_specifier();
+                    pushFollow(FOLLOW_struct_or_union_specifier_in_type_specifier814);
+                    struct_or_union_specifier141=struct_or_union_specifier();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_or_union_specifier140.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_or_union_specifier141.getTree());
 
                     }
                     break;
@@ -5170,12 +5180,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_enum_specifier_in_type_specifier817);
-                    enum_specifier141=enum_specifier();
+                    pushFollow(FOLLOW_enum_specifier_in_type_specifier819);
+                    enum_specifier142=enum_specifier();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, enum_specifier141.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, enum_specifier142.getTree());
 
                     }
                     break;
@@ -5185,12 +5195,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    IDENTIFIER142=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type_specifier823); if (state.failed) return retval;
+                    IDENTIFIER143=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type_specifier825); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    IDENTIFIER142_tree = 
-                    (Object)adaptor.create(IDENTIFIER142)
+                    IDENTIFIER143_tree = 
+                    (Object)adaptor.create(IDENTIFIER143)
                     ;
-                    adaptor.addChild(root_0, IDENTIFIER142_tree);
+                    adaptor.addChild(root_0, IDENTIFIER143_tree);
                     }
 
                     }
@@ -5236,13 +5246,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal143=null;
         Token string_literal144=null;
-        ObjectiveCParser.protocol_qualifier_return protocol_qualifier145 =null;
+        Token string_literal145=null;
+        ObjectiveCParser.protocol_qualifier_return protocol_qualifier146 =null;
 
 
-        Object string_literal143_tree=null;
         Object string_literal144_tree=null;
+        Object string_literal145_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:185:15: ( 'const' | 'volatile' | protocol_qualifier )
@@ -5284,12 +5294,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal143=(Token)match(input,95,FOLLOW_95_in_type_qualifier831); if (state.failed) return retval;
+                    string_literal144=(Token)match(input,95,FOLLOW_95_in_type_qualifier833); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal143_tree = 
-                    (Object)adaptor.create(string_literal143)
+                    string_literal144_tree = 
+                    (Object)adaptor.create(string_literal144)
                     ;
-                    adaptor.addChild(root_0, string_literal143_tree);
+                    adaptor.addChild(root_0, string_literal144_tree);
                     }
 
                     }
@@ -5300,12 +5310,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal144=(Token)match(input,128,FOLLOW_128_in_type_qualifier835); if (state.failed) return retval;
+                    string_literal145=(Token)match(input,128,FOLLOW_128_in_type_qualifier837); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal144_tree = 
-                    (Object)adaptor.create(string_literal144)
+                    string_literal145_tree = 
+                    (Object)adaptor.create(string_literal145)
                     ;
-                    adaptor.addChild(root_0, string_literal144_tree);
+                    adaptor.addChild(root_0, string_literal145_tree);
                     }
 
                     }
@@ -5316,12 +5326,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_protocol_qualifier_in_type_qualifier839);
-                    protocol_qualifier145=protocol_qualifier();
+                    pushFollow(FOLLOW_protocol_qualifier_in_type_qualifier841);
+                    protocol_qualifier146=protocol_qualifier();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_qualifier145.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_qualifier146.getTree());
 
                     }
                     break;
@@ -5366,9 +5376,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set146=null;
+        Token set147=null;
 
-        Object set146_tree=null;
+        Object set147_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:188:19: ( 'in' | 'out' | 'inout' | 'bycopy' | 'byref' | 'oneway' )
@@ -5377,12 +5387,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            set146=(Token)input.LT(1);
+            set147=(Token)input.LT(1);
 
             if ( (input.LA(1) >= 91 && input.LA(1) <= 92)||(input.LA(1) >= 108 && input.LA(1) <= 109)||(input.LA(1) >= 112 && input.LA(1) <= 113) ) {
                 input.consume();
                 if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-                (Object)adaptor.create(set146)
+                (Object)adaptor.create(set147)
                 );
                 state.errorRecovery=false;
                 state.failed=false;
@@ -5435,29 +5445,29 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token IDENTIFIER147=null;
-        Token STRING_LITERAL149=null;
-        Token char_literal150=null;
-        Token char_literal152=null;
-        Token string_literal153=null;
-        ObjectiveCParser.constant_return constant148 =null;
+        Token IDENTIFIER148=null;
+        Token STRING_LITERAL150=null;
+        Token char_literal151=null;
+        Token char_literal153=null;
+        Token string_literal154=null;
+        ObjectiveCParser.constant_return constant149 =null;
 
-        ObjectiveCParser.expression_return expression151 =null;
+        ObjectiveCParser.expression_return expression152 =null;
 
-        ObjectiveCParser.message_expression_return message_expression154 =null;
+        ObjectiveCParser.message_expression_return message_expression155 =null;
 
-        ObjectiveCParser.selector_expression_return selector_expression155 =null;
+        ObjectiveCParser.selector_expression_return selector_expression156 =null;
 
-        ObjectiveCParser.protocol_expression_return protocol_expression156 =null;
+        ObjectiveCParser.protocol_expression_return protocol_expression157 =null;
 
-        ObjectiveCParser.encode_expression_return encode_expression157 =null;
+        ObjectiveCParser.encode_expression_return encode_expression158 =null;
 
 
-        Object IDENTIFIER147_tree=null;
-        Object STRING_LITERAL149_tree=null;
-        Object char_literal150_tree=null;
-        Object char_literal152_tree=null;
-        Object string_literal153_tree=null;
+        Object IDENTIFIER148_tree=null;
+        Object STRING_LITERAL150_tree=null;
+        Object char_literal151_tree=null;
+        Object char_literal153_tree=null;
+        Object string_literal154_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:191:19: ( IDENTIFIER | constant | STRING_LITERAL | ( '(' expression ')' ) | 'self' | message_expression | selector_expression | protocol_expression | encode_expression )
@@ -5528,12 +5538,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    IDENTIFIER147=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_primary_expression875); if (state.failed) return retval;
+                    IDENTIFIER148=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_primary_expression877); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    IDENTIFIER147_tree = 
-                    (Object)adaptor.create(IDENTIFIER147)
+                    IDENTIFIER148_tree = 
+                    (Object)adaptor.create(IDENTIFIER148)
                     ;
-                    adaptor.addChild(root_0, IDENTIFIER147_tree);
+                    adaptor.addChild(root_0, IDENTIFIER148_tree);
                     }
 
                     }
@@ -5544,12 +5554,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_constant_in_primary_expression880);
-                    constant148=constant();
+                    pushFollow(FOLLOW_constant_in_primary_expression882);
+                    constant149=constant();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant148.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant149.getTree());
 
                     }
                     break;
@@ -5559,12 +5569,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    STRING_LITERAL149=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_primary_expression885); if (state.failed) return retval;
+                    STRING_LITERAL150=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_primary_expression887); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    STRING_LITERAL149_tree = 
-                    (Object)adaptor.create(STRING_LITERAL149)
+                    STRING_LITERAL150_tree = 
+                    (Object)adaptor.create(STRING_LITERAL150)
                     ;
-                    adaptor.addChild(root_0, STRING_LITERAL149_tree);
+                    adaptor.addChild(root_0, STRING_LITERAL150_tree);
                     }
 
                     }
@@ -5578,27 +5588,27 @@ public TreeAdaptor getTreeAdaptor() {
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:195:4: ( '(' expression ')' )
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:195:5: '(' expression ')'
                     {
-                    char_literal150=(Token)match(input,38,FOLLOW_38_in_primary_expression891); if (state.failed) return retval;
+                    char_literal151=(Token)match(input,38,FOLLOW_38_in_primary_expression893); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal150_tree = 
-                    (Object)adaptor.create(char_literal150)
+                    char_literal151_tree = 
+                    (Object)adaptor.create(char_literal151)
                     ;
-                    adaptor.addChild(root_0, char_literal150_tree);
+                    adaptor.addChild(root_0, char_literal151_tree);
                     }
 
-                    pushFollow(FOLLOW_expression_in_primary_expression893);
-                    expression151=expression();
+                    pushFollow(FOLLOW_expression_in_primary_expression895);
+                    expression152=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression151.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression152.getTree());
 
-                    char_literal152=(Token)match(input,39,FOLLOW_39_in_primary_expression895); if (state.failed) return retval;
+                    char_literal153=(Token)match(input,39,FOLLOW_39_in_primary_expression897); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal152_tree = 
-                    (Object)adaptor.create(char_literal152)
+                    char_literal153_tree = 
+                    (Object)adaptor.create(char_literal153)
                     ;
-                    adaptor.addChild(root_0, char_literal152_tree);
+                    adaptor.addChild(root_0, char_literal153_tree);
                     }
 
                     }
@@ -5612,12 +5622,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal153=(Token)match(input,116,FOLLOW_116_in_primary_expression901); if (state.failed) return retval;
+                    string_literal154=(Token)match(input,116,FOLLOW_116_in_primary_expression903); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal153_tree = 
-                    (Object)adaptor.create(string_literal153)
+                    string_literal154_tree = 
+                    (Object)adaptor.create(string_literal154)
                     ;
-                    adaptor.addChild(root_0, string_literal153_tree);
+                    adaptor.addChild(root_0, string_literal154_tree);
                     }
 
                     }
@@ -5628,12 +5638,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_message_expression_in_primary_expression906);
-                    message_expression154=message_expression();
+                    pushFollow(FOLLOW_message_expression_in_primary_expression908);
+                    message_expression155=message_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, message_expression154.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, message_expression155.getTree());
 
                     }
                     break;
@@ -5643,12 +5653,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_selector_expression_in_primary_expression911);
-                    selector_expression155=selector_expression();
+                    pushFollow(FOLLOW_selector_expression_in_primary_expression913);
+                    selector_expression156=selector_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector_expression155.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector_expression156.getTree());
 
                     }
                     break;
@@ -5658,12 +5668,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_protocol_expression_in_primary_expression916);
-                    protocol_expression156=protocol_expression();
+                    pushFollow(FOLLOW_protocol_expression_in_primary_expression918);
+                    protocol_expression157=protocol_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_expression156.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_expression157.getTree());
 
                     }
                     break;
@@ -5673,12 +5683,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_encode_expression_in_primary_expression921);
-                    encode_expression157=encode_expression();
+                    pushFollow(FOLLOW_encode_expression_in_primary_expression923);
+                    encode_expression158=encode_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, encode_expression157.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, encode_expression158.getTree());
 
                     }
                     break;
@@ -5723,15 +5733,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal158=null;
-        Token char_literal161=null;
-        ObjectiveCParser.receiver_return receiver159 =null;
+        Token char_literal159=null;
+        Token char_literal162=null;
+        ObjectiveCParser.receiver_return receiver160 =null;
 
-        ObjectiveCParser.message_selector_return message_selector160 =null;
+        ObjectiveCParser.message_selector_return message_selector161 =null;
 
 
-        Object char_literal158_tree=null;
-        Object char_literal161_tree=null;
+        Object char_literal159_tree=null;
+        Object char_literal162_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:202:19: ( ( '[' receiver message_selector ']' ) )
@@ -5743,34 +5753,34 @@ public TreeAdaptor getTreeAdaptor() {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:203:2: ( '[' receiver message_selector ']' )
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:203:3: '[' receiver message_selector ']'
             {
-            char_literal158=(Token)match(input,84,FOLLOW_84_in_message_expression930); if (state.failed) return retval;
+            char_literal159=(Token)match(input,84,FOLLOW_84_in_message_expression932); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal158_tree = 
-            (Object)adaptor.create(char_literal158)
+            char_literal159_tree = 
+            (Object)adaptor.create(char_literal159)
             ;
-            adaptor.addChild(root_0, char_literal158_tree);
+            adaptor.addChild(root_0, char_literal159_tree);
             }
 
-            pushFollow(FOLLOW_receiver_in_message_expression932);
-            receiver159=receiver();
+            pushFollow(FOLLOW_receiver_in_message_expression934);
+            receiver160=receiver();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, receiver159.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, receiver160.getTree());
 
-            pushFollow(FOLLOW_message_selector_in_message_expression934);
-            message_selector160=message_selector();
+            pushFollow(FOLLOW_message_selector_in_message_expression936);
+            message_selector161=message_selector();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, message_selector160.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, message_selector161.getTree());
 
-            char_literal161=(Token)match(input,86,FOLLOW_86_in_message_expression936); if (state.failed) return retval;
+            char_literal162=(Token)match(input,86,FOLLOW_86_in_message_expression938); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal161_tree = 
-            (Object)adaptor.create(char_literal161)
+            char_literal162_tree = 
+            (Object)adaptor.create(char_literal162)
             ;
-            adaptor.addChild(root_0, char_literal161_tree);
+            adaptor.addChild(root_0, char_literal162_tree);
             }
 
             }
@@ -5817,13 +5827,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal164=null;
-        ObjectiveCParser.expression_return expression162 =null;
+        Token string_literal165=null;
+        ObjectiveCParser.expression_return expression163 =null;
 
-        ObjectiveCParser.class_name_return class_name163 =null;
+        ObjectiveCParser.class_name_return class_name164 =null;
 
 
-        Object string_literal164_tree=null;
+        Object string_literal165_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:206:9: ( expression | class_name | 'super' )
@@ -5894,12 +5904,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_expression_in_receiver947);
-                    expression162=expression();
+                    pushFollow(FOLLOW_expression_in_receiver949);
+                    expression163=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression162.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression163.getTree());
 
                     }
                     break;
@@ -5909,12 +5919,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_class_name_in_receiver952);
-                    class_name163=class_name();
+                    pushFollow(FOLLOW_class_name_in_receiver954);
+                    class_name164=class_name();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name163.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, class_name164.getTree());
 
                     }
                     break;
@@ -5924,12 +5934,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal164=(Token)match(input,122,FOLLOW_122_in_receiver958); if (state.failed) return retval;
+                    string_literal165=(Token)match(input,122,FOLLOW_122_in_receiver960); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal164_tree = 
-                    (Object)adaptor.create(string_literal164)
+                    string_literal165_tree = 
+                    (Object)adaptor.create(string_literal165)
                     ;
-                    adaptor.addChild(root_0, string_literal164_tree);
+                    adaptor.addChild(root_0, string_literal165_tree);
                     }
 
                     }
@@ -5975,9 +5985,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.selector_return selector165 =null;
+        ObjectiveCParser.selector_return selector166 =null;
 
-        ObjectiveCParser.keyword_argument_return keyword_argument166 =null;
+        ObjectiveCParser.keyword_argument_return keyword_argument167 =null;
 
 
 
@@ -6022,12 +6032,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_selector_in_message_selector966);
-                    selector165=selector();
+                    pushFollow(FOLLOW_selector_in_message_selector968);
+                    selector166=selector();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector165.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector166.getTree());
 
                     }
                     break;
@@ -6053,12 +6063,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:213:4: keyword_argument
                     	    {
-                    	    pushFollow(FOLLOW_keyword_argument_in_message_selector971);
-                    	    keyword_argument166=keyword_argument();
+                    	    pushFollow(FOLLOW_keyword_argument_in_message_selector973);
+                    	    keyword_argument167=keyword_argument();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, keyword_argument166.getTree());
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, keyword_argument167.getTree());
 
                     	    }
                     	    break;
@@ -6117,13 +6127,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal168=null;
-        ObjectiveCParser.selector_return selector167 =null;
+        Token char_literal169=null;
+        ObjectiveCParser.selector_return selector168 =null;
 
-        ObjectiveCParser.expression_return expression169 =null;
+        ObjectiveCParser.expression_return expression170 =null;
 
 
-        Object char_literal168_tree=null;
+        Object char_literal169_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:215:17: ( ( selector )? ':' expression )
@@ -6143,12 +6153,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:216:2: selector
                     {
-                    pushFollow(FOLLOW_selector_in_keyword_argument980);
-                    selector167=selector();
+                    pushFollow(FOLLOW_selector_in_keyword_argument982);
+                    selector168=selector();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector167.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector168.getTree());
 
                     }
                     break;
@@ -6156,20 +6166,20 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            char_literal168=(Token)match(input,55,FOLLOW_55_in_keyword_argument983); if (state.failed) return retval;
+            char_literal169=(Token)match(input,55,FOLLOW_55_in_keyword_argument985); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal168_tree = 
-            (Object)adaptor.create(char_literal168)
+            char_literal169_tree = 
+            (Object)adaptor.create(char_literal169)
             ;
-            adaptor.addChild(root_0, char_literal168_tree);
+            adaptor.addChild(root_0, char_literal169_tree);
             }
 
-            pushFollow(FOLLOW_expression_in_keyword_argument985);
-            expression169=expression();
+            pushFollow(FOLLOW_expression_in_keyword_argument987);
+            expression170=expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression169.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression170.getTree());
 
             }
 
@@ -6212,15 +6222,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal170=null;
-        Token char_literal171=null;
-        Token char_literal173=null;
-        ObjectiveCParser.selector_name_return selector_name172 =null;
+        Token string_literal171=null;
+        Token char_literal172=null;
+        Token char_literal174=null;
+        ObjectiveCParser.selector_name_return selector_name173 =null;
 
 
-        Object string_literal170_tree=null;
-        Object char_literal171_tree=null;
-        Object char_literal173_tree=null;
+        Object string_literal171_tree=null;
+        Object char_literal172_tree=null;
+        Object char_literal174_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:218:20: ( '@selector' '(' selector_name ')' )
@@ -6229,35 +6239,35 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal170=(Token)match(input,80,FOLLOW_80_in_selector_expression993); if (state.failed) return retval;
+            string_literal171=(Token)match(input,80,FOLLOW_80_in_selector_expression995); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal170_tree = 
-            (Object)adaptor.create(string_literal170)
+            string_literal171_tree = 
+            (Object)adaptor.create(string_literal171)
             ;
-            adaptor.addChild(root_0, string_literal170_tree);
+            adaptor.addChild(root_0, string_literal171_tree);
             }
 
-            char_literal171=(Token)match(input,38,FOLLOW_38_in_selector_expression995); if (state.failed) return retval;
+            char_literal172=(Token)match(input,38,FOLLOW_38_in_selector_expression997); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal171_tree = 
-            (Object)adaptor.create(char_literal171)
+            char_literal172_tree = 
+            (Object)adaptor.create(char_literal172)
             ;
-            adaptor.addChild(root_0, char_literal171_tree);
+            adaptor.addChild(root_0, char_literal172_tree);
             }
 
-            pushFollow(FOLLOW_selector_name_in_selector_expression997);
-            selector_name172=selector_name();
+            pushFollow(FOLLOW_selector_name_in_selector_expression999);
+            selector_name173=selector_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, selector_name172.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, selector_name173.getTree());
 
-            char_literal173=(Token)match(input,39,FOLLOW_39_in_selector_expression999); if (state.failed) return retval;
+            char_literal174=(Token)match(input,39,FOLLOW_39_in_selector_expression1001); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal173_tree = 
-            (Object)adaptor.create(char_literal173)
+            char_literal174_tree = 
+            (Object)adaptor.create(char_literal174)
             ;
-            adaptor.addChild(root_0, char_literal173_tree);
+            adaptor.addChild(root_0, char_literal174_tree);
             }
 
             }
@@ -6301,13 +6311,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal176=null;
-        ObjectiveCParser.selector_return selector174 =null;
-
+        Token char_literal177=null;
         ObjectiveCParser.selector_return selector175 =null;
 
+        ObjectiveCParser.selector_return selector176 =null;
 
-        Object char_literal176_tree=null;
+
+        Object char_literal177_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:221:14: ( selector | ( ( selector )? ':' )+ )
@@ -6350,12 +6360,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_selector_in_selector_name1007);
-                    selector174=selector();
+                    pushFollow(FOLLOW_selector_in_selector_name1009);
+                    selector175=selector();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector174.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selector175.getTree());
 
                     }
                     break;
@@ -6392,12 +6402,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	        case 1 :
                     	            // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:223:5: selector
                     	            {
-                    	            pushFollow(FOLLOW_selector_in_selector_name1013);
-                    	            selector175=selector();
+                    	            pushFollow(FOLLOW_selector_in_selector_name1015);
+                    	            selector176=selector();
 
                     	            state._fsp--;
                     	            if (state.failed) return retval;
-                    	            if ( state.backtracking==0 ) adaptor.addChild(root_0, selector175.getTree());
+                    	            if ( state.backtracking==0 ) adaptor.addChild(root_0, selector176.getTree());
 
                     	            }
                     	            break;
@@ -6405,12 +6415,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	    }
 
 
-                    	    char_literal176=(Token)match(input,55,FOLLOW_55_in_selector_name1016); if (state.failed) return retval;
+                    	    char_literal177=(Token)match(input,55,FOLLOW_55_in_selector_name1018); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
-                    	    char_literal176_tree = 
-                    	    (Object)adaptor.create(char_literal176)
+                    	    char_literal177_tree = 
+                    	    (Object)adaptor.create(char_literal177)
                     	    ;
-                    	    adaptor.addChild(root_0, char_literal176_tree);
+                    	    adaptor.addChild(root_0, char_literal177_tree);
                     	    }
 
                     	    }
@@ -6470,15 +6480,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal177=null;
-        Token char_literal178=null;
-        Token char_literal180=null;
-        ObjectiveCParser.protocol_name_return protocol_name179 =null;
+        Token string_literal178=null;
+        Token char_literal179=null;
+        Token char_literal181=null;
+        ObjectiveCParser.protocol_name_return protocol_name180 =null;
 
 
-        Object string_literal177_tree=null;
-        Object char_literal178_tree=null;
-        Object char_literal180_tree=null;
+        Object string_literal178_tree=null;
+        Object char_literal179_tree=null;
+        Object char_literal181_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:225:20: ( '@protocol' '(' protocol_name ')' )
@@ -6487,35 +6497,35 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal177=(Token)match(input,78,FOLLOW_78_in_protocol_expression1026); if (state.failed) return retval;
+            string_literal178=(Token)match(input,78,FOLLOW_78_in_protocol_expression1028); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal177_tree = 
-            (Object)adaptor.create(string_literal177)
+            string_literal178_tree = 
+            (Object)adaptor.create(string_literal178)
             ;
-            adaptor.addChild(root_0, string_literal177_tree);
+            adaptor.addChild(root_0, string_literal178_tree);
             }
 
-            char_literal178=(Token)match(input,38,FOLLOW_38_in_protocol_expression1028); if (state.failed) return retval;
+            char_literal179=(Token)match(input,38,FOLLOW_38_in_protocol_expression1030); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal178_tree = 
-            (Object)adaptor.create(char_literal178)
+            char_literal179_tree = 
+            (Object)adaptor.create(char_literal179)
             ;
-            adaptor.addChild(root_0, char_literal178_tree);
+            adaptor.addChild(root_0, char_literal179_tree);
             }
 
-            pushFollow(FOLLOW_protocol_name_in_protocol_expression1030);
-            protocol_name179=protocol_name();
+            pushFollow(FOLLOW_protocol_name_in_protocol_expression1032);
+            protocol_name180=protocol_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_name179.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, protocol_name180.getTree());
 
-            char_literal180=(Token)match(input,39,FOLLOW_39_in_protocol_expression1032); if (state.failed) return retval;
+            char_literal181=(Token)match(input,39,FOLLOW_39_in_protocol_expression1034); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal180_tree = 
-            (Object)adaptor.create(char_literal180)
+            char_literal181_tree = 
+            (Object)adaptor.create(char_literal181)
             ;
-            adaptor.addChild(root_0, char_literal180_tree);
+            adaptor.addChild(root_0, char_literal181_tree);
             }
 
             }
@@ -6559,15 +6569,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal181=null;
-        Token char_literal182=null;
-        Token char_literal184=null;
-        ObjectiveCParser.type_name_return type_name183 =null;
+        Token string_literal182=null;
+        Token char_literal183=null;
+        Token char_literal185=null;
+        ObjectiveCParser.type_name_return type_name184 =null;
 
 
-        Object string_literal181_tree=null;
-        Object char_literal182_tree=null;
-        Object char_literal184_tree=null;
+        Object string_literal182_tree=null;
+        Object char_literal183_tree=null;
+        Object char_literal185_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:228:18: ( '@encode' '(' type_name ')' )
@@ -6576,35 +6586,35 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal181=(Token)match(input,70,FOLLOW_70_in_encode_expression1040); if (state.failed) return retval;
+            string_literal182=(Token)match(input,70,FOLLOW_70_in_encode_expression1042); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal181_tree = 
-            (Object)adaptor.create(string_literal181)
+            string_literal182_tree = 
+            (Object)adaptor.create(string_literal182)
             ;
-            adaptor.addChild(root_0, string_literal181_tree);
+            adaptor.addChild(root_0, string_literal182_tree);
             }
 
-            char_literal182=(Token)match(input,38,FOLLOW_38_in_encode_expression1042); if (state.failed) return retval;
+            char_literal183=(Token)match(input,38,FOLLOW_38_in_encode_expression1044); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal182_tree = 
-            (Object)adaptor.create(char_literal182)
+            char_literal183_tree = 
+            (Object)adaptor.create(char_literal183)
             ;
-            adaptor.addChild(root_0, char_literal182_tree);
+            adaptor.addChild(root_0, char_literal183_tree);
             }
 
-            pushFollow(FOLLOW_type_name_in_encode_expression1044);
-            type_name183=type_name();
+            pushFollow(FOLLOW_type_name_in_encode_expression1046);
+            type_name184=type_name();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, type_name183.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, type_name184.getTree());
 
-            char_literal184=(Token)match(input,39,FOLLOW_39_in_encode_expression1046); if (state.failed) return retval;
+            char_literal185=(Token)match(input,39,FOLLOW_39_in_encode_expression1048); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal184_tree = 
-            (Object)adaptor.create(char_literal184)
+            char_literal185_tree = 
+            (Object)adaptor.create(char_literal185)
             ;
-            adaptor.addChild(root_0, char_literal184_tree);
+            adaptor.addChild(root_0, char_literal185_tree);
             }
 
             }
@@ -6648,7 +6658,7 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.declarator_return declarator185 =null;
+        ObjectiveCParser.declarator_return declarator186 =null;
 
 
 
@@ -6659,12 +6669,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_declarator_in_exception_declarator1054);
-            declarator185=declarator();
+            pushFollow(FOLLOW_declarator_in_exception_declarator1056);
+            declarator186=declarator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator185.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator186.getTree());
 
             }
 
@@ -6707,9 +6717,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal186=null;
+        Token string_literal187=null;
 
-        Object string_literal186_tree=null;
+        Object string_literal187_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:234:14: ( '@trystatement' )
@@ -6718,12 +6728,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal186=(Token)match(input,83,FOLLOW_83_in_try_statement1062); if (state.failed) return retval;
+            string_literal187=(Token)match(input,83,FOLLOW_83_in_try_statement1064); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal186_tree = 
-            (Object)adaptor.create(string_literal186)
+            string_literal187_tree = 
+            (Object)adaptor.create(string_literal187)
             ;
-            adaptor.addChild(root_0, string_literal186_tree);
+            adaptor.addChild(root_0, string_literal187_tree);
             }
 
             }
@@ -6767,17 +6777,17 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal187=null;
-        Token char_literal188=null;
-        Token char_literal190=null;
-        ObjectiveCParser.exception_declarator_return exception_declarator189 =null;
+        Token string_literal188=null;
+        Token char_literal189=null;
+        Token char_literal191=null;
+        ObjectiveCParser.exception_declarator_return exception_declarator190 =null;
 
-        ObjectiveCParser.statement_return statement191 =null;
+        ObjectiveCParser.statement_return statement192 =null;
 
 
-        Object string_literal187_tree=null;
-        Object char_literal188_tree=null;
-        Object char_literal190_tree=null;
+        Object string_literal188_tree=null;
+        Object char_literal189_tree=null;
+        Object char_literal191_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:237:16: ( '@catch' '(' exception_declarator ')' statement )
@@ -6786,43 +6796,43 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal187=(Token)match(input,68,FOLLOW_68_in_catch_statement1070); if (state.failed) return retval;
+            string_literal188=(Token)match(input,68,FOLLOW_68_in_catch_statement1072); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal187_tree = 
-            (Object)adaptor.create(string_literal187)
+            string_literal188_tree = 
+            (Object)adaptor.create(string_literal188)
             ;
-            adaptor.addChild(root_0, string_literal187_tree);
+            adaptor.addChild(root_0, string_literal188_tree);
             }
 
-            char_literal188=(Token)match(input,38,FOLLOW_38_in_catch_statement1072); if (state.failed) return retval;
+            char_literal189=(Token)match(input,38,FOLLOW_38_in_catch_statement1074); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal188_tree = 
-            (Object)adaptor.create(char_literal188)
+            char_literal189_tree = 
+            (Object)adaptor.create(char_literal189)
             ;
-            adaptor.addChild(root_0, char_literal188_tree);
+            adaptor.addChild(root_0, char_literal189_tree);
             }
 
-            pushFollow(FOLLOW_exception_declarator_in_catch_statement1073);
-            exception_declarator189=exception_declarator();
+            pushFollow(FOLLOW_exception_declarator_in_catch_statement1075);
+            exception_declarator190=exception_declarator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, exception_declarator189.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, exception_declarator190.getTree());
 
-            char_literal190=(Token)match(input,39,FOLLOW_39_in_catch_statement1074); if (state.failed) return retval;
+            char_literal191=(Token)match(input,39,FOLLOW_39_in_catch_statement1076); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal190_tree = 
-            (Object)adaptor.create(char_literal190)
+            char_literal191_tree = 
+            (Object)adaptor.create(char_literal191)
             ;
-            adaptor.addChild(root_0, char_literal190_tree);
+            adaptor.addChild(root_0, char_literal191_tree);
             }
 
-            pushFollow(FOLLOW_statement_in_catch_statement1075);
-            statement191=statement();
+            pushFollow(FOLLOW_statement_in_catch_statement1077);
+            statement192=statement();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, statement191.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, statement192.getTree());
 
             }
 
@@ -6865,11 +6875,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal192=null;
-        ObjectiveCParser.statement_return statement193 =null;
+        Token string_literal193=null;
+        ObjectiveCParser.statement_return statement194 =null;
 
 
-        Object string_literal192_tree=null;
+        Object string_literal193_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:240:18: ( '@finally' statement )
@@ -6878,20 +6888,20 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal192=(Token)match(input,72,FOLLOW_72_in_finally_statement1083); if (state.failed) return retval;
+            string_literal193=(Token)match(input,72,FOLLOW_72_in_finally_statement1085); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal192_tree = 
-            (Object)adaptor.create(string_literal192)
+            string_literal193_tree = 
+            (Object)adaptor.create(string_literal193)
             ;
-            adaptor.addChild(root_0, string_literal192_tree);
+            adaptor.addChild(root_0, string_literal193_tree);
             }
 
-            pushFollow(FOLLOW_statement_in_finally_statement1085);
-            statement193=statement();
+            pushFollow(FOLLOW_statement_in_finally_statement1087);
+            statement194=statement();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, statement193.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, statement194.getTree());
 
             }
 
@@ -6934,15 +6944,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal194=null;
-        Token char_literal195=null;
-        Token IDENTIFIER196=null;
-        Token char_literal197=null;
+        Token string_literal195=null;
+        Token char_literal196=null;
+        Token IDENTIFIER197=null;
+        Token char_literal198=null;
 
-        Object string_literal194_tree=null;
-        Object char_literal195_tree=null;
-        Object IDENTIFIER196_tree=null;
-        Object char_literal197_tree=null;
+        Object string_literal195_tree=null;
+        Object char_literal196_tree=null;
+        Object IDENTIFIER197_tree=null;
+        Object char_literal198_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:243:16: ( '@throw' '(' IDENTIFIER ')' )
@@ -6951,36 +6961,36 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal194=(Token)match(input,82,FOLLOW_82_in_throw_statement1093); if (state.failed) return retval;
+            string_literal195=(Token)match(input,82,FOLLOW_82_in_throw_statement1095); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal194_tree = 
-            (Object)adaptor.create(string_literal194)
+            string_literal195_tree = 
+            (Object)adaptor.create(string_literal195)
             ;
-            adaptor.addChild(root_0, string_literal194_tree);
+            adaptor.addChild(root_0, string_literal195_tree);
             }
 
-            char_literal195=(Token)match(input,38,FOLLOW_38_in_throw_statement1095); if (state.failed) return retval;
+            char_literal196=(Token)match(input,38,FOLLOW_38_in_throw_statement1097); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal195_tree = 
-            (Object)adaptor.create(char_literal195)
+            char_literal196_tree = 
+            (Object)adaptor.create(char_literal196)
             ;
-            adaptor.addChild(root_0, char_literal195_tree);
+            adaptor.addChild(root_0, char_literal196_tree);
             }
 
-            IDENTIFIER196=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_throw_statement1096); if (state.failed) return retval;
+            IDENTIFIER197=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_throw_statement1098); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            IDENTIFIER196_tree = 
-            (Object)adaptor.create(IDENTIFIER196)
+            IDENTIFIER197_tree = 
+            (Object)adaptor.create(IDENTIFIER197)
             ;
-            adaptor.addChild(root_0, IDENTIFIER196_tree);
+            adaptor.addChild(root_0, IDENTIFIER197_tree);
             }
 
-            char_literal197=(Token)match(input,39,FOLLOW_39_in_throw_statement1097); if (state.failed) return retval;
+            char_literal198=(Token)match(input,39,FOLLOW_39_in_throw_statement1099); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal197_tree = 
-            (Object)adaptor.create(char_literal197)
+            char_literal198_tree = 
+            (Object)adaptor.create(char_literal198)
             ;
-            adaptor.addChild(root_0, char_literal197_tree);
+            adaptor.addChild(root_0, char_literal198_tree);
             }
 
             }
@@ -7024,11 +7034,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.try_statement_return try_statement198 =null;
+        ObjectiveCParser.try_statement_return try_statement199 =null;
 
-        ObjectiveCParser.catch_statement_return catch_statement199 =null;
+        ObjectiveCParser.catch_statement_return catch_statement200 =null;
 
-        ObjectiveCParser.finally_statement_return finally_statement200 =null;
+        ObjectiveCParser.finally_statement_return finally_statement201 =null;
 
 
 
@@ -7039,19 +7049,19 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_try_statement_in_try_block1105);
-            try_statement198=try_statement();
+            pushFollow(FOLLOW_try_statement_in_try_block1107);
+            try_statement199=try_statement();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, try_statement198.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, try_statement199.getTree());
 
-            pushFollow(FOLLOW_catch_statement_in_try_block1108);
-            catch_statement199=catch_statement();
+            pushFollow(FOLLOW_catch_statement_in_try_block1110);
+            catch_statement200=catch_statement();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, catch_statement199.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, catch_statement200.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:249:2: ( finally_statement )?
             int alt42=2;
@@ -7064,12 +7074,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:249:4: finally_statement
                     {
-                    pushFollow(FOLLOW_finally_statement_in_try_block1113);
-                    finally_statement200=finally_statement();
+                    pushFollow(FOLLOW_finally_statement_in_try_block1115);
+                    finally_statement201=finally_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, finally_statement200.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, finally_statement201.getTree());
 
                     }
                     break;
@@ -7118,17 +7128,17 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal201=null;
-        Token char_literal202=null;
-        Token IDENTIFIER203=null;
-        Token char_literal204=null;
-        ObjectiveCParser.statement_return statement205 =null;
+        Token string_literal202=null;
+        Token char_literal203=null;
+        Token IDENTIFIER204=null;
+        Token char_literal205=null;
+        ObjectiveCParser.statement_return statement206 =null;
 
 
-        Object string_literal201_tree=null;
-        Object char_literal202_tree=null;
-        Object IDENTIFIER203_tree=null;
-        Object char_literal204_tree=null;
+        Object string_literal202_tree=null;
+        Object char_literal203_tree=null;
+        Object IDENTIFIER204_tree=null;
+        Object char_literal205_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:251:23: ( '@synchronized' '(' IDENTIFIER ')' statement )
@@ -7137,44 +7147,44 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal201=(Token)match(input,81,FOLLOW_81_in_synchronized_statement1124); if (state.failed) return retval;
+            string_literal202=(Token)match(input,81,FOLLOW_81_in_synchronized_statement1126); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal201_tree = 
-            (Object)adaptor.create(string_literal201)
+            string_literal202_tree = 
+            (Object)adaptor.create(string_literal202)
             ;
-            adaptor.addChild(root_0, string_literal201_tree);
+            adaptor.addChild(root_0, string_literal202_tree);
             }
 
-            char_literal202=(Token)match(input,38,FOLLOW_38_in_synchronized_statement1126); if (state.failed) return retval;
+            char_literal203=(Token)match(input,38,FOLLOW_38_in_synchronized_statement1128); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal202_tree = 
-            (Object)adaptor.create(char_literal202)
+            char_literal203_tree = 
+            (Object)adaptor.create(char_literal203)
             ;
-            adaptor.addChild(root_0, char_literal202_tree);
+            adaptor.addChild(root_0, char_literal203_tree);
             }
 
-            IDENTIFIER203=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synchronized_statement1128); if (state.failed) return retval;
+            IDENTIFIER204=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synchronized_statement1130); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            IDENTIFIER203_tree = 
-            (Object)adaptor.create(IDENTIFIER203)
+            IDENTIFIER204_tree = 
+            (Object)adaptor.create(IDENTIFIER204)
             ;
-            adaptor.addChild(root_0, IDENTIFIER203_tree);
+            adaptor.addChild(root_0, IDENTIFIER204_tree);
             }
 
-            char_literal204=(Token)match(input,39,FOLLOW_39_in_synchronized_statement1130); if (state.failed) return retval;
+            char_literal205=(Token)match(input,39,FOLLOW_39_in_synchronized_statement1132); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal204_tree = 
-            (Object)adaptor.create(char_literal204)
+            char_literal205_tree = 
+            (Object)adaptor.create(char_literal205)
             ;
-            adaptor.addChild(root_0, char_literal204_tree);
+            adaptor.addChild(root_0, char_literal205_tree);
             }
 
-            pushFollow(FOLLOW_statement_in_synchronized_statement1132);
-            statement205=statement();
+            pushFollow(FOLLOW_statement_in_synchronized_statement1134);
+            statement206=statement();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, statement205.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, statement206.getTree());
 
             }
 
@@ -7217,11 +7227,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.declaration_specifiers_return declaration_specifiers206 =null;
+        ObjectiveCParser.declaration_specifiers_return declaration_specifiers207 =null;
 
-        ObjectiveCParser.declarator_return declarator207 =null;
+        ObjectiveCParser.declarator_return declarator208 =null;
 
-        ObjectiveCParser.compound_statement_return compound_statement208 =null;
+        ObjectiveCParser.compound_statement_return compound_statement209 =null;
 
 
 
@@ -7232,26 +7242,26 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_declaration_specifiers_in_function_definition1140);
-            declaration_specifiers206=declaration_specifiers();
+            pushFollow(FOLLOW_declaration_specifiers_in_function_definition1142);
+            declaration_specifiers207=declaration_specifiers();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration_specifiers206.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration_specifiers207.getTree());
 
-            pushFollow(FOLLOW_declarator_in_function_definition1142);
-            declarator207=declarator();
-
-            state._fsp--;
-            if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator207.getTree());
-
-            pushFollow(FOLLOW_compound_statement_in_function_definition1144);
-            compound_statement208=compound_statement();
+            pushFollow(FOLLOW_declarator_in_function_definition1144);
+            declarator208=declarator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, compound_statement208.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator208.getTree());
+
+            pushFollow(FOLLOW_compound_statement_in_function_definition1146);
+            compound_statement209=compound_statement();
+
+            state._fsp--;
+            if (state.failed) return retval;
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, compound_statement209.getTree());
 
             }
 
@@ -7294,13 +7304,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal211=null;
-        ObjectiveCParser.declaration_specifiers_return declaration_specifiers209 =null;
+        Token char_literal212=null;
+        ObjectiveCParser.declaration_specifiers_return declaration_specifiers210 =null;
 
-        ObjectiveCParser.init_declarator_list_return init_declarator_list210 =null;
+        ObjectiveCParser.init_declarator_list_return init_declarator_list211 =null;
 
 
-        Object char_literal211_tree=null;
+        Object char_literal212_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:256:13: ( declaration_specifiers ( init_declarator_list )? ';' )
@@ -7309,12 +7319,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_declaration_specifiers_in_declaration1153);
-            declaration_specifiers209=declaration_specifiers();
+            pushFollow(FOLLOW_declaration_specifiers_in_declaration1155);
+            declaration_specifiers210=declaration_specifiers();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration_specifiers209.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration_specifiers210.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:256:38: ( init_declarator_list )?
             int alt43=2;
@@ -7327,12 +7337,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:256:38: init_declarator_list
                     {
-                    pushFollow(FOLLOW_init_declarator_list_in_declaration1155);
-                    init_declarator_list210=init_declarator_list();
+                    pushFollow(FOLLOW_init_declarator_list_in_declaration1157);
+                    init_declarator_list211=init_declarator_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, init_declarator_list210.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, init_declarator_list211.getTree());
 
                     }
                     break;
@@ -7340,12 +7350,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            char_literal211=(Token)match(input,56,FOLLOW_56_in_declaration1158); if (state.failed) return retval;
+            char_literal212=(Token)match(input,56,FOLLOW_56_in_declaration1160); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal211_tree = 
-            (Object)adaptor.create(char_literal211)
+            char_literal212_tree = 
+            (Object)adaptor.create(char_literal212)
             ;
-            adaptor.addChild(root_0, char_literal211_tree);
+            adaptor.addChild(root_0, char_literal212_tree);
             }
 
             }
@@ -7389,11 +7399,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.storage_class_specifier_return storage_class_specifier212 =null;
+        ObjectiveCParser.storage_class_specifier_return storage_class_specifier213 =null;
 
-        ObjectiveCParser.type_specifier_return type_specifier213 =null;
+        ObjectiveCParser.type_specifier_return type_specifier214 =null;
 
-        ObjectiveCParser.type_qualifier_return type_qualifier214 =null;
+        ObjectiveCParser.type_qualifier_return type_qualifier215 =null;
 
 
 
@@ -7466,36 +7476,36 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:259:6: storage_class_specifier
             	    {
-            	    pushFollow(FOLLOW_storage_class_specifier_in_declaration_specifiers1170);
-            	    storage_class_specifier212=storage_class_specifier();
+            	    pushFollow(FOLLOW_storage_class_specifier_in_declaration_specifiers1172);
+            	    storage_class_specifier213=storage_class_specifier();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, storage_class_specifier212.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, storage_class_specifier213.getTree());
 
             	    }
             	    break;
             	case 2 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:259:32: type_specifier
             	    {
-            	    pushFollow(FOLLOW_type_specifier_in_declaration_specifiers1174);
-            	    type_specifier213=type_specifier();
+            	    pushFollow(FOLLOW_type_specifier_in_declaration_specifiers1176);
+            	    type_specifier214=type_specifier();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_specifier213.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_specifier214.getTree());
 
             	    }
             	    break;
             	case 3 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:259:49: type_qualifier
             	    {
-            	    pushFollow(FOLLOW_type_qualifier_in_declaration_specifiers1178);
-            	    type_qualifier214=type_qualifier();
+            	    pushFollow(FOLLOW_type_qualifier_in_declaration_specifiers1180);
+            	    type_qualifier215=type_qualifier();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_qualifier214.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_qualifier215.getTree());
 
             	    }
             	    break;
@@ -7552,9 +7562,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set215=null;
+        Token set216=null;
 
-        Object set215_tree=null;
+        Object set216_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:261:24: ( 'auto' | 'register' | 'static' | 'extern' | 'typedef' )
@@ -7563,12 +7573,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            set215=(Token)input.LT(1);
+            set216=(Token)input.LT(1);
 
             if ( input.LA(1)==89||input.LA(1)==102||input.LA(1)==114||input.LA(1)==120||input.LA(1)==124 ) {
                 input.consume();
                 if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-                (Object)adaptor.create(set215)
+                (Object)adaptor.create(set216)
                 );
                 state.errorRecovery=false;
                 state.failed=false;
@@ -7621,13 +7631,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal217=null;
-        ObjectiveCParser.init_declarator_return init_declarator216 =null;
+        Token char_literal218=null;
+        ObjectiveCParser.init_declarator_return init_declarator217 =null;
 
-        ObjectiveCParser.init_declarator_return init_declarator218 =null;
+        ObjectiveCParser.init_declarator_return init_declarator219 =null;
 
 
-        Object char_literal217_tree=null;
+        Object char_literal218_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:263:22: ( init_declarator ( ',' init_declarator )* )
@@ -7636,12 +7646,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_init_declarator_in_init_declarator_list1212);
-            init_declarator216=init_declarator();
+            pushFollow(FOLLOW_init_declarator_in_init_declarator_list1214);
+            init_declarator217=init_declarator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, init_declarator216.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, init_declarator217.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:263:40: ( ',' init_declarator )*
             loop45:
@@ -7658,20 +7668,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:263:41: ',' init_declarator
             	    {
-            	    char_literal217=(Token)match(input,45,FOLLOW_45_in_init_declarator_list1215); if (state.failed) return retval;
+            	    char_literal218=(Token)match(input,45,FOLLOW_45_in_init_declarator_list1217); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal217_tree = 
-            	    (Object)adaptor.create(char_literal217)
+            	    char_literal218_tree = 
+            	    (Object)adaptor.create(char_literal218)
             	    ;
-            	    adaptor.addChild(root_0, char_literal217_tree);
+            	    adaptor.addChild(root_0, char_literal218_tree);
             	    }
 
-            	    pushFollow(FOLLOW_init_declarator_in_init_declarator_list1217);
-            	    init_declarator218=init_declarator();
+            	    pushFollow(FOLLOW_init_declarator_in_init_declarator_list1219);
+            	    init_declarator219=init_declarator();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, init_declarator218.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, init_declarator219.getTree());
 
             	    }
             	    break;
@@ -7723,13 +7733,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal220=null;
-        ObjectiveCParser.declarator_return declarator219 =null;
+        Token char_literal221=null;
+        ObjectiveCParser.declarator_return declarator220 =null;
 
-        ObjectiveCParser.initializer_return initializer221 =null;
+        ObjectiveCParser.initializer_return initializer222 =null;
 
 
-        Object char_literal220_tree=null;
+        Object char_literal221_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:264:17: ( declarator ( '=' initializer )? )
@@ -7738,12 +7748,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_declarator_in_init_declarator1227);
-            declarator219=declarator();
+            pushFollow(FOLLOW_declarator_in_init_declarator1229);
+            declarator220=declarator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator219.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator220.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:264:30: ( '=' initializer )?
             int alt46=2;
@@ -7756,20 +7766,20 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:264:31: '=' initializer
                     {
-                    char_literal220=(Token)match(input,61,FOLLOW_61_in_init_declarator1230); if (state.failed) return retval;
+                    char_literal221=(Token)match(input,61,FOLLOW_61_in_init_declarator1232); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal220_tree = 
-                    (Object)adaptor.create(char_literal220)
+                    char_literal221_tree = 
+                    (Object)adaptor.create(char_literal221)
                     ;
-                    adaptor.addChild(root_0, char_literal220_tree);
+                    adaptor.addChild(root_0, char_literal221_tree);
                     }
 
-                    pushFollow(FOLLOW_initializer_in_init_declarator1232);
-                    initializer221=initializer();
+                    pushFollow(FOLLOW_initializer_in_init_declarator1234);
+                    initializer222=initializer();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, initializer221.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, initializer222.getTree());
 
                     }
                     break;
@@ -7818,19 +7828,19 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set222=null;
-        Token IDENTIFIER223=null;
+        Token set223=null;
         Token IDENTIFIER224=null;
-        Token char_literal225=null;
-        Token char_literal227=null;
-        ObjectiveCParser.struct_declaration_return struct_declaration226 =null;
+        Token IDENTIFIER225=null;
+        Token char_literal226=null;
+        Token char_literal228=null;
+        ObjectiveCParser.struct_declaration_return struct_declaration227 =null;
 
 
-        Object set222_tree=null;
-        Object IDENTIFIER223_tree=null;
+        Object set223_tree=null;
         Object IDENTIFIER224_tree=null;
-        Object char_literal225_tree=null;
-        Object char_literal227_tree=null;
+        Object IDENTIFIER225_tree=null;
+        Object char_literal226_tree=null;
+        Object char_literal228_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:266:26: ( ( 'struct' | 'union' ) ( IDENTIFIER | ( IDENTIFIER )? '{' ( struct_declaration )+ '}' ) )
@@ -7839,12 +7849,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            set222=(Token)input.LT(1);
+            set223=(Token)input.LT(1);
 
             if ( input.LA(1)==121||input.LA(1)==125 ) {
                 input.consume();
                 if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-                (Object)adaptor.create(set222)
+                (Object)adaptor.create(set223)
                 );
                 state.errorRecovery=false;
                 state.failed=false;
@@ -7893,12 +7903,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:267:5: IDENTIFIER
                     {
-                    IDENTIFIER223=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_struct_or_union_specifier1255); if (state.failed) return retval;
+                    IDENTIFIER224=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_struct_or_union_specifier1257); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    IDENTIFIER223_tree = 
-                    (Object)adaptor.create(IDENTIFIER223)
+                    IDENTIFIER224_tree = 
+                    (Object)adaptor.create(IDENTIFIER224)
                     ;
-                    adaptor.addChild(root_0, IDENTIFIER223_tree);
+                    adaptor.addChild(root_0, IDENTIFIER224_tree);
                     }
 
                     }
@@ -7917,12 +7927,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:267:18: IDENTIFIER
                             {
-                            IDENTIFIER224=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_struct_or_union_specifier1259); if (state.failed) return retval;
+                            IDENTIFIER225=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_struct_or_union_specifier1261); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
-                            IDENTIFIER224_tree = 
-                            (Object)adaptor.create(IDENTIFIER224)
+                            IDENTIFIER225_tree = 
+                            (Object)adaptor.create(IDENTIFIER225)
                             ;
-                            adaptor.addChild(root_0, IDENTIFIER224_tree);
+                            adaptor.addChild(root_0, IDENTIFIER225_tree);
                             }
 
                             }
@@ -7931,12 +7941,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    char_literal225=(Token)match(input,130,FOLLOW_130_in_struct_or_union_specifier1262); if (state.failed) return retval;
+                    char_literal226=(Token)match(input,130,FOLLOW_130_in_struct_or_union_specifier1264); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal225_tree = 
-                    (Object)adaptor.create(char_literal225)
+                    char_literal226_tree = 
+                    (Object)adaptor.create(char_literal226)
                     ;
-                    adaptor.addChild(root_0, char_literal225_tree);
+                    adaptor.addChild(root_0, char_literal226_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:267:34: ( struct_declaration )+
@@ -7955,12 +7965,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:267:34: struct_declaration
                     	    {
-                    	    pushFollow(FOLLOW_struct_declaration_in_struct_or_union_specifier1264);
-                    	    struct_declaration226=struct_declaration();
+                    	    pushFollow(FOLLOW_struct_declaration_in_struct_or_union_specifier1266);
+                    	    struct_declaration227=struct_declaration();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_declaration226.getTree());
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_declaration227.getTree());
 
                     	    }
                     	    break;
@@ -7976,12 +7986,12 @@ public TreeAdaptor getTreeAdaptor() {
                     } while (true);
 
 
-                    char_literal227=(Token)match(input,134,FOLLOW_134_in_struct_or_union_specifier1267); if (state.failed) return retval;
+                    char_literal228=(Token)match(input,134,FOLLOW_134_in_struct_or_union_specifier1269); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal227_tree = 
-                    (Object)adaptor.create(char_literal227)
+                    char_literal228_tree = 
+                    (Object)adaptor.create(char_literal228)
                     ;
-                    adaptor.addChild(root_0, char_literal227_tree);
+                    adaptor.addChild(root_0, char_literal228_tree);
                     }
 
                     }
@@ -8031,13 +8041,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal230=null;
-        ObjectiveCParser.specifier_qualifier_list_return specifier_qualifier_list228 =null;
+        Token char_literal231=null;
+        ObjectiveCParser.specifier_qualifier_list_return specifier_qualifier_list229 =null;
 
-        ObjectiveCParser.struct_declarator_list_return struct_declarator_list229 =null;
+        ObjectiveCParser.struct_declarator_list_return struct_declarator_list230 =null;
 
 
-        Object char_literal230_tree=null;
+        Object char_literal231_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:269:20: ( specifier_qualifier_list struct_declarator_list ';' )
@@ -8046,26 +8056,26 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_specifier_qualifier_list_in_struct_declaration1277);
-            specifier_qualifier_list228=specifier_qualifier_list();
+            pushFollow(FOLLOW_specifier_qualifier_list_in_struct_declaration1279);
+            specifier_qualifier_list229=specifier_qualifier_list();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, specifier_qualifier_list228.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, specifier_qualifier_list229.getTree());
 
-            pushFollow(FOLLOW_struct_declarator_list_in_struct_declaration1279);
-            struct_declarator_list229=struct_declarator_list();
+            pushFollow(FOLLOW_struct_declarator_list_in_struct_declaration1281);
+            struct_declarator_list230=struct_declarator_list();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_declarator_list229.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_declarator_list230.getTree());
 
-            char_literal230=(Token)match(input,56,FOLLOW_56_in_struct_declaration1281); if (state.failed) return retval;
+            char_literal231=(Token)match(input,56,FOLLOW_56_in_struct_declaration1283); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal230_tree = 
-            (Object)adaptor.create(char_literal230)
+            char_literal231_tree = 
+            (Object)adaptor.create(char_literal231)
             ;
-            adaptor.addChild(root_0, char_literal230_tree);
+            adaptor.addChild(root_0, char_literal231_tree);
             }
 
             }
@@ -8109,9 +8119,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.type_specifier_return type_specifier231 =null;
+        ObjectiveCParser.type_specifier_return type_specifier232 =null;
 
-        ObjectiveCParser.type_qualifier_return type_qualifier232 =null;
+        ObjectiveCParser.type_qualifier_return type_qualifier233 =null;
 
 
 
@@ -8175,24 +8185,24 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:271:29: type_specifier
             	    {
-            	    pushFollow(FOLLOW_type_specifier_in_specifier_qualifier_list1291);
-            	    type_specifier231=type_specifier();
+            	    pushFollow(FOLLOW_type_specifier_in_specifier_qualifier_list1293);
+            	    type_specifier232=type_specifier();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_specifier231.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_specifier232.getTree());
 
             	    }
             	    break;
             	case 2 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:271:46: type_qualifier
             	    {
-            	    pushFollow(FOLLOW_type_qualifier_in_specifier_qualifier_list1295);
-            	    type_qualifier232=type_qualifier();
+            	    pushFollow(FOLLOW_type_qualifier_in_specifier_qualifier_list1297);
+            	    type_qualifier233=type_qualifier();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_qualifier232.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_qualifier233.getTree());
 
             	    }
             	    break;
@@ -8249,13 +8259,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal234=null;
-        ObjectiveCParser.struct_declarator_return struct_declarator233 =null;
+        Token char_literal235=null;
+        ObjectiveCParser.struct_declarator_return struct_declarator234 =null;
 
-        ObjectiveCParser.struct_declarator_return struct_declarator235 =null;
+        ObjectiveCParser.struct_declarator_return struct_declarator236 =null;
 
 
-        Object char_literal234_tree=null;
+        Object char_literal235_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:273:24: ( struct_declarator ( ',' struct_declarator )* )
@@ -8264,12 +8274,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_struct_declarator_in_struct_declarator_list1306);
-            struct_declarator233=struct_declarator();
+            pushFollow(FOLLOW_struct_declarator_in_struct_declarator_list1308);
+            struct_declarator234=struct_declarator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_declarator233.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_declarator234.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:273:44: ( ',' struct_declarator )*
             loop51:
@@ -8286,20 +8296,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:273:45: ',' struct_declarator
             	    {
-            	    char_literal234=(Token)match(input,45,FOLLOW_45_in_struct_declarator_list1309); if (state.failed) return retval;
+            	    char_literal235=(Token)match(input,45,FOLLOW_45_in_struct_declarator_list1311); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal234_tree = 
-            	    (Object)adaptor.create(char_literal234)
+            	    char_literal235_tree = 
+            	    (Object)adaptor.create(char_literal235)
             	    ;
-            	    adaptor.addChild(root_0, char_literal234_tree);
+            	    adaptor.addChild(root_0, char_literal235_tree);
             	    }
 
-            	    pushFollow(FOLLOW_struct_declarator_in_struct_declarator_list1311);
-            	    struct_declarator235=struct_declarator();
+            	    pushFollow(FOLLOW_struct_declarator_in_struct_declarator_list1313);
+            	    struct_declarator236=struct_declarator();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_declarator235.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, struct_declarator236.getTree());
 
             	    }
             	    break;
@@ -8351,15 +8361,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal238=null;
-        ObjectiveCParser.declarator_return declarator236 =null;
-
+        Token char_literal239=null;
         ObjectiveCParser.declarator_return declarator237 =null;
 
-        ObjectiveCParser.constant_return constant239 =null;
+        ObjectiveCParser.declarator_return declarator238 =null;
+
+        ObjectiveCParser.constant_return constant240 =null;
 
 
-        Object char_literal238_tree=null;
+        Object char_literal239_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:275:19: ( declarator | ( declarator )? ':' constant )
@@ -8446,12 +8456,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_declarator_in_struct_declarator1322);
-                    declarator236=declarator();
+                    pushFollow(FOLLOW_declarator_in_struct_declarator1324);
+                    declarator237=declarator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator236.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator237.getTree());
 
                     }
                     break;
@@ -8472,12 +8482,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:275:34: declarator
                             {
-                            pushFollow(FOLLOW_declarator_in_struct_declarator1326);
-                            declarator237=declarator();
+                            pushFollow(FOLLOW_declarator_in_struct_declarator1328);
+                            declarator238=declarator();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator237.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator238.getTree());
 
                             }
                             break;
@@ -8485,20 +8495,20 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    char_literal238=(Token)match(input,55,FOLLOW_55_in_struct_declarator1329); if (state.failed) return retval;
+                    char_literal239=(Token)match(input,55,FOLLOW_55_in_struct_declarator1331); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal238_tree = 
-                    (Object)adaptor.create(char_literal238)
+                    char_literal239_tree = 
+                    (Object)adaptor.create(char_literal239)
                     ;
-                    adaptor.addChild(root_0, char_literal238_tree);
+                    adaptor.addChild(root_0, char_literal239_tree);
                     }
 
-                    pushFollow(FOLLOW_constant_in_struct_declarator1331);
-                    constant239=constant();
+                    pushFollow(FOLLOW_constant_in_struct_declarator1333);
+                    constant240=constant();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant239.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant240.getTree());
 
                     }
                     break;
@@ -8543,23 +8553,23 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal240=null;
-        Token char_literal242=null;
-        Token char_literal244=null;
+        Token string_literal241=null;
+        Token char_literal243=null;
         Token char_literal245=null;
-        Token char_literal247=null;
-        ObjectiveCParser.identifier_return identifier241 =null;
+        Token char_literal246=null;
+        Token char_literal248=null;
+        ObjectiveCParser.identifier_return identifier242 =null;
 
-        ObjectiveCParser.enumerator_list_return enumerator_list243 =null;
+        ObjectiveCParser.enumerator_list_return enumerator_list244 =null;
 
-        ObjectiveCParser.enumerator_list_return enumerator_list246 =null;
+        ObjectiveCParser.enumerator_list_return enumerator_list247 =null;
 
 
-        Object string_literal240_tree=null;
-        Object char_literal242_tree=null;
-        Object char_literal244_tree=null;
+        Object string_literal241_tree=null;
+        Object char_literal243_tree=null;
         Object char_literal245_tree=null;
-        Object char_literal247_tree=null;
+        Object char_literal246_tree=null;
+        Object char_literal248_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:277:16: ( 'enum' ( identifier ( '{' enumerator_list '}' )? | '{' enumerator_list '}' ) )
@@ -8568,12 +8578,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            string_literal240=(Token)match(input,101,FOLLOW_101_in_enum_specifier1339); if (state.failed) return retval;
+            string_literal241=(Token)match(input,101,FOLLOW_101_in_enum_specifier1341); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            string_literal240_tree = 
-            (Object)adaptor.create(string_literal240)
+            string_literal241_tree = 
+            (Object)adaptor.create(string_literal241)
             ;
-            adaptor.addChild(root_0, string_literal240_tree);
+            adaptor.addChild(root_0, string_literal241_tree);
             }
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:278:3: ( identifier ( '{' enumerator_list '}' )? | '{' enumerator_list '}' )
@@ -8598,12 +8608,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:278:5: identifier ( '{' enumerator_list '}' )?
                     {
-                    pushFollow(FOLLOW_identifier_in_enum_specifier1346);
-                    identifier241=identifier();
+                    pushFollow(FOLLOW_identifier_in_enum_specifier1348);
+                    identifier242=identifier();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier241.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier242.getTree());
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:278:16: ( '{' enumerator_list '}' )?
                     int alt54=2;
@@ -8620,27 +8630,27 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:278:17: '{' enumerator_list '}'
                             {
-                            char_literal242=(Token)match(input,130,FOLLOW_130_in_enum_specifier1349); if (state.failed) return retval;
+                            char_literal243=(Token)match(input,130,FOLLOW_130_in_enum_specifier1351); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
-                            char_literal242_tree = 
-                            (Object)adaptor.create(char_literal242)
+                            char_literal243_tree = 
+                            (Object)adaptor.create(char_literal243)
                             ;
-                            adaptor.addChild(root_0, char_literal242_tree);
+                            adaptor.addChild(root_0, char_literal243_tree);
                             }
 
-                            pushFollow(FOLLOW_enumerator_list_in_enum_specifier1351);
-                            enumerator_list243=enumerator_list();
+                            pushFollow(FOLLOW_enumerator_list_in_enum_specifier1353);
+                            enumerator_list244=enumerator_list();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, enumerator_list243.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, enumerator_list244.getTree());
 
-                            char_literal244=(Token)match(input,134,FOLLOW_134_in_enum_specifier1353); if (state.failed) return retval;
+                            char_literal245=(Token)match(input,134,FOLLOW_134_in_enum_specifier1355); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
-                            char_literal244_tree = 
-                            (Object)adaptor.create(char_literal244)
+                            char_literal245_tree = 
+                            (Object)adaptor.create(char_literal245)
                             ;
-                            adaptor.addChild(root_0, char_literal244_tree);
+                            adaptor.addChild(root_0, char_literal245_tree);
                             }
 
                             }
@@ -8654,27 +8664,27 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:279:5: '{' enumerator_list '}'
                     {
-                    char_literal245=(Token)match(input,130,FOLLOW_130_in_enum_specifier1362); if (state.failed) return retval;
+                    char_literal246=(Token)match(input,130,FOLLOW_130_in_enum_specifier1364); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal245_tree = 
-                    (Object)adaptor.create(char_literal245)
+                    char_literal246_tree = 
+                    (Object)adaptor.create(char_literal246)
                     ;
-                    adaptor.addChild(root_0, char_literal245_tree);
+                    adaptor.addChild(root_0, char_literal246_tree);
                     }
 
-                    pushFollow(FOLLOW_enumerator_list_in_enum_specifier1364);
-                    enumerator_list246=enumerator_list();
+                    pushFollow(FOLLOW_enumerator_list_in_enum_specifier1366);
+                    enumerator_list247=enumerator_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, enumerator_list246.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, enumerator_list247.getTree());
 
-                    char_literal247=(Token)match(input,134,FOLLOW_134_in_enum_specifier1366); if (state.failed) return retval;
+                    char_literal248=(Token)match(input,134,FOLLOW_134_in_enum_specifier1368); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal247_tree = 
-                    (Object)adaptor.create(char_literal247)
+                    char_literal248_tree = 
+                    (Object)adaptor.create(char_literal248)
                     ;
-                    adaptor.addChild(root_0, char_literal247_tree);
+                    adaptor.addChild(root_0, char_literal248_tree);
                     }
 
                     }
@@ -8724,13 +8734,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal249=null;
-        ObjectiveCParser.enumerator_return enumerator248 =null;
+        Token char_literal250=null;
+        ObjectiveCParser.enumerator_return enumerator249 =null;
 
-        ObjectiveCParser.enumerator_return enumerator250 =null;
+        ObjectiveCParser.enumerator_return enumerator251 =null;
 
 
-        Object char_literal249_tree=null;
+        Object char_literal250_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:280:17: ( enumerator ( ',' enumerator )* )
@@ -8739,12 +8749,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_enumerator_in_enumerator_list1375);
-            enumerator248=enumerator();
+            pushFollow(FOLLOW_enumerator_in_enumerator_list1377);
+            enumerator249=enumerator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, enumerator248.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, enumerator249.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:280:30: ( ',' enumerator )*
             loop56:
@@ -8761,20 +8771,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:280:31: ',' enumerator
             	    {
-            	    char_literal249=(Token)match(input,45,FOLLOW_45_in_enumerator_list1378); if (state.failed) return retval;
+            	    char_literal250=(Token)match(input,45,FOLLOW_45_in_enumerator_list1380); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal249_tree = 
-            	    (Object)adaptor.create(char_literal249)
+            	    char_literal250_tree = 
+            	    (Object)adaptor.create(char_literal250)
             	    ;
-            	    adaptor.addChild(root_0, char_literal249_tree);
+            	    adaptor.addChild(root_0, char_literal250_tree);
             	    }
 
-            	    pushFollow(FOLLOW_enumerator_in_enumerator_list1380);
-            	    enumerator250=enumerator();
+            	    pushFollow(FOLLOW_enumerator_in_enumerator_list1382);
+            	    enumerator251=enumerator();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, enumerator250.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, enumerator251.getTree());
 
             	    }
             	    break;
@@ -8826,13 +8836,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal252=null;
-        ObjectiveCParser.identifier_return identifier251 =null;
+        Token char_literal253=null;
+        ObjectiveCParser.identifier_return identifier252 =null;
 
-        ObjectiveCParser.constant_expression_return constant_expression253 =null;
+        ObjectiveCParser.constant_expression_return constant_expression254 =null;
 
 
-        Object char_literal252_tree=null;
+        Object char_literal253_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:281:12: ( identifier ( '=' constant_expression )? )
@@ -8841,12 +8851,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_identifier_in_enumerator1390);
-            identifier251=identifier();
+            pushFollow(FOLLOW_identifier_in_enumerator1392);
+            identifier252=identifier();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier251.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier252.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:281:25: ( '=' constant_expression )?
             int alt57=2;
@@ -8859,20 +8869,20 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:281:26: '=' constant_expression
                     {
-                    char_literal252=(Token)match(input,61,FOLLOW_61_in_enumerator1393); if (state.failed) return retval;
+                    char_literal253=(Token)match(input,61,FOLLOW_61_in_enumerator1395); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal252_tree = 
-                    (Object)adaptor.create(char_literal252)
+                    char_literal253_tree = 
+                    (Object)adaptor.create(char_literal253)
                     ;
-                    adaptor.addChild(root_0, char_literal252_tree);
+                    adaptor.addChild(root_0, char_literal253_tree);
                     }
 
-                    pushFollow(FOLLOW_constant_expression_in_enumerator1395);
-                    constant_expression253=constant_expression();
+                    pushFollow(FOLLOW_constant_expression_in_enumerator1397);
+                    constant_expression254=constant_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant_expression253.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant_expression254.getTree());
 
                     }
                     break;
@@ -8921,15 +8931,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal254=null;
-        ObjectiveCParser.type_qualifier_return type_qualifier255 =null;
+        Token char_literal255=null;
+        ObjectiveCParser.type_qualifier_return type_qualifier256 =null;
 
-        ObjectiveCParser.declarator_return declarator256 =null;
+        ObjectiveCParser.declarator_return declarator257 =null;
 
-        ObjectiveCParser.direct_declarator_return direct_declarator257 =null;
+        ObjectiveCParser.direct_declarator_return direct_declarator258 =null;
 
 
-        Object char_literal254_tree=null;
+        Object char_literal255_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:283:12: ( '*' ( type_qualifier )* declarator | direct_declarator )
@@ -8957,12 +8967,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal254=(Token)match(input,40,FOLLOW_40_in_declarator1405); if (state.failed) return retval;
+                    char_literal255=(Token)match(input,40,FOLLOW_40_in_declarator1407); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal254_tree = 
-                    (Object)adaptor.create(char_literal254)
+                    char_literal255_tree = 
+                    (Object)adaptor.create(char_literal255)
                     ;
-                    adaptor.addChild(root_0, char_literal254_tree);
+                    adaptor.addChild(root_0, char_literal255_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:283:18: ( type_qualifier )*
@@ -8980,12 +8990,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:283:18: type_qualifier
                     	    {
-                    	    pushFollow(FOLLOW_type_qualifier_in_declarator1407);
-                    	    type_qualifier255=type_qualifier();
+                    	    pushFollow(FOLLOW_type_qualifier_in_declarator1409);
+                    	    type_qualifier256=type_qualifier();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_qualifier255.getTree());
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_qualifier256.getTree());
 
                     	    }
                     	    break;
@@ -8996,12 +9006,12 @@ public TreeAdaptor getTreeAdaptor() {
                     } while (true);
 
 
-                    pushFollow(FOLLOW_declarator_in_declarator1410);
-                    declarator256=declarator();
+                    pushFollow(FOLLOW_declarator_in_declarator1412);
+                    declarator257=declarator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator256.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator257.getTree());
 
                     }
                     break;
@@ -9011,12 +9021,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_direct_declarator_in_declarator1414);
-                    direct_declarator257=direct_declarator();
+                    pushFollow(FOLLOW_direct_declarator_in_declarator1416);
+                    direct_declarator258=direct_declarator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, direct_declarator257.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, direct_declarator258.getTree());
 
                     }
                     break;
@@ -9061,19 +9071,19 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal260=null;
-        Token char_literal262=null;
-        ObjectiveCParser.identifier_return identifier258 =null;
+        Token char_literal261=null;
+        Token char_literal263=null;
+        ObjectiveCParser.identifier_return identifier259 =null;
 
-        ObjectiveCParser.declarator_suffix_return declarator_suffix259 =null;
+        ObjectiveCParser.declarator_suffix_return declarator_suffix260 =null;
 
-        ObjectiveCParser.declarator_return declarator261 =null;
+        ObjectiveCParser.declarator_return declarator262 =null;
 
-        ObjectiveCParser.declarator_suffix_return declarator_suffix263 =null;
+        ObjectiveCParser.declarator_suffix_return declarator_suffix264 =null;
 
 
-        Object char_literal260_tree=null;
-        Object char_literal262_tree=null;
+        Object char_literal261_tree=null;
+        Object char_literal263_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:285:19: ( identifier ( declarator_suffix )* | '(' declarator ')' ( declarator_suffix )* )
@@ -9101,12 +9111,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_identifier_in_direct_declarator1423);
-                    identifier258=identifier();
+                    pushFollow(FOLLOW_identifier_in_direct_declarator1425);
+                    identifier259=identifier();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier258.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier259.getTree());
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:285:32: ( declarator_suffix )*
                     loop60:
@@ -9132,12 +9142,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:285:32: declarator_suffix
                     	    {
-                    	    pushFollow(FOLLOW_declarator_suffix_in_direct_declarator1425);
-                    	    declarator_suffix259=declarator_suffix();
+                    	    pushFollow(FOLLOW_declarator_suffix_in_direct_declarator1427);
+                    	    declarator_suffix260=declarator_suffix();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator_suffix259.getTree());
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator_suffix260.getTree());
 
                     	    }
                     	    break;
@@ -9156,27 +9166,27 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal260=(Token)match(input,38,FOLLOW_38_in_direct_declarator1448); if (state.failed) return retval;
+                    char_literal261=(Token)match(input,38,FOLLOW_38_in_direct_declarator1450); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal260_tree = 
-                    (Object)adaptor.create(char_literal260)
+                    char_literal261_tree = 
+                    (Object)adaptor.create(char_literal261)
                     ;
-                    adaptor.addChild(root_0, char_literal260_tree);
+                    adaptor.addChild(root_0, char_literal261_tree);
                     }
 
-                    pushFollow(FOLLOW_declarator_in_direct_declarator1450);
-                    declarator261=declarator();
+                    pushFollow(FOLLOW_declarator_in_direct_declarator1452);
+                    declarator262=declarator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator261.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator262.getTree());
 
-                    char_literal262=(Token)match(input,39,FOLLOW_39_in_direct_declarator1452); if (state.failed) return retval;
+                    char_literal263=(Token)match(input,39,FOLLOW_39_in_direct_declarator1454); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal262_tree = 
-                    (Object)adaptor.create(char_literal262)
+                    char_literal263_tree = 
+                    (Object)adaptor.create(char_literal263)
                     ;
-                    adaptor.addChild(root_0, char_literal262_tree);
+                    adaptor.addChild(root_0, char_literal263_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:286:40: ( declarator_suffix )*
@@ -9203,12 +9213,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:286:40: declarator_suffix
                     	    {
-                    	    pushFollow(FOLLOW_declarator_suffix_in_direct_declarator1454);
-                    	    declarator_suffix263=declarator_suffix();
+                    	    pushFollow(FOLLOW_declarator_suffix_in_direct_declarator1456);
+                    	    declarator_suffix264=declarator_suffix();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator_suffix263.getTree());
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator_suffix264.getTree());
 
                     	    }
                     	    break;
@@ -9262,19 +9272,19 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal264=null;
-        Token char_literal266=null;
+        Token char_literal265=null;
         Token char_literal267=null;
-        Token char_literal269=null;
-        ObjectiveCParser.constant_expression_return constant_expression265 =null;
+        Token char_literal268=null;
+        Token char_literal270=null;
+        ObjectiveCParser.constant_expression_return constant_expression266 =null;
 
-        ObjectiveCParser.parameter_list_return parameter_list268 =null;
+        ObjectiveCParser.parameter_list_return parameter_list269 =null;
 
 
-        Object char_literal264_tree=null;
-        Object char_literal266_tree=null;
+        Object char_literal265_tree=null;
         Object char_literal267_tree=null;
-        Object char_literal269_tree=null;
+        Object char_literal268_tree=null;
+        Object char_literal270_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:288:19: ( '[' ( constant_expression )? ']' | '(' ( parameter_list )? ')' )
@@ -9302,12 +9312,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal264=(Token)match(input,84,FOLLOW_84_in_declarator_suffix1464); if (state.failed) return retval;
+                    char_literal265=(Token)match(input,84,FOLLOW_84_in_declarator_suffix1466); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal264_tree = 
-                    (Object)adaptor.create(char_literal264)
+                    char_literal265_tree = 
+                    (Object)adaptor.create(char_literal265)
                     ;
-                    adaptor.addChild(root_0, char_literal264_tree);
+                    adaptor.addChild(root_0, char_literal265_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:288:25: ( constant_expression )?
@@ -9321,12 +9331,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:288:25: constant_expression
                             {
-                            pushFollow(FOLLOW_constant_expression_in_declarator_suffix1466);
-                            constant_expression265=constant_expression();
+                            pushFollow(FOLLOW_constant_expression_in_declarator_suffix1468);
+                            constant_expression266=constant_expression();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, constant_expression265.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, constant_expression266.getTree());
 
                             }
                             break;
@@ -9334,12 +9344,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    char_literal266=(Token)match(input,86,FOLLOW_86_in_declarator_suffix1469); if (state.failed) return retval;
+                    char_literal267=(Token)match(input,86,FOLLOW_86_in_declarator_suffix1471); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal266_tree = 
-                    (Object)adaptor.create(char_literal266)
+                    char_literal267_tree = 
+                    (Object)adaptor.create(char_literal267)
                     ;
-                    adaptor.addChild(root_0, char_literal266_tree);
+                    adaptor.addChild(root_0, char_literal267_tree);
                     }
 
                     }
@@ -9350,12 +9360,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal267=(Token)match(input,38,FOLLOW_38_in_declarator_suffix1477); if (state.failed) return retval;
+                    char_literal268=(Token)match(input,38,FOLLOW_38_in_declarator_suffix1479); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal267_tree = 
-                    (Object)adaptor.create(char_literal267)
+                    char_literal268_tree = 
+                    (Object)adaptor.create(char_literal268)
                     ;
-                    adaptor.addChild(root_0, char_literal267_tree);
+                    adaptor.addChild(root_0, char_literal268_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:289:11: ( parameter_list )?
@@ -9369,12 +9379,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:289:11: parameter_list
                             {
-                            pushFollow(FOLLOW_parameter_list_in_declarator_suffix1479);
-                            parameter_list268=parameter_list();
+                            pushFollow(FOLLOW_parameter_list_in_declarator_suffix1481);
+                            parameter_list269=parameter_list();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_list268.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_list269.getTree());
 
                             }
                             break;
@@ -9382,12 +9392,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    char_literal269=(Token)match(input,39,FOLLOW_39_in_declarator_suffix1482); if (state.failed) return retval;
+                    char_literal270=(Token)match(input,39,FOLLOW_39_in_declarator_suffix1484); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal269_tree = 
-                    (Object)adaptor.create(char_literal269)
+                    char_literal270_tree = 
+                    (Object)adaptor.create(char_literal270)
                     ;
-                    adaptor.addChild(root_0, char_literal269_tree);
+                    adaptor.addChild(root_0, char_literal270_tree);
                     }
 
                     }
@@ -9433,13 +9443,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal271=null;
-        Token string_literal272=null;
-        ObjectiveCParser.parameter_declaration_list_return parameter_declaration_list270 =null;
+        Token char_literal272=null;
+        Token string_literal273=null;
+        ObjectiveCParser.parameter_declaration_list_return parameter_declaration_list271 =null;
 
 
-        Object char_literal271_tree=null;
-        Object string_literal272_tree=null;
+        Object char_literal272_tree=null;
+        Object string_literal273_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:291:16: ( parameter_declaration_list ( ',' '...' )? )
@@ -9448,12 +9458,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_parameter_declaration_list_in_parameter_list1490);
-            parameter_declaration_list270=parameter_declaration_list();
+            pushFollow(FOLLOW_parameter_declaration_list_in_parameter_list1492);
+            parameter_declaration_list271=parameter_declaration_list();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_declaration_list270.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_declaration_list271.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:291:45: ( ',' '...' )?
             int alt66=2;
@@ -9466,20 +9476,20 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:291:47: ',' '...'
                     {
-                    char_literal271=(Token)match(input,45,FOLLOW_45_in_parameter_list1494); if (state.failed) return retval;
+                    char_literal272=(Token)match(input,45,FOLLOW_45_in_parameter_list1496); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal271_tree = 
-                    (Object)adaptor.create(char_literal271)
+                    char_literal272_tree = 
+                    (Object)adaptor.create(char_literal272)
                     ;
-                    adaptor.addChild(root_0, char_literal271_tree);
+                    adaptor.addChild(root_0, char_literal272_tree);
                     }
 
-                    string_literal272=(Token)match(input,52,FOLLOW_52_in_parameter_list1496); if (state.failed) return retval;
+                    string_literal273=(Token)match(input,52,FOLLOW_52_in_parameter_list1498); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal272_tree = 
-                    (Object)adaptor.create(string_literal272)
+                    string_literal273_tree = 
+                    (Object)adaptor.create(string_literal273)
                     ;
-                    adaptor.addChild(root_0, string_literal272_tree);
+                    adaptor.addChild(root_0, string_literal273_tree);
                     }
 
                     }
@@ -9529,11 +9539,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.declaration_specifiers_return declaration_specifiers273 =null;
+        ObjectiveCParser.declaration_specifiers_return declaration_specifiers274 =null;
 
-        ObjectiveCParser.declarator_return declarator274 =null;
+        ObjectiveCParser.declarator_return declarator275 =null;
 
-        ObjectiveCParser.abstract_declarator_return abstract_declarator275 =null;
+        ObjectiveCParser.abstract_declarator_return abstract_declarator276 =null;
 
 
 
@@ -9544,12 +9554,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_declaration_specifiers_in_parameter_declaration1511);
-            declaration_specifiers273=declaration_specifiers();
+            pushFollow(FOLLOW_declaration_specifiers_in_parameter_declaration1513);
+            declaration_specifiers274=declaration_specifiers();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration_specifiers273.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration_specifiers274.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:294:28: ( ( declarator )? | abstract_declarator )
             int alt68=2;
@@ -9768,12 +9778,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:294:29: declarator
                             {
-                            pushFollow(FOLLOW_declarator_in_parameter_declaration1514);
-                            declarator274=declarator();
+                            pushFollow(FOLLOW_declarator_in_parameter_declaration1516);
+                            declarator275=declarator();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator274.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, declarator275.getTree());
 
                             }
                             break;
@@ -9786,12 +9796,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:294:43: abstract_declarator
                     {
-                    pushFollow(FOLLOW_abstract_declarator_in_parameter_declaration1519);
-                    abstract_declarator275=abstract_declarator();
+                    pushFollow(FOLLOW_abstract_declarator_in_parameter_declaration1521);
+                    abstract_declarator276=abstract_declarator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, abstract_declarator275.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, abstract_declarator276.getTree());
 
                     }
                     break;
@@ -9840,19 +9850,19 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal277=null;
-        Token char_literal279=null;
-        Token char_literal281=null;
-        ObjectiveCParser.assignment_expression_return assignment_expression276 =null;
+        Token char_literal278=null;
+        Token char_literal280=null;
+        Token char_literal282=null;
+        ObjectiveCParser.assignment_expression_return assignment_expression277 =null;
 
-        ObjectiveCParser.initializer_return initializer278 =null;
+        ObjectiveCParser.initializer_return initializer279 =null;
 
-        ObjectiveCParser.initializer_return initializer280 =null;
+        ObjectiveCParser.initializer_return initializer281 =null;
 
 
-        Object char_literal277_tree=null;
-        Object char_literal279_tree=null;
-        Object char_literal281_tree=null;
+        Object char_literal278_tree=null;
+        Object char_literal280_tree=null;
+        Object char_literal282_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:296:13: ( assignment_expression | '{' initializer ( ',' initializer )* '}' )
@@ -9880,12 +9890,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_assignment_expression_in_initializer1529);
-                    assignment_expression276=assignment_expression();
+                    pushFollow(FOLLOW_assignment_expression_in_initializer1531);
+                    assignment_expression277=assignment_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression276.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression277.getTree());
 
                     }
                     break;
@@ -9895,20 +9905,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal277=(Token)match(input,130,FOLLOW_130_in_initializer1538); if (state.failed) return retval;
+                    char_literal278=(Token)match(input,130,FOLLOW_130_in_initializer1540); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal277_tree = 
-                    (Object)adaptor.create(char_literal277)
+                    char_literal278_tree = 
+                    (Object)adaptor.create(char_literal278)
                     ;
-                    adaptor.addChild(root_0, char_literal277_tree);
+                    adaptor.addChild(root_0, char_literal278_tree);
                     }
 
-                    pushFollow(FOLLOW_initializer_in_initializer1540);
-                    initializer278=initializer();
+                    pushFollow(FOLLOW_initializer_in_initializer1542);
+                    initializer279=initializer();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, initializer278.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, initializer279.getTree());
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:297:24: ( ',' initializer )*
                     loop69:
@@ -9925,20 +9935,20 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:297:25: ',' initializer
                     	    {
-                    	    char_literal279=(Token)match(input,45,FOLLOW_45_in_initializer1543); if (state.failed) return retval;
+                    	    char_literal280=(Token)match(input,45,FOLLOW_45_in_initializer1545); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
-                    	    char_literal279_tree = 
-                    	    (Object)adaptor.create(char_literal279)
+                    	    char_literal280_tree = 
+                    	    (Object)adaptor.create(char_literal280)
                     	    ;
-                    	    adaptor.addChild(root_0, char_literal279_tree);
+                    	    adaptor.addChild(root_0, char_literal280_tree);
                     	    }
 
-                    	    pushFollow(FOLLOW_initializer_in_initializer1545);
-                    	    initializer280=initializer();
+                    	    pushFollow(FOLLOW_initializer_in_initializer1547);
+                    	    initializer281=initializer();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, initializer280.getTree());
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, initializer281.getTree());
 
                     	    }
                     	    break;
@@ -9949,12 +9959,12 @@ public TreeAdaptor getTreeAdaptor() {
                     } while (true);
 
 
-                    char_literal281=(Token)match(input,134,FOLLOW_134_in_initializer1549); if (state.failed) return retval;
+                    char_literal282=(Token)match(input,134,FOLLOW_134_in_initializer1551); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal281_tree = 
-                    (Object)adaptor.create(char_literal281)
+                    char_literal282_tree = 
+                    (Object)adaptor.create(char_literal282)
                     ;
-                    adaptor.addChild(root_0, char_literal281_tree);
+                    adaptor.addChild(root_0, char_literal282_tree);
                     }
 
                     }
@@ -10000,9 +10010,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.specifier_qualifier_list_return specifier_qualifier_list282 =null;
+        ObjectiveCParser.specifier_qualifier_list_return specifier_qualifier_list283 =null;
 
-        ObjectiveCParser.abstract_declarator_return abstract_declarator283 =null;
+        ObjectiveCParser.abstract_declarator_return abstract_declarator284 =null;
 
 
 
@@ -10013,19 +10023,19 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_specifier_qualifier_list_in_type_name1558);
-            specifier_qualifier_list282=specifier_qualifier_list();
+            pushFollow(FOLLOW_specifier_qualifier_list_in_type_name1560);
+            specifier_qualifier_list283=specifier_qualifier_list();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, specifier_qualifier_list282.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, specifier_qualifier_list283.getTree());
 
-            pushFollow(FOLLOW_abstract_declarator_in_type_name1560);
-            abstract_declarator283=abstract_declarator();
+            pushFollow(FOLLOW_abstract_declarator_in_type_name1562);
+            abstract_declarator284=abstract_declarator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, abstract_declarator283.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, abstract_declarator284.getTree());
 
             }
 
@@ -10068,27 +10078,27 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal284=null;
-        Token char_literal287=null;
-        Token char_literal289=null;
-        Token char_literal291=null;
-        Token char_literal293=null;
-        ObjectiveCParser.type_qualifier_return type_qualifier285 =null;
+        Token char_literal285=null;
+        Token char_literal288=null;
+        Token char_literal290=null;
+        Token char_literal292=null;
+        Token char_literal294=null;
+        ObjectiveCParser.type_qualifier_return type_qualifier286 =null;
 
-        ObjectiveCParser.abstract_declarator_return abstract_declarator286 =null;
+        ObjectiveCParser.abstract_declarator_return abstract_declarator287 =null;
 
-        ObjectiveCParser.abstract_declarator_return abstract_declarator288 =null;
+        ObjectiveCParser.abstract_declarator_return abstract_declarator289 =null;
 
-        ObjectiveCParser.abstract_declarator_suffix_return abstract_declarator_suffix290 =null;
+        ObjectiveCParser.abstract_declarator_suffix_return abstract_declarator_suffix291 =null;
 
-        ObjectiveCParser.constant_expression_return constant_expression292 =null;
+        ObjectiveCParser.constant_expression_return constant_expression293 =null;
 
 
-        Object char_literal284_tree=null;
-        Object char_literal287_tree=null;
-        Object char_literal289_tree=null;
-        Object char_literal291_tree=null;
-        Object char_literal293_tree=null;
+        Object char_literal285_tree=null;
+        Object char_literal288_tree=null;
+        Object char_literal290_tree=null;
+        Object char_literal292_tree=null;
+        Object char_literal294_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:301:21: ( '*' ( type_qualifier )* abstract_declarator | '(' abstract_declarator ')' ( abstract_declarator_suffix )+ | ( '[' ( constant_expression )? ']' )+ |)
@@ -10165,12 +10175,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal284=(Token)match(input,40,FOLLOW_40_in_abstract_declarator1569); if (state.failed) return retval;
+                    char_literal285=(Token)match(input,40,FOLLOW_40_in_abstract_declarator1571); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal284_tree = 
-                    (Object)adaptor.create(char_literal284)
+                    char_literal285_tree = 
+                    (Object)adaptor.create(char_literal285)
                     ;
-                    adaptor.addChild(root_0, char_literal284_tree);
+                    adaptor.addChild(root_0, char_literal285_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:301:27: ( type_qualifier )*
@@ -10188,12 +10198,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:301:27: type_qualifier
                     	    {
-                    	    pushFollow(FOLLOW_type_qualifier_in_abstract_declarator1571);
-                    	    type_qualifier285=type_qualifier();
+                    	    pushFollow(FOLLOW_type_qualifier_in_abstract_declarator1573);
+                    	    type_qualifier286=type_qualifier();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_qualifier285.getTree());
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_qualifier286.getTree());
 
                     	    }
                     	    break;
@@ -10204,12 +10214,12 @@ public TreeAdaptor getTreeAdaptor() {
                     } while (true);
 
 
-                    pushFollow(FOLLOW_abstract_declarator_in_abstract_declarator1574);
-                    abstract_declarator286=abstract_declarator();
+                    pushFollow(FOLLOW_abstract_declarator_in_abstract_declarator1576);
+                    abstract_declarator287=abstract_declarator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, abstract_declarator286.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, abstract_declarator287.getTree());
 
                     }
                     break;
@@ -10219,27 +10229,27 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal287=(Token)match(input,38,FOLLOW_38_in_abstract_declarator1581); if (state.failed) return retval;
+                    char_literal288=(Token)match(input,38,FOLLOW_38_in_abstract_declarator1583); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal287_tree = 
-                    (Object)adaptor.create(char_literal287)
+                    char_literal288_tree = 
+                    (Object)adaptor.create(char_literal288)
                     ;
-                    adaptor.addChild(root_0, char_literal287_tree);
+                    adaptor.addChild(root_0, char_literal288_tree);
                     }
 
-                    pushFollow(FOLLOW_abstract_declarator_in_abstract_declarator1583);
-                    abstract_declarator288=abstract_declarator();
+                    pushFollow(FOLLOW_abstract_declarator_in_abstract_declarator1585);
+                    abstract_declarator289=abstract_declarator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, abstract_declarator288.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, abstract_declarator289.getTree());
 
-                    char_literal289=(Token)match(input,39,FOLLOW_39_in_abstract_declarator1585); if (state.failed) return retval;
+                    char_literal290=(Token)match(input,39,FOLLOW_39_in_abstract_declarator1587); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal289_tree = 
-                    (Object)adaptor.create(char_literal289)
+                    char_literal290_tree = 
+                    (Object)adaptor.create(char_literal290)
                     ;
-                    adaptor.addChild(root_0, char_literal289_tree);
+                    adaptor.addChild(root_0, char_literal290_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:302:33: ( abstract_declarator_suffix )+
@@ -10267,12 +10277,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:302:33: abstract_declarator_suffix
                     	    {
-                    	    pushFollow(FOLLOW_abstract_declarator_suffix_in_abstract_declarator1587);
-                    	    abstract_declarator_suffix290=abstract_declarator_suffix();
+                    	    pushFollow(FOLLOW_abstract_declarator_suffix_in_abstract_declarator1589);
+                    	    abstract_declarator_suffix291=abstract_declarator_suffix();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, abstract_declarator_suffix290.getTree());
+                    	    if ( state.backtracking==0 ) adaptor.addChild(root_0, abstract_declarator_suffix291.getTree());
 
                     	    }
                     	    break;
@@ -10312,12 +10322,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	case 1 :
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:303:6: '[' ( constant_expression )? ']'
                     	    {
-                    	    char_literal291=(Token)match(input,84,FOLLOW_84_in_abstract_declarator1595); if (state.failed) return retval;
+                    	    char_literal292=(Token)match(input,84,FOLLOW_84_in_abstract_declarator1597); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
-                    	    char_literal291_tree = 
-                    	    (Object)adaptor.create(char_literal291)
+                    	    char_literal292_tree = 
+                    	    (Object)adaptor.create(char_literal292)
                     	    ;
-                    	    adaptor.addChild(root_0, char_literal291_tree);
+                    	    adaptor.addChild(root_0, char_literal292_tree);
                     	    }
 
                     	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:303:10: ( constant_expression )?
@@ -10331,12 +10341,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	        case 1 :
                     	            // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:303:10: constant_expression
                     	            {
-                    	            pushFollow(FOLLOW_constant_expression_in_abstract_declarator1597);
-                    	            constant_expression292=constant_expression();
+                    	            pushFollow(FOLLOW_constant_expression_in_abstract_declarator1599);
+                    	            constant_expression293=constant_expression();
 
                     	            state._fsp--;
                     	            if (state.failed) return retval;
-                    	            if ( state.backtracking==0 ) adaptor.addChild(root_0, constant_expression292.getTree());
+                    	            if ( state.backtracking==0 ) adaptor.addChild(root_0, constant_expression293.getTree());
 
                     	            }
                     	            break;
@@ -10344,12 +10354,12 @@ public TreeAdaptor getTreeAdaptor() {
                     	    }
 
 
-                    	    char_literal293=(Token)match(input,86,FOLLOW_86_in_abstract_declarator1600); if (state.failed) return retval;
+                    	    char_literal294=(Token)match(input,86,FOLLOW_86_in_abstract_declarator1602); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
-                    	    char_literal293_tree = 
-                    	    (Object)adaptor.create(char_literal293)
+                    	    char_literal294_tree = 
+                    	    (Object)adaptor.create(char_literal294)
                     	    ;
-                    	    adaptor.addChild(root_0, char_literal293_tree);
+                    	    adaptor.addChild(root_0, char_literal294_tree);
                     	    }
 
                     	    }
@@ -10417,19 +10427,19 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal294=null;
-        Token char_literal296=null;
+        Token char_literal295=null;
         Token char_literal297=null;
-        Token char_literal299=null;
-        ObjectiveCParser.constant_expression_return constant_expression295 =null;
+        Token char_literal298=null;
+        Token char_literal300=null;
+        ObjectiveCParser.constant_expression_return constant_expression296 =null;
 
-        ObjectiveCParser.parameter_declaration_list_return parameter_declaration_list298 =null;
+        ObjectiveCParser.parameter_declaration_list_return parameter_declaration_list299 =null;
 
 
-        Object char_literal294_tree=null;
-        Object char_literal296_tree=null;
+        Object char_literal295_tree=null;
         Object char_literal297_tree=null;
-        Object char_literal299_tree=null;
+        Object char_literal298_tree=null;
+        Object char_literal300_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:307:3: ( '[' ( constant_expression )? ']' | '(' ( parameter_declaration_list )? ')' )
@@ -10457,12 +10467,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal294=(Token)match(input,84,FOLLOW_84_in_abstract_declarator_suffix1617); if (state.failed) return retval;
+                    char_literal295=(Token)match(input,84,FOLLOW_84_in_abstract_declarator_suffix1619); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal294_tree = 
-                    (Object)adaptor.create(char_literal294)
+                    char_literal295_tree = 
+                    (Object)adaptor.create(char_literal295)
                     ;
-                    adaptor.addChild(root_0, char_literal294_tree);
+                    adaptor.addChild(root_0, char_literal295_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:307:9: ( constant_expression )?
@@ -10476,12 +10486,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:307:9: constant_expression
                             {
-                            pushFollow(FOLLOW_constant_expression_in_abstract_declarator_suffix1619);
-                            constant_expression295=constant_expression();
+                            pushFollow(FOLLOW_constant_expression_in_abstract_declarator_suffix1621);
+                            constant_expression296=constant_expression();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, constant_expression295.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, constant_expression296.getTree());
 
                             }
                             break;
@@ -10489,12 +10499,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    char_literal296=(Token)match(input,86,FOLLOW_86_in_abstract_declarator_suffix1622); if (state.failed) return retval;
+                    char_literal297=(Token)match(input,86,FOLLOW_86_in_abstract_declarator_suffix1624); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal296_tree = 
-                    (Object)adaptor.create(char_literal296)
+                    char_literal297_tree = 
+                    (Object)adaptor.create(char_literal297)
                     ;
-                    adaptor.addChild(root_0, char_literal296_tree);
+                    adaptor.addChild(root_0, char_literal297_tree);
                     }
 
                     }
@@ -10505,12 +10515,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal297=(Token)match(input,38,FOLLOW_38_in_abstract_declarator_suffix1628); if (state.failed) return retval;
+                    char_literal298=(Token)match(input,38,FOLLOW_38_in_abstract_declarator_suffix1630); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal297_tree = 
-                    (Object)adaptor.create(char_literal297)
+                    char_literal298_tree = 
+                    (Object)adaptor.create(char_literal298)
                     ;
-                    adaptor.addChild(root_0, char_literal297_tree);
+                    adaptor.addChild(root_0, char_literal298_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:308:10: ( parameter_declaration_list )?
@@ -10524,12 +10534,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:308:10: parameter_declaration_list
                             {
-                            pushFollow(FOLLOW_parameter_declaration_list_in_abstract_declarator_suffix1631);
-                            parameter_declaration_list298=parameter_declaration_list();
+                            pushFollow(FOLLOW_parameter_declaration_list_in_abstract_declarator_suffix1633);
+                            parameter_declaration_list299=parameter_declaration_list();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_declaration_list298.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_declaration_list299.getTree());
 
                             }
                             break;
@@ -10537,12 +10547,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    char_literal299=(Token)match(input,39,FOLLOW_39_in_abstract_declarator_suffix1634); if (state.failed) return retval;
+                    char_literal300=(Token)match(input,39,FOLLOW_39_in_abstract_declarator_suffix1636); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal299_tree = 
-                    (Object)adaptor.create(char_literal299)
+                    char_literal300_tree = 
+                    (Object)adaptor.create(char_literal300)
                     ;
-                    adaptor.addChild(root_0, char_literal299_tree);
+                    adaptor.addChild(root_0, char_literal300_tree);
                     }
 
                     }
@@ -10588,13 +10598,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal301=null;
-        ObjectiveCParser.parameter_declaration_return parameter_declaration300 =null;
+        Token char_literal302=null;
+        ObjectiveCParser.parameter_declaration_return parameter_declaration301 =null;
 
-        ObjectiveCParser.parameter_declaration_return parameter_declaration302 =null;
+        ObjectiveCParser.parameter_declaration_return parameter_declaration303 =null;
 
 
-        Object char_literal301_tree=null;
+        Object char_literal302_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:311:3: ( parameter_declaration ( ',' parameter_declaration )* )
@@ -10603,12 +10613,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_parameter_declaration_in_parameter_declaration_list1645);
-            parameter_declaration300=parameter_declaration();
+            pushFollow(FOLLOW_parameter_declaration_in_parameter_declaration_list1647);
+            parameter_declaration301=parameter_declaration();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_declaration300.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_declaration301.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:311:27: ( ',' parameter_declaration )*
             loop79:
@@ -10631,20 +10641,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:311:29: ',' parameter_declaration
             	    {
-            	    char_literal301=(Token)match(input,45,FOLLOW_45_in_parameter_declaration_list1649); if (state.failed) return retval;
+            	    char_literal302=(Token)match(input,45,FOLLOW_45_in_parameter_declaration_list1651); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal301_tree = 
-            	    (Object)adaptor.create(char_literal301)
+            	    char_literal302_tree = 
+            	    (Object)adaptor.create(char_literal302)
             	    ;
-            	    adaptor.addChild(root_0, char_literal301_tree);
+            	    adaptor.addChild(root_0, char_literal302_tree);
             	    }
 
-            	    pushFollow(FOLLOW_parameter_declaration_in_parameter_declaration_list1651);
-            	    parameter_declaration302=parameter_declaration();
+            	    pushFollow(FOLLOW_parameter_declaration_in_parameter_declaration_list1653);
+            	    parameter_declaration303=parameter_declaration();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_declaration302.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter_declaration303.getTree());
 
             	    }
             	    break;
@@ -10696,7 +10706,7 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.statement_return statement303 =null;
+        ObjectiveCParser.statement_return statement304 =null;
 
 
 
@@ -10723,12 +10733,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:313:19: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_statement_list1664);
-            	    statement303=statement();
+            	    pushFollow(FOLLOW_statement_in_statement_list1666);
+            	    statement304=statement();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement303.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement304.getTree());
 
             	    }
             	    break;
@@ -10785,23 +10795,23 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal306=null;
-        Token char_literal311=null;
-        ObjectiveCParser.labeled_statement_return labeled_statement304 =null;
+        Token char_literal307=null;
+        Token char_literal312=null;
+        ObjectiveCParser.labeled_statement_return labeled_statement305 =null;
 
-        ObjectiveCParser.expression_return expression305 =null;
+        ObjectiveCParser.expression_return expression306 =null;
 
-        ObjectiveCParser.compound_statement_return compound_statement307 =null;
+        ObjectiveCParser.compound_statement_return compound_statement308 =null;
 
-        ObjectiveCParser.selection_statement_return selection_statement308 =null;
+        ObjectiveCParser.selection_statement_return selection_statement309 =null;
 
-        ObjectiveCParser.iteration_statement_return iteration_statement309 =null;
+        ObjectiveCParser.iteration_statement_return iteration_statement310 =null;
 
-        ObjectiveCParser.jump_statement_return jump_statement310 =null;
+        ObjectiveCParser.jump_statement_return jump_statement311 =null;
 
 
-        Object char_literal306_tree=null;
-        Object char_literal311_tree=null;
+        Object char_literal307_tree=null;
+        Object char_literal312_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:316:3: ( labeled_statement | expression ';' | compound_statement | selection_statement | iteration_statement | jump_statement | ';' )
@@ -10904,12 +10914,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_labeled_statement_in_statement1678);
-                    labeled_statement304=labeled_statement();
+                    pushFollow(FOLLOW_labeled_statement_in_statement1680);
+                    labeled_statement305=labeled_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, labeled_statement304.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, labeled_statement305.getTree());
 
                     }
                     break;
@@ -10919,19 +10929,19 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_expression_in_statement1684);
-                    expression305=expression();
+                    pushFollow(FOLLOW_expression_in_statement1686);
+                    expression306=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression305.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression306.getTree());
 
-                    char_literal306=(Token)match(input,56,FOLLOW_56_in_statement1686); if (state.failed) return retval;
+                    char_literal307=(Token)match(input,56,FOLLOW_56_in_statement1688); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal306_tree = 
-                    (Object)adaptor.create(char_literal306)
+                    char_literal307_tree = 
+                    (Object)adaptor.create(char_literal307)
                     ;
-                    adaptor.addChild(root_0, char_literal306_tree);
+                    adaptor.addChild(root_0, char_literal307_tree);
                     }
 
                     }
@@ -10942,12 +10952,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_compound_statement_in_statement1692);
-                    compound_statement307=compound_statement();
+                    pushFollow(FOLLOW_compound_statement_in_statement1694);
+                    compound_statement308=compound_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, compound_statement307.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, compound_statement308.getTree());
 
                     }
                     break;
@@ -10957,12 +10967,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_selection_statement_in_statement1698);
-                    selection_statement308=selection_statement();
+                    pushFollow(FOLLOW_selection_statement_in_statement1700);
+                    selection_statement309=selection_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selection_statement308.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, selection_statement309.getTree());
 
                     }
                     break;
@@ -10972,12 +10982,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_iteration_statement_in_statement1704);
-                    iteration_statement309=iteration_statement();
+                    pushFollow(FOLLOW_iteration_statement_in_statement1706);
+                    iteration_statement310=iteration_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, iteration_statement309.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, iteration_statement310.getTree());
 
                     }
                     break;
@@ -10987,12 +10997,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_jump_statement_in_statement1710);
-                    jump_statement310=jump_statement();
+                    pushFollow(FOLLOW_jump_statement_in_statement1712);
+                    jump_statement311=jump_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, jump_statement310.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, jump_statement311.getTree());
 
                     }
                     break;
@@ -11002,12 +11012,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal311=(Token)match(input,56,FOLLOW_56_in_statement1716); if (state.failed) return retval;
+                    char_literal312=(Token)match(input,56,FOLLOW_56_in_statement1718); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal311_tree = 
-                    (Object)adaptor.create(char_literal311)
+                    char_literal312_tree = 
+                    (Object)adaptor.create(char_literal312)
                     ;
-                    adaptor.addChild(root_0, char_literal311_tree);
+                    adaptor.addChild(root_0, char_literal312_tree);
                     }
 
                     }
@@ -11053,27 +11063,27 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal313=null;
-        Token string_literal315=null;
-        Token char_literal317=null;
-        Token string_literal319=null;
-        Token char_literal320=null;
-        ObjectiveCParser.identifier_return identifier312 =null;
+        Token char_literal314=null;
+        Token string_literal316=null;
+        Token char_literal318=null;
+        Token string_literal320=null;
+        Token char_literal321=null;
+        ObjectiveCParser.identifier_return identifier313 =null;
 
-        ObjectiveCParser.statement_return statement314 =null;
+        ObjectiveCParser.statement_return statement315 =null;
 
-        ObjectiveCParser.constant_expression_return constant_expression316 =null;
+        ObjectiveCParser.constant_expression_return constant_expression317 =null;
 
-        ObjectiveCParser.statement_return statement318 =null;
+        ObjectiveCParser.statement_return statement319 =null;
 
-        ObjectiveCParser.statement_return statement321 =null;
+        ObjectiveCParser.statement_return statement322 =null;
 
 
-        Object char_literal313_tree=null;
-        Object string_literal315_tree=null;
-        Object char_literal317_tree=null;
-        Object string_literal319_tree=null;
-        Object char_literal320_tree=null;
+        Object char_literal314_tree=null;
+        Object string_literal316_tree=null;
+        Object char_literal318_tree=null;
+        Object string_literal320_tree=null;
+        Object char_literal321_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:325:3: ( identifier ':' statement | 'case' constant_expression ':' statement | 'default' ':' statement )
@@ -11110,27 +11120,27 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_identifier_in_labeled_statement1727);
-                    identifier312=identifier();
+                    pushFollow(FOLLOW_identifier_in_labeled_statement1729);
+                    identifier313=identifier();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier312.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier313.getTree());
 
-                    char_literal313=(Token)match(input,55,FOLLOW_55_in_labeled_statement1729); if (state.failed) return retval;
+                    char_literal314=(Token)match(input,55,FOLLOW_55_in_labeled_statement1731); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal313_tree = 
-                    (Object)adaptor.create(char_literal313)
+                    char_literal314_tree = 
+                    (Object)adaptor.create(char_literal314)
                     ;
-                    adaptor.addChild(root_0, char_literal313_tree);
+                    adaptor.addChild(root_0, char_literal314_tree);
                     }
 
-                    pushFollow(FOLLOW_statement_in_labeled_statement1731);
-                    statement314=statement();
+                    pushFollow(FOLLOW_statement_in_labeled_statement1733);
+                    statement315=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement314.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement315.getTree());
 
                     }
                     break;
@@ -11140,35 +11150,35 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal315=(Token)match(input,93,FOLLOW_93_in_labeled_statement1737); if (state.failed) return retval;
+                    string_literal316=(Token)match(input,93,FOLLOW_93_in_labeled_statement1739); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal315_tree = 
-                    (Object)adaptor.create(string_literal315)
+                    string_literal316_tree = 
+                    (Object)adaptor.create(string_literal316)
                     ;
-                    adaptor.addChild(root_0, string_literal315_tree);
+                    adaptor.addChild(root_0, string_literal316_tree);
                     }
 
-                    pushFollow(FOLLOW_constant_expression_in_labeled_statement1739);
-                    constant_expression316=constant_expression();
+                    pushFollow(FOLLOW_constant_expression_in_labeled_statement1741);
+                    constant_expression317=constant_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant_expression316.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant_expression317.getTree());
 
-                    char_literal317=(Token)match(input,55,FOLLOW_55_in_labeled_statement1741); if (state.failed) return retval;
+                    char_literal318=(Token)match(input,55,FOLLOW_55_in_labeled_statement1743); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal317_tree = 
-                    (Object)adaptor.create(char_literal317)
+                    char_literal318_tree = 
+                    (Object)adaptor.create(char_literal318)
                     ;
-                    adaptor.addChild(root_0, char_literal317_tree);
+                    adaptor.addChild(root_0, char_literal318_tree);
                     }
 
-                    pushFollow(FOLLOW_statement_in_labeled_statement1743);
-                    statement318=statement();
+                    pushFollow(FOLLOW_statement_in_labeled_statement1745);
+                    statement319=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement318.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement319.getTree());
 
                     }
                     break;
@@ -11178,28 +11188,28 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal319=(Token)match(input,97,FOLLOW_97_in_labeled_statement1749); if (state.failed) return retval;
+                    string_literal320=(Token)match(input,97,FOLLOW_97_in_labeled_statement1751); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal319_tree = 
-                    (Object)adaptor.create(string_literal319)
+                    string_literal320_tree = 
+                    (Object)adaptor.create(string_literal320)
                     ;
-                    adaptor.addChild(root_0, string_literal319_tree);
+                    adaptor.addChild(root_0, string_literal320_tree);
                     }
 
-                    char_literal320=(Token)match(input,55,FOLLOW_55_in_labeled_statement1751); if (state.failed) return retval;
+                    char_literal321=(Token)match(input,55,FOLLOW_55_in_labeled_statement1753); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal320_tree = 
-                    (Object)adaptor.create(char_literal320)
+                    char_literal321_tree = 
+                    (Object)adaptor.create(char_literal321)
                     ;
-                    adaptor.addChild(root_0, char_literal320_tree);
+                    adaptor.addChild(root_0, char_literal321_tree);
                     }
 
-                    pushFollow(FOLLOW_statement_in_labeled_statement1753);
-                    statement321=statement();
+                    pushFollow(FOLLOW_statement_in_labeled_statement1755);
+                    statement322=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement321.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement322.getTree());
 
                     }
                     break;
@@ -11244,15 +11254,15 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal322=null;
-        Token char_literal325=null;
-        ObjectiveCParser.declaration_return declaration323 =null;
+        Token char_literal323=null;
+        Token char_literal326=null;
+        ObjectiveCParser.declaration_return declaration324 =null;
 
-        ObjectiveCParser.statement_list_return statement_list324 =null;
+        ObjectiveCParser.statement_list_return statement_list325 =null;
 
 
-        Object char_literal322_tree=null;
-        Object char_literal325_tree=null;
+        Object char_literal323_tree=null;
+        Object char_literal326_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:329:20: ( '{' ( declaration )* ( statement_list )? '}' )
@@ -11261,12 +11271,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            char_literal322=(Token)match(input,130,FOLLOW_130_in_compound_statement1762); if (state.failed) return retval;
+            char_literal323=(Token)match(input,130,FOLLOW_130_in_compound_statement1764); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal322_tree = 
-            (Object)adaptor.create(char_literal322)
+            char_literal323_tree = 
+            (Object)adaptor.create(char_literal323)
             ;
-            adaptor.addChild(root_0, char_literal322_tree);
+            adaptor.addChild(root_0, char_literal323_tree);
             }
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:329:26: ( declaration )*
@@ -11293,12 +11303,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:329:27: declaration
             	    {
-            	    pushFollow(FOLLOW_declaration_in_compound_statement1765);
-            	    declaration323=declaration();
+            	    pushFollow(FOLLOW_declaration_in_compound_statement1767);
+            	    declaration324=declaration();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration323.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, declaration324.getTree());
 
             	    }
             	    break;
@@ -11320,12 +11330,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:329:41: statement_list
                     {
-                    pushFollow(FOLLOW_statement_list_in_compound_statement1769);
-                    statement_list324=statement_list();
+                    pushFollow(FOLLOW_statement_list_in_compound_statement1771);
+                    statement_list325=statement_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement_list324.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement_list325.getTree());
 
                     }
                     break;
@@ -11333,12 +11343,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            char_literal325=(Token)match(input,134,FOLLOW_134_in_compound_statement1772); if (state.failed) return retval;
+            char_literal326=(Token)match(input,134,FOLLOW_134_in_compound_statement1774); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            char_literal325_tree = 
-            (Object)adaptor.create(char_literal325)
+            char_literal326_tree = 
+            (Object)adaptor.create(char_literal326)
             ;
-            adaptor.addChild(root_0, char_literal325_tree);
+            adaptor.addChild(root_0, char_literal326_tree);
             }
 
             }
@@ -11382,31 +11392,31 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal326=null;
-        Token char_literal327=null;
-        Token char_literal329=null;
-        Token string_literal331=null;
-        Token string_literal333=null;
-        Token char_literal334=null;
-        Token char_literal336=null;
-        ObjectiveCParser.expression_return expression328 =null;
+        Token string_literal327=null;
+        Token char_literal328=null;
+        Token char_literal330=null;
+        Token string_literal332=null;
+        Token string_literal334=null;
+        Token char_literal335=null;
+        Token char_literal337=null;
+        ObjectiveCParser.expression_return expression329 =null;
 
-        ObjectiveCParser.statement_return statement330 =null;
+        ObjectiveCParser.statement_return statement331 =null;
 
-        ObjectiveCParser.statement_return statement332 =null;
+        ObjectiveCParser.statement_return statement333 =null;
 
-        ObjectiveCParser.expression_return expression335 =null;
+        ObjectiveCParser.expression_return expression336 =null;
 
-        ObjectiveCParser.statement_return statement337 =null;
+        ObjectiveCParser.statement_return statement338 =null;
 
 
-        Object string_literal326_tree=null;
-        Object char_literal327_tree=null;
-        Object char_literal329_tree=null;
-        Object string_literal331_tree=null;
-        Object string_literal333_tree=null;
-        Object char_literal334_tree=null;
-        Object char_literal336_tree=null;
+        Object string_literal327_tree=null;
+        Object char_literal328_tree=null;
+        Object char_literal330_tree=null;
+        Object string_literal332_tree=null;
+        Object string_literal334_tree=null;
+        Object char_literal335_tree=null;
+        Object char_literal337_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:332:3: ( 'if' '(' expression ')' statement ( 'else' statement )? | 'switch' '(' expression ')' statement )
@@ -11434,43 +11444,43 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal326=(Token)match(input,107,FOLLOW_107_in_selection_statement1783); if (state.failed) return retval;
+                    string_literal327=(Token)match(input,107,FOLLOW_107_in_selection_statement1785); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal326_tree = 
-                    (Object)adaptor.create(string_literal326)
+                    string_literal327_tree = 
+                    (Object)adaptor.create(string_literal327)
                     ;
-                    adaptor.addChild(root_0, string_literal326_tree);
+                    adaptor.addChild(root_0, string_literal327_tree);
                     }
 
-                    char_literal327=(Token)match(input,38,FOLLOW_38_in_selection_statement1785); if (state.failed) return retval;
+                    char_literal328=(Token)match(input,38,FOLLOW_38_in_selection_statement1787); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal327_tree = 
-                    (Object)adaptor.create(char_literal327)
+                    char_literal328_tree = 
+                    (Object)adaptor.create(char_literal328)
                     ;
-                    adaptor.addChild(root_0, char_literal327_tree);
+                    adaptor.addChild(root_0, char_literal328_tree);
                     }
 
-                    pushFollow(FOLLOW_expression_in_selection_statement1787);
-                    expression328=expression();
+                    pushFollow(FOLLOW_expression_in_selection_statement1789);
+                    expression329=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression328.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression329.getTree());
 
-                    char_literal329=(Token)match(input,39,FOLLOW_39_in_selection_statement1789); if (state.failed) return retval;
+                    char_literal330=(Token)match(input,39,FOLLOW_39_in_selection_statement1791); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal329_tree = 
-                    (Object)adaptor.create(char_literal329)
+                    char_literal330_tree = 
+                    (Object)adaptor.create(char_literal330)
                     ;
-                    adaptor.addChild(root_0, char_literal329_tree);
+                    adaptor.addChild(root_0, char_literal330_tree);
                     }
 
-                    pushFollow(FOLLOW_statement_in_selection_statement1791);
-                    statement330=statement();
+                    pushFollow(FOLLOW_statement_in_selection_statement1793);
+                    statement331=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement330.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement331.getTree());
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:332:39: ( 'else' statement )?
                     int alt85=2;
@@ -11487,20 +11497,20 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:332:40: 'else' statement
                             {
-                            string_literal331=(Token)match(input,100,FOLLOW_100_in_selection_statement1794); if (state.failed) return retval;
+                            string_literal332=(Token)match(input,100,FOLLOW_100_in_selection_statement1796); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
-                            string_literal331_tree = 
-                            (Object)adaptor.create(string_literal331)
+                            string_literal332_tree = 
+                            (Object)adaptor.create(string_literal332)
                             ;
-                            adaptor.addChild(root_0, string_literal331_tree);
+                            adaptor.addChild(root_0, string_literal332_tree);
                             }
 
-                            pushFollow(FOLLOW_statement_in_selection_statement1796);
-                            statement332=statement();
+                            pushFollow(FOLLOW_statement_in_selection_statement1798);
+                            statement333=statement();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, statement332.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, statement333.getTree());
 
                             }
                             break;
@@ -11516,43 +11526,43 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal333=(Token)match(input,123,FOLLOW_123_in_selection_statement1804); if (state.failed) return retval;
+                    string_literal334=(Token)match(input,123,FOLLOW_123_in_selection_statement1806); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal333_tree = 
-                    (Object)adaptor.create(string_literal333)
+                    string_literal334_tree = 
+                    (Object)adaptor.create(string_literal334)
                     ;
-                    adaptor.addChild(root_0, string_literal333_tree);
+                    adaptor.addChild(root_0, string_literal334_tree);
                     }
 
-                    char_literal334=(Token)match(input,38,FOLLOW_38_in_selection_statement1806); if (state.failed) return retval;
+                    char_literal335=(Token)match(input,38,FOLLOW_38_in_selection_statement1808); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal334_tree = 
-                    (Object)adaptor.create(char_literal334)
+                    char_literal335_tree = 
+                    (Object)adaptor.create(char_literal335)
                     ;
-                    adaptor.addChild(root_0, char_literal334_tree);
+                    adaptor.addChild(root_0, char_literal335_tree);
                     }
 
-                    pushFollow(FOLLOW_expression_in_selection_statement1808);
-                    expression335=expression();
+                    pushFollow(FOLLOW_expression_in_selection_statement1810);
+                    expression336=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression335.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression336.getTree());
 
-                    char_literal336=(Token)match(input,39,FOLLOW_39_in_selection_statement1810); if (state.failed) return retval;
+                    char_literal337=(Token)match(input,39,FOLLOW_39_in_selection_statement1812); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal336_tree = 
-                    (Object)adaptor.create(char_literal336)
+                    char_literal337_tree = 
+                    (Object)adaptor.create(char_literal337)
                     ;
-                    adaptor.addChild(root_0, char_literal336_tree);
+                    adaptor.addChild(root_0, char_literal337_tree);
                     }
 
-                    pushFollow(FOLLOW_statement_in_selection_statement1812);
-                    statement337=statement();
+                    pushFollow(FOLLOW_statement_in_selection_statement1814);
+                    statement338=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement337.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement338.getTree());
 
                     }
                     break;
@@ -11597,49 +11607,49 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal338=null;
-        Token char_literal339=null;
-        Token char_literal341=null;
-        Token string_literal343=null;
-        Token string_literal345=null;
-        Token char_literal346=null;
-        Token char_literal348=null;
+        Token string_literal339=null;
+        Token char_literal340=null;
+        Token char_literal342=null;
+        Token string_literal344=null;
+        Token string_literal346=null;
+        Token char_literal347=null;
         Token char_literal349=null;
-        Token string_literal350=null;
-        Token char_literal351=null;
-        Token char_literal353=null;
-        Token char_literal355=null;
-        Token char_literal357=null;
-        ObjectiveCParser.expression_return expression340 =null;
+        Token char_literal350=null;
+        Token string_literal351=null;
+        Token char_literal352=null;
+        Token char_literal354=null;
+        Token char_literal356=null;
+        Token char_literal358=null;
+        ObjectiveCParser.expression_return expression341 =null;
 
-        ObjectiveCParser.statement_return statement342 =null;
+        ObjectiveCParser.statement_return statement343 =null;
 
-        ObjectiveCParser.statement_return statement344 =null;
+        ObjectiveCParser.statement_return statement345 =null;
 
-        ObjectiveCParser.expression_return expression347 =null;
+        ObjectiveCParser.expression_return expression348 =null;
 
-        ObjectiveCParser.expression_return expression352 =null;
+        ObjectiveCParser.expression_return expression353 =null;
 
-        ObjectiveCParser.expression_return expression354 =null;
+        ObjectiveCParser.expression_return expression355 =null;
 
-        ObjectiveCParser.expression_return expression356 =null;
+        ObjectiveCParser.expression_return expression357 =null;
 
-        ObjectiveCParser.statement_return statement358 =null;
+        ObjectiveCParser.statement_return statement359 =null;
 
 
-        Object string_literal338_tree=null;
-        Object char_literal339_tree=null;
-        Object char_literal341_tree=null;
-        Object string_literal343_tree=null;
-        Object string_literal345_tree=null;
-        Object char_literal346_tree=null;
-        Object char_literal348_tree=null;
+        Object string_literal339_tree=null;
+        Object char_literal340_tree=null;
+        Object char_literal342_tree=null;
+        Object string_literal344_tree=null;
+        Object string_literal346_tree=null;
+        Object char_literal347_tree=null;
         Object char_literal349_tree=null;
-        Object string_literal350_tree=null;
-        Object char_literal351_tree=null;
-        Object char_literal353_tree=null;
-        Object char_literal355_tree=null;
-        Object char_literal357_tree=null;
+        Object char_literal350_tree=null;
+        Object string_literal351_tree=null;
+        Object char_literal352_tree=null;
+        Object char_literal354_tree=null;
+        Object char_literal356_tree=null;
+        Object char_literal358_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:336:3: ( 'while' '(' expression ')' statement | 'do' statement 'while' '(' expression ')' ';' | 'for' '(' ( expression )? ';' ( expression )? ';' ( expression )? ')' statement )
@@ -11676,43 +11686,43 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal338=(Token)match(input,129,FOLLOW_129_in_iteration_statement1823); if (state.failed) return retval;
+                    string_literal339=(Token)match(input,129,FOLLOW_129_in_iteration_statement1825); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal338_tree = 
-                    (Object)adaptor.create(string_literal338)
+                    string_literal339_tree = 
+                    (Object)adaptor.create(string_literal339)
                     ;
-                    adaptor.addChild(root_0, string_literal338_tree);
+                    adaptor.addChild(root_0, string_literal339_tree);
                     }
 
-                    char_literal339=(Token)match(input,38,FOLLOW_38_in_iteration_statement1825); if (state.failed) return retval;
+                    char_literal340=(Token)match(input,38,FOLLOW_38_in_iteration_statement1827); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal339_tree = 
-                    (Object)adaptor.create(char_literal339)
+                    char_literal340_tree = 
+                    (Object)adaptor.create(char_literal340)
                     ;
-                    adaptor.addChild(root_0, char_literal339_tree);
+                    adaptor.addChild(root_0, char_literal340_tree);
                     }
 
-                    pushFollow(FOLLOW_expression_in_iteration_statement1827);
-                    expression340=expression();
+                    pushFollow(FOLLOW_expression_in_iteration_statement1829);
+                    expression341=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression340.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression341.getTree());
 
-                    char_literal341=(Token)match(input,39,FOLLOW_39_in_iteration_statement1829); if (state.failed) return retval;
+                    char_literal342=(Token)match(input,39,FOLLOW_39_in_iteration_statement1831); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal341_tree = 
-                    (Object)adaptor.create(char_literal341)
+                    char_literal342_tree = 
+                    (Object)adaptor.create(char_literal342)
                     ;
-                    adaptor.addChild(root_0, char_literal341_tree);
+                    adaptor.addChild(root_0, char_literal342_tree);
                     }
 
-                    pushFollow(FOLLOW_statement_in_iteration_statement1831);
-                    statement342=statement();
+                    pushFollow(FOLLOW_statement_in_iteration_statement1833);
+                    statement343=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement342.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement343.getTree());
 
                     }
                     break;
@@ -11722,58 +11732,58 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal343=(Token)match(input,98,FOLLOW_98_in_iteration_statement1837); if (state.failed) return retval;
+                    string_literal344=(Token)match(input,98,FOLLOW_98_in_iteration_statement1839); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal343_tree = 
-                    (Object)adaptor.create(string_literal343)
+                    string_literal344_tree = 
+                    (Object)adaptor.create(string_literal344)
                     ;
-                    adaptor.addChild(root_0, string_literal343_tree);
+                    adaptor.addChild(root_0, string_literal344_tree);
                     }
 
-                    pushFollow(FOLLOW_statement_in_iteration_statement1839);
-                    statement344=statement();
+                    pushFollow(FOLLOW_statement_in_iteration_statement1841);
+                    statement345=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement344.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement345.getTree());
 
-                    string_literal345=(Token)match(input,129,FOLLOW_129_in_iteration_statement1841); if (state.failed) return retval;
+                    string_literal346=(Token)match(input,129,FOLLOW_129_in_iteration_statement1843); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal345_tree = 
-                    (Object)adaptor.create(string_literal345)
+                    string_literal346_tree = 
+                    (Object)adaptor.create(string_literal346)
                     ;
-                    adaptor.addChild(root_0, string_literal345_tree);
+                    adaptor.addChild(root_0, string_literal346_tree);
                     }
 
-                    char_literal346=(Token)match(input,38,FOLLOW_38_in_iteration_statement1843); if (state.failed) return retval;
+                    char_literal347=(Token)match(input,38,FOLLOW_38_in_iteration_statement1845); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal346_tree = 
-                    (Object)adaptor.create(char_literal346)
+                    char_literal347_tree = 
+                    (Object)adaptor.create(char_literal347)
                     ;
-                    adaptor.addChild(root_0, char_literal346_tree);
+                    adaptor.addChild(root_0, char_literal347_tree);
                     }
 
-                    pushFollow(FOLLOW_expression_in_iteration_statement1845);
-                    expression347=expression();
+                    pushFollow(FOLLOW_expression_in_iteration_statement1847);
+                    expression348=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression347.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression348.getTree());
 
-                    char_literal348=(Token)match(input,39,FOLLOW_39_in_iteration_statement1847); if (state.failed) return retval;
-                    if ( state.backtracking==0 ) {
-                    char_literal348_tree = 
-                    (Object)adaptor.create(char_literal348)
-                    ;
-                    adaptor.addChild(root_0, char_literal348_tree);
-                    }
-
-                    char_literal349=(Token)match(input,56,FOLLOW_56_in_iteration_statement1849); if (state.failed) return retval;
+                    char_literal349=(Token)match(input,39,FOLLOW_39_in_iteration_statement1849); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     char_literal349_tree = 
                     (Object)adaptor.create(char_literal349)
                     ;
                     adaptor.addChild(root_0, char_literal349_tree);
+                    }
+
+                    char_literal350=(Token)match(input,56,FOLLOW_56_in_iteration_statement1851); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) {
+                    char_literal350_tree = 
+                    (Object)adaptor.create(char_literal350)
+                    ;
+                    adaptor.addChild(root_0, char_literal350_tree);
                     }
 
                     }
@@ -11784,20 +11794,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal350=(Token)match(input,104,FOLLOW_104_in_iteration_statement1855); if (state.failed) return retval;
+                    string_literal351=(Token)match(input,104,FOLLOW_104_in_iteration_statement1857); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal350_tree = 
-                    (Object)adaptor.create(string_literal350)
+                    string_literal351_tree = 
+                    (Object)adaptor.create(string_literal351)
                     ;
-                    adaptor.addChild(root_0, string_literal350_tree);
+                    adaptor.addChild(root_0, string_literal351_tree);
                     }
 
-                    char_literal351=(Token)match(input,38,FOLLOW_38_in_iteration_statement1857); if (state.failed) return retval;
+                    char_literal352=(Token)match(input,38,FOLLOW_38_in_iteration_statement1859); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal351_tree = 
-                    (Object)adaptor.create(char_literal351)
+                    char_literal352_tree = 
+                    (Object)adaptor.create(char_literal352)
                     ;
-                    adaptor.addChild(root_0, char_literal351_tree);
+                    adaptor.addChild(root_0, char_literal352_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:338:15: ( expression )?
@@ -11811,12 +11821,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:338:15: expression
                             {
-                            pushFollow(FOLLOW_expression_in_iteration_statement1859);
-                            expression352=expression();
+                            pushFollow(FOLLOW_expression_in_iteration_statement1861);
+                            expression353=expression();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression352.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression353.getTree());
 
                             }
                             break;
@@ -11824,12 +11834,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    char_literal353=(Token)match(input,56,FOLLOW_56_in_iteration_statement1862); if (state.failed) return retval;
+                    char_literal354=(Token)match(input,56,FOLLOW_56_in_iteration_statement1864); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal353_tree = 
-                    (Object)adaptor.create(char_literal353)
+                    char_literal354_tree = 
+                    (Object)adaptor.create(char_literal354)
                     ;
-                    adaptor.addChild(root_0, char_literal353_tree);
+                    adaptor.addChild(root_0, char_literal354_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:338:31: ( expression )?
@@ -11843,12 +11853,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:338:31: expression
                             {
-                            pushFollow(FOLLOW_expression_in_iteration_statement1864);
-                            expression354=expression();
+                            pushFollow(FOLLOW_expression_in_iteration_statement1866);
+                            expression355=expression();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression354.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression355.getTree());
 
                             }
                             break;
@@ -11856,12 +11866,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    char_literal355=(Token)match(input,56,FOLLOW_56_in_iteration_statement1867); if (state.failed) return retval;
+                    char_literal356=(Token)match(input,56,FOLLOW_56_in_iteration_statement1869); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal355_tree = 
-                    (Object)adaptor.create(char_literal355)
+                    char_literal356_tree = 
+                    (Object)adaptor.create(char_literal356)
                     ;
-                    adaptor.addChild(root_0, char_literal355_tree);
+                    adaptor.addChild(root_0, char_literal356_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:338:47: ( expression )?
@@ -11875,12 +11885,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:338:47: expression
                             {
-                            pushFollow(FOLLOW_expression_in_iteration_statement1869);
-                            expression356=expression();
+                            pushFollow(FOLLOW_expression_in_iteration_statement1871);
+                            expression357=expression();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression356.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression357.getTree());
 
                             }
                             break;
@@ -11888,20 +11898,20 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    char_literal357=(Token)match(input,39,FOLLOW_39_in_iteration_statement1872); if (state.failed) return retval;
+                    char_literal358=(Token)match(input,39,FOLLOW_39_in_iteration_statement1874); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal357_tree = 
-                    (Object)adaptor.create(char_literal357)
+                    char_literal358_tree = 
+                    (Object)adaptor.create(char_literal358)
                     ;
-                    adaptor.addChild(root_0, char_literal357_tree);
+                    adaptor.addChild(root_0, char_literal358_tree);
                     }
 
-                    pushFollow(FOLLOW_statement_in_iteration_statement1874);
-                    statement358=statement();
+                    pushFollow(FOLLOW_statement_in_iteration_statement1876);
+                    statement359=statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement358.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, statement359.getTree());
 
                     }
                     break;
@@ -11946,27 +11956,27 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal359=null;
-        Token char_literal361=null;
-        Token string_literal362=null;
-        Token char_literal363=null;
-        Token string_literal364=null;
-        Token char_literal365=null;
-        Token string_literal366=null;
-        Token char_literal368=null;
-        ObjectiveCParser.identifier_return identifier360 =null;
+        Token string_literal360=null;
+        Token char_literal362=null;
+        Token string_literal363=null;
+        Token char_literal364=null;
+        Token string_literal365=null;
+        Token char_literal366=null;
+        Token string_literal367=null;
+        Token char_literal369=null;
+        ObjectiveCParser.identifier_return identifier361 =null;
 
-        ObjectiveCParser.expression_return expression367 =null;
+        ObjectiveCParser.expression_return expression368 =null;
 
 
-        Object string_literal359_tree=null;
-        Object char_literal361_tree=null;
-        Object string_literal362_tree=null;
-        Object char_literal363_tree=null;
-        Object string_literal364_tree=null;
-        Object char_literal365_tree=null;
-        Object string_literal366_tree=null;
-        Object char_literal368_tree=null;
+        Object string_literal360_tree=null;
+        Object char_literal362_tree=null;
+        Object string_literal363_tree=null;
+        Object char_literal364_tree=null;
+        Object string_literal365_tree=null;
+        Object char_literal366_tree=null;
+        Object string_literal367_tree=null;
+        Object char_literal369_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:341:3: ( 'goto' identifier ';' | 'continue' ';' | 'break' ';' | 'return' ( expression )? ';' )
@@ -12008,27 +12018,27 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal359=(Token)match(input,105,FOLLOW_105_in_jump_statement1885); if (state.failed) return retval;
+                    string_literal360=(Token)match(input,105,FOLLOW_105_in_jump_statement1887); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal359_tree = 
-                    (Object)adaptor.create(string_literal359)
+                    string_literal360_tree = 
+                    (Object)adaptor.create(string_literal360)
                     ;
-                    adaptor.addChild(root_0, string_literal359_tree);
+                    adaptor.addChild(root_0, string_literal360_tree);
                     }
 
-                    pushFollow(FOLLOW_identifier_in_jump_statement1887);
-                    identifier360=identifier();
+                    pushFollow(FOLLOW_identifier_in_jump_statement1889);
+                    identifier361=identifier();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier360.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier361.getTree());
 
-                    char_literal361=(Token)match(input,56,FOLLOW_56_in_jump_statement1889); if (state.failed) return retval;
+                    char_literal362=(Token)match(input,56,FOLLOW_56_in_jump_statement1891); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal361_tree = 
-                    (Object)adaptor.create(char_literal361)
+                    char_literal362_tree = 
+                    (Object)adaptor.create(char_literal362)
                     ;
-                    adaptor.addChild(root_0, char_literal361_tree);
+                    adaptor.addChild(root_0, char_literal362_tree);
                     }
 
                     }
@@ -12039,20 +12049,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal362=(Token)match(input,96,FOLLOW_96_in_jump_statement1895); if (state.failed) return retval;
+                    string_literal363=(Token)match(input,96,FOLLOW_96_in_jump_statement1897); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal362_tree = 
-                    (Object)adaptor.create(string_literal362)
+                    string_literal363_tree = 
+                    (Object)adaptor.create(string_literal363)
                     ;
-                    adaptor.addChild(root_0, string_literal362_tree);
+                    adaptor.addChild(root_0, string_literal363_tree);
                     }
 
-                    char_literal363=(Token)match(input,56,FOLLOW_56_in_jump_statement1897); if (state.failed) return retval;
+                    char_literal364=(Token)match(input,56,FOLLOW_56_in_jump_statement1899); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal363_tree = 
-                    (Object)adaptor.create(char_literal363)
+                    char_literal364_tree = 
+                    (Object)adaptor.create(char_literal364)
                     ;
-                    adaptor.addChild(root_0, char_literal363_tree);
+                    adaptor.addChild(root_0, char_literal364_tree);
                     }
 
                     }
@@ -12063,20 +12073,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal364=(Token)match(input,90,FOLLOW_90_in_jump_statement1903); if (state.failed) return retval;
+                    string_literal365=(Token)match(input,90,FOLLOW_90_in_jump_statement1905); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal364_tree = 
-                    (Object)adaptor.create(string_literal364)
+                    string_literal365_tree = 
+                    (Object)adaptor.create(string_literal365)
                     ;
-                    adaptor.addChild(root_0, string_literal364_tree);
+                    adaptor.addChild(root_0, string_literal365_tree);
                     }
 
-                    char_literal365=(Token)match(input,56,FOLLOW_56_in_jump_statement1905); if (state.failed) return retval;
+                    char_literal366=(Token)match(input,56,FOLLOW_56_in_jump_statement1907); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal365_tree = 
-                    (Object)adaptor.create(char_literal365)
+                    char_literal366_tree = 
+                    (Object)adaptor.create(char_literal366)
                     ;
-                    adaptor.addChild(root_0, char_literal365_tree);
+                    adaptor.addChild(root_0, char_literal366_tree);
                     }
 
                     }
@@ -12087,12 +12097,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal366=(Token)match(input,115,FOLLOW_115_in_jump_statement1911); if (state.failed) return retval;
+                    string_literal367=(Token)match(input,115,FOLLOW_115_in_jump_statement1913); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal366_tree = 
-                    (Object)adaptor.create(string_literal366)
+                    string_literal367_tree = 
+                    (Object)adaptor.create(string_literal367)
                     ;
-                    adaptor.addChild(root_0, string_literal366_tree);
+                    adaptor.addChild(root_0, string_literal367_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:344:14: ( expression )?
@@ -12106,12 +12116,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:344:14: expression
                             {
-                            pushFollow(FOLLOW_expression_in_jump_statement1913);
-                            expression367=expression();
+                            pushFollow(FOLLOW_expression_in_jump_statement1915);
+                            expression368=expression();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression367.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression368.getTree());
 
                             }
                             break;
@@ -12119,12 +12129,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    char_literal368=(Token)match(input,56,FOLLOW_56_in_jump_statement1916); if (state.failed) return retval;
+                    char_literal369=(Token)match(input,56,FOLLOW_56_in_jump_statement1918); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal368_tree = 
-                    (Object)adaptor.create(char_literal368)
+                    char_literal369_tree = 
+                    (Object)adaptor.create(char_literal369)
                     ;
-                    adaptor.addChild(root_0, char_literal368_tree);
+                    adaptor.addChild(root_0, char_literal369_tree);
                     }
 
                     }
@@ -12170,13 +12180,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal370=null;
-        ObjectiveCParser.assignment_expression_return assignment_expression369 =null;
+        Token char_literal371=null;
+        ObjectiveCParser.assignment_expression_return assignment_expression370 =null;
 
-        ObjectiveCParser.assignment_expression_return assignment_expression371 =null;
+        ObjectiveCParser.assignment_expression_return assignment_expression372 =null;
 
 
-        Object char_literal370_tree=null;
+        Object char_literal371_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:347:12: ( assignment_expression ( ',' assignment_expression )* )
@@ -12185,12 +12195,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_assignment_expression_in_expression1928);
-            assignment_expression369=assignment_expression();
+            pushFollow(FOLLOW_assignment_expression_in_expression1930);
+            assignment_expression370=assignment_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression369.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression370.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:347:36: ( ',' assignment_expression )*
             loop93:
@@ -12207,20 +12217,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:347:37: ',' assignment_expression
             	    {
-            	    char_literal370=(Token)match(input,45,FOLLOW_45_in_expression1931); if (state.failed) return retval;
+            	    char_literal371=(Token)match(input,45,FOLLOW_45_in_expression1933); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal370_tree = 
-            	    (Object)adaptor.create(char_literal370)
+            	    char_literal371_tree = 
+            	    (Object)adaptor.create(char_literal371)
             	    ;
-            	    adaptor.addChild(root_0, char_literal370_tree);
+            	    adaptor.addChild(root_0, char_literal371_tree);
             	    }
 
-            	    pushFollow(FOLLOW_assignment_expression_in_expression1933);
-            	    assignment_expression371=assignment_expression();
+            	    pushFollow(FOLLOW_assignment_expression_in_expression1935);
+            	    assignment_expression372=assignment_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression371.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression372.getTree());
 
             	    }
             	    break;
@@ -12272,11 +12282,11 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.conditional_expression_return conditional_expression372 =null;
+        ObjectiveCParser.conditional_expression_return conditional_expression373 =null;
 
-        ObjectiveCParser.assignment_operator_return assignment_operator373 =null;
+        ObjectiveCParser.assignment_operator_return assignment_operator374 =null;
 
-        ObjectiveCParser.assignment_expression_return assignment_expression374 =null;
+        ObjectiveCParser.assignment_expression_return assignment_expression375 =null;
 
 
 
@@ -12287,12 +12297,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_conditional_expression_in_assignment_expression1944);
-            conditional_expression372=conditional_expression();
+            pushFollow(FOLLOW_conditional_expression_in_assignment_expression1946);
+            conditional_expression373=conditional_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, conditional_expression372.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, conditional_expression373.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:350:3: ( assignment_operator assignment_expression )?
             int alt94=2;
@@ -12305,19 +12315,19 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:350:5: assignment_operator assignment_expression
                     {
-                    pushFollow(FOLLOW_assignment_operator_in_assignment_expression1951);
-                    assignment_operator373=assignment_operator();
+                    pushFollow(FOLLOW_assignment_operator_in_assignment_expression1953);
+                    assignment_operator374=assignment_operator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_operator373.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_operator374.getTree());
 
-                    pushFollow(FOLLOW_assignment_expression_in_assignment_expression1953);
-                    assignment_expression374=assignment_expression();
+                    pushFollow(FOLLOW_assignment_expression_in_assignment_expression1955);
+                    assignment_expression375=assignment_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression374.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression375.getTree());
 
                     }
                     break;
@@ -12366,9 +12376,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set375=null;
+        Token set376=null;
 
-        Object set375_tree=null;
+        Object set376_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:351:20: ( '=' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|=' )
@@ -12377,12 +12387,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            set375=(Token)input.LT(1);
+            set376=(Token)input.LT(1);
 
             if ( input.LA(1)==34||input.LA(1)==37||input.LA(1)==41||input.LA(1)==44||input.LA(1)==48||input.LA(1)==54||input.LA(1)==59||input.LA(1)==61||input.LA(1)==66||input.LA(1)==88||input.LA(1)==132 ) {
                 input.consume();
                 if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-                (Object)adaptor.create(set375)
+                (Object)adaptor.create(set376)
                 );
                 state.errorRecovery=false;
                 state.failed=false;
@@ -12435,17 +12445,17 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal377=null;
-        Token char_literal379=null;
-        ObjectiveCParser.logical_or_expression_return logical_or_expression376 =null;
+        Token char_literal378=null;
+        Token char_literal380=null;
+        ObjectiveCParser.logical_or_expression_return logical_or_expression377 =null;
 
-        ObjectiveCParser.logical_or_expression_return logical_or_expression378 =null;
+        ObjectiveCParser.logical_or_expression_return logical_or_expression379 =null;
 
-        ObjectiveCParser.logical_or_expression_return logical_or_expression380 =null;
+        ObjectiveCParser.logical_or_expression_return logical_or_expression381 =null;
 
 
-        Object char_literal377_tree=null;
-        Object char_literal379_tree=null;
+        Object char_literal378_tree=null;
+        Object char_literal380_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:354:24: ( logical_or_expression ( '?' logical_or_expression ':' logical_or_expression )? )
@@ -12454,12 +12464,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_logical_or_expression_in_conditional_expression2013);
-            logical_or_expression376=logical_or_expression();
+            pushFollow(FOLLOW_logical_or_expression_in_conditional_expression2015);
+            logical_or_expression377=logical_or_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_or_expression376.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_or_expression377.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:355:3: ( '?' logical_or_expression ':' logical_or_expression )?
             int alt95=2;
@@ -12472,35 +12482,35 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:355:4: '?' logical_or_expression ':' logical_or_expression
                     {
-                    char_literal377=(Token)match(input,67,FOLLOW_67_in_conditional_expression2019); if (state.failed) return retval;
+                    char_literal378=(Token)match(input,67,FOLLOW_67_in_conditional_expression2021); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal377_tree = 
-                    (Object)adaptor.create(char_literal377)
+                    char_literal378_tree = 
+                    (Object)adaptor.create(char_literal378)
                     ;
-                    adaptor.addChild(root_0, char_literal377_tree);
+                    adaptor.addChild(root_0, char_literal378_tree);
                     }
 
-                    pushFollow(FOLLOW_logical_or_expression_in_conditional_expression2021);
-                    logical_or_expression378=logical_or_expression();
+                    pushFollow(FOLLOW_logical_or_expression_in_conditional_expression2023);
+                    logical_or_expression379=logical_or_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_or_expression378.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_or_expression379.getTree());
 
-                    char_literal379=(Token)match(input,55,FOLLOW_55_in_conditional_expression2023); if (state.failed) return retval;
+                    char_literal380=(Token)match(input,55,FOLLOW_55_in_conditional_expression2025); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal379_tree = 
-                    (Object)adaptor.create(char_literal379)
+                    char_literal380_tree = 
+                    (Object)adaptor.create(char_literal380)
                     ;
-                    adaptor.addChild(root_0, char_literal379_tree);
+                    adaptor.addChild(root_0, char_literal380_tree);
                     }
 
-                    pushFollow(FOLLOW_logical_or_expression_in_conditional_expression2025);
-                    logical_or_expression380=logical_or_expression();
+                    pushFollow(FOLLOW_logical_or_expression_in_conditional_expression2027);
+                    logical_or_expression381=logical_or_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_or_expression380.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_or_expression381.getTree());
 
                     }
                     break;
@@ -12549,7 +12559,7 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        ObjectiveCParser.conditional_expression_return conditional_expression381 =null;
+        ObjectiveCParser.conditional_expression_return conditional_expression382 =null;
 
 
 
@@ -12560,12 +12570,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_conditional_expression_in_constant_expression2036);
-            conditional_expression381=conditional_expression();
+            pushFollow(FOLLOW_conditional_expression_in_constant_expression2038);
+            conditional_expression382=conditional_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, conditional_expression381.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, conditional_expression382.getTree());
 
             }
 
@@ -12608,13 +12618,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal383=null;
-        ObjectiveCParser.logical_and_expression_return logical_and_expression382 =null;
+        Token string_literal384=null;
+        ObjectiveCParser.logical_and_expression_return logical_and_expression383 =null;
 
-        ObjectiveCParser.logical_and_expression_return logical_and_expression384 =null;
+        ObjectiveCParser.logical_and_expression_return logical_and_expression385 =null;
 
 
-        Object string_literal383_tree=null;
+        Object string_literal384_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:359:23: ( logical_and_expression ( '||' logical_and_expression )* )
@@ -12623,12 +12633,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression2045);
-            logical_and_expression382=logical_and_expression();
+            pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression2047);
+            logical_and_expression383=logical_and_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_and_expression382.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_and_expression383.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:360:3: ( '||' logical_and_expression )*
             loop96:
@@ -12645,20 +12655,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:360:4: '||' logical_and_expression
             	    {
-            	    string_literal383=(Token)match(input,133,FOLLOW_133_in_logical_or_expression2051); if (state.failed) return retval;
+            	    string_literal384=(Token)match(input,133,FOLLOW_133_in_logical_or_expression2053); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal383_tree = 
-            	    (Object)adaptor.create(string_literal383)
+            	    string_literal384_tree = 
+            	    (Object)adaptor.create(string_literal384)
             	    ;
-            	    adaptor.addChild(root_0, string_literal383_tree);
+            	    adaptor.addChild(root_0, string_literal384_tree);
             	    }
 
-            	    pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression2053);
-            	    logical_and_expression384=logical_and_expression();
+            	    pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression2055);
+            	    logical_and_expression385=logical_and_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_and_expression384.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_and_expression385.getTree());
 
             	    }
             	    break;
@@ -12710,13 +12720,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal386=null;
-        ObjectiveCParser.inclusive_or_expression_return inclusive_or_expression385 =null;
+        Token string_literal387=null;
+        ObjectiveCParser.inclusive_or_expression_return inclusive_or_expression386 =null;
 
-        ObjectiveCParser.inclusive_or_expression_return inclusive_or_expression387 =null;
+        ObjectiveCParser.inclusive_or_expression_return inclusive_or_expression388 =null;
 
 
-        Object string_literal386_tree=null;
+        Object string_literal387_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:362:24: ( inclusive_or_expression ( '&&' inclusive_or_expression )* )
@@ -12725,12 +12735,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_inclusive_or_expression_in_logical_and_expression2064);
-            inclusive_or_expression385=inclusive_or_expression();
+            pushFollow(FOLLOW_inclusive_or_expression_in_logical_and_expression2066);
+            inclusive_or_expression386=inclusive_or_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, inclusive_or_expression385.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, inclusive_or_expression386.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:363:3: ( '&&' inclusive_or_expression )*
             loop97:
@@ -12747,20 +12757,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:363:4: '&&' inclusive_or_expression
             	    {
-            	    string_literal386=(Token)match(input,35,FOLLOW_35_in_logical_and_expression2070); if (state.failed) return retval;
+            	    string_literal387=(Token)match(input,35,FOLLOW_35_in_logical_and_expression2072); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal386_tree = 
-            	    (Object)adaptor.create(string_literal386)
+            	    string_literal387_tree = 
+            	    (Object)adaptor.create(string_literal387)
             	    ;
-            	    adaptor.addChild(root_0, string_literal386_tree);
+            	    adaptor.addChild(root_0, string_literal387_tree);
             	    }
 
-            	    pushFollow(FOLLOW_inclusive_or_expression_in_logical_and_expression2072);
-            	    inclusive_or_expression387=inclusive_or_expression();
+            	    pushFollow(FOLLOW_inclusive_or_expression_in_logical_and_expression2074);
+            	    inclusive_or_expression388=inclusive_or_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, inclusive_or_expression387.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, inclusive_or_expression388.getTree());
 
             	    }
             	    break;
@@ -12812,13 +12822,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal389=null;
-        ObjectiveCParser.exclusive_or_expression_return exclusive_or_expression388 =null;
+        Token char_literal390=null;
+        ObjectiveCParser.exclusive_or_expression_return exclusive_or_expression389 =null;
 
-        ObjectiveCParser.exclusive_or_expression_return exclusive_or_expression390 =null;
+        ObjectiveCParser.exclusive_or_expression_return exclusive_or_expression391 =null;
 
 
-        Object char_literal389_tree=null;
+        Object char_literal390_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:365:25: ( exclusive_or_expression ( '|' exclusive_or_expression )* )
@@ -12827,12 +12837,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_exclusive_or_expression_in_inclusive_or_expression2083);
-            exclusive_or_expression388=exclusive_or_expression();
+            pushFollow(FOLLOW_exclusive_or_expression_in_inclusive_or_expression2085);
+            exclusive_or_expression389=exclusive_or_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, exclusive_or_expression388.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, exclusive_or_expression389.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:366:3: ( '|' exclusive_or_expression )*
             loop98:
@@ -12849,20 +12859,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:366:4: '|' exclusive_or_expression
             	    {
-            	    char_literal389=(Token)match(input,131,FOLLOW_131_in_inclusive_or_expression2089); if (state.failed) return retval;
+            	    char_literal390=(Token)match(input,131,FOLLOW_131_in_inclusive_or_expression2091); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal389_tree = 
-            	    (Object)adaptor.create(char_literal389)
+            	    char_literal390_tree = 
+            	    (Object)adaptor.create(char_literal390)
             	    ;
-            	    adaptor.addChild(root_0, char_literal389_tree);
+            	    adaptor.addChild(root_0, char_literal390_tree);
             	    }
 
-            	    pushFollow(FOLLOW_exclusive_or_expression_in_inclusive_or_expression2091);
-            	    exclusive_or_expression390=exclusive_or_expression();
+            	    pushFollow(FOLLOW_exclusive_or_expression_in_inclusive_or_expression2093);
+            	    exclusive_or_expression391=exclusive_or_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, exclusive_or_expression390.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, exclusive_or_expression391.getTree());
 
             	    }
             	    break;
@@ -12914,13 +12924,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal392=null;
-        ObjectiveCParser.and_expression_return and_expression391 =null;
+        Token char_literal393=null;
+        ObjectiveCParser.and_expression_return and_expression392 =null;
 
-        ObjectiveCParser.and_expression_return and_expression393 =null;
+        ObjectiveCParser.and_expression_return and_expression394 =null;
 
 
-        Object char_literal392_tree=null;
+        Object char_literal393_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:368:25: ( and_expression ( '^' and_expression )* )
@@ -12929,12 +12939,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_and_expression_in_exclusive_or_expression2102);
-            and_expression391=and_expression();
+            pushFollow(FOLLOW_and_expression_in_exclusive_or_expression2104);
+            and_expression392=and_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, and_expression391.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, and_expression392.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:368:42: ( '^' and_expression )*
             loop99:
@@ -12951,20 +12961,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:368:43: '^' and_expression
             	    {
-            	    char_literal392=(Token)match(input,87,FOLLOW_87_in_exclusive_or_expression2105); if (state.failed) return retval;
+            	    char_literal393=(Token)match(input,87,FOLLOW_87_in_exclusive_or_expression2107); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal392_tree = 
-            	    (Object)adaptor.create(char_literal392)
+            	    char_literal393_tree = 
+            	    (Object)adaptor.create(char_literal393)
             	    ;
-            	    adaptor.addChild(root_0, char_literal392_tree);
+            	    adaptor.addChild(root_0, char_literal393_tree);
             	    }
 
-            	    pushFollow(FOLLOW_and_expression_in_exclusive_or_expression2107);
-            	    and_expression393=and_expression();
+            	    pushFollow(FOLLOW_and_expression_in_exclusive_or_expression2109);
+            	    and_expression394=and_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, and_expression393.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, and_expression394.getTree());
 
             	    }
             	    break;
@@ -13016,13 +13026,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal395=null;
-        ObjectiveCParser.equality_expression_return equality_expression394 =null;
+        Token char_literal396=null;
+        ObjectiveCParser.equality_expression_return equality_expression395 =null;
 
-        ObjectiveCParser.equality_expression_return equality_expression396 =null;
+        ObjectiveCParser.equality_expression_return equality_expression397 =null;
 
 
-        Object char_literal395_tree=null;
+        Object char_literal396_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:370:16: ( equality_expression ( '&' equality_expression )* )
@@ -13031,12 +13041,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_equality_expression_in_and_expression2118);
-            equality_expression394=equality_expression();
+            pushFollow(FOLLOW_equality_expression_in_and_expression2120);
+            equality_expression395=equality_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, equality_expression394.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, equality_expression395.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:370:38: ( '&' equality_expression )*
             loop100:
@@ -13053,20 +13063,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:370:39: '&' equality_expression
             	    {
-            	    char_literal395=(Token)match(input,36,FOLLOW_36_in_and_expression2121); if (state.failed) return retval;
+            	    char_literal396=(Token)match(input,36,FOLLOW_36_in_and_expression2123); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal395_tree = 
-            	    (Object)adaptor.create(char_literal395)
+            	    char_literal396_tree = 
+            	    (Object)adaptor.create(char_literal396)
             	    ;
-            	    adaptor.addChild(root_0, char_literal395_tree);
+            	    adaptor.addChild(root_0, char_literal396_tree);
             	    }
 
-            	    pushFollow(FOLLOW_equality_expression_in_and_expression2123);
-            	    equality_expression396=equality_expression();
+            	    pushFollow(FOLLOW_equality_expression_in_and_expression2125);
+            	    equality_expression397=equality_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, equality_expression396.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, equality_expression397.getTree());
 
             	    }
             	    break;
@@ -13118,13 +13128,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set398=null;
-        ObjectiveCParser.relational_expression_return relational_expression397 =null;
+        Token set399=null;
+        ObjectiveCParser.relational_expression_return relational_expression398 =null;
 
-        ObjectiveCParser.relational_expression_return relational_expression399 =null;
+        ObjectiveCParser.relational_expression_return relational_expression400 =null;
 
 
-        Object set398_tree=null;
+        Object set399_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:372:21: ( relational_expression ( ( '!=' | '==' ) relational_expression )* )
@@ -13133,12 +13143,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_relational_expression_in_equality_expression2134);
-            relational_expression397=relational_expression();
+            pushFollow(FOLLOW_relational_expression_in_equality_expression2136);
+            relational_expression398=relational_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, relational_expression397.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, relational_expression398.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:373:3: ( ( '!=' | '==' ) relational_expression )*
             loop101:
@@ -13155,12 +13165,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:373:4: ( '!=' | '==' ) relational_expression
             	    {
-            	    set398=(Token)input.LT(1);
+            	    set399=(Token)input.LT(1);
 
             	    if ( input.LA(1)==23||input.LA(1)==62 ) {
             	        input.consume();
             	        if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-            	        (Object)adaptor.create(set398)
+            	        (Object)adaptor.create(set399)
             	        );
             	        state.errorRecovery=false;
             	        state.failed=false;
@@ -13172,12 +13182,12 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_relational_expression_in_equality_expression2148);
-            	    relational_expression399=relational_expression();
+            	    pushFollow(FOLLOW_relational_expression_in_equality_expression2150);
+            	    relational_expression400=relational_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, relational_expression399.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, relational_expression400.getTree());
 
             	    }
             	    break;
@@ -13229,13 +13239,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set401=null;
-        ObjectiveCParser.shift_expression_return shift_expression400 =null;
+        Token set402=null;
+        ObjectiveCParser.shift_expression_return shift_expression401 =null;
 
-        ObjectiveCParser.shift_expression_return shift_expression402 =null;
+        ObjectiveCParser.shift_expression_return shift_expression403 =null;
 
 
-        Object set401_tree=null;
+        Object set402_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:375:23: ( shift_expression ( ( '<' | '>' | '<=' | '>=' ) shift_expression )* )
@@ -13244,12 +13254,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_shift_expression_in_relational_expression2159);
-            shift_expression400=shift_expression();
+            pushFollow(FOLLOW_shift_expression_in_relational_expression2161);
+            shift_expression401=shift_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, shift_expression400.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, shift_expression401.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:376:2: ( ( '<' | '>' | '<=' | '>=' ) shift_expression )*
             loop102:
@@ -13266,12 +13276,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:376:3: ( '<' | '>' | '<=' | '>=' ) shift_expression
             	    {
-            	    set401=(Token)input.LT(1);
+            	    set402=(Token)input.LT(1);
 
             	    if ( input.LA(1)==57||input.LA(1)==60||(input.LA(1) >= 63 && input.LA(1) <= 64) ) {
             	        input.consume();
             	        if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-            	        (Object)adaptor.create(set401)
+            	        (Object)adaptor.create(set402)
             	        );
             	        state.errorRecovery=false;
             	        state.failed=false;
@@ -13283,12 +13293,12 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_shift_expression_in_relational_expression2179);
-            	    shift_expression402=shift_expression();
+            	    pushFollow(FOLLOW_shift_expression_in_relational_expression2181);
+            	    shift_expression403=shift_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, shift_expression402.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, shift_expression403.getTree());
 
             	    }
             	    break;
@@ -13340,13 +13350,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set404=null;
-        ObjectiveCParser.additive_expression_return additive_expression403 =null;
+        Token set405=null;
+        ObjectiveCParser.additive_expression_return additive_expression404 =null;
 
-        ObjectiveCParser.additive_expression_return additive_expression405 =null;
+        ObjectiveCParser.additive_expression_return additive_expression406 =null;
 
 
-        Object set404_tree=null;
+        Object set405_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:378:18: ( additive_expression ( ( '<<' | '>>' ) additive_expression )* )
@@ -13355,12 +13365,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_additive_expression_in_shift_expression2190);
-            additive_expression403=additive_expression();
+            pushFollow(FOLLOW_additive_expression_in_shift_expression2192);
+            additive_expression404=additive_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, additive_expression403.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, additive_expression404.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:378:40: ( ( '<<' | '>>' ) additive_expression )*
             loop103:
@@ -13377,12 +13387,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:378:41: ( '<<' | '>>' ) additive_expression
             	    {
-            	    set404=(Token)input.LT(1);
+            	    set405=(Token)input.LT(1);
 
             	    if ( input.LA(1)==58||input.LA(1)==65 ) {
             	        input.consume();
             	        if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-            	        (Object)adaptor.create(set404)
+            	        (Object)adaptor.create(set405)
             	        );
             	        state.errorRecovery=false;
             	        state.failed=false;
@@ -13394,12 +13404,12 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_additive_expression_in_shift_expression2201);
-            	    additive_expression405=additive_expression();
+            	    pushFollow(FOLLOW_additive_expression_in_shift_expression2203);
+            	    additive_expression406=additive_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, additive_expression405.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, additive_expression406.getTree());
 
             	    }
             	    break;
@@ -13451,13 +13461,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set407=null;
-        ObjectiveCParser.multiplicative_expression_return multiplicative_expression406 =null;
+        Token set408=null;
+        ObjectiveCParser.multiplicative_expression_return multiplicative_expression407 =null;
 
-        ObjectiveCParser.multiplicative_expression_return multiplicative_expression408 =null;
+        ObjectiveCParser.multiplicative_expression_return multiplicative_expression409 =null;
 
 
-        Object set407_tree=null;
+        Object set408_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:380:21: ( multiplicative_expression ( ( '+' | '-' ) multiplicative_expression )* )
@@ -13466,12 +13476,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_multiplicative_expression_in_additive_expression2212);
-            multiplicative_expression406=multiplicative_expression();
+            pushFollow(FOLLOW_multiplicative_expression_in_additive_expression2214);
+            multiplicative_expression407=multiplicative_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, multiplicative_expression406.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, multiplicative_expression407.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:381:3: ( ( '+' | '-' ) multiplicative_expression )*
             loop104:
@@ -13488,12 +13498,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:381:4: ( '+' | '-' ) multiplicative_expression
             	    {
-            	    set407=(Token)input.LT(1);
+            	    set408=(Token)input.LT(1);
 
             	    if ( input.LA(1)==42||input.LA(1)==46 ) {
             	        input.consume();
             	        if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-            	        (Object)adaptor.create(set407)
+            	        (Object)adaptor.create(set408)
             	        );
             	        state.errorRecovery=false;
             	        state.failed=false;
@@ -13505,12 +13515,12 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_multiplicative_expression_in_additive_expression2225);
-            	    multiplicative_expression408=multiplicative_expression();
+            	    pushFollow(FOLLOW_multiplicative_expression_in_additive_expression2227);
+            	    multiplicative_expression409=multiplicative_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, multiplicative_expression408.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, multiplicative_expression409.getTree());
 
             	    }
             	    break;
@@ -13562,13 +13572,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set410=null;
-        ObjectiveCParser.cast_expression_return cast_expression409 =null;
+        Token set411=null;
+        ObjectiveCParser.cast_expression_return cast_expression410 =null;
 
-        ObjectiveCParser.cast_expression_return cast_expression411 =null;
+        ObjectiveCParser.cast_expression_return cast_expression412 =null;
 
 
-        Object set410_tree=null;
+        Object set411_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:383:27: ( cast_expression ( ( '*' | '/' | '%' ) cast_expression )* )
@@ -13577,12 +13587,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_cast_expression_in_multiplicative_expression2236);
-            cast_expression409=cast_expression();
+            pushFollow(FOLLOW_cast_expression_in_multiplicative_expression2238);
+            cast_expression410=cast_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, cast_expression409.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, cast_expression410.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:384:3: ( ( '*' | '/' | '%' ) cast_expression )*
             loop105:
@@ -13599,12 +13609,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:384:4: ( '*' | '/' | '%' ) cast_expression
             	    {
-            	    set410=(Token)input.LT(1);
+            	    set411=(Token)input.LT(1);
 
             	    if ( input.LA(1)==33||input.LA(1)==40||input.LA(1)==53 ) {
             	        input.consume();
             	        if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-            	        (Object)adaptor.create(set410)
+            	        (Object)adaptor.create(set411)
             	        );
             	        state.errorRecovery=false;
             	        state.failed=false;
@@ -13616,12 +13626,12 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_cast_expression_in_multiplicative_expression2254);
-            	    cast_expression411=cast_expression();
+            	    pushFollow(FOLLOW_cast_expression_in_multiplicative_expression2256);
+            	    cast_expression412=cast_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, cast_expression411.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, cast_expression412.getTree());
 
             	    }
             	    break;
@@ -13673,17 +13683,17 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal412=null;
-        Token char_literal414=null;
-        ObjectiveCParser.type_name_return type_name413 =null;
+        Token char_literal413=null;
+        Token char_literal415=null;
+        ObjectiveCParser.type_name_return type_name414 =null;
 
-        ObjectiveCParser.cast_expression_return cast_expression415 =null;
+        ObjectiveCParser.cast_expression_return cast_expression416 =null;
 
-        ObjectiveCParser.unary_expression_return unary_expression416 =null;
+        ObjectiveCParser.unary_expression_return unary_expression417 =null;
 
 
-        Object char_literal412_tree=null;
-        Object char_literal414_tree=null;
+        Object char_literal413_tree=null;
+        Object char_literal415_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:386:17: ( '(' type_name ')' cast_expression | unary_expression )
@@ -13726,35 +13736,35 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    char_literal412=(Token)match(input,38,FOLLOW_38_in_cast_expression2265); if (state.failed) return retval;
+                    char_literal413=(Token)match(input,38,FOLLOW_38_in_cast_expression2267); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal412_tree = 
-                    (Object)adaptor.create(char_literal412)
+                    char_literal413_tree = 
+                    (Object)adaptor.create(char_literal413)
                     ;
-                    adaptor.addChild(root_0, char_literal412_tree);
+                    adaptor.addChild(root_0, char_literal413_tree);
                     }
 
-                    pushFollow(FOLLOW_type_name_in_cast_expression2267);
-                    type_name413=type_name();
+                    pushFollow(FOLLOW_type_name_in_cast_expression2269);
+                    type_name414=type_name();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_name413.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, type_name414.getTree());
 
-                    char_literal414=(Token)match(input,39,FOLLOW_39_in_cast_expression2269); if (state.failed) return retval;
+                    char_literal415=(Token)match(input,39,FOLLOW_39_in_cast_expression2271); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    char_literal414_tree = 
-                    (Object)adaptor.create(char_literal414)
+                    char_literal415_tree = 
+                    (Object)adaptor.create(char_literal415)
                     ;
-                    adaptor.addChild(root_0, char_literal414_tree);
+                    adaptor.addChild(root_0, char_literal415_tree);
                     }
 
-                    pushFollow(FOLLOW_cast_expression_in_cast_expression2271);
-                    cast_expression415=cast_expression();
+                    pushFollow(FOLLOW_cast_expression_in_cast_expression2273);
+                    cast_expression416=cast_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, cast_expression415.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, cast_expression416.getTree());
 
                     }
                     break;
@@ -13764,12 +13774,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_unary_expression_in_cast_expression2275);
-                    unary_expression416=unary_expression();
+                    pushFollow(FOLLOW_unary_expression_in_cast_expression2277);
+                    unary_expression417=unary_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expression416.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expression417.getTree());
 
                     }
                     break;
@@ -13814,31 +13824,31 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token string_literal418=null;
-        Token string_literal420=null;
-        Token string_literal424=null;
-        Token char_literal425=null;
-        Token char_literal427=null;
-        ObjectiveCParser.postfix_expression_return postfix_expression417 =null;
+        Token string_literal419=null;
+        Token string_literal421=null;
+        Token string_literal425=null;
+        Token char_literal426=null;
+        Token char_literal428=null;
+        ObjectiveCParser.postfix_expression_return postfix_expression418 =null;
 
-        ObjectiveCParser.unary_expression_return unary_expression419 =null;
+        ObjectiveCParser.unary_expression_return unary_expression420 =null;
 
-        ObjectiveCParser.unary_expression_return unary_expression421 =null;
+        ObjectiveCParser.unary_expression_return unary_expression422 =null;
 
-        ObjectiveCParser.unary_operator_return unary_operator422 =null;
+        ObjectiveCParser.unary_operator_return unary_operator423 =null;
 
-        ObjectiveCParser.cast_expression_return cast_expression423 =null;
+        ObjectiveCParser.cast_expression_return cast_expression424 =null;
 
-        ObjectiveCParser.type_name_return type_name426 =null;
+        ObjectiveCParser.type_name_return type_name427 =null;
 
-        ObjectiveCParser.unary_expression_return unary_expression428 =null;
+        ObjectiveCParser.unary_expression_return unary_expression429 =null;
 
 
-        Object string_literal418_tree=null;
-        Object string_literal420_tree=null;
-        Object string_literal424_tree=null;
-        Object char_literal425_tree=null;
-        Object char_literal427_tree=null;
+        Object string_literal419_tree=null;
+        Object string_literal421_tree=null;
+        Object string_literal425_tree=null;
+        Object char_literal426_tree=null;
+        Object char_literal428_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:389:3: ( postfix_expression | '++' unary_expression | '--' unary_expression | unary_operator cast_expression | 'sizeof' ( '(' type_name ')' | unary_expression ) )
@@ -13901,12 +13911,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_postfix_expression_in_unary_expression2287);
-                    postfix_expression417=postfix_expression();
+                    pushFollow(FOLLOW_postfix_expression_in_unary_expression2289);
+                    postfix_expression418=postfix_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, postfix_expression417.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, postfix_expression418.getTree());
 
                     }
                     break;
@@ -13916,20 +13926,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal418=(Token)match(input,43,FOLLOW_43_in_unary_expression2293); if (state.failed) return retval;
+                    string_literal419=(Token)match(input,43,FOLLOW_43_in_unary_expression2295); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal418_tree = 
-                    (Object)adaptor.create(string_literal418)
+                    string_literal419_tree = 
+                    (Object)adaptor.create(string_literal419)
                     ;
-                    adaptor.addChild(root_0, string_literal418_tree);
+                    adaptor.addChild(root_0, string_literal419_tree);
                     }
 
-                    pushFollow(FOLLOW_unary_expression_in_unary_expression2295);
-                    unary_expression419=unary_expression();
+                    pushFollow(FOLLOW_unary_expression_in_unary_expression2297);
+                    unary_expression420=unary_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expression419.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expression420.getTree());
 
                     }
                     break;
@@ -13939,20 +13949,20 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal420=(Token)match(input,47,FOLLOW_47_in_unary_expression2301); if (state.failed) return retval;
+                    string_literal421=(Token)match(input,47,FOLLOW_47_in_unary_expression2303); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal420_tree = 
-                    (Object)adaptor.create(string_literal420)
+                    string_literal421_tree = 
+                    (Object)adaptor.create(string_literal421)
                     ;
-                    adaptor.addChild(root_0, string_literal420_tree);
+                    adaptor.addChild(root_0, string_literal421_tree);
                     }
 
-                    pushFollow(FOLLOW_unary_expression_in_unary_expression2303);
-                    unary_expression421=unary_expression();
+                    pushFollow(FOLLOW_unary_expression_in_unary_expression2305);
+                    unary_expression422=unary_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expression421.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expression422.getTree());
 
                     }
                     break;
@@ -13962,19 +13972,19 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_unary_operator_in_unary_expression2309);
-                    unary_operator422=unary_operator();
+                    pushFollow(FOLLOW_unary_operator_in_unary_expression2311);
+                    unary_operator423=unary_operator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_operator422.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_operator423.getTree());
 
-                    pushFollow(FOLLOW_cast_expression_in_unary_expression2311);
-                    cast_expression423=cast_expression();
+                    pushFollow(FOLLOW_cast_expression_in_unary_expression2313);
+                    cast_expression424=cast_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, cast_expression423.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, cast_expression424.getTree());
 
                     }
                     break;
@@ -13984,12 +13994,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (Object)adaptor.nil();
 
 
-                    string_literal424=(Token)match(input,119,FOLLOW_119_in_unary_expression2317); if (state.failed) return retval;
+                    string_literal425=(Token)match(input,119,FOLLOW_119_in_unary_expression2319); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    string_literal424_tree = 
-                    (Object)adaptor.create(string_literal424)
+                    string_literal425_tree = 
+                    (Object)adaptor.create(string_literal425)
                     ;
-                    adaptor.addChild(root_0, string_literal424_tree);
+                    adaptor.addChild(root_0, string_literal425_tree);
                     }
 
                     // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:393:14: ( '(' type_name ')' | unary_expression )
@@ -14029,27 +14039,27 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:393:15: '(' type_name ')'
                             {
-                            char_literal425=(Token)match(input,38,FOLLOW_38_in_unary_expression2320); if (state.failed) return retval;
+                            char_literal426=(Token)match(input,38,FOLLOW_38_in_unary_expression2322); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
-                            char_literal425_tree = 
-                            (Object)adaptor.create(char_literal425)
+                            char_literal426_tree = 
+                            (Object)adaptor.create(char_literal426)
                             ;
-                            adaptor.addChild(root_0, char_literal425_tree);
+                            adaptor.addChild(root_0, char_literal426_tree);
                             }
 
-                            pushFollow(FOLLOW_type_name_in_unary_expression2322);
-                            type_name426=type_name();
+                            pushFollow(FOLLOW_type_name_in_unary_expression2324);
+                            type_name427=type_name();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, type_name426.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, type_name427.getTree());
 
-                            char_literal427=(Token)match(input,39,FOLLOW_39_in_unary_expression2324); if (state.failed) return retval;
+                            char_literal428=(Token)match(input,39,FOLLOW_39_in_unary_expression2326); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
-                            char_literal427_tree = 
-                            (Object)adaptor.create(char_literal427)
+                            char_literal428_tree = 
+                            (Object)adaptor.create(char_literal428)
                             ;
-                            adaptor.addChild(root_0, char_literal427_tree);
+                            adaptor.addChild(root_0, char_literal428_tree);
                             }
 
                             }
@@ -14057,12 +14067,12 @@ public TreeAdaptor getTreeAdaptor() {
                         case 2 :
                             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:393:35: unary_expression
                             {
-                            pushFollow(FOLLOW_unary_expression_in_unary_expression2328);
-                            unary_expression428=unary_expression();
+                            pushFollow(FOLLOW_unary_expression_in_unary_expression2330);
+                            unary_expression429=unary_expression();
 
                             state._fsp--;
                             if (state.failed) return retval;
-                            if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expression428.getTree());
+                            if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expression429.getTree());
 
                             }
                             break;
@@ -14113,9 +14123,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set429=null;
+        Token set430=null;
 
-        Object set429_tree=null;
+        Object set430_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:395:16: ( '&' | '*' | '-' | '~' | '!' )
@@ -14124,12 +14134,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            set429=(Token)input.LT(1);
+            set430=(Token)input.LT(1);
 
             if ( input.LA(1)==22||input.LA(1)==36||input.LA(1)==40||input.LA(1)==46||input.LA(1)==135 ) {
                 input.consume();
                 if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-                (Object)adaptor.create(set429)
+                (Object)adaptor.create(set430)
                 );
                 state.errorRecovery=false;
                 state.failed=false;
@@ -14182,33 +14192,33 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal431=null;
-        Token char_literal433=null;
+        Token char_literal432=null;
         Token char_literal434=null;
-        Token char_literal436=null;
+        Token char_literal435=null;
         Token char_literal437=null;
-        Token string_literal439=null;
-        Token string_literal441=null;
+        Token char_literal438=null;
+        Token string_literal440=null;
         Token string_literal442=null;
-        ObjectiveCParser.primary_expression_return primary_expression430 =null;
+        Token string_literal443=null;
+        ObjectiveCParser.primary_expression_return primary_expression431 =null;
 
-        ObjectiveCParser.expression_return expression432 =null;
+        ObjectiveCParser.expression_return expression433 =null;
 
-        ObjectiveCParser.argument_expression_list_return argument_expression_list435 =null;
+        ObjectiveCParser.argument_expression_list_return argument_expression_list436 =null;
 
-        ObjectiveCParser.identifier_return identifier438 =null;
+        ObjectiveCParser.identifier_return identifier439 =null;
 
-        ObjectiveCParser.identifier_return identifier440 =null;
+        ObjectiveCParser.identifier_return identifier441 =null;
 
 
-        Object char_literal431_tree=null;
-        Object char_literal433_tree=null;
+        Object char_literal432_tree=null;
         Object char_literal434_tree=null;
-        Object char_literal436_tree=null;
+        Object char_literal435_tree=null;
         Object char_literal437_tree=null;
-        Object string_literal439_tree=null;
-        Object string_literal441_tree=null;
+        Object char_literal438_tree=null;
+        Object string_literal440_tree=null;
         Object string_literal442_tree=null;
+        Object string_literal443_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:397:20: ( primary_expression ( '[' expression ']' | '(' ( argument_expression_list )? ')' | '.' identifier | '->' identifier | '++' | '--' )* )
@@ -14217,12 +14227,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_primary_expression_in_postfix_expression2363);
-            primary_expression430=primary_expression();
+            pushFollow(FOLLOW_primary_expression_in_postfix_expression2365);
+            primary_expression431=primary_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, primary_expression430.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, primary_expression431.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:398:3: ( '[' expression ']' | '(' ( argument_expression_list )? ')' | '.' identifier | '->' identifier | '++' | '--' )*
             loop110:
@@ -14266,27 +14276,27 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:398:4: '[' expression ']'
             	    {
-            	    char_literal431=(Token)match(input,84,FOLLOW_84_in_postfix_expression2368); if (state.failed) return retval;
+            	    char_literal432=(Token)match(input,84,FOLLOW_84_in_postfix_expression2370); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal431_tree = 
-            	    (Object)adaptor.create(char_literal431)
+            	    char_literal432_tree = 
+            	    (Object)adaptor.create(char_literal432)
             	    ;
-            	    adaptor.addChild(root_0, char_literal431_tree);
+            	    adaptor.addChild(root_0, char_literal432_tree);
             	    }
 
-            	    pushFollow(FOLLOW_expression_in_postfix_expression2370);
-            	    expression432=expression();
+            	    pushFollow(FOLLOW_expression_in_postfix_expression2372);
+            	    expression433=expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression432.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression433.getTree());
 
-            	    char_literal433=(Token)match(input,86,FOLLOW_86_in_postfix_expression2372); if (state.failed) return retval;
+            	    char_literal434=(Token)match(input,86,FOLLOW_86_in_postfix_expression2374); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal433_tree = 
-            	    (Object)adaptor.create(char_literal433)
+            	    char_literal434_tree = 
+            	    (Object)adaptor.create(char_literal434)
             	    ;
-            	    adaptor.addChild(root_0, char_literal433_tree);
+            	    adaptor.addChild(root_0, char_literal434_tree);
             	    }
 
             	    }
@@ -14294,12 +14304,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 2 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:399:5: '(' ( argument_expression_list )? ')'
             	    {
-            	    char_literal434=(Token)match(input,38,FOLLOW_38_in_postfix_expression2379); if (state.failed) return retval;
+            	    char_literal435=(Token)match(input,38,FOLLOW_38_in_postfix_expression2381); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal434_tree = 
-            	    (Object)adaptor.create(char_literal434)
+            	    char_literal435_tree = 
+            	    (Object)adaptor.create(char_literal435)
             	    ;
-            	    adaptor.addChild(root_0, char_literal434_tree);
+            	    adaptor.addChild(root_0, char_literal435_tree);
             	    }
 
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:399:9: ( argument_expression_list )?
@@ -14313,12 +14323,12 @@ public TreeAdaptor getTreeAdaptor() {
             	        case 1 :
             	            // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:399:9: argument_expression_list
             	            {
-            	            pushFollow(FOLLOW_argument_expression_list_in_postfix_expression2381);
-            	            argument_expression_list435=argument_expression_list();
+            	            pushFollow(FOLLOW_argument_expression_list_in_postfix_expression2383);
+            	            argument_expression_list436=argument_expression_list();
 
             	            state._fsp--;
             	            if (state.failed) return retval;
-            	            if ( state.backtracking==0 ) adaptor.addChild(root_0, argument_expression_list435.getTree());
+            	            if ( state.backtracking==0 ) adaptor.addChild(root_0, argument_expression_list436.getTree());
 
             	            }
             	            break;
@@ -14326,20 +14336,7 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    char_literal436=(Token)match(input,39,FOLLOW_39_in_postfix_expression2384); if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) {
-            	    char_literal436_tree = 
-            	    (Object)adaptor.create(char_literal436)
-            	    ;
-            	    adaptor.addChild(root_0, char_literal436_tree);
-            	    }
-
-            	    }
-            	    break;
-            	case 3 :
-            	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:400:5: '.' identifier
-            	    {
-            	    char_literal437=(Token)match(input,50,FOLLOW_50_in_postfix_expression2390); if (state.failed) return retval;
+            	    char_literal437=(Token)match(input,39,FOLLOW_39_in_postfix_expression2386); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
             	    char_literal437_tree = 
             	    (Object)adaptor.create(char_literal437)
@@ -14347,44 +14344,57 @@ public TreeAdaptor getTreeAdaptor() {
             	    adaptor.addChild(root_0, char_literal437_tree);
             	    }
 
-            	    pushFollow(FOLLOW_identifier_in_postfix_expression2392);
-            	    identifier438=identifier();
+            	    }
+            	    break;
+            	case 3 :
+            	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:400:5: '.' identifier
+            	    {
+            	    char_literal438=(Token)match(input,50,FOLLOW_50_in_postfix_expression2392); if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) {
+            	    char_literal438_tree = 
+            	    (Object)adaptor.create(char_literal438)
+            	    ;
+            	    adaptor.addChild(root_0, char_literal438_tree);
+            	    }
+
+            	    pushFollow(FOLLOW_identifier_in_postfix_expression2394);
+            	    identifier439=identifier();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier438.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier439.getTree());
 
             	    }
             	    break;
             	case 4 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:401:5: '->' identifier
             	    {
-            	    string_literal439=(Token)match(input,49,FOLLOW_49_in_postfix_expression2398); if (state.failed) return retval;
+            	    string_literal440=(Token)match(input,49,FOLLOW_49_in_postfix_expression2400); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal439_tree = 
-            	    (Object)adaptor.create(string_literal439)
+            	    string_literal440_tree = 
+            	    (Object)adaptor.create(string_literal440)
             	    ;
-            	    adaptor.addChild(root_0, string_literal439_tree);
+            	    adaptor.addChild(root_0, string_literal440_tree);
             	    }
 
-            	    pushFollow(FOLLOW_identifier_in_postfix_expression2400);
-            	    identifier440=identifier();
+            	    pushFollow(FOLLOW_identifier_in_postfix_expression2402);
+            	    identifier441=identifier();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier440.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier441.getTree());
 
             	    }
             	    break;
             	case 5 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:402:5: '++'
             	    {
-            	    string_literal441=(Token)match(input,43,FOLLOW_43_in_postfix_expression2406); if (state.failed) return retval;
+            	    string_literal442=(Token)match(input,43,FOLLOW_43_in_postfix_expression2408); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal441_tree = 
-            	    (Object)adaptor.create(string_literal441)
+            	    string_literal442_tree = 
+            	    (Object)adaptor.create(string_literal442)
             	    ;
-            	    adaptor.addChild(root_0, string_literal441_tree);
+            	    adaptor.addChild(root_0, string_literal442_tree);
             	    }
 
             	    }
@@ -14392,12 +14402,12 @@ public TreeAdaptor getTreeAdaptor() {
             	case 6 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:403:5: '--'
             	    {
-            	    string_literal442=(Token)match(input,47,FOLLOW_47_in_postfix_expression2412); if (state.failed) return retval;
+            	    string_literal443=(Token)match(input,47,FOLLOW_47_in_postfix_expression2414); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    string_literal442_tree = 
-            	    (Object)adaptor.create(string_literal442)
+            	    string_literal443_tree = 
+            	    (Object)adaptor.create(string_literal443)
             	    ;
-            	    adaptor.addChild(root_0, string_literal442_tree);
+            	    adaptor.addChild(root_0, string_literal443_tree);
             	    }
 
             	    }
@@ -14450,13 +14460,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token char_literal444=null;
-        ObjectiveCParser.assignment_expression_return assignment_expression443 =null;
+        Token char_literal445=null;
+        ObjectiveCParser.assignment_expression_return assignment_expression444 =null;
 
-        ObjectiveCParser.assignment_expression_return assignment_expression445 =null;
+        ObjectiveCParser.assignment_expression_return assignment_expression446 =null;
 
 
-        Object char_literal444_tree=null;
+        Object char_literal445_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:407:3: ( assignment_expression ( ',' assignment_expression )* )
@@ -14465,12 +14475,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            pushFollow(FOLLOW_assignment_expression_in_argument_expression_list2428);
-            assignment_expression443=assignment_expression();
+            pushFollow(FOLLOW_assignment_expression_in_argument_expression_list2430);
+            assignment_expression444=assignment_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression443.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression444.getTree());
 
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:407:27: ( ',' assignment_expression )*
             loop111:
@@ -14487,20 +14497,20 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:407:28: ',' assignment_expression
             	    {
-            	    char_literal444=(Token)match(input,45,FOLLOW_45_in_argument_expression_list2431); if (state.failed) return retval;
+            	    char_literal445=(Token)match(input,45,FOLLOW_45_in_argument_expression_list2433); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
-            	    char_literal444_tree = 
-            	    (Object)adaptor.create(char_literal444)
+            	    char_literal445_tree = 
+            	    (Object)adaptor.create(char_literal445)
             	    ;
-            	    adaptor.addChild(root_0, char_literal444_tree);
+            	    adaptor.addChild(root_0, char_literal445_tree);
             	    }
 
-            	    pushFollow(FOLLOW_assignment_expression_in_argument_expression_list2433);
-            	    assignment_expression445=assignment_expression();
+            	    pushFollow(FOLLOW_assignment_expression_in_argument_expression_list2435);
+            	    assignment_expression446=assignment_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression445.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression446.getTree());
 
             	    }
             	    break;
@@ -14552,9 +14562,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token IDENTIFIER446=null;
+        Token IDENTIFIER447=null;
 
-        Object IDENTIFIER446_tree=null;
+        Object IDENTIFIER447_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:409:12: ( IDENTIFIER )
@@ -14563,12 +14573,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            IDENTIFIER446=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_identifier2444); if (state.failed) return retval;
+            IDENTIFIER447=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_identifier2446); if (state.failed) return retval;
             if ( state.backtracking==0 ) {
-            IDENTIFIER446_tree = 
-            (Object)adaptor.create(IDENTIFIER446)
+            IDENTIFIER447_tree = 
+            (Object)adaptor.create(IDENTIFIER447)
             ;
-            adaptor.addChild(root_0, IDENTIFIER446_tree);
+            adaptor.addChild(root_0, IDENTIFIER447_tree);
             }
 
             }
@@ -14612,9 +14622,9 @@ public TreeAdaptor getTreeAdaptor() {
 
         Object root_0 = null;
 
-        Token set447=null;
+        Token set448=null;
 
-        Object set447_tree=null;
+        Object set448_tree=null;
 
         try {
             // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:411:10: ( DECIMAL_LITERAL | HEX_LITERAL | OCTAL_LITERAL | CHARACTER_LITERAL | FLOATING_POINT_LITERAL )
@@ -14623,12 +14633,12 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (Object)adaptor.nil();
 
 
-            set447=(Token)input.LT(1);
+            set448=(Token)input.LT(1);
 
             if ( input.LA(1)==CHARACTER_LITERAL||input.LA(1)==DECIMAL_LITERAL||input.LA(1)==FLOATING_POINT_LITERAL||input.LA(1)==HEX_LITERAL||input.LA(1)==OCTAL_LITERAL ) {
                 input.consume();
                 if ( state.backtracking==0 ) adaptor.addChild(root_0, 
-                (Object)adaptor.create(set447)
+                (Object)adaptor.create(set448)
                 );
                 state.errorRecovery=false;
                 state.failed=false;
@@ -14670,7 +14680,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:30:2: ( function_definition )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:30:2: function_definition
         {
-        pushFollow(FOLLOW_function_definition_in_synpred5_ObjectiveC66);
+        pushFollow(FOLLOW_function_definition_in_synpred5_ObjectiveC68);
         function_definition();
 
         state._fsp--;
@@ -14686,7 +14696,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:31:3: ( declaration )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:31:3: declaration
         {
-        pushFollow(FOLLOW_declaration_in_synpred6_ObjectiveC70);
+        pushFollow(FOLLOW_declaration_in_synpred6_ObjectiveC72);
         declaration();
 
         state._fsp--;
@@ -14702,7 +14712,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:32:3: ( class_interface )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:32:3: class_interface
         {
-        pushFollow(FOLLOW_class_interface_in_synpred7_ObjectiveC75);
+        pushFollow(FOLLOW_class_interface_in_synpred7_ObjectiveC77);
         class_interface();
 
         state._fsp--;
@@ -14718,7 +14728,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:33:3: ( class_implementation )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:33:3: class_implementation
         {
-        pushFollow(FOLLOW_class_implementation_in_synpred8_ObjectiveC79);
+        pushFollow(FOLLOW_class_implementation_in_synpred8_ObjectiveC81);
         class_implementation();
 
         state._fsp--;
@@ -14734,7 +14744,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:34:3: ( category_interface )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:34:3: category_interface
         {
-        pushFollow(FOLLOW_category_interface_in_synpred9_ObjectiveC83);
+        pushFollow(FOLLOW_category_interface_in_synpred9_ObjectiveC85);
         category_interface();
 
         state._fsp--;
@@ -14750,7 +14760,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:35:3: ( category_implementation )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:35:3: category_implementation
         {
-        pushFollow(FOLLOW_category_implementation_in_synpred10_ObjectiveC87);
+        pushFollow(FOLLOW_category_implementation_in_synpred10_ObjectiveC89);
         category_implementation();
 
         state._fsp--;
@@ -14766,7 +14776,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:36:3: ( protocol_declaration )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:36:3: protocol_declaration
         {
-        pushFollow(FOLLOW_protocol_declaration_in_synpred11_ObjectiveC91);
+        pushFollow(FOLLOW_protocol_declaration_in_synpred11_ObjectiveC93);
         protocol_declaration();
 
         state._fsp--;
@@ -14782,7 +14792,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:37:3: ( protocol_declaration_list )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:37:3: protocol_declaration_list
         {
-        pushFollow(FOLLOW_protocol_declaration_list_in_synpred12_ObjectiveC95);
+        pushFollow(FOLLOW_protocol_declaration_list_in_synpred12_ObjectiveC97);
         protocol_declaration_list();
 
         state._fsp--;
@@ -14798,7 +14808,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:151:3: ( function_definition )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:151:3: function_definition
         {
-        pushFollow(FOLLOW_function_definition_in_synpred48_ObjectiveC619);
+        pushFollow(FOLLOW_function_definition_in_synpred48_ObjectiveC621);
         function_definition();
 
         state._fsp--;
@@ -14814,7 +14824,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:151:25: ( declaration )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:151:25: declaration
         {
-        pushFollow(FOLLOW_declaration_in_synpred49_ObjectiveC623);
+        pushFollow(FOLLOW_declaration_in_synpred49_ObjectiveC625);
         declaration();
 
         state._fsp--;
@@ -14830,7 +14840,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:165:34: ( parameter_list )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:165:34: parameter_list
         {
-        pushFollow(FOLLOW_parameter_list_in_synpred56_ObjectiveC698);
+        pushFollow(FOLLOW_parameter_list_in_synpred56_ObjectiveC700);
         parameter_list();
 
         state._fsp--;
@@ -14849,7 +14859,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:180:4: ( class_name ( protocol_reference_list )? )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:180:5: class_name ( protocol_reference_list )?
         {
-        pushFollow(FOLLOW_class_name_in_synpred71_ObjectiveC799);
+        pushFollow(FOLLOW_class_name_in_synpred71_ObjectiveC801);
         class_name();
 
         state._fsp--;
@@ -14866,7 +14876,7 @@ public TreeAdaptor getTreeAdaptor() {
             case 1 :
                 // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:180:18: protocol_reference_list
                 {
-                pushFollow(FOLLOW_protocol_reference_list_in_synpred71_ObjectiveC803);
+                pushFollow(FOLLOW_protocol_reference_list_in_synpred71_ObjectiveC805);
                 protocol_reference_list();
 
                 state._fsp--;
@@ -14891,7 +14901,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:207:2: ( expression )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:207:2: expression
         {
-        pushFollow(FOLLOW_expression_in_synpred89_ObjectiveC947);
+        pushFollow(FOLLOW_expression_in_synpred89_ObjectiveC949);
         expression();
 
         state._fsp--;
@@ -14907,7 +14917,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:208:4: ( class_name )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:208:4: class_name
         {
-        pushFollow(FOLLOW_class_name_in_synpred90_ObjectiveC952);
+        pushFollow(FOLLOW_class_name_in_synpred90_ObjectiveC954);
         class_name();
 
         state._fsp--;
@@ -14923,7 +14933,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:259:32: ( type_specifier )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:259:32: type_specifier
         {
-        pushFollow(FOLLOW_type_specifier_in_synpred100_ObjectiveC1174);
+        pushFollow(FOLLOW_type_specifier_in_synpred100_ObjectiveC1176);
         type_specifier();
 
         state._fsp--;
@@ -14939,7 +14949,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:267:5: ( IDENTIFIER )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:267:5: IDENTIFIER
         {
-        match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred109_ObjectiveC1255); if (state.failed) return ;
+        match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred109_ObjectiveC1257); if (state.failed) return ;
 
         }
 
@@ -14951,7 +14961,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:271:29: ( type_specifier )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:271:29: type_specifier
         {
-        pushFollow(FOLLOW_type_specifier_in_synpred112_ObjectiveC1291);
+        pushFollow(FOLLOW_type_specifier_in_synpred112_ObjectiveC1293);
         type_specifier();
 
         state._fsp--;
@@ -14967,7 +14977,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:275:21: ( declarator )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:275:21: declarator
         {
-        pushFollow(FOLLOW_declarator_in_synpred115_ObjectiveC1322);
+        pushFollow(FOLLOW_declarator_in_synpred115_ObjectiveC1324);
         declarator();
 
         state._fsp--;
@@ -14983,15 +14993,15 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:278:17: ( '{' enumerator_list '}' )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:278:17: '{' enumerator_list '}'
         {
-        match(input,130,FOLLOW_130_in_synpred117_ObjectiveC1349); if (state.failed) return ;
+        match(input,130,FOLLOW_130_in_synpred117_ObjectiveC1351); if (state.failed) return ;
 
-        pushFollow(FOLLOW_enumerator_list_in_synpred117_ObjectiveC1351);
+        pushFollow(FOLLOW_enumerator_list_in_synpred117_ObjectiveC1353);
         enumerator_list();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,134,FOLLOW_134_in_synpred117_ObjectiveC1353); if (state.failed) return ;
+        match(input,134,FOLLOW_134_in_synpred117_ObjectiveC1355); if (state.failed) return ;
 
         }
 
@@ -15003,7 +15013,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:285:32: ( declarator_suffix )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:285:32: declarator_suffix
         {
-        pushFollow(FOLLOW_declarator_suffix_in_synpred123_ObjectiveC1425);
+        pushFollow(FOLLOW_declarator_suffix_in_synpred123_ObjectiveC1427);
         declarator_suffix();
 
         state._fsp--;
@@ -15019,7 +15029,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:286:40: ( declarator_suffix )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:286:40: declarator_suffix
         {
-        pushFollow(FOLLOW_declarator_suffix_in_synpred125_ObjectiveC1454);
+        pushFollow(FOLLOW_declarator_suffix_in_synpred125_ObjectiveC1456);
         declarator_suffix();
 
         state._fsp--;
@@ -15035,7 +15045,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:294:29: ( declarator )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:294:29: declarator
         {
-        pushFollow(FOLLOW_declarator_in_synpred130_ObjectiveC1514);
+        pushFollow(FOLLOW_declarator_in_synpred130_ObjectiveC1516);
         declarator();
 
         state._fsp--;
@@ -15062,7 +15072,7 @@ public TreeAdaptor getTreeAdaptor() {
             case 1 :
                 // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:294:29: declarator
                 {
-                pushFollow(FOLLOW_declarator_in_synpred131_ObjectiveC1514);
+                pushFollow(FOLLOW_declarator_in_synpred131_ObjectiveC1516);
                 declarator();
 
                 state._fsp--;
@@ -15084,7 +15094,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:301:23: ( '*' ( type_qualifier )* abstract_declarator )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:301:23: '*' ( type_qualifier )* abstract_declarator
         {
-        match(input,40,FOLLOW_40_in_synpred135_ObjectiveC1569); if (state.failed) return ;
+        match(input,40,FOLLOW_40_in_synpred135_ObjectiveC1571); if (state.failed) return ;
 
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:301:27: ( type_qualifier )*
         loop121:
@@ -15101,7 +15111,7 @@ public TreeAdaptor getTreeAdaptor() {
         	case 1 :
         	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:301:27: type_qualifier
         	    {
-        	    pushFollow(FOLLOW_type_qualifier_in_synpred135_ObjectiveC1571);
+        	    pushFollow(FOLLOW_type_qualifier_in_synpred135_ObjectiveC1573);
         	    type_qualifier();
 
         	    state._fsp--;
@@ -15116,7 +15126,7 @@ public TreeAdaptor getTreeAdaptor() {
         } while (true);
 
 
-        pushFollow(FOLLOW_abstract_declarator_in_synpred135_ObjectiveC1574);
+        pushFollow(FOLLOW_abstract_declarator_in_synpred135_ObjectiveC1576);
         abstract_declarator();
 
         state._fsp--;
@@ -15132,7 +15142,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:302:33: ( abstract_declarator_suffix )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:302:33: abstract_declarator_suffix
         {
-        pushFollow(FOLLOW_abstract_declarator_suffix_in_synpred136_ObjectiveC1587);
+        pushFollow(FOLLOW_abstract_declarator_suffix_in_synpred136_ObjectiveC1589);
         abstract_declarator_suffix();
 
         state._fsp--;
@@ -15148,15 +15158,15 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:302:5: ( '(' abstract_declarator ')' ( abstract_declarator_suffix )+ )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:302:5: '(' abstract_declarator ')' ( abstract_declarator_suffix )+
         {
-        match(input,38,FOLLOW_38_in_synpred137_ObjectiveC1581); if (state.failed) return ;
+        match(input,38,FOLLOW_38_in_synpred137_ObjectiveC1583); if (state.failed) return ;
 
-        pushFollow(FOLLOW_abstract_declarator_in_synpred137_ObjectiveC1583);
+        pushFollow(FOLLOW_abstract_declarator_in_synpred137_ObjectiveC1585);
         abstract_declarator();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,39,FOLLOW_39_in_synpred137_ObjectiveC1585); if (state.failed) return ;
+        match(input,39,FOLLOW_39_in_synpred137_ObjectiveC1587); if (state.failed) return ;
 
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:302:33: ( abstract_declarator_suffix )+
         int cnt122=0;
@@ -15174,7 +15184,7 @@ public TreeAdaptor getTreeAdaptor() {
         	case 1 :
         	    // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:302:33: abstract_declarator_suffix
         	    {
-        	    pushFollow(FOLLOW_abstract_declarator_suffix_in_synpred137_ObjectiveC1587);
+        	    pushFollow(FOLLOW_abstract_declarator_suffix_in_synpred137_ObjectiveC1589);
         	    abstract_declarator_suffix();
 
         	    state._fsp--;
@@ -15204,7 +15214,7 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:329:27: ( declaration )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:329:27: declaration
         {
-        pushFollow(FOLLOW_declaration_in_synpred154_ObjectiveC1765);
+        pushFollow(FOLLOW_declaration_in_synpred154_ObjectiveC1767);
         declaration();
 
         state._fsp--;
@@ -15220,9 +15230,9 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:332:40: ( 'else' statement )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:332:40: 'else' statement
         {
-        match(input,100,FOLLOW_100_in_synpred156_ObjectiveC1794); if (state.failed) return ;
+        match(input,100,FOLLOW_100_in_synpred156_ObjectiveC1796); if (state.failed) return ;
 
-        pushFollow(FOLLOW_statement_in_synpred156_ObjectiveC1796);
+        pushFollow(FOLLOW_statement_in_synpred156_ObjectiveC1798);
         statement();
 
         state._fsp--;
@@ -15238,17 +15248,17 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:386:19: ( '(' type_name ')' cast_expression )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:386:19: '(' type_name ')' cast_expression
         {
-        match(input,38,FOLLOW_38_in_synpred198_ObjectiveC2265); if (state.failed) return ;
+        match(input,38,FOLLOW_38_in_synpred198_ObjectiveC2267); if (state.failed) return ;
 
-        pushFollow(FOLLOW_type_name_in_synpred198_ObjectiveC2267);
+        pushFollow(FOLLOW_type_name_in_synpred198_ObjectiveC2269);
         type_name();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,39,FOLLOW_39_in_synpred198_ObjectiveC2269); if (state.failed) return ;
+        match(input,39,FOLLOW_39_in_synpred198_ObjectiveC2271); if (state.failed) return ;
 
-        pushFollow(FOLLOW_cast_expression_in_synpred198_ObjectiveC2271);
+        pushFollow(FOLLOW_cast_expression_in_synpred198_ObjectiveC2273);
         cast_expression();
 
         state._fsp--;
@@ -15264,15 +15274,15 @@ public TreeAdaptor getTreeAdaptor() {
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:393:15: ( '(' type_name ')' )
         // /Users/Vincent/Projects/parsing/ObjectiveC/antlr-objc/src/smartmobili/lang/objc/ObjectiveC.g:393:15: '(' type_name ')'
         {
-        match(input,38,FOLLOW_38_in_synpred203_ObjectiveC2320); if (state.failed) return ;
+        match(input,38,FOLLOW_38_in_synpred203_ObjectiveC2322); if (state.failed) return ;
 
-        pushFollow(FOLLOW_type_name_in_synpred203_ObjectiveC2322);
+        pushFollow(FOLLOW_type_name_in_synpred203_ObjectiveC2324);
         type_name();
 
         state._fsp--;
         if (state.failed) return ;
 
-        match(input,39,FOLLOW_39_in_synpred203_ObjectiveC2324); if (state.failed) return ;
+        match(input,39,FOLLOW_39_in_synpred203_ObjectiveC2326); if (state.failed) return ;
 
         }
 
@@ -15705,489 +15715,490 @@ public TreeAdaptor getTreeAdaptor() {
 
  
 
-    public static final BitSet FOLLOW_external_declaration_in_translation_unit47 = new BitSet(new long[]{0x00000001FE012022L,0xF367F4E8DA004620L,0x0000000000000001L});
-    public static final BitSet FOLLOW_COMMENT_in_external_declaration55 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LINE_COMMENT_in_external_declaration59 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_preprocessor_declaration_in_external_declaration63 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_function_definition_in_external_declaration66 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaration_in_external_declaration70 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_class_interface_in_external_declaration75 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_class_implementation_in_external_declaration79 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_category_interface_in_external_declaration83 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_category_implementation_in_external_declaration87 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_protocol_declaration_in_external_declaration91 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_protocol_declaration_list_in_external_declaration95 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_class_declaration_list_in_external_declaration99 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_preprocessor_declaration106 = new BitSet(new long[]{0x0200000001000000L});
-    public static final BitSet FOLLOW_file_specification_in_preprocessor_declaration108 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_preprocessor_declaration112 = new BitSet(new long[]{0x0200000001000000L});
-    public static final BitSet FOLLOW_file_specification_in_preprocessor_declaration114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_preprocessor_declaration118 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_macro_specification_in_preprocessor_declaration120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_preprocessor_declaration124 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_preprocessor_declaration126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_preprocessor_declaration130 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_preprocessor_declaration132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_preprocessor_declaration136 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_preprocessor_declaration138 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_preprocessor_declaration142 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_preprocessor_declaration144 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_preprocessor_declaration148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_file_specification155 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_file_specification161 = new BitSet(new long[]{0x8024000001002000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_set_in_file_specification178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_macro_specification191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_class_interface199 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_class_name_in_class_interface205 = new BitSet(new long[]{0x0280440000002000L,0xF367F4E8DA000080L,0x0000000000000005L});
-    public static final BitSet FOLLOW_55_in_class_interface208 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_superclass_name_in_class_interface210 = new BitSet(new long[]{0x0200440000002000L,0xF367F4E8DA000080L,0x0000000000000005L});
-    public static final BitSet FOLLOW_protocol_reference_list_in_class_interface217 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000005L});
-    public static final BitSet FOLLOW_instance_variables_in_class_interface225 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
-    public static final BitSet FOLLOW_interface_declaration_list_in_class_interface233 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_class_interface242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_category_interface250 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_class_name_in_category_interface256 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_category_interface258 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_category_name_in_category_interface260 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_category_interface262 = new BitSet(new long[]{0x0200440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
-    public static final BitSet FOLLOW_protocol_reference_list_in_category_interface267 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
-    public static final BitSet FOLLOW_interface_declaration_list_in_category_interface275 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_category_interface284 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_class_implementation292 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_class_name_in_class_implementation298 = new BitSet(new long[]{0x0080440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
-    public static final BitSet FOLLOW_55_in_class_implementation302 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_superclass_name_in_class_implementation304 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
-    public static final BitSet FOLLOW_implementation_definition_list_in_class_implementation312 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_class_implementation321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_category_implementation329 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_class_name_in_category_implementation333 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_category_implementation335 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_category_name_in_category_implementation337 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_category_implementation339 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
-    public static final BitSet FOLLOW_implementation_definition_list_in_category_implementation344 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_category_implementation351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_protocol_declaration359 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_protocol_name_in_protocol_declaration363 = new BitSet(new long[]{0x0200440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
-    public static final BitSet FOLLOW_protocol_reference_list_in_protocol_declaration367 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
-    public static final BitSet FOLLOW_interface_declaration_list_in_protocol_declaration375 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_71_in_protocol_declaration382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_protocol_declaration_list391 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_protocol_list_in_protocol_declaration_list393 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_protocol_declaration_list394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_class_declaration_list406 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_class_list_in_class_declaration_list408 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_class_declaration_list409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_class_name_in_class_list420 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_45_in_class_list423 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_class_name_in_class_list425 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_57_in_protocol_reference_list436 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_protocol_list_in_protocol_reference_list438 = new BitSet(new long[]{0x8000000000000000L});
-    public static final BitSet FOLLOW_63_in_protocol_reference_list440 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_protocol_name_in_protocol_list449 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_45_in_protocol_list452 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_protocol_name_in_protocol_list454 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_class_name464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_superclass_name472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_category_name480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_protocol_name488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_130_in_instance_variables496 = new BitSet(new long[]{0x0080014000002000L,0x000000000000B800L});
-    public static final BitSet FOLLOW_instance_variable_declaration_in_instance_variables498 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_134_in_instance_variables500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_visibility_specification_in_instance_variable_declaration510 = new BitSet(new long[]{0x0080014000002002L,0x000000000000B800L});
-    public static final BitSet FOLLOW_struct_declarator_list_in_instance_variable_declaration514 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_instance_variables_in_instance_variable_declaration516 = new BitSet(new long[]{0x0080014000002002L,0x000000000000B800L});
-    public static final BitSet FOLLOW_declaration_in_interface_declaration_list553 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_class_method_declaration_in_interface_declaration_list557 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_instance_method_declaration_in_interface_declaration_list561 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_42_in_class_method_declaration574 = new BitSet(new long[]{0x0080004000002000L});
-    public static final BitSet FOLLOW_method_declaration_in_class_method_declaration576 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_instance_method_declaration588 = new BitSet(new long[]{0x0080004000002000L});
-    public static final BitSet FOLLOW_method_declaration_in_instance_method_declaration590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_method_type_in_method_declaration603 = new BitSet(new long[]{0x0080000000002000L});
-    public static final BitSet FOLLOW_method_selector_in_method_declaration608 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_method_declaration610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_function_definition_in_implementation_definition_list619 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_declaration_in_implementation_definition_list623 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_class_method_definition_in_implementation_definition_list627 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_instance_method_definition_in_implementation_definition_list631 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_42_in_class_method_definition642 = new BitSet(new long[]{0x0080004000002000L});
-    public static final BitSet FOLLOW_method_definition_in_class_method_definition644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_instance_method_definition656 = new BitSet(new long[]{0x0080004000002000L});
-    public static final BitSet FOLLOW_method_definition_in_instance_method_definition658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_method_type_in_method_definition671 = new BitSet(new long[]{0x0080000000002000L});
-    public static final BitSet FOLLOW_method_selector_in_method_definition675 = new BitSet(new long[]{0x0000014000002000L,0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_init_declarator_list_in_method_definition678 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_compound_statement_in_method_definition682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_selector_in_method_selector690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_keyword_declarator_in_method_selector694 = new BitSet(new long[]{0x0080000000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_parameter_list_in_method_selector698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_selector_in_keyword_declarator712 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_keyword_declarator715 = new BitSet(new long[]{0x0000004000002000L});
-    public static final BitSet FOLLOW_method_type_in_keyword_declarator717 = new BitSet(new long[]{0x0000004000002000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_keyword_declarator720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_selector727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_method_type734 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_name_in_method_type736 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_method_type738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_127_in_type_specifier745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_type_specifier749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_117_in_type_specifier753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_110_in_type_specifier757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_111_in_type_specifier761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_103_in_type_specifier765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_99_in_type_specifier769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_118_in_type_specifier773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_126_in_type_specifier777 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_106_in_type_specifier784 = new BitSet(new long[]{0x0200000000000002L});
-    public static final BitSet FOLLOW_protocol_reference_list_in_type_specifier788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_class_name_in_type_specifier799 = new BitSet(new long[]{0x0200000000000002L});
-    public static final BitSet FOLLOW_protocol_reference_list_in_type_specifier803 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_struct_or_union_specifier_in_type_specifier812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_enum_specifier_in_type_specifier817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_type_specifier823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_95_in_type_qualifier831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_128_in_type_qualifier835 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_protocol_qualifier_in_type_qualifier839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_primary_expression875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_constant_in_primary_expression880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_LITERAL_in_primary_expression885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_primary_expression891 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_primary_expression893 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_primary_expression895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_116_in_primary_expression901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_message_expression_in_primary_expression906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_selector_expression_in_primary_expression911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_protocol_expression_in_primary_expression916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_encode_expression_in_primary_expression921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_message_expression930 = new BitSet(new long[]{0x0000C950004A2A50L,0x0490000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_receiver_in_message_expression932 = new BitSet(new long[]{0x0080000000002000L});
-    public static final BitSet FOLLOW_message_selector_in_message_expression934 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_message_expression936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_receiver947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_class_name_in_receiver952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_122_in_receiver958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_selector_in_message_selector966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_keyword_argument_in_message_selector971 = new BitSet(new long[]{0x0080000000002002L});
-    public static final BitSet FOLLOW_selector_in_keyword_argument980 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_keyword_argument983 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_keyword_argument985 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_selector_expression993 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_selector_expression995 = new BitSet(new long[]{0x0080000000002000L});
-    public static final BitSet FOLLOW_selector_name_in_selector_expression997 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_selector_expression999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_selector_in_selector_name1007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_selector_in_selector_name1013 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_selector_name1016 = new BitSet(new long[]{0x0080000000002002L});
-    public static final BitSet FOLLOW_78_in_protocol_expression1026 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_protocol_expression1028 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_protocol_name_in_protocol_expression1030 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_protocol_expression1032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_encode_expression1040 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_encode_expression1042 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_name_in_encode_expression1044 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_encode_expression1046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declarator_in_exception_declarator1054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_try_statement1062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_catch_statement1070 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_catch_statement1072 = new BitSet(new long[]{0x0000014000002000L});
-    public static final BitSet FOLLOW_exception_declarator_in_catch_statement1073 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_catch_statement1074 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_catch_statement1075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_finally_statement1083 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_finally_statement1085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_throw_statement1093 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_throw_statement1095 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_throw_statement1096 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_throw_statement1097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_try_statement_in_try_block1105 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_catch_statement_in_try_block1108 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000100L});
-    public static final BitSet FOLLOW_finally_statement_in_try_block1113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_synchronized_statement1124 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_synchronized_statement1126 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_synchronized_statement1128 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_synchronized_statement1130 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_synchronized_statement1132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaration_specifiers_in_function_definition1140 = new BitSet(new long[]{0x0000014000002000L});
-    public static final BitSet FOLLOW_declarator_in_function_definition1142 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_compound_statement_in_function_definition1144 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaration_specifiers_in_declaration1153 = new BitSet(new long[]{0x0100014000002000L});
-    public static final BitSet FOLLOW_init_declarator_list_in_declaration1155 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_declaration1158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_storage_class_specifier_in_declaration_specifiers1170 = new BitSet(new long[]{0x0000000000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_specifier_in_declaration_specifiers1174 = new BitSet(new long[]{0x0000000000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_qualifier_in_declaration_specifiers1178 = new BitSet(new long[]{0x0000000000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_init_declarator_in_init_declarator_list1212 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_45_in_init_declarator_list1215 = new BitSet(new long[]{0x0000014000002000L});
-    public static final BitSet FOLLOW_init_declarator_in_init_declarator_list1217 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_declarator_in_init_declarator1227 = new BitSet(new long[]{0x2000000000000002L});
-    public static final BitSet FOLLOW_61_in_init_declarator1230 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000084L});
-    public static final BitSet FOLLOW_initializer_in_init_declarator1232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_struct_or_union_specifier1242 = new BitSet(new long[]{0x0000000000002000L,0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_struct_or_union_specifier1255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_struct_or_union_specifier1259 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_130_in_struct_or_union_specifier1262 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_struct_declaration_in_struct_or_union_specifier1264 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000041L});
-    public static final BitSet FOLLOW_134_in_struct_or_union_specifier1267 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_specifier_qualifier_list_in_struct_declaration1277 = new BitSet(new long[]{0x0080014000002000L});
-    public static final BitSet FOLLOW_struct_declarator_list_in_struct_declaration1279 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_struct_declaration1281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_specifier_in_specifier_qualifier_list1291 = new BitSet(new long[]{0x0000000000002002L,0xE263F4A8D8000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_qualifier_in_specifier_qualifier_list1295 = new BitSet(new long[]{0x0000000000002002L,0xE263F4A8D8000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_struct_declarator_in_struct_declarator_list1306 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_45_in_struct_declarator_list1309 = new BitSet(new long[]{0x0080014000002000L});
-    public static final BitSet FOLLOW_struct_declarator_in_struct_declarator_list1311 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_declarator_in_struct_declarator1322 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declarator_in_struct_declarator1326 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_struct_declarator1329 = new BitSet(new long[]{0x0000000000020A50L});
-    public static final BitSet FOLLOW_constant_in_struct_declarator1331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_101_in_enum_specifier1339 = new BitSet(new long[]{0x0000000000002000L,0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_identifier_in_enum_specifier1346 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_130_in_enum_specifier1349 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_enumerator_list_in_enum_specifier1351 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_134_in_enum_specifier1353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_130_in_enum_specifier1362 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_enumerator_list_in_enum_specifier1364 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_134_in_enum_specifier1366 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_enumerator_in_enumerator_list1375 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_45_in_enumerator_list1378 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_enumerator_in_enumerator_list1380 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_identifier_in_enumerator1390 = new BitSet(new long[]{0x2000000000000002L});
-    public static final BitSet FOLLOW_61_in_enumerator1393 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_constant_expression_in_enumerator1395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_declarator1405 = new BitSet(new long[]{0x0000014000002000L,0x0003300098000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_qualifier_in_declarator1407 = new BitSet(new long[]{0x0000014000002000L,0x0003300098000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_declarator_in_declarator1410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_direct_declarator_in_declarator1414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_identifier_in_direct_declarator1423 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_declarator_suffix_in_direct_declarator1425 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_38_in_direct_declarator1448 = new BitSet(new long[]{0x0000014000002000L});
-    public static final BitSet FOLLOW_declarator_in_direct_declarator1450 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_direct_declarator1452 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_declarator_suffix_in_direct_declarator1454 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_84_in_declarator_suffix1464 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000514040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_constant_expression_in_declarator_suffix1466 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_declarator_suffix1469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_declarator_suffix1477 = new BitSet(new long[]{0x0000008000002000L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_parameter_list_in_declarator_suffix1479 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_declarator_suffix1482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_parameter_declaration_list_in_parameter_list1490 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_45_in_parameter_list1494 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_parameter_list1496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaration_specifiers_in_parameter_declaration1511 = new BitSet(new long[]{0x0000014000002002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_declarator_in_parameter_declaration1514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_abstract_declarator_in_parameter_declaration1519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_assignment_expression_in_initializer1529 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_130_in_initializer1538 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000084L});
-    public static final BitSet FOLLOW_initializer_in_initializer1540 = new BitSet(new long[]{0x0000200000000000L,0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_45_in_initializer1543 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000084L});
-    public static final BitSet FOLLOW_initializer_in_initializer1545 = new BitSet(new long[]{0x0000200000000000L,0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_134_in_initializer1549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_specifier_qualifier_list_in_type_name1558 = new BitSet(new long[]{0x0000014000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_abstract_declarator_in_type_name1560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_abstract_declarator1569 = new BitSet(new long[]{0x0000014000000000L,0x0003300098100000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_qualifier_in_abstract_declarator1571 = new BitSet(new long[]{0x0000014000000000L,0x0003300098100000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_abstract_declarator_in_abstract_declarator1574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_abstract_declarator1581 = new BitSet(new long[]{0x000001C000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_abstract_declarator_in_abstract_declarator1583 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_abstract_declarator1585 = new BitSet(new long[]{0x0000004000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_abstract_declarator_suffix_in_abstract_declarator1587 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_84_in_abstract_declarator1595 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000514040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_constant_expression_in_abstract_declarator1597 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_abstract_declarator1600 = new BitSet(new long[]{0x0000000000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_84_in_abstract_declarator_suffix1617 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000514040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_constant_expression_in_abstract_declarator_suffix1619 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_abstract_declarator_suffix1622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_abstract_declarator_suffix1628 = new BitSet(new long[]{0x0000008000002000L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_parameter_declaration_list_in_abstract_declarator_suffix1631 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_abstract_declarator_suffix1634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_parameter_declaration_in_parameter_declaration_list1645 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_45_in_parameter_declaration_list1649 = new BitSet(new long[]{0x0000000000002000L,0xF367F4E8DA000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_parameter_declaration_in_parameter_declaration_list1651 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_statement_in_statement_list1664 = new BitSet(new long[]{0x0100C950004A2A52L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_labeled_statement_in_statement1678 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_statement1684 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_statement1686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_compound_statement_in_statement1692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_selection_statement_in_statement1698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_iteration_statement_in_statement1704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_jump_statement_in_statement1710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_statement1716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_identifier_in_labeled_statement1727 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_labeled_statement1729 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_labeled_statement1731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_93_in_labeled_statement1737 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_constant_expression_in_labeled_statement1739 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_labeled_statement1741 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_labeled_statement1743 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_97_in_labeled_statement1749 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_labeled_statement1751 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_labeled_statement1753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_130_in_compound_statement1762 = new BitSet(new long[]{0x0100C950004A2A50L,0xFBFFFFEFFE114040L,0x00000000000000C7L});
-    public static final BitSet FOLLOW_declaration_in_compound_statement1765 = new BitSet(new long[]{0x0100C950004A2A50L,0xFBFFFFEFFE114040L,0x00000000000000C7L});
-    public static final BitSet FOLLOW_statement_list_in_compound_statement1769 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_134_in_compound_statement1772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_107_in_selection_statement1783 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_selection_statement1785 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_selection_statement1787 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_selection_statement1789 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_selection_statement1791 = new BitSet(new long[]{0x0000000000000002L,0x0000001000000000L});
-    public static final BitSet FOLLOW_100_in_selection_statement1794 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_selection_statement1796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_123_in_selection_statement1804 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_selection_statement1806 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_selection_statement1808 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_selection_statement1810 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_selection_statement1812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_129_in_iteration_statement1823 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_iteration_statement1825 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_iteration_statement1827 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_iteration_statement1829 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_iteration_statement1831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_98_in_iteration_statement1837 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_iteration_statement1839 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_129_in_iteration_statement1841 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_iteration_statement1843 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_iteration_statement1845 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_iteration_statement1847 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_iteration_statement1849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_104_in_iteration_statement1855 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_iteration_statement1857 = new BitSet(new long[]{0x0100C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_iteration_statement1859 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_iteration_statement1862 = new BitSet(new long[]{0x0100C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_iteration_statement1864 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_iteration_statement1867 = new BitSet(new long[]{0x0000C9D0004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_iteration_statement1869 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_iteration_statement1872 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_iteration_statement1874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_105_in_jump_statement1885 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_identifier_in_jump_statement1887 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_jump_statement1889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_96_in_jump_statement1895 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_jump_statement1897 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_jump_statement1903 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_jump_statement1905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_115_in_jump_statement1911 = new BitSet(new long[]{0x0100C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_jump_statement1913 = new BitSet(new long[]{0x0100000000000000L});
-    public static final BitSet FOLLOW_56_in_jump_statement1916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_assignment_expression_in_expression1928 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_45_in_expression1931 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_assignment_expression_in_expression1933 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_conditional_expression_in_assignment_expression1944 = new BitSet(new long[]{0x2841122400000002L,0x0000000001000004L,0x0000000000000010L});
-    public static final BitSet FOLLOW_assignment_operator_in_assignment_expression1951 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_assignment_expression_in_assignment_expression1953 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logical_or_expression_in_conditional_expression2013 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000008L});
-    public static final BitSet FOLLOW_67_in_conditional_expression2019 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_logical_or_expression_in_conditional_expression2021 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_conditional_expression2023 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_logical_or_expression_in_conditional_expression2025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_conditional_expression_in_constant_expression2036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression2045 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_133_in_logical_or_expression2051 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression2053 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_inclusive_or_expression_in_logical_and_expression2064 = new BitSet(new long[]{0x0000000800000002L});
-    public static final BitSet FOLLOW_35_in_logical_and_expression2070 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_inclusive_or_expression_in_logical_and_expression2072 = new BitSet(new long[]{0x0000000800000002L});
-    public static final BitSet FOLLOW_exclusive_or_expression_in_inclusive_or_expression2083 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_131_in_inclusive_or_expression2089 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_exclusive_or_expression_in_inclusive_or_expression2091 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression2102 = new BitSet(new long[]{0x0000000000000002L,0x0000000000800000L});
-    public static final BitSet FOLLOW_87_in_exclusive_or_expression2105 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression2107 = new BitSet(new long[]{0x0000000000000002L,0x0000000000800000L});
-    public static final BitSet FOLLOW_equality_expression_in_and_expression2118 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_36_in_and_expression2121 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_equality_expression_in_and_expression2123 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_relational_expression_in_equality_expression2134 = new BitSet(new long[]{0x4000000000800002L});
-    public static final BitSet FOLLOW_set_in_equality_expression2140 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_relational_expression_in_equality_expression2148 = new BitSet(new long[]{0x4000000000800002L});
-    public static final BitSet FOLLOW_shift_expression_in_relational_expression2159 = new BitSet(new long[]{0x9200000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_set_in_relational_expression2163 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_shift_expression_in_relational_expression2179 = new BitSet(new long[]{0x9200000000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_additive_expression_in_shift_expression2190 = new BitSet(new long[]{0x0400000000000002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_shift_expression2193 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_additive_expression_in_shift_expression2201 = new BitSet(new long[]{0x0400000000000002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression2212 = new BitSet(new long[]{0x0000440000000002L});
-    public static final BitSet FOLLOW_set_in_additive_expression2217 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression2225 = new BitSet(new long[]{0x0000440000000002L});
-    public static final BitSet FOLLOW_cast_expression_in_multiplicative_expression2236 = new BitSet(new long[]{0x0020010200000002L});
-    public static final BitSet FOLLOW_set_in_multiplicative_expression2242 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_cast_expression_in_multiplicative_expression2254 = new BitSet(new long[]{0x0020010200000002L});
-    public static final BitSet FOLLOW_38_in_cast_expression2265 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_name_in_cast_expression2267 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_cast_expression2269 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_cast_expression_in_cast_expression2271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_expression_in_cast_expression2275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_postfix_expression_in_unary_expression2287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_unary_expression2293 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_unary_expression_in_unary_expression2295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_unary_expression2301 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_unary_expression_in_unary_expression2303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_operator_in_unary_expression2309 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_cast_expression_in_unary_expression2311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_119_in_unary_expression2317 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_38_in_unary_expression2320 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_name_in_unary_expression2322 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_unary_expression2324 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_expression_in_unary_expression2328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_primary_expression_in_postfix_expression2363 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_84_in_postfix_expression2368 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_expression_in_postfix_expression2370 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_postfix_expression2372 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_38_in_postfix_expression2379 = new BitSet(new long[]{0x0000C9D0004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_argument_expression_list_in_postfix_expression2381 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_postfix_expression2384 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_50_in_postfix_expression2390 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_identifier_in_postfix_expression2392 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_49_in_postfix_expression2398 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_identifier_in_postfix_expression2400 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_43_in_postfix_expression2406 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_47_in_postfix_expression2412 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_assignment_expression_in_argument_expression_list2428 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_45_in_argument_expression_list2431 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_assignment_expression_in_argument_expression_list2433 = new BitSet(new long[]{0x0000200000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_identifier2444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_function_definition_in_synpred5_ObjectiveC66 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaration_in_synpred6_ObjectiveC70 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_class_interface_in_synpred7_ObjectiveC75 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_class_implementation_in_synpred8_ObjectiveC79 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_category_interface_in_synpred9_ObjectiveC83 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_category_implementation_in_synpred10_ObjectiveC87 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_protocol_declaration_in_synpred11_ObjectiveC91 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_protocol_declaration_list_in_synpred12_ObjectiveC95 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_function_definition_in_synpred48_ObjectiveC619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declaration_in_synpred49_ObjectiveC623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_parameter_list_in_synpred56_ObjectiveC698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_class_name_in_synpred71_ObjectiveC799 = new BitSet(new long[]{0x0200000000000002L});
-    public static final BitSet FOLLOW_protocol_reference_list_in_synpred71_ObjectiveC803 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_synpred89_ObjectiveC947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_class_name_in_synpred90_ObjectiveC952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_specifier_in_synpred100_ObjectiveC1174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_synpred109_ObjectiveC1255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_type_specifier_in_synpred112_ObjectiveC1291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declarator_in_synpred115_ObjectiveC1322 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_130_in_synpred117_ObjectiveC1349 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_enumerator_list_in_synpred117_ObjectiveC1351 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_134_in_synpred117_ObjectiveC1353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declarator_suffix_in_synpred123_ObjectiveC1425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declarator_suffix_in_synpred125_ObjectiveC1454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declarator_in_synpred130_ObjectiveC1514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_declarator_in_synpred131_ObjectiveC1514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_synpred135_ObjectiveC1569 = new BitSet(new long[]{0x0000014000000000L,0x0003300098100000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_qualifier_in_synpred135_ObjectiveC1571 = new BitSet(new long[]{0x0000014000000000L,0x0003300098100000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_abstract_declarator_in_synpred135_ObjectiveC1574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_abstract_declarator_suffix_in_synpred136_ObjectiveC1587 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_synpred137_ObjectiveC1581 = new BitSet(new long[]{0x000001C000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_abstract_declarator_in_synpred137_ObjectiveC1583 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_synpred137_ObjectiveC1585 = new BitSet(new long[]{0x0000004000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_abstract_declarator_suffix_in_synpred137_ObjectiveC1587 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
-    public static final BitSet FOLLOW_declaration_in_synpred154_ObjectiveC1765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_100_in_synpred156_ObjectiveC1794 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
-    public static final BitSet FOLLOW_statement_in_synpred156_ObjectiveC1796 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_synpred198_ObjectiveC2265 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_name_in_synpred198_ObjectiveC2267 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_synpred198_ObjectiveC2269 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
-    public static final BitSet FOLLOW_cast_expression_in_synpred198_ObjectiveC2271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_synpred203_ObjectiveC2320 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_type_name_in_synpred203_ObjectiveC2322 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_synpred203_ObjectiveC2324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_external_declaration_in_translation_unit47 = new BitSet(new long[]{0x00000001FE012020L,0xF367F4E8DA004620L,0x0000000000000001L});
+    public static final BitSet FOLLOW_EOF_in_translation_unit50 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COMMENT_in_external_declaration57 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LINE_COMMENT_in_external_declaration61 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_preprocessor_declaration_in_external_declaration65 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_function_definition_in_external_declaration68 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaration_in_external_declaration72 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_class_interface_in_external_declaration77 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_class_implementation_in_external_declaration81 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_category_interface_in_external_declaration85 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_category_implementation_in_external_declaration89 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_protocol_declaration_in_external_declaration93 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_protocol_declaration_list_in_external_declaration97 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_class_declaration_list_in_external_declaration101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_preprocessor_declaration108 = new BitSet(new long[]{0x0200000001000000L});
+    public static final BitSet FOLLOW_file_specification_in_preprocessor_declaration110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_preprocessor_declaration114 = new BitSet(new long[]{0x0200000001000000L});
+    public static final BitSet FOLLOW_file_specification_in_preprocessor_declaration116 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_preprocessor_declaration120 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_macro_specification_in_preprocessor_declaration122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_preprocessor_declaration126 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_preprocessor_declaration128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_preprocessor_declaration132 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_preprocessor_declaration134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_preprocessor_declaration138 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_preprocessor_declaration140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_preprocessor_declaration144 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_preprocessor_declaration146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_preprocessor_declaration150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_file_specification157 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_file_specification163 = new BitSet(new long[]{0x8024000001002000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_set_in_file_specification180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_macro_specification193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_class_interface201 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_class_name_in_class_interface207 = new BitSet(new long[]{0x0280440000002000L,0xF367F4E8DA000080L,0x0000000000000005L});
+    public static final BitSet FOLLOW_55_in_class_interface210 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_superclass_name_in_class_interface212 = new BitSet(new long[]{0x0200440000002000L,0xF367F4E8DA000080L,0x0000000000000005L});
+    public static final BitSet FOLLOW_protocol_reference_list_in_class_interface219 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000005L});
+    public static final BitSet FOLLOW_instance_variables_in_class_interface227 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
+    public static final BitSet FOLLOW_interface_declaration_list_in_class_interface235 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_71_in_class_interface244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_category_interface252 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_class_name_in_category_interface258 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_category_interface260 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_category_name_in_category_interface262 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_category_interface264 = new BitSet(new long[]{0x0200440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
+    public static final BitSet FOLLOW_protocol_reference_list_in_category_interface269 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
+    public static final BitSet FOLLOW_interface_declaration_list_in_category_interface277 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_71_in_category_interface286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_class_implementation294 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_class_name_in_class_implementation300 = new BitSet(new long[]{0x0080440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
+    public static final BitSet FOLLOW_55_in_class_implementation304 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_superclass_name_in_class_implementation306 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
+    public static final BitSet FOLLOW_implementation_definition_list_in_class_implementation314 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_71_in_class_implementation323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_category_implementation331 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_class_name_in_category_implementation335 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_category_implementation337 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_category_name_in_category_implementation339 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_category_implementation341 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
+    public static final BitSet FOLLOW_implementation_definition_list_in_category_implementation346 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_71_in_category_implementation353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_protocol_declaration361 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_protocol_name_in_protocol_declaration365 = new BitSet(new long[]{0x0200440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
+    public static final BitSet FOLLOW_protocol_reference_list_in_protocol_declaration369 = new BitSet(new long[]{0x0000440000002000L,0xF367F4E8DA000080L,0x0000000000000001L});
+    public static final BitSet FOLLOW_interface_declaration_list_in_protocol_declaration377 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_71_in_protocol_declaration384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_protocol_declaration_list393 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_protocol_list_in_protocol_declaration_list395 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_protocol_declaration_list396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_class_declaration_list408 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_class_list_in_class_declaration_list410 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_class_declaration_list411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_class_name_in_class_list422 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_45_in_class_list425 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_class_name_in_class_list427 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_57_in_protocol_reference_list438 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_protocol_list_in_protocol_reference_list440 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_63_in_protocol_reference_list442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_protocol_name_in_protocol_list451 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_45_in_protocol_list454 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_protocol_name_in_protocol_list456 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_class_name466 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_superclass_name474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_category_name482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_protocol_name490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_130_in_instance_variables498 = new BitSet(new long[]{0x0080014000002000L,0x000000000000B800L});
+    public static final BitSet FOLLOW_instance_variable_declaration_in_instance_variables500 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_134_in_instance_variables502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_visibility_specification_in_instance_variable_declaration512 = new BitSet(new long[]{0x0080014000002002L,0x000000000000B800L});
+    public static final BitSet FOLLOW_struct_declarator_list_in_instance_variable_declaration516 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_instance_variables_in_instance_variable_declaration518 = new BitSet(new long[]{0x0080014000002002L,0x000000000000B800L});
+    public static final BitSet FOLLOW_declaration_in_interface_declaration_list555 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_class_method_declaration_in_interface_declaration_list559 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_instance_method_declaration_in_interface_declaration_list563 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_42_in_class_method_declaration576 = new BitSet(new long[]{0x0080004000002000L});
+    public static final BitSet FOLLOW_method_declaration_in_class_method_declaration578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_instance_method_declaration590 = new BitSet(new long[]{0x0080004000002000L});
+    public static final BitSet FOLLOW_method_declaration_in_instance_method_declaration592 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_method_type_in_method_declaration605 = new BitSet(new long[]{0x0080000000002000L});
+    public static final BitSet FOLLOW_method_selector_in_method_declaration610 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_method_declaration612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_function_definition_in_implementation_definition_list621 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_declaration_in_implementation_definition_list625 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_class_method_definition_in_implementation_definition_list629 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_instance_method_definition_in_implementation_definition_list633 = new BitSet(new long[]{0x0000440000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_42_in_class_method_definition644 = new BitSet(new long[]{0x0080004000002000L});
+    public static final BitSet FOLLOW_method_definition_in_class_method_definition646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_instance_method_definition658 = new BitSet(new long[]{0x0080004000002000L});
+    public static final BitSet FOLLOW_method_definition_in_instance_method_definition660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_method_type_in_method_definition673 = new BitSet(new long[]{0x0080000000002000L});
+    public static final BitSet FOLLOW_method_selector_in_method_definition677 = new BitSet(new long[]{0x0000014000002000L,0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_init_declarator_list_in_method_definition680 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_compound_statement_in_method_definition684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_selector_in_method_selector692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_keyword_declarator_in_method_selector696 = new BitSet(new long[]{0x0080000000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_parameter_list_in_method_selector700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_selector_in_keyword_declarator714 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_keyword_declarator717 = new BitSet(new long[]{0x0000004000002000L});
+    public static final BitSet FOLLOW_method_type_in_keyword_declarator719 = new BitSet(new long[]{0x0000004000002000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_keyword_declarator722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_selector729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_method_type736 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_name_in_method_type738 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_method_type740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_127_in_type_specifier747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_type_specifier751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_117_in_type_specifier755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_110_in_type_specifier759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_111_in_type_specifier763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_103_in_type_specifier767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_99_in_type_specifier771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_118_in_type_specifier775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_126_in_type_specifier779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_106_in_type_specifier786 = new BitSet(new long[]{0x0200000000000002L});
+    public static final BitSet FOLLOW_protocol_reference_list_in_type_specifier790 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_class_name_in_type_specifier801 = new BitSet(new long[]{0x0200000000000002L});
+    public static final BitSet FOLLOW_protocol_reference_list_in_type_specifier805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_struct_or_union_specifier_in_type_specifier814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_enum_specifier_in_type_specifier819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_type_specifier825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_95_in_type_qualifier833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_128_in_type_qualifier837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_protocol_qualifier_in_type_qualifier841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_primary_expression877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_constant_in_primary_expression882 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_LITERAL_in_primary_expression887 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_primary_expression893 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_primary_expression895 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_primary_expression897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_116_in_primary_expression903 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_message_expression_in_primary_expression908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_selector_expression_in_primary_expression913 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_protocol_expression_in_primary_expression918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_encode_expression_in_primary_expression923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_message_expression932 = new BitSet(new long[]{0x0000C950004A2A50L,0x0490000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_receiver_in_message_expression934 = new BitSet(new long[]{0x0080000000002000L});
+    public static final BitSet FOLLOW_message_selector_in_message_expression936 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_message_expression938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_receiver949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_class_name_in_receiver954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_122_in_receiver960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_selector_in_message_selector968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_keyword_argument_in_message_selector973 = new BitSet(new long[]{0x0080000000002002L});
+    public static final BitSet FOLLOW_selector_in_keyword_argument982 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_keyword_argument985 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_keyword_argument987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_80_in_selector_expression995 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_selector_expression997 = new BitSet(new long[]{0x0080000000002000L});
+    public static final BitSet FOLLOW_selector_name_in_selector_expression999 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_selector_expression1001 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_selector_in_selector_name1009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_selector_in_selector_name1015 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_selector_name1018 = new BitSet(new long[]{0x0080000000002002L});
+    public static final BitSet FOLLOW_78_in_protocol_expression1028 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_protocol_expression1030 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_protocol_name_in_protocol_expression1032 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_protocol_expression1034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_encode_expression1042 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_encode_expression1044 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_name_in_encode_expression1046 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_encode_expression1048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declarator_in_exception_declarator1056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_try_statement1064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_catch_statement1072 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_catch_statement1074 = new BitSet(new long[]{0x0000014000002000L});
+    public static final BitSet FOLLOW_exception_declarator_in_catch_statement1075 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_catch_statement1076 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_catch_statement1077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_finally_statement1085 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_finally_statement1087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_82_in_throw_statement1095 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_throw_statement1097 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_throw_statement1098 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_throw_statement1099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_try_statement_in_try_block1107 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_catch_statement_in_try_block1110 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000100L});
+    public static final BitSet FOLLOW_finally_statement_in_try_block1115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_synchronized_statement1126 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_synchronized_statement1128 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_synchronized_statement1130 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_synchronized_statement1132 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_synchronized_statement1134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaration_specifiers_in_function_definition1142 = new BitSet(new long[]{0x0000014000002000L});
+    public static final BitSet FOLLOW_declarator_in_function_definition1144 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_compound_statement_in_function_definition1146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaration_specifiers_in_declaration1155 = new BitSet(new long[]{0x0100014000002000L});
+    public static final BitSet FOLLOW_init_declarator_list_in_declaration1157 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_declaration1160 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_storage_class_specifier_in_declaration_specifiers1172 = new BitSet(new long[]{0x0000000000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_specifier_in_declaration_specifiers1176 = new BitSet(new long[]{0x0000000000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_qualifier_in_declaration_specifiers1180 = new BitSet(new long[]{0x0000000000002002L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_init_declarator_in_init_declarator_list1214 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_45_in_init_declarator_list1217 = new BitSet(new long[]{0x0000014000002000L});
+    public static final BitSet FOLLOW_init_declarator_in_init_declarator_list1219 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_declarator_in_init_declarator1229 = new BitSet(new long[]{0x2000000000000002L});
+    public static final BitSet FOLLOW_61_in_init_declarator1232 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000084L});
+    public static final BitSet FOLLOW_initializer_in_init_declarator1234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_struct_or_union_specifier1244 = new BitSet(new long[]{0x0000000000002000L,0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_struct_or_union_specifier1257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_struct_or_union_specifier1261 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_130_in_struct_or_union_specifier1264 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_struct_declaration_in_struct_or_union_specifier1266 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000041L});
+    public static final BitSet FOLLOW_134_in_struct_or_union_specifier1269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_specifier_qualifier_list_in_struct_declaration1279 = new BitSet(new long[]{0x0080014000002000L});
+    public static final BitSet FOLLOW_struct_declarator_list_in_struct_declaration1281 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_struct_declaration1283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_specifier_in_specifier_qualifier_list1293 = new BitSet(new long[]{0x0000000000002002L,0xE263F4A8D8000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_qualifier_in_specifier_qualifier_list1297 = new BitSet(new long[]{0x0000000000002002L,0xE263F4A8D8000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_struct_declarator_in_struct_declarator_list1308 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_45_in_struct_declarator_list1311 = new BitSet(new long[]{0x0080014000002000L});
+    public static final BitSet FOLLOW_struct_declarator_in_struct_declarator_list1313 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_declarator_in_struct_declarator1324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declarator_in_struct_declarator1328 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_struct_declarator1331 = new BitSet(new long[]{0x0000000000020A50L});
+    public static final BitSet FOLLOW_constant_in_struct_declarator1333 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_101_in_enum_specifier1341 = new BitSet(new long[]{0x0000000000002000L,0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_identifier_in_enum_specifier1348 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_130_in_enum_specifier1351 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_enumerator_list_in_enum_specifier1353 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_134_in_enum_specifier1355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_130_in_enum_specifier1364 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_enumerator_list_in_enum_specifier1366 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_134_in_enum_specifier1368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_enumerator_in_enumerator_list1377 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_45_in_enumerator_list1380 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_enumerator_in_enumerator_list1382 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_identifier_in_enumerator1392 = new BitSet(new long[]{0x2000000000000002L});
+    public static final BitSet FOLLOW_61_in_enumerator1395 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_constant_expression_in_enumerator1397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_declarator1407 = new BitSet(new long[]{0x0000014000002000L,0x0003300098000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_qualifier_in_declarator1409 = new BitSet(new long[]{0x0000014000002000L,0x0003300098000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_declarator_in_declarator1412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_direct_declarator_in_declarator1416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_identifier_in_direct_declarator1425 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_declarator_suffix_in_direct_declarator1427 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_38_in_direct_declarator1450 = new BitSet(new long[]{0x0000014000002000L});
+    public static final BitSet FOLLOW_declarator_in_direct_declarator1452 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_direct_declarator1454 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_declarator_suffix_in_direct_declarator1456 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_declarator_suffix1466 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000514040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_constant_expression_in_declarator_suffix1468 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_declarator_suffix1471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_declarator_suffix1479 = new BitSet(new long[]{0x0000008000002000L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_parameter_list_in_declarator_suffix1481 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_declarator_suffix1484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_parameter_declaration_list_in_parameter_list1492 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_45_in_parameter_list1496 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_parameter_list1498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaration_specifiers_in_parameter_declaration1513 = new BitSet(new long[]{0x0000014000002002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_declarator_in_parameter_declaration1516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_abstract_declarator_in_parameter_declaration1521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_assignment_expression_in_initializer1531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_130_in_initializer1540 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000084L});
+    public static final BitSet FOLLOW_initializer_in_initializer1542 = new BitSet(new long[]{0x0000200000000000L,0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_45_in_initializer1545 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000084L});
+    public static final BitSet FOLLOW_initializer_in_initializer1547 = new BitSet(new long[]{0x0000200000000000L,0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_134_in_initializer1551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_specifier_qualifier_list_in_type_name1560 = new BitSet(new long[]{0x0000014000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_abstract_declarator_in_type_name1562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_abstract_declarator1571 = new BitSet(new long[]{0x0000014000000000L,0x0003300098100000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_qualifier_in_abstract_declarator1573 = new BitSet(new long[]{0x0000014000000000L,0x0003300098100000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_abstract_declarator_in_abstract_declarator1576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_abstract_declarator1583 = new BitSet(new long[]{0x000001C000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_abstract_declarator_in_abstract_declarator1585 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_abstract_declarator1587 = new BitSet(new long[]{0x0000004000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_abstract_declarator_suffix_in_abstract_declarator1589 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_abstract_declarator1597 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000514040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_constant_expression_in_abstract_declarator1599 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_abstract_declarator1602 = new BitSet(new long[]{0x0000000000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_abstract_declarator_suffix1619 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000514040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_constant_expression_in_abstract_declarator_suffix1621 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_abstract_declarator_suffix1624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_abstract_declarator_suffix1630 = new BitSet(new long[]{0x0000008000002000L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_parameter_declaration_list_in_abstract_declarator_suffix1633 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_abstract_declarator_suffix1636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_parameter_declaration_in_parameter_declaration_list1647 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_45_in_parameter_declaration_list1651 = new BitSet(new long[]{0x0000000000002000L,0xF367F4E8DA000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_parameter_declaration_in_parameter_declaration_list1653 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_statement_in_statement_list1666 = new BitSet(new long[]{0x0100C950004A2A52L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_labeled_statement_in_statement1680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_statement1686 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_statement1688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_compound_statement_in_statement1694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_selection_statement_in_statement1700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_iteration_statement_in_statement1706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_jump_statement_in_statement1712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_statement1718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_identifier_in_labeled_statement1729 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_labeled_statement1731 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_labeled_statement1733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_93_in_labeled_statement1739 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_constant_expression_in_labeled_statement1741 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_labeled_statement1743 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_labeled_statement1745 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_97_in_labeled_statement1751 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_labeled_statement1753 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_labeled_statement1755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_130_in_compound_statement1764 = new BitSet(new long[]{0x0100C950004A2A50L,0xFBFFFFEFFE114040L,0x00000000000000C7L});
+    public static final BitSet FOLLOW_declaration_in_compound_statement1767 = new BitSet(new long[]{0x0100C950004A2A50L,0xFBFFFFEFFE114040L,0x00000000000000C7L});
+    public static final BitSet FOLLOW_statement_list_in_compound_statement1771 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_134_in_compound_statement1774 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_107_in_selection_statement1785 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_selection_statement1787 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_selection_statement1789 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_selection_statement1791 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_selection_statement1793 = new BitSet(new long[]{0x0000000000000002L,0x0000001000000000L});
+    public static final BitSet FOLLOW_100_in_selection_statement1796 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_selection_statement1798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_123_in_selection_statement1806 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_selection_statement1808 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_selection_statement1810 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_selection_statement1812 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_selection_statement1814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_129_in_iteration_statement1825 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_iteration_statement1827 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_iteration_statement1829 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_iteration_statement1831 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_iteration_statement1833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_98_in_iteration_statement1839 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_iteration_statement1841 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_129_in_iteration_statement1843 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_iteration_statement1845 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_iteration_statement1847 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_iteration_statement1849 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_iteration_statement1851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_104_in_iteration_statement1857 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_iteration_statement1859 = new BitSet(new long[]{0x0100C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_iteration_statement1861 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_iteration_statement1864 = new BitSet(new long[]{0x0100C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_iteration_statement1866 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_iteration_statement1869 = new BitSet(new long[]{0x0000C9D0004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_iteration_statement1871 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_iteration_statement1874 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_iteration_statement1876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_105_in_jump_statement1887 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_identifier_in_jump_statement1889 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_jump_statement1891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_96_in_jump_statement1897 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_jump_statement1899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_jump_statement1905 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_jump_statement1907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_115_in_jump_statement1913 = new BitSet(new long[]{0x0100C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_jump_statement1915 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_jump_statement1918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_assignment_expression_in_expression1930 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_45_in_expression1933 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_assignment_expression_in_expression1935 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_conditional_expression_in_assignment_expression1946 = new BitSet(new long[]{0x2841122400000002L,0x0000000001000004L,0x0000000000000010L});
+    public static final BitSet FOLLOW_assignment_operator_in_assignment_expression1953 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_assignment_expression_in_assignment_expression1955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logical_or_expression_in_conditional_expression2015 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000008L});
+    public static final BitSet FOLLOW_67_in_conditional_expression2021 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_logical_or_expression_in_conditional_expression2023 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_conditional_expression2025 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_logical_or_expression_in_conditional_expression2027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_conditional_expression_in_constant_expression2038 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression2047 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_133_in_logical_or_expression2053 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression2055 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_inclusive_or_expression_in_logical_and_expression2066 = new BitSet(new long[]{0x0000000800000002L});
+    public static final BitSet FOLLOW_35_in_logical_and_expression2072 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_inclusive_or_expression_in_logical_and_expression2074 = new BitSet(new long[]{0x0000000800000002L});
+    public static final BitSet FOLLOW_exclusive_or_expression_in_inclusive_or_expression2085 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_131_in_inclusive_or_expression2091 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_exclusive_or_expression_in_inclusive_or_expression2093 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression2104 = new BitSet(new long[]{0x0000000000000002L,0x0000000000800000L});
+    public static final BitSet FOLLOW_87_in_exclusive_or_expression2107 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression2109 = new BitSet(new long[]{0x0000000000000002L,0x0000000000800000L});
+    public static final BitSet FOLLOW_equality_expression_in_and_expression2120 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_36_in_and_expression2123 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_equality_expression_in_and_expression2125 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_relational_expression_in_equality_expression2136 = new BitSet(new long[]{0x4000000000800002L});
+    public static final BitSet FOLLOW_set_in_equality_expression2142 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_relational_expression_in_equality_expression2150 = new BitSet(new long[]{0x4000000000800002L});
+    public static final BitSet FOLLOW_shift_expression_in_relational_expression2161 = new BitSet(new long[]{0x9200000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_set_in_relational_expression2165 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_shift_expression_in_relational_expression2181 = new BitSet(new long[]{0x9200000000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_additive_expression_in_shift_expression2192 = new BitSet(new long[]{0x0400000000000002L,0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_shift_expression2195 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_additive_expression_in_shift_expression2203 = new BitSet(new long[]{0x0400000000000002L,0x0000000000000002L});
+    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression2214 = new BitSet(new long[]{0x0000440000000002L});
+    public static final BitSet FOLLOW_set_in_additive_expression2219 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression2227 = new BitSet(new long[]{0x0000440000000002L});
+    public static final BitSet FOLLOW_cast_expression_in_multiplicative_expression2238 = new BitSet(new long[]{0x0020010200000002L});
+    public static final BitSet FOLLOW_set_in_multiplicative_expression2244 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_cast_expression_in_multiplicative_expression2256 = new BitSet(new long[]{0x0020010200000002L});
+    public static final BitSet FOLLOW_38_in_cast_expression2267 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_name_in_cast_expression2269 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_cast_expression2271 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_cast_expression_in_cast_expression2273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_expression_in_cast_expression2277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_postfix_expression_in_unary_expression2289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_unary_expression2295 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_unary_expression_in_unary_expression2297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_unary_expression2303 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_unary_expression_in_unary_expression2305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_operator_in_unary_expression2311 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_cast_expression_in_unary_expression2313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_119_in_unary_expression2319 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_38_in_unary_expression2322 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_name_in_unary_expression2324 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_unary_expression2326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_expression_in_unary_expression2330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_primary_expression_in_postfix_expression2365 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_postfix_expression2370 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_expression_in_postfix_expression2372 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_postfix_expression2374 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_38_in_postfix_expression2381 = new BitSet(new long[]{0x0000C9D0004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_argument_expression_list_in_postfix_expression2383 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_postfix_expression2386 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_50_in_postfix_expression2392 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_identifier_in_postfix_expression2394 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_49_in_postfix_expression2400 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_identifier_in_postfix_expression2402 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_43_in_postfix_expression2408 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_47_in_postfix_expression2414 = new BitSet(new long[]{0x0006884000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_assignment_expression_in_argument_expression_list2430 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_45_in_argument_expression_list2433 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_assignment_expression_in_argument_expression_list2435 = new BitSet(new long[]{0x0000200000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_identifier2446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_function_definition_in_synpred5_ObjectiveC68 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaration_in_synpred6_ObjectiveC72 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_class_interface_in_synpred7_ObjectiveC77 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_class_implementation_in_synpred8_ObjectiveC81 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_category_interface_in_synpred9_ObjectiveC85 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_category_implementation_in_synpred10_ObjectiveC89 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_protocol_declaration_in_synpred11_ObjectiveC93 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_protocol_declaration_list_in_synpred12_ObjectiveC97 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_function_definition_in_synpred48_ObjectiveC621 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declaration_in_synpred49_ObjectiveC625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_parameter_list_in_synpred56_ObjectiveC700 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_class_name_in_synpred71_ObjectiveC801 = new BitSet(new long[]{0x0200000000000002L});
+    public static final BitSet FOLLOW_protocol_reference_list_in_synpred71_ObjectiveC805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_synpred89_ObjectiveC949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_class_name_in_synpred90_ObjectiveC954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_specifier_in_synpred100_ObjectiveC1176 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_synpred109_ObjectiveC1257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_type_specifier_in_synpred112_ObjectiveC1293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declarator_in_synpred115_ObjectiveC1324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_130_in_synpred117_ObjectiveC1351 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_enumerator_list_in_synpred117_ObjectiveC1353 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_134_in_synpred117_ObjectiveC1355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declarator_suffix_in_synpred123_ObjectiveC1427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declarator_suffix_in_synpred125_ObjectiveC1456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declarator_in_synpred130_ObjectiveC1516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_declarator_in_synpred131_ObjectiveC1516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_synpred135_ObjectiveC1571 = new BitSet(new long[]{0x0000014000000000L,0x0003300098100000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_qualifier_in_synpred135_ObjectiveC1573 = new BitSet(new long[]{0x0000014000000000L,0x0003300098100000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_abstract_declarator_in_synpred135_ObjectiveC1576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_abstract_declarator_suffix_in_synpred136_ObjectiveC1589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_synpred137_ObjectiveC1583 = new BitSet(new long[]{0x000001C000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_abstract_declarator_in_synpred137_ObjectiveC1585 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_synpred137_ObjectiveC1587 = new BitSet(new long[]{0x0000004000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_abstract_declarator_suffix_in_synpred137_ObjectiveC1589 = new BitSet(new long[]{0x0000004000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_declaration_in_synpred154_ObjectiveC1767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_100_in_synpred156_ObjectiveC1796 = new BitSet(new long[]{0x0100C950004A2A50L,0x08980B0724114040L,0x0000000000000086L});
+    public static final BitSet FOLLOW_statement_in_synpred156_ObjectiveC1798 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_synpred198_ObjectiveC2267 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_name_in_synpred198_ObjectiveC2269 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_synpred198_ObjectiveC2271 = new BitSet(new long[]{0x0000C950004A2A50L,0x0090000000114040L,0x0000000000000080L});
+    public static final BitSet FOLLOW_cast_expression_in_synpred198_ObjectiveC2273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_synpred203_ObjectiveC2322 = new BitSet(new long[]{0x0000000000002000L,0xE263F4A8D8000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_type_name_in_synpred203_ObjectiveC2324 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_synpred203_ObjectiveC2326 = new BitSet(new long[]{0x0000000000000002L});
 
 }
