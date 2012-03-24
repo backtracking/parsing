@@ -1,0 +1,14 @@
+C:\Users\Vincent\Downloads\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\bin\Debug\Microsoft.Samples.VisualStudio.IronPython.Interfaces.dll
+C:\Users\Vincent\Downloads\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\bin\Debug\Microsoft.Samples.VisualStudio.IronPython.Interfaces.pdb
+C:\Users\Vincent\Downloads\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\bin\Debug\IronPython.dll
+C:\Users\Vincent\Downloads\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\bin\Debug\IronMath.dll
+C:\Users\Vincent\Downloads\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Vincent\Downloads\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\obj\x86\Debug\Microsoft.Samples.VisualStudio.IronPython.Interfaces.dll
+C:\Users\Vincent\Downloads\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\obj\x86\Debug\Microsoft.Samples.VisualStudio.IronPython.Interfaces.pdb
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\bin\Debug\Microsoft.Samples.VisualStudio.IronPython.Interfaces.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\bin\Debug\Microsoft.Samples.VisualStudio.IronPython.Interfaces.pdb
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\bin\Debug\IronPython.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\bin\Debug\IronMath.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\obj\x86\Debug\Microsoft.Samples.VisualStudio.IronPython.Interfaces.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\IronPython.Interfaces\obj\x86\Debug\Microsoft.Samples.VisualStudio.IronPython.Interfaces.pdb

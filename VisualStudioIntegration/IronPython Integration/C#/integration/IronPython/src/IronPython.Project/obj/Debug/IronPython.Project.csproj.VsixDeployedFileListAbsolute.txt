@@ -1,0 +1,98 @@
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\pyWPFWindow.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\WebuserControl.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\WebService.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\WebHtmlPage.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\WebForm.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\WebConfig.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\WebClass.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\StyleSheet.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\SkinFile.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\SiteMap.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\NestedWebConfig.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\MasterPage.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\JScript.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\Handler.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\GlobalAsax.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\ContentPage.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\BrowserFile.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\TextFile.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\Resource.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\WindowsForm.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ItemTemplates\IronPython\\1033\Class.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ProjectTemplates\IronPython\\1033\pyWPFApplication.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ProjectTemplates\IronPython\\1033\IPWinformApp.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ProjectTemplates\IronPython\\1033\WebService.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ProjectTemplates\IronPython\\1033\WebApplication.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ProjectTemplates\IronPython\\1033\IPConsoleApp.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\ProjectTemplates\IronPython\\1033\IPClassLib.zip
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\Microsoft.Samples.VisualStudio.IronPython.Project.dll
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\IronMath.dll
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\IronPython.dll
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\Microsoft.Samples.VisualStudio.IronPython.CompilerTasks.dll
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\Microsoft.Samples.VisualStudio.IronPython.Console.dll
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\Microsoft.Samples.VisualStudio.IronPython.EditorExtensions.dll
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\Microsoft.Samples.VisualStudio.IronPython.Interfaces.dll
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\Microsoft.Samples.VisualStudio.IronPython.Project.pkgdef
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\extension.vsixmanifest
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\IronPython.targets
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\CodeSnippets\\SnippetsIndex.xml
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\CodeSnippets\Snippets\\class.snippet
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\CodeSnippets\Snippets\\ctor.snippet
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\CodeSnippets\Snippets\\else.snippet
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\CodeSnippets\Snippets\\for.snippet
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\CodeSnippets\Snippets\\if.snippet
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\CodeSnippets\Snippets\\while.snippet
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\IronPython_large.png
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\IronPython_small.png
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\Microsoft.Samples.VisualStudio.IronPython.Console.pkgdef
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\Microsoft.Samples.VisualStudio.IronPython.Project.pdb
+C:\Users\Vincent\AppData\Local\Microsoft\VisualStudio\10.0Exp\Extensions\Microsoft\IronPython\1.0\\Microsoft.Samples.VisualStudio.IronPython.EditorExtensions.pdb
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\pyWPFWindow.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\WebuserControl.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\WebService.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\WebHtmlPage.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\WebForm.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\WebConfig.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\WebClass.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\StyleSheet.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\SkinFile.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\SiteMap.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\NestedWebConfig.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\MasterPage.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\JScript.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\Handler.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\GlobalAsax.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\ContentPage.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\BrowserFile.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\TextFile.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\Resource.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\WindowsForm.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ItemTemplates\IronPython\\1033\Class.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ProjectTemplates\IronPython\\1033\pyWPFApplication.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ProjectTemplates\IronPython\\1033\IPWinformApp.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ProjectTemplates\IronPython\\1033\WebService.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ProjectTemplates\IronPython\\1033\WebApplication.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ProjectTemplates\IronPython\\1033\IPConsoleApp.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\ProjectTemplates\IronPython\\1033\IPClassLib.zip
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\Microsoft.Samples.VisualStudio.IronPython.Project.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\IronMath.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\IronPython.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\Microsoft.Samples.VisualStudio.IronPython.CompilerTasks.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\Microsoft.Samples.VisualStudio.IronPython.Console.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\Microsoft.Samples.VisualStudio.IronPython.EditorExtensions.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\Microsoft.Samples.VisualStudio.IronPython.Interfaces.dll
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\Microsoft.Samples.VisualStudio.IronPython.Project.pkgdef
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\extension.vsixmanifest
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\IronPython.targets
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\CodeSnippets\\SnippetsIndex.xml
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\CodeSnippets\Snippets\\class.snippet
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\CodeSnippets\Snippets\\ctor.snippet
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\CodeSnippets\Snippets\\else.snippet
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\CodeSnippets\Snippets\\for.snippet
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\CodeSnippets\Snippets\\if.snippet
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\CodeSnippets\Snippets\\while.snippet
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\IronPython_large.png
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\IronPython_small.png
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\Microsoft.Samples.VisualStudio.IronPython.Console.pkgdef
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\Microsoft.Samples.VisualStudio.IronPython.Project.pdb
+C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\IronPython Integration\C#\integration\IronPython\src\Debug\Extensions\Application\IronPython\\Microsoft.Samples.VisualStudio.IronPython.EditorExtensions.pdb
