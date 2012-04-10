@@ -142,6 +142,7 @@ namespace Java.EditorExtensions
         {
             public NumberClassificationFormat()
             {
+                ForegroundColor = Colors.Orange;
                 this.DisplayName = "Java Number";
             }
         }

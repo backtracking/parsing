@@ -1406,7 +1406,7 @@ WS
     
 COMMENT
          @init{
-            bool isJavaDoc = false;
+            bool isJavaDoc = true;
         }
     :   '/*'
             {
@@ -1428,11 +1428,13 @@ COMMENT
 LINE_COMMENT
     :   '//' ~('\n'|'\r')*  ('\r\n' | '\r' | '\n') 
             {
-                Skip();
+                //Skip();
+				$channel=Hidden;
             }
     |   '//' ~('\n'|'\r')*     // a line comment could appear at the end of the file without CR/LF
             {
-                Skip();
+                //Skip();
+				$channel=Hidden;
             }
     ;   
         
