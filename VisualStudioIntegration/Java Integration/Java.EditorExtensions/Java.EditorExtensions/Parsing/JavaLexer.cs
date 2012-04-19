@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4.1.9004 Java.g 2012-04-09 13:43:09
+// $ANTLR 3.4.1.9004 Java.g 2012-04-12 13:41:54
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -1960,7 +1960,7 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 			DebugLocation(1402, 13);
 
-			                Skip();
+			                _channel=Hidden;
 			            
 
 			}
@@ -2061,14 +2061,7 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 			} finally { DebugExitSubRule(25); }
 
 			DebugLocation(1418, 9);
-            try
-            {
-                Match("*/");
-            }
-            catch (System.Exception)
-            {
-                //System.Diagnostics.Debug.WriteLine("Match(\"*/\") exception");
-            }
+			Match("*/"); 
 
 			DebugLocation(1419, 13);
 

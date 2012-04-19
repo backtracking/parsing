@@ -1,476 +1,421 @@
-﻿using System;
+﻿/* ****************************************************************************
+ *
+ * Copyright (c) Microsoft Corporation. 
+ *
+ * This source code is subject to terms and conditions of the Apache License, Version 2.0. A 
+ * copy of the license can be found in the License.html file at the root of this distribution. If 
+ * you cannot locate the Apache License, Version 2.0, please send an email to 
+ * vspython@microsoft.com. By using this source code in any fashion, you are agreeing to be bound 
+ * by the terms of the Apache License, Version 2.0.
+ *
+ * You must not remove this notice, or any other, from this software.
+ * ***************************************************************************/
+
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.Composition;
-using System.Windows.Media;
+using System.Diagnostics;
+using System.Diagnostics.Contracts;
+using System.Text;
+//using Microsoft.PythonTools.Interpreter;
+//using Microsoft.PythonTools.Parsing;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
-using Microsoft.VisualStudio.Utilities;
-using Antlr.Runtime;
-using System.Text.RegularExpressions;
 
 namespace Java.EditorExtensions
 {
-
-    internal class TextRange
-    {
-        public int StartIndex { get; set; }
-        public int EndIndex { get; set; }
-
-        public TextRange() 
-        {}
-
-        public TextRange(int startIndex, int endIndex) 
-        {
-            this.StartIndex = startIndex;
-            this.EndIndex = endIndex;
-        }
-    }
-
-    internal class TextRangeList : List<TextRange>
-    {
-        public bool Belongs(int startIndex)
-        {
-            TextRange textRange = this.Find(delegate(TextRange t) 
-            {
-                return startIndex >= t.StartIndex && startIndex < t.EndIndex; 
-            }) ;
-
-            return textRange != null;
-        }
-    }
-
-    internal class DummyToken : IToken
-    {
-        public DummyToken()
-        {
-         
-        }
-        int IToken.Channel { get; set; }
-        int IToken.CharPositionInLine { get; set; }
-        ICharStream IToken.InputStream { get; set; }
-        int IToken.Line { get; set; }
-        int IToken.StartIndex { get; set; }
-        int IToken.StopIndex { get; set; }
-        string IToken.Text { get; set; }
-        int IToken.TokenIndex { get; set; }
-        int IToken.Type { get; set; }
-    }
-
-
     /// <summary>
-    /// Implements <see cref="IClassifier"/> in order to provide coloring
+    /// Provides classification based upon the DLR TokenCategory enum.
     /// </summary>
     internal class JavaClassifier : IClassifier
     {
+        private readonly TokenCache _tokenCache;
+        private readonly JavaClassifierProvider _provider;
+        private readonly ITextBuffer _buffer;
+
+        [ThreadStatic]
+        private static Dictionary<JavaLanguageVersion, Tokenizer> _tokenizers;    // tokenizer for each version, shared between all buffers
+
+        internal JavaClassifier(JavaClassifierProvider provider, ITextBuffer buffer)
+        {
+            buffer.Changed += BufferChanged;
+            buffer.ContentTypeChanged += BufferContentTypeChanged;
+
+            _tokenCache = new TokenCache();
+            _provider = provider;
+            _buffer = buffer;
+        }
+
+        internal void NewVersion()
+        {
+            _tokenCache.Clear();
+            var changed = ClassificationChanged;
+            if (changed != null)
+            {
+                var snapshot = _buffer.CurrentSnapshot;
+
+                changed(this, new ClassificationChangedEventArgs(new SnapshotSpan(snapshot, 0, snapshot.Length)));
+            }
+        }
+
+        #region IDlrClassifier
+
+        // This event gets raised if the classification of existing test changes.
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
-        private IClassificationTypeRegistryService classificationRegistryService;
-        private ITextBuffer textBuffer;
 
-        private TextRangeList _commentRanges = new TextRangeList();
-
-
-        internal JavaClassifier(ITextBuffer textBuffer, IClassificationTypeRegistryService classificationRegistryService)
-        {
-            this.textBuffer = textBuffer;
-            this.classificationRegistryService = classificationRegistryService;
-
-            this.textBuffer.Changed += new EventHandler<TextContentChangedEventArgs>(textBuffer_TextContentChanged);
-            this.textBuffer.ReadOnlyRegionsChanged += new EventHandler<SnapshotSpanEventArgs>(textBuffer_ReadOnlyRegionsChanged);
-        }
-
-        void textBuffer_TextContentChanged(object sender, TextContentChangedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("textBuffer_TextContentChanged");
-        }
-
-        void textBuffer_ReadOnlyRegionsChanged(object sender, SnapshotSpanEventArgs e)
-        {
-            // We need to call this event when read-only regions are added, so they will be grayed out.
-            OnClassificationChanged(new SnapshotSpan(textBuffer.CurrentSnapshot, e.Span));
-        }
-
-        private void OnClassificationChanged(SnapshotSpan changeSpan)
-        {
-            if (ClassificationChanged != null)
-            {
-                ClassificationChanged(this, new ClassificationChangedEventArgs(changeSpan));
-            }
-        }
-
-
-        private IToken GetNextToken(JavaLexer javaLexer, SnapshotSpan span, ref bool shouldGetNext)
-        {
-            IToken token = null;
-
-            if (shouldGetNext)
-            {
-                token = javaLexer.NextToken();
-                if (token.Type == JavaLexer.EOF && token.InputStream.ToString().StartsWith("/*"))
-                {
-                    string curLine = span.GetText();
-                    int startIndex = curLine.IndexOf("/*");
-                    if (startIndex != -1)
-                    {
-                        token.Text = "/*";
-                        token.Line = 1;
-                        token.StartIndex = startIndex;
-                        token.StopIndex = curLine.GetCommentStopIndex(startIndex);
-                        token.Type = JavaLexer.COMMENT;
-                    }
-                    shouldGetNext = false;
-                }
-                else
-                {
-                    // Check next token is not inside a commented region
-                    //_commentRanges.
-                    if (token.Type != JavaLexer.EOF && _commentRanges.Belongs(span.Start.Position))
-                    {
-                        token.Type = JavaLexer.COMMENT;
-                    }
-
-
-                    shouldGetNext = true;
-                }
-            }
-            else
-            {
-                token = new DummyToken();
-                token.Type = JavaLexer.EOF;
-            }
-            
-            return token;
-        }
-
-        private bool _updateCommentRanges = true;
-        void GetCommentRanges(SnapshotSpan span)
-        {
-            if (_updateCommentRanges)
-            {
-                _commentRanges.Clear();
-
-                // First try with a regex
-                //string source = span.Snapshot.GetText();
-                //var rx = new Regex(@"(?<!"")\/\*.+?\*\/(?!"")", RegexOptions.None);
-                //var matches = rx.Matches(source);
-
-                string source = span.Snapshot.GetText();
-                var tokenizer = new JavaLexer(new ANTLRStringStream(source));
-                var token = tokenizer.NextToken();
-                while (token.Type != JavaLexer.EOF)
-                {
-                    if (token.Type == JavaLexer.COMMENT)
-                    {
-                        _commentRanges.Add(new TextRange(token.StartIndex, token.StopIndex));
-                    }
-
-                    // Get next token
-                    token = tokenizer.NextToken();
-                }
-                _updateCommentRanges = false;
-            }
-            
-
-            //int startIndex, endIndex, curIndex;
-            //string source = span.Snapshot.GetText();
-            //if (!string.IsNullOrEmpty(source))
-            //{
-            //    curIndex = startIndex = endIndex = 0;
-            //    while (true)
-            //    {
-            //        startIndex = source.IndexOf("/*", curIndex);
-            //        if (startIndex != -1)
-            //        {
-            //            endIndex = source.IndexOf("*/", curIndex);
-            //            if (endIndex != -1)
-            //            {
-            //                endIndex++;
-            //                _commentRanges.Add(new TextRange(startIndex, endIndex));
-            //            }
-            //            else
-            //            {
-            //                endIndex = source.Length - 1;
-            //                _commentRanges.Add(new TextRange(startIndex, endIndex));
-            //                break;
-            //            }
-                        
-            //            curIndex = endIndex;
-            //        }
-            //        else
-            //        {
-            //            break;
-            //        }
-                    
-                    
-            //    }
-            //}
-        }
-
-        IList<ClassificationSpan> IClassifier.GetClassificationSpans(SnapshotSpan span)
+        /// <summary>
+        /// This method classifies the given snapshot span.
+        /// </summary>
+        public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span)
         {
             var classifications = new List<ClassificationSpan>();
-            System.Diagnostics.Debug.Write(span.GetText());
+            var snapshot = span.Snapshot;
 
-            try
+
+            if (span.Length > 0)
             {
-                // We are only getting source code line by line so we have to know if the current line is part of 
-                // a slash-star (/*) comment
-                // So we parse entire source and we build a list of comment positions.
-                GetCommentRanges(span);
-
-                // So now we build a Antlr lexer to get tokens from input stream, however
-                // grammar normally needs more than one line to be able to recognize comments
-                // and in this case we get an exception and token.Type is JavaLexer.EOF.
-                int startIndex, endIndex, length;
-                var tokenizer = new JavaLexer(new ANTLRStringStream(span.GetText()));
-                bool shouldGetNext = true;
-                
-                var token = GetNextToken(tokenizer, span, ref shouldGetNext);
-                //var token = tokenizer.NextToken();
-                while (token.Type != JavaLexer.EOF)
-                {
-                    //if (token.Text == "final")
-                    //{
-                    //    System.Diagnostics.Debug.WriteLine("final");
-                    //}
-                    startIndex = span.Snapshot.GetLineFromLineNumber(span.Start.GetContainingLine().LineNumber).Start.Position + token.StartIndex;
-                    endIndex = span.Snapshot.GetLineFromLineNumber(span.Start.GetContainingLine().LineNumber).Start.Position + token.StopIndex;
-                    length = endIndex - startIndex + 1;
-
-                    if (endIndex > span.Snapshot.GetText().Length)
-                        endIndex = span.Snapshot.GetText().Length;
-
-                    if (endIndex >= startIndex && !span.Snapshot.TextBuffer.IsReadOnly(new Span(startIndex, length)))
-                    {
-                        // Add the classfication span
-                        classifications.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, startIndex, length), GetClassificationType(token)));
-                    }
-
-                    // Get next token
-                    //token = tokenizer.NextToken();
-                    token = GetNextToken(tokenizer, span, ref shouldGetNext);
-                }
-
-
-                //using (var systemState = new SystemState())
-                //{
-                //    int startIndex, endIndex;
-
-                //    // Execute the IPy tokenizer
-                //    var tokenizer = new Tokenizer(span.GetText().ToCharArray(), true, systemState, new CompilerContext(string.Empty, new QuietCompilerSink()));
-                //    var token = tokenizer.Next();
-
-                //    // Iterate the tokens
-                //    while (token.Kind != TokenKind.EndOfFile)
-                //    {
-                //        // Determine the bounds of the classfication span
-                //        startIndex = span.Snapshot.GetLineFromLineNumber(tokenizer.StartLocation.Line - 1 + span.Start.GetContainingLine().LineNumber).Start.Position + tokenizer.StartLocation.Column;
-                //        endIndex = span.Snapshot.GetLineFromLineNumber(tokenizer.EndLocation.Line - 1 + span.Start.GetContainingLine().LineNumber).Start.Position + tokenizer.EndLocation.Column;
-
-                //        if (endIndex > span.Snapshot.GetText().Length)
-                //            endIndex = span.Snapshot.GetText().Length;
-
-                //        if (endIndex > startIndex && !span.Snapshot.TextBuffer.IsReadOnly(new Span(startIndex, endIndex - startIndex)))
-                //        {
-                //            // Add the classfication span
-                //            classifications.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, startIndex, endIndex - startIndex), GetClassificationType(token)));
-                //        }
-
-                //        // Get next token
-                //        token = tokenizer.Next();
-                //    }
-                //}
-
-                foreach (var region in span.Snapshot.TextBuffer.GetReadOnlyExtents(span))
-                {
-                    // Add classfication for read only regions
-                    classifications.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, region), classificationRegistryService.GetClassificationType("PythonReadOnlyRegion")));
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine("Exception");
+                AddClassifications(GetTokenizer(), classifications, span);
             }
 
             return classifications;
         }
 
-        private IClassificationType GetClassificationType(IToken token)
+        private Tokenizer GetTokenizer()
         {
-            switch (token.Type)
+            if (_tokenizers == null)
             {
-                case JavaLexer.PACKAGE:
-                case JavaLexer.IMPORT:
-                case JavaLexer.ABSTRACT:
-                case JavaLexer.CLASS:
-                case JavaLexer.IMPLEMENTS:
-                case JavaLexer.INSTANCEOF:
-                case JavaLexer.SUPER:
-                case JavaLexer.PUBLIC:
-                case JavaLexer.PRIVATE:
-                case JavaLexer.PROTECTED:
-                case JavaLexer.STATIC:
-                case JavaLexer.FINAL:
-                case JavaLexer.EXTENDS:
-                case JavaLexer.NEW:
-                case JavaLexer.THIS:
-                case JavaLexer.ASSERT:
-                case JavaLexer.GOTO:
-                case JavaLexer.IF:
-                case JavaLexer.ELSE:
-                case JavaLexer.SYNCHRONIZED:
-                case JavaLexer.TRY:
-                case JavaLexer.CATCH:
-                case JavaLexer.FINALLY:
-                case JavaLexer.THROW:
-                case JavaLexer.THROWS:
-                case JavaLexer.FOR:
-                case JavaLexer.DO:
-                case JavaLexer.WHILE:
-                case JavaLexer.SWITCH:
-                case JavaLexer.BREAK:
-                case JavaLexer.CONTINUE:
-                case JavaLexer.DEFAULT:
-                case JavaLexer.ENUM:
-                case JavaLexer.CONST:
-                case JavaLexer.NATIVE:
-                case JavaLexer.VOID:
-                case JavaLexer.BOOLEAN:
-                case JavaLexer.BYTE:
-                case JavaLexer.INT:
-                case JavaLexer.LONG:
-                case JavaLexer.FLOAT:
-                case JavaLexer.DOUBLE:
-                case JavaLexer.CHAR:
-                case JavaLexer.CHARLITERAL:
-                case JavaLexer.TRUE:
-                case JavaLexer.FALSE:
-                case JavaLexer.NULL:
-                    return classificationRegistryService.GetClassificationType(JavaClassificationTypes.Keyword);
+                _tokenizers = new Dictionary<JavaLanguageVersion, Tokenizer>();
+            }
+            var langVersion = JavaLanguageVersion.V16;
+            Tokenizer res;
+            if (!_tokenizers.TryGetValue(langVersion, out res))
+            {
+                _tokenizers[langVersion] = res = new Tokenizer(langVersion, options: TokenizerOptions.Verbatim | TokenizerOptions.VerbatimCommentsAndLineJoins);
+            }
+            return res;
+        }
 
-               
-                case JavaLexer.INTLITERAL:
-                case JavaLexer.LONGLITERAL:
-                case JavaLexer.FLOATLITERAL:
-                case JavaLexer.DOUBLELITERAL:
-                    return classificationRegistryService.GetClassificationType(JavaClassificationTypes.Number);
-
-                case JavaLexer.STRINGLITERAL:
-                    return classificationRegistryService.GetClassificationType(JavaClassificationTypes.String);
-
-                case JavaLexer.COMMENT:
-                case JavaLexer.LINE_COMMENT:
-                    return classificationRegistryService.GetClassificationType(JavaClassificationTypes.Comment);
-
-                default:
-                    return classificationRegistryService.GetClassificationType(JavaClassificationTypes.Unknown);
+        public JavaClassifierProvider Provider
+        {
+            get
+            {
+                return _provider;
             }
         }
 
+        #endregion
 
-        //private IClassificationType GetClassificationType(Token token)
-        //{
-        //    // Translate the token kind into a classfication type
-        //    switch (token.Kind)
-        //    {
-        //        case TokenKind.Comment:
-        //            return classificationRegistryService.GetClassificationType(PyClassificationTypes.Comment);
+        #region Private Members
 
-        //        case TokenKind.Dot:
-        //        case TokenKind.LeftParenthesis:
-        //        case TokenKind.RightParenthesis:
-        //        case TokenKind.LeftBracket:
-        //        case TokenKind.RightBracket:
-        //        case TokenKind.LeftBrace:
-        //        case TokenKind.RightBrace:
-        //        case TokenKind.Comma:
-        //        case TokenKind.Colon:
-        //        case TokenKind.BackQuote:
-        //        case TokenKind.Semicolon:
-        //        case TokenKind.Assign:
-        //        case TokenKind.Twiddle:
-        //        case TokenKind.LessThanGreaterThan:
-        //            return classificationRegistryService.GetClassificationType(PyClassificationTypes.Delimiter);
+        private Dictionary<TokenCategory, IClassificationType> CategoryMap
+        {
+            get
+            {
+                return _provider.CategoryMap;
+            }
+        }
 
-        //        case TokenKind.Add:
-        //        case TokenKind.AddEqual:
-        //        case TokenKind.Subtract:
-        //        case TokenKind.SubtractEqual:
-        //        case TokenKind.Power:
-        //        case TokenKind.PowerEqual:
-        //        case TokenKind.Multiply:
-        //        case TokenKind.MultiplyEqual:
-        //        case TokenKind.FloorDivide:
-        //        case TokenKind.FloorDivideEqual:
-        //        case TokenKind.Divide:
-        //        case TokenKind.DivEqual:
-        //        case TokenKind.Mod:
-        //        case TokenKind.ModEqual:
-        //        case TokenKind.LeftShift:
-        //        case TokenKind.LeftShiftEqual:
-        //        case TokenKind.RightShift:
-        //        case TokenKind.RightShiftEqual:
-        //        case TokenKind.BitwiseAnd:
-        //        case TokenKind.BitwiseAndEqual:
-        //        case TokenKind.BitwiseOr:
-        //        case TokenKind.BitwiseOrEqual:
-        //        case TokenKind.Xor:
-        //        case TokenKind.XorEqual:
-        //        case TokenKind.LessThan:
-        //        case TokenKind.GreaterThan:
-        //        case TokenKind.LessThanOrEqual:
-        //        case TokenKind.GreaterThanOrEqual:
-        //        case TokenKind.Equal:
-        //        case TokenKind.NotEqual:
-        //            return classificationRegistryService.GetClassificationType(PyClassificationTypes.Operator);
+        private void BufferContentTypeChanged(object sender, ContentTypeChangedEventArgs e)
+        {
+            _tokenCache.Clear();
+            _buffer.Changed -= BufferChanged;
+            _buffer.ContentTypeChanged -= BufferContentTypeChanged;
+            _buffer.Properties.RemoveProperty(typeof(JavaClassifier));
+        }
 
-        //        case TokenKind.KeywordAnd:
-        //        case TokenKind.KeywordAssert:
-        //        case TokenKind.KeywordBreak:
-        //        case TokenKind.KeywordClass:
-        //        case TokenKind.KeywordContinue:
-        //        case TokenKind.KeywordDef:
-        //        case TokenKind.KeywordDel:
-        //        case TokenKind.KeywordElseIf:
-        //        case TokenKind.KeywordElse:
-        //        case TokenKind.KeywordExcept:
-        //        case TokenKind.KeywordExec:
-        //        case TokenKind.KeywordFinally:
-        //        case TokenKind.KeywordFor:
-        //        case TokenKind.KeywordFrom:
-        //        case TokenKind.KeywordGlobal:
-        //        case TokenKind.KeywordIf:
-        //        case TokenKind.KeywordImport:
-        //        case TokenKind.KeywordIn:
-        //        case TokenKind.KeywordIs:
-        //        case TokenKind.KeywordLambda:
-        //        case TokenKind.KeywordNot:
-        //        case TokenKind.KeywordOr:
-        //        case TokenKind.KeywordPass:
-        //        case TokenKind.KeywordPrint:
-        //        case TokenKind.KeywordRaise:
-        //        case TokenKind.KeywordReturn:
-        //        case TokenKind.KeywordTry:
-        //        case TokenKind.KeywordWhile:
-        //        case TokenKind.KeywordYield:
-        //            return classificationRegistryService.GetClassificationType(PyClassificationTypes.Keyword);
+        private void BufferChanged(object sender, TextContentChangedEventArgs e)
+        {
+            var snapshot = e.After;
 
-        //        case TokenKind.Name:
-        //            return classificationRegistryService.GetClassificationType(PyClassificationTypes.Identifier);
+            //if (!snapshot.IsReplBufferWithCommand())
+            //{
+                _tokenCache.EnsureCapacity(snapshot.LineCount);
 
-        //        case TokenKind.Constant:
-        //            ConstantValueToken ctoken = (ConstantValueToken)token;
-        //            if (ctoken.Constant is string)
-        //            {
-        //                return classificationRegistryService.GetClassificationType(PyClassificationTypes.String);
-        //            }
-        //            else
-        //            {
-        //                return classificationRegistryService.GetClassificationType(PyClassificationTypes.Number);
-        //            }
+                var tokenizer = GetTokenizer();
+                foreach (var change in e.Changes)
+                {
+                    if (change.LineCountDelta > 0)
+                    {
+                        _tokenCache.InsertLines(snapshot.GetLineNumberFromPosition(change.NewEnd) + 1 - change.LineCountDelta, change.LineCountDelta);
+                    }
+                    else if (change.LineCountDelta < 0)
+                    {
+                        _tokenCache.DeleteLines(snapshot.GetLineNumberFromPosition(change.NewEnd) + 1, -change.LineCountDelta);
+                    }
 
-        //        default:
-        //            return classificationRegistryService.GetClassificationType(PyClassificationTypes.Unknown);
-        //    }
-        //}
+                    ApplyChange(tokenizer, snapshot, change.NewSpan);
+                }
+            //}
+        }
+
+        /// <summary>
+        /// Adds classification spans to the given collection.
+        /// Scans a contiguous sub-<paramref name="span"/> of a larger code span which starts at <paramref name="codeStartLine"/>.
+        /// </summary>
+        private void AddClassifications(Tokenizer tokenizer, List<ClassificationSpan> classifications, SnapshotSpan span)
+        {
+            Debug.Assert(span.Length > 0);
+
+            var snapshot = span.Snapshot;
+            int firstLine = snapshot.GetLineNumberFromPosition(span.Start);
+            int lastLine = snapshot.GetLineNumberFromPosition(span.End - 1);
+
+            Contract.Assert(firstLine >= 0);
+
+            _tokenCache.EnsureCapacity(snapshot.LineCount);
+
+            // find the closest line preceding firstLine for which we know categorizer state, stop at the codeStartLine:
+            LineTokenization lineTokenization;
+            int currentLine = _tokenCache.IndexOfPreviousTokenization(firstLine, 0, out lineTokenization) + 1;
+            object state = lineTokenization.State;
+
+            while (currentLine <= lastLine)
+            {
+                if (!_tokenCache.TryGetTokenization(currentLine, out lineTokenization))
+                {
+                    lineTokenization = TokenizeLine(tokenizer, snapshot, state, currentLine);
+                    _tokenCache[currentLine] = lineTokenization;
+                }
+
+                state = lineTokenization.State;
+
+                foreach (var token in lineTokenization.Tokens)
+                {
+                    if (token.Category == TokenCategory.IncompleteMultiLineStringLiteral)
+                    {
+                        // we need to walk backwards to find the start of this multi-line string...
+
+                        TokenInfo startToken = token;
+                        int validPrevLine;
+                        int length = startToken.SourceSpan.Length;
+                        length += GetLeadingMultiLineStrings(tokenizer, snapshot, firstLine, currentLine, out validPrevLine, ref startToken);
+
+                        length += GetTrailingMultiLineStrings(tokenizer, snapshot, currentLine, state);
+
+                        var multiStrSpan = new Span(SnapshotSpanToSpan(snapshot, startToken, validPrevLine).Start, length);
+                        classifications.Add(
+                            new ClassificationSpan(
+                                new SnapshotSpan(snapshot, multiStrSpan),
+                                _provider.StringLiteral
+                            )
+                        );
+                    }
+                    else
+                    {
+                        var classification = ClassifyToken(span, token, currentLine);
+
+                        if (classification != null)
+                        {
+                            classifications.Add(classification);
+                        }
+                    }
+                }
+
+                currentLine++;
+            }
+        }
+
+        private int GetLeadingMultiLineStrings(Tokenizer tokenizer, ITextSnapshot snapshot, int firstLine, int currentLine, out int validPrevLine, ref TokenInfo startToken)
+        {
+            validPrevLine = currentLine;
+            int prevLine = currentLine - 1;
+            int length = 0;
+
+            while (prevLine >= 0)
+            {
+                LineTokenization prevLineTokenization;
+                if (!_tokenCache.TryGetTokenization(prevLine, out prevLineTokenization))
+                {
+                    LineTokenization lineTokenizationTemp;
+                    int currentLineTemp = _tokenCache.IndexOfPreviousTokenization(firstLine, 0, out lineTokenizationTemp) + 1;
+                    object stateTemp = lineTokenizationTemp.State;
+
+                    while (currentLineTemp <= snapshot.LineCount)
+                    {
+                        if (!_tokenCache.TryGetTokenization(currentLineTemp, out lineTokenizationTemp))
+                        {
+                            lineTokenizationTemp = TokenizeLine(tokenizer, snapshot, stateTemp, currentLineTemp);
+                            _tokenCache[currentLineTemp] = lineTokenizationTemp;
+                        }
+
+                        stateTemp = lineTokenizationTemp.State;
+                    }
+
+                    prevLineTokenization = TokenizeLine(tokenizer, snapshot, stateTemp, prevLine);
+                    _tokenCache[prevLine] = prevLineTokenization;
+                }
+
+                if (prevLineTokenization.Tokens.Length != 0)
+                {
+                    if (prevLineTokenization.Tokens[prevLineTokenization.Tokens.Length - 1].Category != TokenCategory.IncompleteMultiLineStringLiteral)
+                    {
+                        break;
+                    }
+
+                    startToken = prevLineTokenization.Tokens[prevLineTokenization.Tokens.Length - 1];
+                    length += startToken.SourceSpan.Length;
+                }
+
+                validPrevLine = prevLine;
+                prevLine--;
+            }
+            return length;
+        }
+
+        private int GetTrailingMultiLineStrings(Tokenizer tokenizer, ITextSnapshot snapshot, int currentLine, object state)
+        {
+            int nextLine = currentLine + 1;
+            var prevState = state;
+            int length = 0;
+            while (nextLine < snapshot.LineCount)
+            {
+                LineTokenization nextLineTokenization;
+                if (!_tokenCache.TryGetTokenization(nextLine, out nextLineTokenization))
+                {
+                    nextLineTokenization = TokenizeLine(tokenizer, snapshot, prevState, nextLine);
+                    prevState = nextLineTokenization.State;
+                    _tokenCache[nextLine] = nextLineTokenization;
+                }
+
+                if (nextLineTokenization.Tokens.Length != 0)
+                {
+                    if (nextLineTokenization.Tokens[0].Category != TokenCategory.IncompleteMultiLineStringLiteral)
+                    {
+                        break;
+                    }
+
+                    length += nextLineTokenization.Tokens[0].SourceSpan.Length;
+                }
+                nextLine++;
+            }
+            return length;
+        }
+
+        /// <summary>
+        /// Rescans the part of the buffer affected by a change. 
+        /// Scans a contiguous sub-<paramref name="span"/> of a larger code span which starts at <paramref name="codeStartLine"/>.
+        /// </summary>
+        private void ApplyChange(Tokenizer tokenizer, ITextSnapshot snapshot, Span span)
+        {
+            int firstLine = snapshot.GetLineNumberFromPosition(span.Start);
+            int lastLine = snapshot.GetLineNumberFromPosition(span.Length > 0 ? span.End - 1 : span.End);
+
+            Contract.Assert(firstLine >= 0);
+
+            // find the closest line preceding firstLine for which we know categorizer state, stop at the codeStartLine:
+            LineTokenization lineTokenization;
+            firstLine = _tokenCache.IndexOfPreviousTokenization(firstLine, 0, out lineTokenization) + 1;
+            object state = lineTokenization.State;
+
+            int currentLine = firstLine;
+            object previousState;
+            while (currentLine < snapshot.LineCount)
+            {
+                previousState = _tokenCache.TryGetTokenization(currentLine, out lineTokenization) ? lineTokenization.State : null;
+                _tokenCache[currentLine] = lineTokenization = TokenizeLine(tokenizer, snapshot, state, currentLine);
+                state = lineTokenization.State;
+
+                // stop if we visted all affected lines and the current line has no tokenization state or its previous state is the same as the new state:
+                if (currentLine > lastLine && (previousState == null || previousState.Equals(state)))
+                {
+                    break;
+                }
+
+                currentLine++;
+            }
+
+            // classification spans might have changed between the start of the first and end of the last visited line:
+            int changeStart = snapshot.GetLineFromLineNumber(firstLine).Start;
+            int changeEnd = (currentLine < snapshot.LineCount) ? snapshot.GetLineFromLineNumber(currentLine).End : snapshot.Length;
+            if (changeStart < changeEnd)
+            {
+                var classificationChanged = ClassificationChanged;
+                if (classificationChanged != null)
+                {
+                    var args = new ClassificationChangedEventArgs(new SnapshotSpan(snapshot, new Span(changeStart, changeEnd - changeStart)));
+                    classificationChanged(this, args);
+                }
+            }
+        }
+
+        private LineTokenization TokenizeLine(Tokenizer tokenizer, ITextSnapshot snapshot, object previousLineState, int lineNo)
+        {
+            ITextSnapshotLine line = snapshot.GetLineFromLineNumber(lineNo);
+            SnapshotSpan lineSpan = new SnapshotSpan(snapshot, line.Start, line.LengthIncludingLineBreak);
+
+            var tcp = new SnapshotSpanSourceCodeReader(lineSpan);
+
+            tokenizer.Initialize(previousLineState, tcp, new SourceLocation(line.Start.Position, lineNo + 1, 1));
+            var tokens = tokenizer.ReadTokens(lineSpan.Length).ToArray();
+            return new LineTokenization(tokens, tokenizer.CurrentState);
+        }
+
+        private ClassificationSpan ClassifyToken(SnapshotSpan span, TokenInfo token, int lineNumber)
+        {
+            IClassificationType classification = null;
+
+            if (token.Category == TokenCategory.Operator)
+            {
+                if (token.Trigger == TokenTriggers.MemberSelect)
+                {
+                    classification = _provider.DotClassification;
+                }
+            }
+            else if (token.Category == TokenCategory.Grouping)
+            {
+                if ((token.Trigger & TokenTriggers.MatchBraces) != 0)
+                {
+                    classification = _provider.GroupingClassification;
+                }
+            }
+            else if (token.Category == TokenCategory.Delimiter)
+            {
+                if (token.Trigger == TokenTriggers.ParameterNext)
+                {
+                    classification = _provider.CommaClassification;
+                }
+            }
+
+            if (classification == null)
+            {
+                CategoryMap.TryGetValue(token.Category, out classification);
+            }
+
+            if (classification != null)
+            {
+                var tokenSpan = SnapshotSpanToSpan(span.Snapshot, token, lineNumber);
+                var intersection = span.Intersection(tokenSpan);
+
+                if (intersection != null && intersection.Value.Length > 0 ||
+                    (span.Length == 0 && tokenSpan.Contains(span.Start)))
+                { // handle zero-length spans which Intersect and Overlap won't return true on ever.
+                    return new ClassificationSpan(new SnapshotSpan(span.Snapshot, tokenSpan), classification);
+                }
+            }
+
+            return null;
+        }
+
+        private static Span SnapshotSpanToSpan(ITextSnapshot snapshot, TokenInfo token, int lineNumber)
+        {
+            var line = snapshot.GetLineFromLineNumber(lineNumber);
+            var index = line.Start.Position + token.SourceSpan.Start.Column - 1;
+            var tokenSpan = new Span(index, token.SourceSpan.Length);
+            return tokenSpan;
+        }
+
+        #endregion
+    }
+
+    internal static class ClassifierExtensions
+    {
+        public static JavaClassifier GetJavaClassifier(this ITextBuffer buffer)
+        {
+            JavaClassifier res;
+            if (buffer.Properties.TryGetProperty<JavaClassifier>(typeof(JavaClassifier), out res))
+            {
+                return res;
+            }
+            return null;
+        }
     }
 }

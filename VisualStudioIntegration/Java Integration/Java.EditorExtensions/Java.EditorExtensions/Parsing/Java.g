@@ -1400,7 +1400,7 @@ WS
         |    '\n'
         ) 
             {
-                Skip();
+                $channel=Hidden;
             }          
     ;
     
@@ -1410,18 +1410,20 @@ COMMENT
         }
     :   '/*'
             {
-                if((char)input.LA(1) == '*'){
-                    isJavaDoc = true;
-                }
+				$channel=Hidden;
+                //if((char)input.LA(1) == '*'){
+                //    isJavaDoc = true;
+                //}
             }
         (options {greedy=false;} : . )* 
         '*/'
             {
-                if(isJavaDoc==true){
-                    $channel=Hidden;
-                }else{
-                    Skip();
-                }
+				$channel=Hidden;
+                //if(isJavaDoc==true){
+                //    $channel=Hidden;
+                //}else{
+                //    Skip();
+                //}
             }
     ;
 
