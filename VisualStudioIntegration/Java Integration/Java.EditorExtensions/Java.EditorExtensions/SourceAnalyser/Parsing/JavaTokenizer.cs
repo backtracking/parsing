@@ -7,8 +7,6 @@ using Java.EditorExtensions;
 
 public class JavaTokenizer : JavaLexer
 {
-    private bool _callBaseNext = true;
-
     private IToken _token;
     private int _lineIndex = 0;
     private string[] _lines = null;
@@ -40,11 +38,28 @@ public class JavaTokenizer : JavaLexer
                 antlrToken.Type == JavaLexer.JAVADOC_COMMENT);
     }
     
-
+    /// <summary>
+    /// NextToken() call the NextToken() from Antlr if we are eating a token that cannot be on multiple lines
+    /// However if it's a multiline token we return the token line by line
+    /// Let's consider the following example using \n for newline and starting at line 0 column 0 - 
+    /// /*
+    /// * a multiline comment
+    /// */
+    /// Here is the sequence returned by sucessive calls ([startPos endPos]) : 
+    /// BLOCK_COMMENT [0 1]     NL[2 2] 
+    /// BLOCK_COMMENT [3 23]    NL[24 24] 
+    /// BLOCK_COMMENT [25 26]
+    ///
+    /// Without this method Antlr's NextToken() would have returned this: 
+    /// BLOCK_COMMENT [0 26]
+    /// </summary>
+    /// <returns></returns>
     public override IToken NextToken()
     {
         IToken antlrToken = null;
 
+        // if there is no splitted lines it means we are on the first call or previous token was
+        // not a multiline token.
         if (_lines == null)
         {
             antlrToken = base.NextToken();
@@ -53,18 +68,21 @@ public class JavaTokenizer : JavaLexer
         }
         else
         {
+            // Index has reached the end of our splitted lines => we have finished to handle a multi-line token
             if (_lineIndex >= _lines.Length)
             {
                 _lines = null;
                 _newLineLengths = null;
                 _returnNewLineToken = null;
 
+                // We get the next token and we check if it's a single or multi-line token
                 antlrToken = base.NextToken();
                 if (IsMultiLine(antlrToken))
                     SplitMultiLineToken(antlrToken);
             }
             else
             {
+                // This time we return a NL token
                 if (_returnNewLineToken[_lineIndex])
                 {
                     antlrToken = new DummyToken(_token);
@@ -90,8 +108,10 @@ public class JavaTokenizer : JavaLexer
                     antlrToken.StopIndex = antlrToken.StartIndex + lenWithoutNewLine - 1;
                     antlrToken.Text = _lines[_lineIndex].Substring(0, lenWithoutNewLine);
 
+                    // Check the current line ends with a new line (NL)
                     if (_newLineLengths[_lineIndex] != 0)
                     {
+                        // The next call will return a NL token
                         _returnNewLineToken[_lineIndex] = true;
                         _startIndex = antlrToken.StopIndex + 1;
                     }
