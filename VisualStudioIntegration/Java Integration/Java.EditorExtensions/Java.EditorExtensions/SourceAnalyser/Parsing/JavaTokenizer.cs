@@ -45,13 +45,13 @@ public class JavaTokenizer : JavaLexer
     /// /*
     /// * a multiline comment
     /// */
-    /// Here is the sequence returned by sucessive calls ([startPos endPos]) : 
-    /// BLOCK_COMMENT [0 1]     NL[2 2] 
-    /// BLOCK_COMMENT [3 23]    NL[24 24] 
-    /// BLOCK_COMMENT [25 26]
+    /// Here is the sequence returned by sucessive calls ([lineNo startPos endPos]) : 
+    /// BLOCK_COMMENT [0 0 1]     NL[0 2 2] 
+    /// BLOCK_COMMENT [1 3 23]    NL[1 24 24] 
+    /// BLOCK_COMMENT [2 25 26]
     ///
     /// Without this method Antlr's NextToken() would have returned this: 
-    /// BLOCK_COMMENT [0 26]
+    /// BLOCK_COMMENT [0 0 26]
     /// </summary>
     /// <returns></returns>
     public override IToken NextToken()

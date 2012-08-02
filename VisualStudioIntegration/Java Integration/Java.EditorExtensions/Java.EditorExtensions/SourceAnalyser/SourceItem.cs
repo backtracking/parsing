@@ -28,6 +28,7 @@ namespace Java.EditorExtensions
 
     public class SourceItem
     {
+        private ITextBuffer _textBuffer;
         public LazyArray<TokenLine> TokenLines { get; private set; }
 
         private StringBuilder _buffer;
@@ -57,7 +58,22 @@ namespace Java.EditorExtensions
             _tokLineEndpos = 0;
         }
 
-        public SourceItem(string entireBuffer, int length, int linecount) : this()
+        public SourceItem(ITextBuffer textBuffer) : this()
+        {
+            _textBuffer = textBuffer;
+            SnapshotSpan entireSnapSpan = Smartmobili.JavaTools.Editor.Core.EditorExtensions.CreateEntireBufferSnapshotSpan(_textBuffer);
+
+            Length = _textBuffer.CurrentSnapshot.Length;
+            LineCount = _textBuffer.CurrentSnapshot.LineCount;
+
+            Func<int, TokenLine> itemCreator = itemCreator = index => new TokenLine(); ;
+            TokenLines = new LazyArray<TokenLine>(LineCount, itemCreator);
+
+            StartLexicalAnalysis(entireSnapSpan);
+        }
+
+        public SourceItem(string entireBuffer, int length, int linecount)
+            : this()
         {
             if (string.IsNullOrEmpty(entireBuffer))
                 return;
@@ -72,7 +88,7 @@ namespace Java.EditorExtensions
 
             //BuildLineMapping(entireBuffer);
 
-            StartLexicalAnalysis();
+            //StartLexicalAnalysis();
         }
 
         //private void BuildLineMapping(string buffer)
@@ -107,15 +123,16 @@ namespace Java.EditorExtensions
 
             return line;
         }
-
-        private void StartLexicalAnalysis()
+        
+        private void StartLexicalAnalysis(SnapshotSpan snapShotSpan)
         {
             //Argument.ThrowIfNull(srcItem, "StartLexicalAnalysis : srcItem");
 
             int curLine = 0;
             int startPosition = 0;
 
-            var tokenizer = new JavaTokenizer(new ANTLRStringStream(EntireBuffer));
+            string text = snapShotSpan.GetText();
+            var tokenizer = new JavaTokenizer(new ANTLRStringStream(text));
             var antlrToken = tokenizer.NextToken();
             while (antlrToken.Type != JavaLexer.EOF)
             {
@@ -123,7 +140,7 @@ namespace Java.EditorExtensions
 
                 // Antlr line starts from 1
                 curLine = antlrToken.Line - 1;
-                
+
                 if (antlrToken.Type != JavaLexer.WS &&
                     antlrToken.Type != JavaLexer.NL)
                 {
@@ -153,6 +170,54 @@ namespace Java.EditorExtensions
                 TokenLines[curLine].EndPosition = antlrToken.StopIndex - 1;
             }
         }
+
+
+
+        //private void StartLexicalAnalysis()
+        //{
+        //    //Argument.ThrowIfNull(srcItem, "StartLexicalAnalysis : srcItem");
+
+        //    int curLine = 0;
+        //    int startPosition = 0;
+
+        //    var tokenizer = new JavaTokenizer(new ANTLRStringStream(EntireBuffer));
+        //    var antlrToken = tokenizer.NextToken();
+        //    while (antlrToken.Type != JavaLexer.EOF)
+        //    {
+        //        //System.Diagnostics.Debug.WriteLine(string.Format("token : {0}", tokenizer.TokenNames[antlrToken.Type]));
+
+        //        // Antlr line starts from 1
+        //        curLine = antlrToken.Line - 1;
+                
+        //        if (antlrToken.Type != JavaLexer.WS &&
+        //            antlrToken.Type != JavaLexer.NL)
+        //        {
+        //            TokenLines[curLine].Tokens.Add(TokenFactory.CreateToken(antlrToken));
+        //        }
+        //        else
+        //        {
+        //            // Since we don't store noisy token(spaces and nl) we need to store start/end index
+        //            // To be able to map a position with a line
+        //            if (antlrToken.Type == JavaLexer.NL)
+        //            {
+        //                // Foreach TokenLine we store start/Stop index
+        //                int tokLen = antlrToken.Text.Length;
+        //                TokenLines[curLine].StartPosition = startPosition;
+        //                TokenLines[curLine].EndPosition = antlrToken.StopIndex;
+        //                startPosition = antlrToken.StopIndex + tokLen;
+        //            }
+        //        }
+        //        // Get next token from antlr lexer
+        //        antlrToken = tokenizer.NextToken();
+        //    }
+
+        //    // if our buffer doesn't end with a new line...
+        //    if (TokenLines != null && TokenLines.Count > 0)
+        //    {
+        //        TokenLines[curLine].StartPosition = startPosition;
+        //        TokenLines[curLine].EndPosition = antlrToken.StopIndex - 1;
+        //    }
+        //}
         
     }
 }

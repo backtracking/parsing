@@ -6,6 +6,7 @@ using System.IO;
 using Antlr.Runtime;
 using Antlr.Runtime.Tree;
 using Smartmobili.VisualStudio.Core;
+using Microsoft.VisualStudio.Text;
 
 namespace Java.EditorExtensions
 {
@@ -20,6 +21,26 @@ namespace Java.EditorExtensions
                 return Singleton<SourceAnalyzer>.Instance;
             }
         }
+
+
+
+        public SourceItem AddItem(ITextBuffer textBuffer)
+        {
+            SourceItem srcItem = null;
+
+            if (textBuffer == null)
+                return null;
+
+            string filepath = textBuffer.GetFileName();
+            if (!_sources.ContainsKey(filepath))
+            {
+                srcItem = new SourceItem(textBuffer);
+                _sources.Add(filepath, srcItem);
+            }
+
+            return srcItem;
+        }
+
 
         /// <summary>
         /// 
