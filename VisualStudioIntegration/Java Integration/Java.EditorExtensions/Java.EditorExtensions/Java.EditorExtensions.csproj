@@ -68,16 +68,41 @@
     <Compile Include="Classification\JavaClassifierProvider.cs" />
     <Compile Include="Classification\JavaClassificationDefinitions.cs" />
     <Compile Include="Classification\JavaClassifier.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="SourceAnalyser\Antlr\DummyToken.cs" />
+    <Compile Include="SourceAnalyser\Core\Argument.cs" />
+    <Compile Include="SourceAnalyser\Core\LazyArray.cs" />
+    <Compile Include="SourceAnalyser\Core\Position.cs" />
+    <Compile Include="SourceAnalyser\Core\Token.cs" />
+    <Compile Include="SourceAnalyser\Core\Token2.cs" />
+    <Compile Include="SourceAnalyser\Core\TokenKind.cs" />
+    <Compile Include="SourceAnalyser\Core\TokenSpan.cs" />
+    <Compile Include="Extensions\EditorExtensions.cs" />
+    <Compile Include="SourceAnalyser\Core\Singleton.cs" />
+    <None Include="SourceAnalyser\OLD_SourceItem.cs" />
+    <Compile Include="SourceAnalyser\Parsing\JavaTokenizer.cs" />
+    <Compile Include="SourceAnalyser\Parsing\JavaTreeParser.cs" />
+    <Compile Include="SourceAnalyser\SourceAnalyzer.cs" />
+    <Compile Include="SourceAnalyser\SourceItem.cs" />
+    <Compile Include="SourceAnalyser\Syntax\CommentLiteralToken.cs" />
+    <Compile Include="SourceAnalyser\Syntax\IdentifierToken.cs" />
+    <Compile Include="SourceAnalyser\Syntax\InvalidToken.cs" />
+    <Compile Include="SourceAnalyser\Syntax\KeywordToken.cs" />
+    <Compile Include="SourceAnalyser\Syntax\NumericLiteralToken.cs" />
+    <Compile Include="SourceAnalyser\Syntax\OperatorToken.cs" />
+    <Compile Include="SourceAnalyser\Syntax\StringLiteralToken.cs" />
+    <Compile Include="SourceAnalyser\Syntax\TokenFactory.cs" />
     <Compile Include="StringExtension.cs" />
     <Compile Include="JavaContentTypeDefinition.cs" />
-    <Compile Include="Parsing\JavaLexer.cs" />
-    <Compile Include="Parsing\JavaParser.cs" />
+    <Compile Include="SourceAnalyser\Parsing\JavaLexer.cs" />
+    <Compile Include="SourceAnalyser\Parsing\JavaParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tagging\BufferIdleEventUtil.cs" />
     <Compile Include="TextBufferExtension.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Parsing\Java.g" />
+    <None Include="SourceAnalyser\Parsing\Java.g" />
+    <None Include="SourceAnalyser\Parsing\JavaTreeParser.g" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
