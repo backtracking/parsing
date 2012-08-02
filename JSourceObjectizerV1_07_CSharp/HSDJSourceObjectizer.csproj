@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FBAEB58-6AE6-46BB-A510-5633BECAF405}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JSourceObjectizer</RootNamespace>
+    <AssemblyName>HSDJSourceObjectizerV1.07</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\com\habelitz\core\Constants.cs" />
+    <Compile Include="src\com\habelitz\core\JavaFile.cs" />
+    <Compile Include="src\com\habelitz\core\ListResourceBundle.cs" />
+    <Compile Include="src\com\habelitz\core\ResourceBundle.cs" />
+    <Compile Include="src\com\habelitz\core\resource\resbundle\CommonErrorMessages.cs" />
+    <Compile Include="src\com\habelitz\core\StringResourceBundle.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\Annotation.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\AnnotationDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\AnnotationElementValue.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\AnnotationInitializer.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\AnnotationMethodDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\AnnotationTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\abstracttype\AbstractTypeTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\abstracttype\CommonMethodOrConstructorDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\abstracttype\CommonTypeDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\abstracttype\CommonTypeTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\abstracttype\CommonVariableDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\ClassDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\ClassExtendsClause.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\ClassTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\ComplexTypeIdentifier.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\ConstructorDefinition.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\PackageDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\EnumConstant.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\EnumDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\EnumTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\ArrayElementAccess.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\ArrayTypeDeclarator.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\BinaryOperatorExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\ClassConstructorCall.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\ConditionalExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\DotExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\ExplicitConstructorCall.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\Expression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\Identifier.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\InstanceofExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\Literal.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\MethodCall.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\ParenthesizedExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\PrimaryExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\PrimaryExpressionKeyword.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\StaticArrayCreator.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\TypeCast.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\expression\UnaryOperatorExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\FormalParameterDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\FormalParameterList.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\GenericTypeArgument.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\GenericTypeParameter.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\ImplementsClause.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\ImportDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\InterfaceDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\InterfaceExtendsClause.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\InterfaceTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\JavaSource.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\MethodDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\MethodDefinition.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\ModifierList.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\PrimitiveType.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\QualifiedIdentifier.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\AssertStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\abstracttype\StatementBlockElementContainer.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\BreakStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\ContinueStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\ExpressionStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\ForEachStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\ForStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\IfStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\LabeledStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\LocalClassDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\LocalVariableDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\ReturnStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\Statement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\StatementBlockElement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\StatementBlockScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\SwitchStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\SynchronizedStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\ThrowStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\TryStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\statement\WhileAndDoStatements.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\ThrowsClause.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\Type.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\TypeMemberDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\VariableDeclarator.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\VariableDeclaratorIdentifier.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\api\VariableInitializer.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\JSOM.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\util\TraverseAction.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\jsom\util\TraverseActionAdapter.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\JSourceObjectizerException.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\JSourceObjectizerInternalException.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\marshaller\JSourceMarshaller.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\marshaller\MarshallerException.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\resource\resbundle\CommonJSOMMessages.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\resource\resbundle\MarshallerMessages.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\resource\resbundle\ParserGeneratorMessages.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\resource\resbundle\UnmarshallerMessages.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\AST2JSOMCommonErrorNode.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\AST2JSOMTree.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\AST2JSOMTreeAdaptor.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\generated\JavaLexer.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\generated\JavaParser.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\generated\JavaTreeParser.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\JSOParser.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2Annotation.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2AnnotationDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2AnnotationElementValue.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2AnnotationInitializer.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2AnnotationMethodDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2AnnotationTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2ClassDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2ClassExtendsClause.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2ClassTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2ComplexTypeIdentifier.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2ConstructorDefinition.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2EnumConstant.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2EnumDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2EnumTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2FormalParameterDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2FormalParameterList.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2GenericTypeArgument.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2GenericTypeParameter.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2ImplementsClause.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2ImportDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2InterfaceDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2InterfaceExtendsClause.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2InterfaceTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2JavaSource.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2MethodDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2MethodDefinition.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2ModifierList.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2PrimitiveType.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2QualifiedIdentifier.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2ThrowsClause.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2Type.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2TypeMemberDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2VariableDeclarator.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2VariableDeclaratorIdentifier.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2VariableInitializer.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\abstracttype\AST2AbstractTypeTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\abstracttype\AST2CommonMethodOrConstructorDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\abstracttype\AST2CommonTypeDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\abstracttype\AST2CommonTypeTopLevelScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\abstracttype\AST2CommonVariableDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\AST2PackageDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2ArrayElementAccess.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2ArrayTypeDeclarator.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2BinaryOperatorExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2ClassConstructorCall.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2ConditionalExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2DotExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2ExplicitConstructorCall.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2Expression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2Identifier.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2InstanceofExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2Literal.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2MethodCall.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2ParenthesizedExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2PrimaryExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2PrimaryExpressionKeyword.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2StaticArrayCreator.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2TypeCast.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\expression\AST2UnaryOperatorExpression.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2AssertStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2BreakStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2ContinueStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2ExpressionStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2ForEachStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2ForStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2IfStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2LabeledStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2LocalClassDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2LocalVariableDeclaration.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2ReturnStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2Statement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2StatementBlockElement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2StatementBlockScope.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2SwitchStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2SynchronizedStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2ThrowStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2TryStatement.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\AST2WhileAndDoStatements.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\statement\abstracttype\AST2StatementBlockElementContainerImpl.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\ast2api\utils\TreeNodeValidator.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\AST2JSOM.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\AST2JSOMBase.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\jsombridge\JSourceUnmarshallerBase.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\JSourceUnmarshaller.cs" />
+    <Compile Include="src\com\habelitz\jsobjectizer\unmarshaller\JSourceUnmarshallerException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\generated\Java.tokens" />
+    <None Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\generated\JavaTreeParser.tokens" />
+    <None Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\grammar\Java.g" />
+    <None Include="src\com\habelitz\jsobjectizer\unmarshaller\antlrbridge\grammar\JavaTreeParser.g" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

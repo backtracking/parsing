@@ -1,0 +1,12 @@
+com.habelitz.jsobjectizer
+com.habelitz.jsobjectizer.jsom
+com.habelitz.jsobjectizer.jsom.api
+com.habelitz.jsobjectizer.jsom.api.base
+com.habelitz.jsobjectizer.jsom.api.expression
+com.habelitz.jsobjectizer.jsom.api.statement
+com.habelitz.jsobjectizer.jsom.api.statement.base
+com.habelitz.jsobjectizer.jsom.util
+com.habelitz.jsobjectizer.marshaller
+com.habelitz.jsobjectizer.resource.resbundle
+com.habelitz.jsobjectizer.unmarshaller
+com.habelitz.jsobjectizer.unmarshaller.jsombridge
