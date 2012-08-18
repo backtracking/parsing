@@ -5,6 +5,7 @@ using System.Text;
 using Smartmobili.VisualStudio.Core;
 using Antlr.Runtime;
 using Microsoft.VisualStudio.Text;
+using Smi.VisualStudio.Antlr;
 
 namespace Java.EditorExtensions
 {
@@ -132,6 +133,8 @@ namespace Java.EditorExtensions
             int startPosition = 0;
 
             string text = snapShotSpan.GetText();
+
+            //var tokenizer = new JavaTokenizer(new SnapshotCharStream(snapShotSpan.Snapshot));
             var tokenizer = new JavaTokenizer(new ANTLRStringStream(text));
             var antlrToken = tokenizer.NextToken();
             while (antlrToken.Type != JavaLexer.EOF)
@@ -141,8 +144,8 @@ namespace Java.EditorExtensions
                 // Antlr line starts from 1
                 curLine = antlrToken.Line - 1;
 
-                if (antlrToken.Type != JavaLexer.WS &&
-                    antlrToken.Type != JavaLexer.NL)
+                if (antlrToken.Type != Java6ColorizerLexer.WS &&
+                    antlrToken.Type != Java6ColorizerLexer.NEWLINE)
                 {
                     TokenLines[curLine].Tokens.Add(TokenFactory.CreateToken(antlrToken));
                 }
@@ -150,7 +153,7 @@ namespace Java.EditorExtensions
                 {
                     // Since we don't store noisy token(spaces and nl) we need to store start/end index
                     // To be able to map a position with a line
-                    if (antlrToken.Type == JavaLexer.NL)
+                    if (antlrToken.Type == Java6ColorizerLexer.NEWLINE)
                     {
                         // Foreach TokenLine we store start/Stop index
                         int tokLen = antlrToken.Text.Length;

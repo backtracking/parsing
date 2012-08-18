@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4.1.9004 JavaTreeParser.g 2012-05-12 15:00:43
+// $ANTLR 3.4.1.9004 JavaTreeParser.g 2012-08-03 23:20:20
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -392,7 +392,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "javaSource"
 	// JavaTreeParser.g:158:1: javaSource : ^( JAVA_SOURCE annotationList ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* ) ;
 	[GrammarRule("javaSource")]
-	public void javaSource()
+	private void javaSource()
 	{
 		EnterRule_javaSource();
 		EnterRule("javaSource", 1);
@@ -563,7 +563,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "packageDeclaration"
 	// JavaTreeParser.g:162:1: packageDeclaration : ^( PACKAGE qualifiedIdentifier ) ;
 	[GrammarRule("packageDeclaration")]
-	public void packageDeclaration()
+	private void packageDeclaration()
 	{
 		EnterRule_packageDeclaration();
 		EnterRule("packageDeclaration", 2);
@@ -622,7 +622,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "importDeclaration"
 	// JavaTreeParser.g:166:1: importDeclaration : ^( IMPORT ( STATIC )? qualifiedIdentifier ( DOTSTAR )? ) ;
 	[GrammarRule("importDeclaration")]
-	public void importDeclaration()
+	private void importDeclaration()
 	{
 		EnterRule_importDeclaration();
 		EnterRule("importDeclaration", 3);
@@ -735,7 +735,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "typeDeclaration"
 	// JavaTreeParser.g:170:1: typeDeclaration : ( ^( CLASS modifierList IDENT ( genericTypeParameterList )? ( extendsClause )? ( implementsClause )? classTopLevelScope ) | ^( INTERFACE modifierList IDENT ( genericTypeParameterList )? ( extendsClause )? interfaceTopLevelScope ) | ^( ENUM modifierList IDENT ( implementsClause )? enumTopLevelScope ) | ^( AT modifierList IDENT annotationTopLevelScope ) );
 	[GrammarRule("typeDeclaration")]
-	public void typeDeclaration()
+	private void typeDeclaration()
 	{
 		EnterRule_typeDeclaration();
 		EnterRule("typeDeclaration", 4);
@@ -1101,7 +1101,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "extendsClause"
 	// JavaTreeParser.g:177:1: extendsClause : ^( EXTENDS_CLAUSE ( type )+ ) ;
 	[GrammarRule("extendsClause")]
-	public void extendsClause()
+	private void extendsClause()
 	{
 		EnterRule_extendsClause();
 		EnterRule("extendsClause", 5);
@@ -1203,7 +1203,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "implementsClause"
 	// JavaTreeParser.g:182:1: implementsClause : ^( IMPLEMENTS_CLAUSE ( type )+ ) ;
 	[GrammarRule("implementsClause")]
-	public void implementsClause()
+	private void implementsClause()
 	{
 		EnterRule_implementsClause();
 		EnterRule("implementsClause", 6);
@@ -1305,7 +1305,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "genericTypeParameterList"
 	// JavaTreeParser.g:186:1: genericTypeParameterList : ^( GENERIC_TYPE_PARAM_LIST ( genericTypeParameter )+ ) ;
 	[GrammarRule("genericTypeParameterList")]
-	public void genericTypeParameterList()
+	private void genericTypeParameterList()
 	{
 		EnterRule_genericTypeParameterList();
 		EnterRule("genericTypeParameterList", 7);
@@ -1407,7 +1407,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "genericTypeParameter"
 	// JavaTreeParser.g:190:1: genericTypeParameter : ^( IDENT ( bound )? ) ;
 	[GrammarRule("genericTypeParameter")]
-	public void genericTypeParameter()
+	private void genericTypeParameter()
 	{
 		EnterRule_genericTypeParameter();
 		EnterRule("genericTypeParameter", 8);
@@ -1494,7 +1494,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "bound"
 	// JavaTreeParser.g:194:1: bound : ^( EXTENDS_BOUND_LIST ( type )+ ) ;
 	[GrammarRule("bound")]
-	public void bound()
+	private void bound()
 	{
 		EnterRule_bound();
 		EnterRule("bound", 9);
@@ -1596,7 +1596,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "enumTopLevelScope"
 	// JavaTreeParser.g:198:1: enumTopLevelScope : ^( ENUM_TOP_LEVEL_SCOPE ( enumConstant )* ( classTopLevelScope )? ) ;
 	[GrammarRule("enumTopLevelScope")]
-	public void enumTopLevelScope()
+	private void enumTopLevelScope()
 	{
 		EnterRule_enumTopLevelScope();
 		EnterRule("enumTopLevelScope", 10);
@@ -1724,7 +1724,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "enumConstant"
 	// JavaTreeParser.g:202:1: enumConstant : ^( IDENT annotationList ( arguments )? ( classTopLevelScope )? ) ;
 	[GrammarRule("enumConstant")]
-	public void enumConstant()
+	private void enumConstant()
 	{
 		EnterRule_enumConstant();
 		EnterRule("enumConstant", 11);
@@ -1843,7 +1843,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "classTopLevelScope"
 	// JavaTreeParser.g:207:1: classTopLevelScope : ^( CLASS_TOP_LEVEL_SCOPE ( classScopeDeclarations )* ) ;
 	[GrammarRule("classTopLevelScope")]
-	public void classTopLevelScope()
+	private void classTopLevelScope()
 	{
 		EnterRule_classTopLevelScope();
 		EnterRule("classTopLevelScope", 12);
@@ -1941,7 +1941,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "classScopeDeclarations"
 	// JavaTreeParser.g:211:1: classScopeDeclarations : ( ^( CLASS_INSTANCE_INITIALIZER block ) | ^( CLASS_STATIC_INITIALIZER block ) | ^( FUNCTION_METHOD_DECL modifierList ( genericTypeParameterList )? type IDENT formalParameterList ( arrayDeclaratorList )? ( throwsClause )? ( block )? ) | ^( VOID_METHOD_DECL modifierList ( genericTypeParameterList )? IDENT formalParameterList ( throwsClause )? ( block )? ) | ^( VAR_DECLARATION modifierList type variableDeclaratorList ) | ^( CONSTRUCTOR_DECL modifierList ( genericTypeParameterList )? formalParameterList ( throwsClause )? block ) | typeDeclaration );
 	[GrammarRule("classScopeDeclarations")]
-	public void classScopeDeclarations()
+	private void classScopeDeclarations()
 	{
 		EnterRule_classScopeDeclarations();
 		EnterRule("classScopeDeclarations", 13);
@@ -2478,7 +2478,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "interfaceTopLevelScope"
 	// JavaTreeParser.g:221:1: interfaceTopLevelScope : ^( INTERFACE_TOP_LEVEL_SCOPE ( interfaceScopeDeclarations )* ) ;
 	[GrammarRule("interfaceTopLevelScope")]
-	public void interfaceTopLevelScope()
+	private void interfaceTopLevelScope()
 	{
 		EnterRule_interfaceTopLevelScope();
 		EnterRule("interfaceTopLevelScope", 14);
@@ -2576,7 +2576,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "interfaceScopeDeclarations"
 	// JavaTreeParser.g:225:1: interfaceScopeDeclarations : ( ^( FUNCTION_METHOD_DECL modifierList ( genericTypeParameterList )? type IDENT formalParameterList ( arrayDeclaratorList )? ( throwsClause )? ) | ^( VOID_METHOD_DECL modifierList ( genericTypeParameterList )? IDENT formalParameterList ( throwsClause )? ) | ^( VAR_DECLARATION modifierList type variableDeclaratorList ) | typeDeclaration );
 	[GrammarRule("interfaceScopeDeclarations")]
-	public void interfaceScopeDeclarations()
+	private void interfaceScopeDeclarations()
 	{
 		EnterRule_interfaceScopeDeclarations();
 		EnterRule("interfaceScopeDeclarations", 15);
@@ -2908,7 +2908,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "variableDeclaratorList"
 	// JavaTreeParser.g:235:1: variableDeclaratorList : ^( VAR_DECLARATOR_LIST ( variableDeclarator )+ ) ;
 	[GrammarRule("variableDeclaratorList")]
-	public void variableDeclaratorList()
+	private void variableDeclaratorList()
 	{
 		EnterRule_variableDeclaratorList();
 		EnterRule("variableDeclaratorList", 16);
@@ -3010,7 +3010,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "variableDeclarator"
 	// JavaTreeParser.g:239:1: variableDeclarator : ^( VAR_DECLARATOR variableDeclaratorId ( variableInitializer )? ) ;
 	[GrammarRule("variableDeclarator")]
-	public void variableDeclarator()
+	private void variableDeclarator()
 	{
 		EnterRule_variableDeclarator();
 		EnterRule("variableDeclarator", 17);
@@ -3099,7 +3099,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "variableDeclaratorId"
 	// JavaTreeParser.g:243:1: variableDeclaratorId : ^( IDENT ( arrayDeclaratorList )? ) ;
 	[GrammarRule("variableDeclaratorId")]
-	public void variableDeclaratorId()
+	private void variableDeclaratorId()
 	{
 		EnterRule_variableDeclaratorId();
 		EnterRule("variableDeclaratorId", 18);
@@ -3186,7 +3186,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "variableInitializer"
 	// JavaTreeParser.g:247:1: variableInitializer : ( arrayInitializer | expression );
 	[GrammarRule("variableInitializer")]
-	public void variableInitializer()
+	private void variableInitializer()
 	{
 		EnterRule_variableInitializer();
 		EnterRule("variableInitializer", 19);
@@ -3274,7 +3274,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "arrayDeclarator"
 	// JavaTreeParser.g:252:1: arrayDeclarator : LBRACK RBRACK ;
 	[GrammarRule("arrayDeclarator")]
-	public void arrayDeclarator()
+	private void arrayDeclarator()
 	{
 		EnterRule_arrayDeclarator();
 		EnterRule("arrayDeclarator", 20);
@@ -3324,7 +3324,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "arrayDeclaratorList"
 	// JavaTreeParser.g:256:1: arrayDeclaratorList : ^( ARRAY_DECLARATOR_LIST ( ARRAY_DECLARATOR )* ) ;
 	[GrammarRule("arrayDeclaratorList")]
-	public void arrayDeclaratorList()
+	private void arrayDeclaratorList()
 	{
 		EnterRule_arrayDeclaratorList();
 		EnterRule("arrayDeclaratorList", 21);
@@ -3419,7 +3419,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "arrayInitializer"
 	// JavaTreeParser.g:260:1: arrayInitializer : ^( ARRAY_INITIALIZER ( variableInitializer )* ) ;
 	[GrammarRule("arrayInitializer")]
-	public void arrayInitializer()
+	private void arrayInitializer()
 	{
 		EnterRule_arrayInitializer();
 		EnterRule("arrayInitializer", 22);
@@ -3517,7 +3517,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "throwsClause"
 	// JavaTreeParser.g:264:1: throwsClause : ^( THROWS_CLAUSE ( qualifiedIdentifier )+ ) ;
 	[GrammarRule("throwsClause")]
-	public void throwsClause()
+	private void throwsClause()
 	{
 		EnterRule_throwsClause();
 		EnterRule("throwsClause", 23);
@@ -3619,7 +3619,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "modifierList"
 	// JavaTreeParser.g:268:1: modifierList : ^( MODIFIER_LIST ( modifier )* ) ;
 	[GrammarRule("modifierList")]
-	public void modifierList()
+	private void modifierList()
 	{
 		EnterRule_modifierList();
 		EnterRule("modifierList", 24);
@@ -3717,7 +3717,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "modifier"
 	// JavaTreeParser.g:272:1: modifier : ( PUBLIC | PROTECTED | PRIVATE | STATIC | ABSTRACT | NATIVE | SYNCHRONIZED | TRANSIENT | VOLATILE | STRICTFP | localModifier );
 	[GrammarRule("modifier")]
-	public void modifier()
+	private void modifier()
 	{
 		EnterRule_modifier();
 		EnterRule("modifier", 25);
@@ -3933,7 +3933,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "localModifierList"
 	// JavaTreeParser.g:286:1: localModifierList : ^( LOCAL_MODIFIER_LIST ( localModifier )* ) ;
 	[GrammarRule("localModifierList")]
-	public void localModifierList()
+	private void localModifierList()
 	{
 		EnterRule_localModifierList();
 		EnterRule("localModifierList", 26);
@@ -4031,7 +4031,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "localModifier"
 	// JavaTreeParser.g:290:1: localModifier : ( FINAL | annotation );
 	[GrammarRule("localModifier")]
-	public void localModifier()
+	private void localModifier()
 	{
 		EnterRule_localModifier();
 		EnterRule("localModifier", 27);
@@ -4116,7 +4116,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "type"
 	// JavaTreeParser.g:295:1: type : ^( TYPE ( primitiveType | qualifiedTypeIdent ) ( arrayDeclaratorList )? ) ;
 	[GrammarRule("type")]
-	public void type()
+	private void type()
 	{
 		EnterRule_type();
 		EnterRule("type", 28);
@@ -4253,7 +4253,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "qualifiedTypeIdent"
 	// JavaTreeParser.g:299:1: qualifiedTypeIdent : ^( QUALIFIED_TYPE_IDENT ( typeIdent )+ ) ;
 	[GrammarRule("qualifiedTypeIdent")]
-	public void qualifiedTypeIdent()
+	private void qualifiedTypeIdent()
 	{
 		EnterRule_qualifiedTypeIdent();
 		EnterRule("qualifiedTypeIdent", 29);
@@ -4355,7 +4355,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "typeIdent"
 	// JavaTreeParser.g:303:1: typeIdent : ^( IDENT ( genericTypeArgumentList )? ) ;
 	[GrammarRule("typeIdent")]
-	public void typeIdent()
+	private void typeIdent()
 	{
 		EnterRule_typeIdent();
 		EnterRule("typeIdent", 30);
@@ -4442,7 +4442,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "primitiveType"
 	// JavaTreeParser.g:307:1: primitiveType : ( BOOLEAN | CHAR | BYTE | SHORT | INT | LONG | FLOAT | DOUBLE );
 	[GrammarRule("primitiveType")]
-	public void primitiveType()
+	private void primitiveType()
 	{
 		EnterRule_primitiveType();
 		EnterRule("primitiveType", 31);
@@ -4502,7 +4502,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "genericTypeArgumentList"
 	// JavaTreeParser.g:318:1: genericTypeArgumentList : ^( GENERIC_TYPE_ARG_LIST ( genericTypeArgument )+ ) ;
 	[GrammarRule("genericTypeArgumentList")]
-	public void genericTypeArgumentList()
+	private void genericTypeArgumentList()
 	{
 		EnterRule_genericTypeArgumentList();
 		EnterRule("genericTypeArgumentList", 32);
@@ -4604,7 +4604,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "genericTypeArgument"
 	// JavaTreeParser.g:322:1: genericTypeArgument : ( type | ^( QUESTION ( genericWildcardBoundType )? ) );
 	[GrammarRule("genericTypeArgument")]
-	public void genericTypeArgument()
+	private void genericTypeArgument()
 	{
 		EnterRule_genericTypeArgument();
 		EnterRule("genericTypeArgument", 33);
@@ -4728,7 +4728,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "genericWildcardBoundType"
 	// JavaTreeParser.g:327:1: genericWildcardBoundType : ( ^( EXTENDS type ) | ^( SUPER type ) );
 	[GrammarRule("genericWildcardBoundType")]
-	public void genericWildcardBoundType()
+	private void genericWildcardBoundType()
 	{
 		EnterRule_genericWildcardBoundType();
 		EnterRule("genericWildcardBoundType", 34);
@@ -4832,7 +4832,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "formalParameterList"
 	// JavaTreeParser.g:332:1: formalParameterList : ^( FORMAL_PARAM_LIST ( formalParameterStandardDecl )* ( formalParameterVarargDecl )? ) ;
 	[GrammarRule("formalParameterList")]
-	public void formalParameterList()
+	private void formalParameterList()
 	{
 		EnterRule_formalParameterList();
 		EnterRule("formalParameterList", 35);
@@ -4960,7 +4960,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "formalParameterStandardDecl"
 	// JavaTreeParser.g:336:1: formalParameterStandardDecl : ^( FORMAL_PARAM_STD_DECL localModifierList type variableDeclaratorId ) ;
 	[GrammarRule("formalParameterStandardDecl")]
-	public void formalParameterStandardDecl()
+	private void formalParameterStandardDecl()
 	{
 		EnterRule_formalParameterStandardDecl();
 		EnterRule("formalParameterStandardDecl", 36);
@@ -5029,7 +5029,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "formalParameterVarargDecl"
 	// JavaTreeParser.g:340:1: formalParameterVarargDecl : ^( FORMAL_PARAM_VARARG_DECL localModifierList type variableDeclaratorId ) ;
 	[GrammarRule("formalParameterVarargDecl")]
-	public void formalParameterVarargDecl()
+	private void formalParameterVarargDecl()
 	{
 		EnterRule_formalParameterVarargDecl();
 		EnterRule("formalParameterVarargDecl", 37);
@@ -5098,7 +5098,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "qualifiedIdentifier"
 	// JavaTreeParser.g:344:1: qualifiedIdentifier : ( IDENT | ^( DOT qualifiedIdentifier IDENT ) );
 	[GrammarRule("qualifiedIdentifier")]
-	public void qualifiedIdentifier()
+	private void qualifiedIdentifier()
 	{
 		EnterRule_qualifiedIdentifier();
 		EnterRule("qualifiedIdentifier", 38);
@@ -5193,7 +5193,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "annotationList"
 	// JavaTreeParser.g:351:1: annotationList : ^( ANNOTATION_LIST ( annotation )* ) ;
 	[GrammarRule("annotationList")]
-	public void annotationList()
+	private void annotationList()
 	{
 		EnterRule_annotationList();
 		EnterRule("annotationList", 39);
@@ -5291,7 +5291,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "annotation"
 	// JavaTreeParser.g:355:1: annotation : ^( AT qualifiedIdentifier ( annotationInit )? ) ;
 	[GrammarRule("annotation")]
-	public void annotation()
+	private void annotation()
 	{
 		EnterRule_annotation();
 		EnterRule("annotation", 40);
@@ -5380,7 +5380,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "annotationInit"
 	// JavaTreeParser.g:359:1: annotationInit : ^( ANNOTATION_INIT_BLOCK ( annotationInitializers )? ) ;
 	[GrammarRule("annotationInit")]
-	public void annotationInit()
+	private void annotationInit()
 	{
 		EnterRule_annotationInit();
 		EnterRule("annotationInit", 41);
@@ -5467,7 +5467,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "annotationInitializers"
 	// JavaTreeParser.g:363:1: annotationInitializers : ( ^( ANNOTATION_INIT_KEY_LIST ( annotationInitializer )+ ) | ^( ANNOTATION_INIT_DEFAULT_KEY annotationElementValue ) );
 	[GrammarRule("annotationInitializers")]
-	public void annotationInitializers()
+	private void annotationInitializers()
 	{
 		EnterRule_annotationInitializers();
 		EnterRule("annotationInitializers", 42);
@@ -5614,7 +5614,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "annotationInitializer"
 	// JavaTreeParser.g:368:1: annotationInitializer : ^( IDENT annotationElementValue ) ;
 	[GrammarRule("annotationInitializer")]
-	public void annotationInitializer()
+	private void annotationInitializer()
 	{
 		EnterRule_annotationInitializer();
 		EnterRule("annotationInitializer", 43);
@@ -5673,7 +5673,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "annotationElementValue"
 	// JavaTreeParser.g:372:1: annotationElementValue : ( ^( ANNOTATION_INIT_ARRAY_ELEMENT ( annotationElementValue )* ) | annotation | expression );
 	[GrammarRule("annotationElementValue")]
-	public void annotationElementValue()
+	private void annotationElementValue()
 	{
 		EnterRule_annotationElementValue();
 		EnterRule("annotationElementValue", 44);
@@ -5829,7 +5829,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "annotationTopLevelScope"
 	// JavaTreeParser.g:378:1: annotationTopLevelScope : ^( ANNOTATION_TOP_LEVEL_SCOPE ( annotationScopeDeclarations )* ) ;
 	[GrammarRule("annotationTopLevelScope")]
-	public void annotationTopLevelScope()
+	private void annotationTopLevelScope()
 	{
 		EnterRule_annotationTopLevelScope();
 		EnterRule("annotationTopLevelScope", 45);
@@ -5927,7 +5927,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "annotationScopeDeclarations"
 	// JavaTreeParser.g:382:1: annotationScopeDeclarations : ( ^( ANNOTATION_METHOD_DECL modifierList type IDENT ( annotationDefaultValue )? ) | ^( VAR_DECLARATION modifierList type variableDeclaratorList ) | typeDeclaration );
 	[GrammarRule("annotationScopeDeclarations")]
-	public void annotationScopeDeclarations()
+	private void annotationScopeDeclarations()
 	{
 		EnterRule_annotationScopeDeclarations();
 		EnterRule("annotationScopeDeclarations", 46);
@@ -6102,7 +6102,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "annotationDefaultValue"
 	// JavaTreeParser.g:388:1: annotationDefaultValue : ^( DEFAULT annotationElementValue ) ;
 	[GrammarRule("annotationDefaultValue")]
-	public void annotationDefaultValue()
+	private void annotationDefaultValue()
 	{
 		EnterRule_annotationDefaultValue();
 		EnterRule("annotationDefaultValue", 47);
@@ -6161,7 +6161,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "block"
 	// JavaTreeParser.g:394:1: block : ^( BLOCK_SCOPE ( blockStatement )* ) ;
 	[GrammarRule("block")]
-	public void block()
+	private void block()
 	{
 		EnterRule_block();
 		EnterRule("block", 48);
@@ -6259,7 +6259,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "blockStatement"
 	// JavaTreeParser.g:398:1: blockStatement : ( localVariableDeclaration | typeDeclaration | statement );
 	[GrammarRule("blockStatement")]
-	public void blockStatement()
+	private void blockStatement()
 	{
 		EnterRule_blockStatement();
 		EnterRule("blockStatement", 49);
@@ -6387,7 +6387,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "localVariableDeclaration"
 	// JavaTreeParser.g:404:1: localVariableDeclaration : ^( VAR_DECLARATION localModifierList type variableDeclaratorList ) ;
 	[GrammarRule("localVariableDeclaration")]
-	public void localVariableDeclaration()
+	private void localVariableDeclaration()
 	{
 		EnterRule_localVariableDeclaration();
 		EnterRule("localVariableDeclaration", 50);
@@ -6456,7 +6456,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "statement"
 	// JavaTreeParser.g:409:1: statement : ( block | ^( ASSERT expression ( expression )? ) | ^( IF parenthesizedExpression statement ( statement )? ) | ^( FOR forInit forCondition forUpdater statement ) | ^( FOR_EACH localModifierList type IDENT expression statement ) | ^( WHILE parenthesizedExpression statement ) | ^( DO statement parenthesizedExpression ) | ^( TRY block ( catches )? ( block )? ) | ^( SWITCH parenthesizedExpression switchBlockLabels ) | ^( SYNCHRONIZED parenthesizedExpression block ) | ^( RETURN ( expression )? ) | ^( THROW expression ) | ^( BREAK ( IDENT )? ) | ^( CONTINUE ( IDENT )? ) | ^( LABELED_STATEMENT IDENT statement ) | expression | SEMI );
 	[GrammarRule("statement")]
-	public void statement()
+	private void statement()
 	{
 		EnterRule_statement();
 		EnterRule("statement", 51);
@@ -7169,7 +7169,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "catches"
 	// JavaTreeParser.g:429:1: catches : ^( CATCH_CLAUSE_LIST ( catchClause )+ ) ;
 	[GrammarRule("catches")]
-	public void catches()
+	private void catches()
 	{
 		EnterRule_catches();
 		EnterRule("catches", 52);
@@ -7271,7 +7271,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "catchClause"
 	// JavaTreeParser.g:433:1: catchClause : ^( CATCH formalParameterStandardDecl block ) ;
 	[GrammarRule("catchClause")]
-	public void catchClause()
+	private void catchClause()
 	{
 		EnterRule_catchClause();
 		EnterRule("catchClause", 53);
@@ -7335,7 +7335,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "switchBlockLabels"
 	// JavaTreeParser.g:437:1: switchBlockLabels : ^( SWITCH_BLOCK_LABEL_LIST ( switchCaseLabel )* ( switchDefaultLabel )? ( switchCaseLabel )* ) ;
 	[GrammarRule("switchBlockLabels")]
-	public void switchBlockLabels()
+	private void switchBlockLabels()
 	{
 		EnterRule_switchBlockLabels();
 		EnterRule("switchBlockLabels", 54);
@@ -7511,7 +7511,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "switchCaseLabel"
 	// JavaTreeParser.g:441:1: switchCaseLabel : ^( CASE expression ( blockStatement )* ) ;
 	[GrammarRule("switchCaseLabel")]
-	public void switchCaseLabel()
+	private void switchCaseLabel()
 	{
 		EnterRule_switchCaseLabel();
 		EnterRule("switchCaseLabel", 55);
@@ -7611,7 +7611,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "switchDefaultLabel"
 	// JavaTreeParser.g:445:1: switchDefaultLabel : ^( DEFAULT ( blockStatement )* ) ;
 	[GrammarRule("switchDefaultLabel")]
-	public void switchDefaultLabel()
+	private void switchDefaultLabel()
 	{
 		EnterRule_switchDefaultLabel();
 		EnterRule("switchDefaultLabel", 56);
@@ -7709,7 +7709,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "forInit"
 	// JavaTreeParser.g:449:1: forInit : ^( FOR_INIT ( localVariableDeclaration | ( expression )* )? ) ;
 	[GrammarRule("forInit")]
-	public void forInit()
+	private void forInit()
 	{
 		EnterRule_forInit();
 		EnterRule("forInit", 57);
@@ -7862,7 +7862,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "forCondition"
 	// JavaTreeParser.g:453:1: forCondition : ^( FOR_CONDITION ( expression )? ) ;
 	[GrammarRule("forCondition")]
-	public void forCondition()
+	private void forCondition()
 	{
 		EnterRule_forCondition();
 		EnterRule("forCondition", 58);
@@ -7949,7 +7949,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "forUpdater"
 	// JavaTreeParser.g:457:1: forUpdater : ^( FOR_UPDATE ( expression )* ) ;
 	[GrammarRule("forUpdater")]
-	public void forUpdater()
+	private void forUpdater()
 	{
 		EnterRule_forUpdater();
 		EnterRule("forUpdater", 59);
@@ -8047,7 +8047,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "parenthesizedExpression"
 	// JavaTreeParser.g:463:1: parenthesizedExpression : ^( PARENTESIZED_EXPR expression ) ;
 	[GrammarRule("parenthesizedExpression")]
-	public void parenthesizedExpression()
+	private void parenthesizedExpression()
 	{
 		EnterRule_parenthesizedExpression();
 		EnterRule("parenthesizedExpression", 60);
@@ -8106,7 +8106,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "expression"
 	// JavaTreeParser.g:467:1: expression : ^( EXPR expr ) ;
 	[GrammarRule("expression")]
-	public void expression()
+	private void expression()
 	{
 		EnterRule_expression();
 		EnterRule("expression", 61);
@@ -8165,7 +8165,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "expr"
 	// JavaTreeParser.g:471:1: expr : ( ^( ASSIGN expr expr ) | ^( PLUS_ASSIGN expr expr ) | ^( MINUS_ASSIGN expr expr ) | ^( STAR_ASSIGN expr expr ) | ^( DIV_ASSIGN expr expr ) | ^( AND_ASSIGN expr expr ) | ^( OR_ASSIGN expr expr ) | ^( XOR_ASSIGN expr expr ) | ^( MOD_ASSIGN expr expr ) | ^( BIT_SHIFT_RIGHT_ASSIGN expr expr ) | ^( SHIFT_RIGHT_ASSIGN expr expr ) | ^( SHIFT_LEFT_ASSIGN expr expr ) | ^( QUESTION expr expr expr ) | ^( LOGICAL_OR expr expr ) | ^( LOGICAL_AND expr expr ) | ^( OR expr expr ) | ^( XOR expr expr ) | ^( AND expr expr ) | ^( EQUAL expr expr ) | ^( NOT_EQUAL expr expr ) | ^( INSTANCEOF expr type ) | ^( LESS_OR_EQUAL expr expr ) | ^( GREATER_OR_EQUAL expr expr ) | ^( BIT_SHIFT_RIGHT expr expr ) | ^( SHIFT_RIGHT expr expr ) | ^( GREATER_THAN expr expr ) | ^( SHIFT_LEFT expr expr ) | ^( LESS_THAN expr expr ) | ^( PLUS expr expr ) | ^( MINUS expr expr ) | ^( STAR expr expr ) | ^( DIV expr expr ) | ^( MOD expr expr ) | ^( UNARY_PLUS expr ) | ^( UNARY_MINUS expr ) | ^( PRE_INC expr ) | ^( PRE_DEC expr ) | ^( POST_INC expr ) | ^( POST_DEC expr ) | ^( NOT expr ) | ^( LOGICAL_NOT expr ) | ^( CAST_EXPR type expr ) | primaryExpression );
 	[GrammarRule("expr")]
-	public void expr()
+	private void expr()
 	{
 		EnterRule_expr();
 		EnterRule("expr", 62);
@@ -9485,7 +9485,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "primaryExpression"
 	// JavaTreeParser.g:517:1: primaryExpression : ( ^( DOT ( primaryExpression ( IDENT | THIS | SUPER | innerNewExpression | CLASS ) | primitiveType CLASS | VOID CLASS ) ) | parenthesizedExpression | IDENT | ^( METHOD_CALL primaryExpression ( genericTypeArgumentList )? arguments ) | explicitConstructorCall | ^( ARRAY_ELEMENT_ACCESS primaryExpression expression ) | literal | newExpression | THIS | arrayTypeDeclarator | SUPER );
 	[GrammarRule("primaryExpression")]
-	public void primaryExpression()
+	private void primaryExpression()
 	{
 		EnterRule_primaryExpression();
 		EnterRule("primaryExpression", 63);
@@ -9988,7 +9988,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "explicitConstructorCall"
 	// JavaTreeParser.g:542:1: explicitConstructorCall : ( ^( THIS_CONSTRUCTOR_CALL ( genericTypeArgumentList )? arguments ) | ^( SUPER_CONSTRUCTOR_CALL ( primaryExpression )? ( genericTypeArgumentList )? arguments ) );
 	[GrammarRule("explicitConstructorCall")]
-	public void explicitConstructorCall()
+	private void explicitConstructorCall()
 	{
 		EnterRule_explicitConstructorCall();
 		EnterRule("explicitConstructorCall", 64);
@@ -10182,7 +10182,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "arrayTypeDeclarator"
 	// JavaTreeParser.g:547:1: arrayTypeDeclarator : ^( ARRAY_DECLARATOR ( arrayTypeDeclarator | qualifiedIdentifier | primitiveType ) ) ;
 	[GrammarRule("arrayTypeDeclarator")]
-	public void arrayTypeDeclarator()
+	private void arrayTypeDeclarator()
 	{
 		EnterRule_arrayTypeDeclarator();
 		EnterRule("arrayTypeDeclarator", 65);
@@ -10318,7 +10318,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "newExpression"
 	// JavaTreeParser.g:551:1: newExpression : ( ^( STATIC_ARRAY_CREATOR ( primitiveType newArrayConstruction | ( genericTypeArgumentList )? qualifiedTypeIdent newArrayConstruction ) ) | ^( CLASS_CONSTRUCTOR_CALL ( genericTypeArgumentList )? qualifiedTypeIdent arguments ( classTopLevelScope )? ) );
 	[GrammarRule("newExpression")]
-	public void newExpression()
+	private void newExpression()
 	{
 		EnterRule_newExpression();
 		EnterRule("newExpression", 66);
@@ -10575,7 +10575,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "innerNewExpression"
 	// JavaTreeParser.g:560:1: innerNewExpression : ^( CLASS_CONSTRUCTOR_CALL ( genericTypeArgumentList )? IDENT arguments ( classTopLevelScope )? ) ;
 	[GrammarRule("innerNewExpression")]
-	public void innerNewExpression()
+	private void innerNewExpression()
 	{
 		EnterRule_innerNewExpression();
 		EnterRule("innerNewExpression", 67);
@@ -10696,7 +10696,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "newArrayConstruction"
 	// JavaTreeParser.g:564:1: newArrayConstruction : ( arrayDeclaratorList arrayInitializer | ( expression )+ ( arrayDeclaratorList )? );
 	[GrammarRule("newArrayConstruction")]
-	public void newArrayConstruction()
+	private void newArrayConstruction()
 	{
 		EnterRule_newArrayConstruction();
 		EnterRule("newArrayConstruction", 68);
@@ -10862,7 +10862,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "arguments"
 	// JavaTreeParser.g:569:1: arguments : ^( ARGUMENT_LIST ( expression )* ) ;
 	[GrammarRule("arguments")]
-	public void arguments()
+	private void arguments()
 	{
 		EnterRule_arguments();
 		EnterRule("arguments", 69);
@@ -10960,7 +10960,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	// $ANTLR start "literal"
 	// JavaTreeParser.g:573:1: literal : ( HEX_LITERAL | OCTAL_LITERAL | DECIMAL_LITERAL | FLOATING_POINT_LITERAL | CHARACTER_LITERAL | STRING_LITERAL | TRUE | FALSE | NULL );
 	[GrammarRule("literal")]
-	public void literal()
+	private void literal()
 	{
 		EnterRule_literal();
 		EnterRule("literal", 70);
@@ -11119,7 +11119,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 	#endregion Rules
 
 	#region Synpreds
-	public bool EvaluatePredicate(System.Action fragment)
+	private bool EvaluatePredicate(System.Action fragment)
 	{
 		bool success = false;
 		state.backtracking++;
@@ -11144,7 +11144,7 @@ public partial class JavaTreeParser : Antlr.Runtime.Tree.TreeParser
 
 
 	#region Follow sets
-	public static class Follow
+	private static class Follow
 	{
 		public static readonly BitSet _JAVA_SOURCE_in_javaSource92 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _annotationList_in_javaSource94 = new BitSet(new ulong[]{0x400001000400008UL,0x1080000000UL,0x40UL});

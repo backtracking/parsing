@@ -5,7 +5,7 @@ using System.Text;
 using Antlr.Runtime;
 using Java.EditorExtensions;
 
-public class JavaTokenizer : JavaLexer
+public class JavaTokenizer : Java6ColorizerLexer
 {
     private IToken _token;
     private int _lineIndex = 0;
@@ -34,10 +34,26 @@ public class JavaTokenizer : JavaLexer
     /// <returns></returns>
     private bool IsMultiLine(IToken antlrToken)
     {
-        return (antlrToken.Type == JavaLexer.BLOCK_COMMENT || 
-                antlrToken.Type == JavaLexer.JAVADOC_COMMENT);
+        return (antlrToken.Type == Java6ColorizerLexer.BLOCK_COMMENT);
+
+        //return (antlrToken.Type == JavaLexer.BLOCK_COMMENT || 
+        //        antlrToken.Type == JavaLexer.JAVADOC_COMMENT);
     }
-    
+
+
+
+    private IToken GetNextToken()
+    {
+        IToken antlrToken = base.NextToken();
+        switch (antlrToken.Type)
+        {
+            case JavaTokenizer.JAVADOC_COMMENT:
+                antlrToken.Type = JavaTokenizer.BLOCK_COMMENT;
+                break;
+        }
+
+        return antlrToken;
+    }
     /// <summary>
     /// NextToken() call the NextToken() from Antlr if we are eating a token that cannot be on multiple lines
     /// However if it's a multiline token we return the token line by line
@@ -62,7 +78,7 @@ public class JavaTokenizer : JavaLexer
         // not a multiline token.
         if (_lines == null)
         {
-            antlrToken = base.NextToken();
+            antlrToken = GetNextToken();
             if (IsMultiLine(antlrToken))
                 SplitMultiLineToken(antlrToken);
         }
@@ -76,7 +92,7 @@ public class JavaTokenizer : JavaLexer
                 _returnNewLineToken = null;
 
                 // We get the next token and we check if it's a single or multi-line token
-                antlrToken = base.NextToken();
+                antlrToken = GetNextToken();
                 if (IsMultiLine(antlrToken))
                     SplitMultiLineToken(antlrToken);
             }
@@ -86,7 +102,7 @@ public class JavaTokenizer : JavaLexer
                 if (_returnNewLineToken[_lineIndex])
                 {
                     antlrToken = new DummyToken(_token);
-                    antlrToken.Type = JavaLexer.NL;
+                    antlrToken.Type = Java6ColorizerLexer.NEWLINE;
                     antlrToken.Line += _lineIndex;
                     antlrToken.StartIndex = _startIndex;
                     antlrToken.StopIndex = antlrToken.StartIndex + _newLineLengths[_lineIndex] - 1;

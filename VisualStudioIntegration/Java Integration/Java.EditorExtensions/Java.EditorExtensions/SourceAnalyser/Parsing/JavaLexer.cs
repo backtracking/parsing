@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4.1.9004 Java.g 2012-05-12 15:00:42
+// $ANTLR 3.4.1.9004 Java.g 2012-08-03 23:20:19
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -34,10 +34,6 @@ using Antlr.Runtime.Misc;
 [System.CLSCompliant(false)]
 public partial class JavaLexer : Antlr.Runtime.Lexer
 {
-    internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ABSTRACT", "AND", "AND_ASSIGN", "ANNOTATION_INIT_ARRAY_ELEMENT", "ANNOTATION_INIT_BLOCK", "ANNOTATION_INIT_DEFAULT_KEY", "ANNOTATION_INIT_KEY_LIST", "ANNOTATION_LIST", "ANNOTATION_METHOD_DECL", "ANNOTATION_SCOPE", "ANNOTATION_TOP_LEVEL_SCOPE", "ARGUMENT_LIST", "ARRAY_DECLARATOR", "ARRAY_DECLARATOR_LIST", "ARRAY_ELEMENT_ACCESS", "ARRAY_INITIALIZER", "ASSERT", "ASSIGN", "AT", "BIT_SHIFT_RIGHT", "BIT_SHIFT_RIGHT_ASSIGN", "BLOCK_COMMENT", "BLOCK_SCOPE", "BOOLEAN", "BREAK", "BYTE", "CASE", "CAST_EXPR", "CATCH", "CATCH_CLAUSE_LIST", "CHAR", "CHARACTER_LITERAL", "CLASS", "CLASS_CONSTRUCTOR_CALL", "CLASS_INSTANCE_INITIALIZER", "CLASS_STATIC_INITIALIZER", "CLASS_TOP_LEVEL_SCOPE", "COLON", "COMMA", "CONST", "CONSTRUCTOR_DECL", "CONTINUE", "DEC", "DECIMAL_FP_LITERAL", "DECIMAL_LITERAL", "DEFAULT", "DIV", "DIV_ASSIGN", "DO", "DOT", "DOTSTAR", "DOUBLE", "ELLIPSIS", "ELSE", "ENUM", "ENUM_TOP_LEVEL_SCOPE", "EQUAL", "ESCAPE_SEQUENCE", "EXPONENT", "EXPR", "EXTENDS", "EXTENDS_BOUND_LIST", "EXTENDS_CLAUSE", "FALSE", "FINAL", "FINALLY", "FLOAT", "FLOATING_POINT_LITERAL", "FLOAT_TYPE_SUFFIX", "FOR", "FORMAL_PARAM_LIST", "FORMAL_PARAM_STD_DECL", "FORMAL_PARAM_VARARG_DECL", "FOR_CONDITION", "FOR_EACH", "FOR_INIT", "FOR_UPDATE", "FUNCTION_METHOD_DECL", "GENERIC_TYPE_ARG_LIST", "GENERIC_TYPE_PARAM_LIST", "GOTO", "GREATER_OR_EQUAL", "GREATER_THAN", "HEXADECIMAL_FP_LITERAL", "HEX_DIGIT", "HEX_LITERAL", "HEX_PREFIX", "IDENT", "IF", "IMPLEMENTS", "IMPLEMENTS_CLAUSE", "IMPORT", "INC", "INSTANCEOF", "INT", "INTEGER_TYPE_SUFFIX", "INTERFACE", "INTERFACE_TOP_LEVEL_SCOPE", "JAVADOC_COMMENT", "JAVA_ID_PART", "JAVA_ID_START", "JAVA_SOURCE", "LABELED_STATEMENT", "LBRACK", "LCURLY", "LESS_OR_EQUAL", "LESS_THAN", "LINE_COMMENT", "LOCAL_MODIFIER_LIST", "LOGICAL_AND", "LOGICAL_NOT", "LOGICAL_OR", "LONG", "LPAREN", "METHOD_CALL", "MINUS", "MINUS_ASSIGN", "MOD", "MODIFIER_LIST", "MOD_ASSIGN", "NATIVE", "NEW", "NL", "NOT", "NOT_EQUAL", "NULL", "OCTAL_ESCAPE", "OCTAL_LITERAL", "OR", "OR_ASSIGN", "PACKAGE", "PARENTESIZED_EXPR", "PLUS", "PLUS_ASSIGN", "POST_DEC", "POST_INC", "PRE_DEC", "PRE_INC", "PRIVATE", "PROTECTED", "PUBLIC", "QUALIFIED_TYPE_IDENT", "QUESTION", "RBRACK", "RCURLY", "RETURN", "RPAREN", "SEMI", "SHIFT_LEFT", "SHIFT_LEFT_ASSIGN", "SHIFT_RIGHT", "SHIFT_RIGHT_ASSIGN", "SHORT", "SIGNED_INTEGER", "STAR", "STAR_ASSIGN", "STATIC", "STATIC_ARRAY_CREATOR", "STRICTFP", "STRING_LITERAL", "SUPER", "SUPER_CONSTRUCTOR_CALL", "SWITCH", "SWITCH_BLOCK_LABEL_LIST", "SYNCHRONIZED", "THIS", "THIS_CONSTRUCTOR_CALL", "THROW", "THROWS", "THROWS_CLAUSE", "TRANSIENT", "TRUE", "TRY", "TYPE", "UNARY_MINUS", "UNARY_PLUS", "UNICODE_ESCAPE", "VAR_DECLARATION", "VAR_DECLARATOR", "VAR_DECLARATOR_LIST", "VOID", "VOID_METHOD_DECL", "VOLATILE", "WHILE", "WS", "XOR", "XOR_ASSIGN"
-	};
-    public override string[] TokenNames { get { return JavaLexer.tokenNames; } }
 	public const int EOF=-1;
 	public const int ABSTRACT=4;
 	public const int AND=5;
@@ -6207,7 +6203,6 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 			        if (!mPreserveNewlineCharacters) {
 			            Skip();
 			        } else {
-			            //Text = NEW_LINE;
 			            _channel = Hidden;
 			        }
 			    
@@ -6240,11 +6235,11 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// Java.g:1552:5: ( ( ' ' | '\\t' | '\\u000C' ) )
+			// Java.g:1551:5: ( ( ' ' | '\\t' | '\\u000C' ) )
 			DebugEnterAlt(1);
-			// Java.g:1552:8: ( ' ' | '\\t' | '\\u000C' )
+			// Java.g:1551:8: ( ' ' | '\\t' | '\\u000C' )
 			{
-			DebugLocation(1552, 8);
+			DebugLocation(1551, 8);
 			if (input.LA(1)=='\t'||input.LA(1)=='\f'||input.LA(1)==' ')
 			{
 				input.Consume();
@@ -6257,7 +6252,7 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(1553, 5);
+			DebugLocation(1552, 5);
 			   
 			        if (!mPreserveWhitespaces) {
 			            Skip();
@@ -6294,12 +6289,12 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 		{
 			int _type = BLOCK_COMMENT;
 			int _channel = DefaultTokenChannel;
-			// Java.g:1563:5: ( ( '/*' ~ '*' ( options {greedy=false; } : . )* '*/' | '/**/' ) )
+			// Java.g:1562:5: ( ( '/*' ~ '*' ( options {greedy=false; } : . )* '*/' | '/**/' ) )
 			DebugEnterAlt(1);
-			// Java.g:1563:9: ( '/*' ~ '*' ( options {greedy=false; } : . )* '*/' | '/**/' )
+			// Java.g:1562:9: ( '/*' ~ '*' ( options {greedy=false; } : . )* '*/' | '/**/' )
 			{
-			DebugLocation(1563, 9);
-			// Java.g:1563:9: ( '/*' ~ '*' ( options {greedy=false; } : . )* '*/' | '/**/' )
+			DebugLocation(1562, 9);
+			// Java.g:1562:9: ( '/*' ~ '*' ( options {greedy=false; } : . )* '*/' | '/**/' )
 			int alt35=2;
 			try { DebugEnterSubRule(35);
 			try { DebugEnterDecision(35, false);
@@ -6346,16 +6341,16 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// Java.g:1563:13: '/*' ~ '*' ( options {greedy=false; } : . )* '*/'
+				// Java.g:1562:13: '/*' ~ '*' ( options {greedy=false; } : . )* '*/'
 				{
-				DebugLocation(1563, 13);
+				DebugLocation(1562, 13);
 				Match("/*"); 
 
-				DebugLocation(1563, 18);
+				DebugLocation(1562, 18);
 				input.Consume();
 
-				DebugLocation(1563, 23);
-				// Java.g:1563:23: ( options {greedy=false; } : . )*
+				DebugLocation(1562, 23);
+				// Java.g:1562:23: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(34);
 				while (true)
 				{
@@ -6389,9 +6384,9 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// Java.g:1563:51: .
+						// Java.g:1562:51: .
 						{
-						DebugLocation(1563, 51);
+						DebugLocation(1562, 51);
 						MatchAny(); 
 
 						}
@@ -6407,7 +6402,7 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(34); }
 
-				DebugLocation(1563, 56);
+				DebugLocation(1562, 56);
 				Match("*/"); 
 
 
@@ -6415,9 +6410,9 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// Java.g:1564:13: '/**/'
+				// Java.g:1563:13: '/**/'
 				{
-				DebugLocation(1564, 13);
+				DebugLocation(1563, 13);
 				Match("/**/"); 
 
 
@@ -6427,7 +6422,7 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(35); }
 
-			DebugLocation(1566, 5);
+			DebugLocation(1565, 5);
 			   
 			        if (!mPreserveBlockComments) {
 			            Skip();
@@ -6464,15 +6459,15 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 		{
 			int _type = JAVADOC_COMMENT;
 			int _channel = DefaultTokenChannel;
-			// Java.g:1576:5: ( '/**' ( options {greedy=false; } : . )* '*/' )
+			// Java.g:1575:5: ( '/**' ( options {greedy=false; } : . )* '*/' )
 			DebugEnterAlt(1);
-			// Java.g:1576:9: '/**' ( options {greedy=false; } : . )* '*/'
+			// Java.g:1575:9: '/**' ( options {greedy=false; } : . )* '*/'
 			{
-			DebugLocation(1576, 9);
+			DebugLocation(1575, 9);
 			Match("/**"); 
 
-			DebugLocation(1576, 15);
-			// Java.g:1576:15: ( options {greedy=false; } : . )*
+			DebugLocation(1575, 15);
+			// Java.g:1575:15: ( options {greedy=false; } : . )*
 			try { DebugEnterSubRule(36);
 			while (true)
 			{
@@ -6506,9 +6501,9 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// Java.g:1576:43: .
+					// Java.g:1575:43: .
 					{
-					DebugLocation(1576, 43);
+					DebugLocation(1575, 43);
 					MatchAny(); 
 
 					}
@@ -6524,10 +6519,10 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(36); }
 
-			DebugLocation(1576, 48);
+			DebugLocation(1575, 48);
 			Match("*/"); 
 
-			DebugLocation(1577, 5);
+			DebugLocation(1576, 5);
 			   
 			        if (!mPreserveJavaDocComments) {
 			            Skip();
@@ -6564,15 +6559,15 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 		{
 			int _type = LINE_COMMENT;
 			int _channel = DefaultTokenChannel;
-			// Java.g:1587:5: ( '//' (~ ( '\\n' | '\\r' ) )* )
+			// Java.g:1586:5: ( '//' (~ ( '\\n' | '\\r' ) )* )
 			DebugEnterAlt(1);
-			// Java.g:1587:7: '//' (~ ( '\\n' | '\\r' ) )*
+			// Java.g:1586:7: '//' (~ ( '\\n' | '\\r' ) )*
 			{
-			DebugLocation(1587, 7);
+			DebugLocation(1586, 7);
 			Match("//"); 
 
-			DebugLocation(1587, 12);
-			// Java.g:1587:12: (~ ( '\\n' | '\\r' ) )*
+			DebugLocation(1586, 12);
+			// Java.g:1586:12: (~ ( '\\n' | '\\r' ) )*
 			try { DebugEnterSubRule(37);
 			while (true)
 			{
@@ -6593,7 +6588,7 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// Java.g:
 					{
-					DebugLocation(1587, 12);
+					DebugLocation(1586, 12);
 					input.Consume();
 
 
@@ -6610,7 +6605,7 @@ public partial class JavaLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(37); }
 
-			DebugLocation(1588, 5);
+			DebugLocation(1587, 5);
 			   
 			        if (!mPreserveLineComments) {
 			            Skip();

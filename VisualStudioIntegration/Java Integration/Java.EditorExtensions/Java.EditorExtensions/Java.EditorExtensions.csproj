@@ -80,6 +80,7 @@
     <Compile Include="Extensions\EditorExtensions.cs" />
     <Compile Include="SourceAnalyser\Core\Singleton.cs" />
     <None Include="SourceAnalyser\OLD_SourceItem.cs" />
+    <Compile Include="SourceAnalyser\Parsing\Java6ColorizerLexer.cs" />
     <Compile Include="SourceAnalyser\Parsing\JavaTokenizer.cs" />
     <Compile Include="SourceAnalyser\Parsing\JavaTreeParser.cs" />
     <Compile Include="SourceAnalyser\SourceAnalyzer.cs" />
@@ -102,12 +103,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SourceAnalyser\Parsing\Java.g" />
+    <None Include="SourceAnalyser\Parsing\Java6ColorizerLexer.g" />
     <None Include="SourceAnalyser\Parsing\JavaTreeParser.g" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Smi.VisualStudio.Antlr\Smi.VisualStudio.Antlr.csproj">
+      <Project>{4E4B936A-4FB5-427B-B04F-1C1B3D6E007A}</Project>
+      <Name>Smi.VisualStudio.Antlr</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

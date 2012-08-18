@@ -100,7 +100,7 @@ namespace Java.EditorExtensions
         }
 
 
-
+        
         void textBuffer_TextContentChanged(object sender, TextContentChangedEventArgs e)
         {
 

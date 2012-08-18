@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4.1.9004 Java.g 2012-05-12 15:00:41
+// $ANTLR 3.4.1.9004 Java.g 2012-08-03 23:20:18
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -467,7 +467,7 @@ public partial class JavaParser : Antlr.Runtime.Parser
 	// $ANTLR start "javaSource"
 	// Java.g:544:1: javaSource : compilationUnit -> ^( JAVA_SOURCE compilationUnit ) ;
 	[GrammarRule("javaSource")]
-	public AstParserRuleReturnScope<CommonTree, IToken> javaSource()
+	private AstParserRuleReturnScope<CommonTree, IToken> javaSource()
 	{
 		EnterRule_javaSource();
 		EnterRule("javaSource", 1);
