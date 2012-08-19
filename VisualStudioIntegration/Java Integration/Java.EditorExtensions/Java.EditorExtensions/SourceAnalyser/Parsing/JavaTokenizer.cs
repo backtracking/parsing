@@ -45,12 +45,12 @@ public class JavaTokenizer : Java6ColorizerLexer
     private IToken GetNextToken()
     {
         IToken antlrToken = base.NextToken();
-        switch (antlrToken.Type)
-        {
-            case JavaTokenizer.JAVADOC_COMMENT:
-                antlrToken.Type = JavaTokenizer.BLOCK_COMMENT;
-                break;
-        }
+        //switch (antlrToken.Type)
+        //{
+        //    case JavaTokenizer.JAVADOC_COMMENT:
+        //        antlrToken.Type = JavaTokenizer.BLOCK_COMMENT;
+        //        break;
+        //}
 
         return antlrToken;
     }
