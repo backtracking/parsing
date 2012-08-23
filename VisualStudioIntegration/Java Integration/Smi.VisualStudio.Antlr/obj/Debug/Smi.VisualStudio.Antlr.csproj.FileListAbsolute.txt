@@ -1,7 +1,0 @@
-C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\Java Integration\Smi.VisualStudio.Antlr\obj\Debug\ResolveAssemblyReference.cache
-C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\Java Integration\Smi.VisualStudio.Antlr\bin\Debug\Smi.VisualStudio.Antlr.dll
-C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\Java Integration\Smi.VisualStudio.Antlr\bin\Debug\Smi.VisualStudio.Antlr.pdb
-C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\Java Integration\Smi.VisualStudio.Antlr\bin\Debug\Antlr3.Runtime.dll
-C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\Java Integration\Smi.VisualStudio.Antlr\bin\Debug\Antlr3.Runtime.pdb
-C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\Java Integration\Smi.VisualStudio.Antlr\obj\Debug\Smi.VisualStudio.Antlr.dll
-C:\Developer\cygwin\home\Vincent\projects\parsing\VisualStudioIntegration\Java Integration\Smi.VisualStudio.Antlr\obj\Debug\Smi.VisualStudio.Antlr.pdb

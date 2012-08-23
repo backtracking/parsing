@@ -16,7 +16,6 @@ namespace Java.EditorExtensions
     /// </summary>
     [Export(typeof(IClassifierProvider))]
     [ContentType(JavaContentTypeDefinition.ContentType)]
-    [ContentType(JavaContentTypeDefinition.ConsoleContentType)]
     internal class JavaClassifierProvider : IClassifierProvider
     {
         /// <summary>

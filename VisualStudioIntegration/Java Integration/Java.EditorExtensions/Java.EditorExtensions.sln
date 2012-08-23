@@ -1,9 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Java.EditorExtensions", "Java.EditorExtensions\Java.EditorExtensions.csproj", "{8D6C5B6F-6E70-4137-9138-D3011BB309C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smi.VisualStudio.Language.Java", "Java.EditorExtensions\Smi.VisualStudio.Language.Java.csproj", "{8D6C5B6F-6E70-4137-9138-D3011BB309C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smi.VisualStudio.Antlr", "..\Smi.VisualStudio.Antlr\Smi.VisualStudio.Antlr.csproj", "{4E4B936A-4FB5-427B-B04F-1C1B3D6E007A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smi.VisualStudio.Language", "..\Smi.VisualStudio.Language\Smi.VisualStudio.Language.csproj", "{E2A5A701-1D2D-40C1-9EBE-93B6690F2D83}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EDD09956-D1AE-449D-B39C-6B9F99D7BC8B} = {EDD09956-D1AE-449D-B39C-6B9F99D7BC8B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smi.VisualStudio.Shell", "..\Smi.VisualStudio.Shell\Smi.VisualStudio.Shell.csproj", "{EDD09956-D1AE-449D-B39C-6B9F99D7BC8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smi.Core", "..\Smi.Core\Smi.Core.csproj", "{C4EE3AC7-6520-4FDB-8834-E31062F114A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +28,18 @@ Global
 		{4E4B936A-4FB5-427B-B04F-1C1B3D6E007A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E4B936A-4FB5-427B-B04F-1C1B3D6E007A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E4B936A-4FB5-427B-B04F-1C1B3D6E007A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A5A701-1D2D-40C1-9EBE-93B6690F2D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A5A701-1D2D-40C1-9EBE-93B6690F2D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A5A701-1D2D-40C1-9EBE-93B6690F2D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A5A701-1D2D-40C1-9EBE-93B6690F2D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD09956-D1AE-449D-B39C-6B9F99D7BC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD09956-D1AE-449D-B39C-6B9F99D7BC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD09956-D1AE-449D-B39C-6B9F99D7BC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD09956-D1AE-449D-B39C-6B9F99D7BC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4EE3AC7-6520-4FDB-8834-E31062F114A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4EE3AC7-6520-4FDB-8834-E31062F114A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4EE3AC7-6520-4FDB-8834-E31062F114A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4EE3AC7-6520-4FDB-8834-E31062F114A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

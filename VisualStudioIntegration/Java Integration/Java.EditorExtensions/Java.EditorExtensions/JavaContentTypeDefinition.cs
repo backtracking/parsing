@@ -8,15 +8,14 @@ using Microsoft.VisualStudio.Utilities;
 namespace Java.EditorExtensions
 {
     /// <summary>
-    /// Exports the iron python content type and file extension
+    /// Exports the java content type and file extension
     /// </summary>
     public sealed class JavaContentTypeDefinition
     {
-        public const string ContentType = "IronJava";
-        public const string ConsoleContentType = "IronJavaConsole";
+        public const string ContentType = "Java";
 
         /// <summary>
-        /// Exports the IPy content type
+        /// Exports the java content type
         /// </summary>
         [Export(typeof(ContentTypeDefinition))]
         [Name(JavaContentTypeDefinition.ContentType)]
@@ -24,15 +23,7 @@ namespace Java.EditorExtensions
         public ContentTypeDefinition IJavaContentType { get; set; }
 
         /// <summary>
-        /// Exports the IPy Console content type
-        /// </summary>
-        [Export(typeof(ContentTypeDefinition))]
-        [Name(JavaContentTypeDefinition.ConsoleContentType)]
-        [BaseDefinition("code")]
-        public ContentTypeDefinition IJavaContentTypeConsole { get; set; }
-
-        /// <summary>
-        /// Exports the IPy file extension
+        /// Exports the java file extension
         /// </summary>
 		[Export(typeof(FileExtensionToContentTypeDefinition))]
         [ContentType(JavaContentTypeDefinition.ContentType)]
